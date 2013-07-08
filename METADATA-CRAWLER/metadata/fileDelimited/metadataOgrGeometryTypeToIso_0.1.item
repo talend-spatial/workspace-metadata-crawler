@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_uFl0sOPxEeKq6LfAQc0w9A" name="metadataOgrGeometryTypeToIso" dataPackage="_uFl0sePxEeKq6LfAQc0w9A" Server="Localhost 127.0.0.1" FilePath="/usr/local/App/talend/TOS_DI-r104014-V5.3.1/workspace/METADATA_CRAWLER/_resources/metadata-geometry-type-mapping.csv" Encoding="US-ASCII" FieldSeparatorValue="&quot;;&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_uFl0sePxEeKq6LfAQc0w9A" name="default" dataManager="_uFl0sOPxEeKq6LfAQc0w9A">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_uFl0suPxEeKq6LfAQc0w9A" name="metadata" id="_mMvpIOPxEeKq6LfAQc0w9A" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_uFl0s-PxEeKq6LfAQc0w9A" name="OGR_TYPE" label="OGR_TYPE" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_uFl0tOPxEeKq6LfAQc0w9A" name="ISO_TYPE" label="ISO_TYPE" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

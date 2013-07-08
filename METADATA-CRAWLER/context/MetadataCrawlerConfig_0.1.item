@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" confirmationNeeded="false" name="Default">
+  <contextParameter comment="The CSW server to push metadata records into" name="csw_server_host" prompt="csw_server_host?" promptNeeded="false" type="id_String" value="&quot;http://localhost:8080/geonetwork/srv/eng/csw-publication&quot;"/>
+  <contextParameter comment="The folder to scan" name="data_dir" prompt="data_dir?" promptNeeded="false" type="id_Directory" value="/tmp/spatialdemo/"/>
+  <contextParameter comment="The folder to create overview into" name="overview_folder" prompt="overview_folder?" promptNeeded="false" type="id_Directory" value="&quot;/var/www/tmp/&quot;"/>
+  <contextParameter comment="RASTER file extensions" name="raster_file_extension" prompt="raster_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.tif|.*\\.tiff|.*\\.ecw&quot;"/>
+  <contextParameter comment="The output folder" name="tmp_dir" prompt="tmp_dir?" promptNeeded="false" type="id_Directory" value="/tmp/csw/"/>
+  <contextParameter comment="Vector file extensions" name="vector_file_extension" prompt="vector_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.kml|.*\\.shp|.*\\.mif|.*\\.gml|.*\\.dxf&quot;"/>
+  <contextParameter comment="The CSW user name" name="csw_username" prompt="csw_username?" promptNeeded="false" type="id_String" value="&quot;admin&quot;"/>
+  <contextParameter comment="The CSW user password" name="csw_password" prompt="csw_password?" promptNeeded="false" type="id_String" value="&quot;admin&quot;"/>
+  <contextParameter comment="The width of the overview to generate" name="overview_width" prompt="overview_width?" promptNeeded="false" type="id_String" value="&quot;400&quot;"/>
+  <contextParameter comment="The height of the overview to generate" name="overview_height" prompt="overview_height?" promptNeeded="false" type="id_String" value="&quot;400&quot;"/>
+  <contextParameter comment="Create or not overview files" name="create_overview" prompt="create_overview?" promptNeeded="false" type="id_Boolean" value="true"/>
+</talendfile:ContextType>

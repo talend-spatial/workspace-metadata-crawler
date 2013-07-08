@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:XmlFileConnection xmi:id="_dwnRgOPJEeKXY41c3BjRgQ" name="iso19110" dataPackage="_dwn4tuPJEeKXY41c3BjRgQ" XmlFilePath="/home/francois/Workspace/github/core-geonetwork/web/src/main/webapp/WEB-INF/data/config/schema_plugins/iso19110/templates/metadata.xml" Encoding="UTF-8" inputModel="false" outputFilePath="">
+    <root xmi:id="_Wr2yUOPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue" RelatedColumn="" Attribute="main" Order="1" Type="id_String"/>
+    <root xmi:id="_Wr2yUePqEeKXY41c3BjRgQ" XMLPath="uuid" RelatedColumn="uuid" Attribute="attri" Order="1" Type="id_String"/>
+    <root xmi:id="_Wr2yUuPqEeKXY41c3BjRgQ" XMLPath="gml" RelatedColumn="" DefaultValue="http://www.opengis.net/gml" Attribute="ns" Order="2" Type="id_String"/>
+    <root xmi:id="_Wr2yU-PqEeKXY41c3BjRgQ" XMLPath="gmd" RelatedColumn="" DefaultValue="http://www.isotc211.org/2005/gmd" Attribute="ns" Order="3" Type="id_String"/>
+    <root xmi:id="_Wr2yVOPqEeKXY41c3BjRgQ" XMLPath="gco" RelatedColumn="" DefaultValue="http://www.isotc211.org/2005/gco" Attribute="ns" Order="4" Type="id_String"/>
+    <root xmi:id="_Wr2yVePqEeKXY41c3BjRgQ" XMLPath="gmx" RelatedColumn="" DefaultValue="http://www.isotc211.org/2005/gmx" Attribute="ns" Order="5" Type="id_String"/>
+    <root xmi:id="_Wr2yVuPqEeKXY41c3BjRgQ" XMLPath="gfc" RelatedColumn="" DefaultValue="http://www.isotc211.org/2005/gfc" Attribute="ns" Order="6" Type="id_String"/>
+    <root xmi:id="_Wr2yV-PqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gmx:name" RelatedColumn="" Attribute="branch" Order="7" Type="id_String"/>
+    <root xmi:id="_Wr2yWOPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gmx:name/gco:CharacterString" RelatedColumn="title" Attribute="branch" Order="8" Type="id_String"/>
+    <root xmi:id="_Wr2yWePqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gmx:scope" RelatedColumn="" Attribute="branch" Order="9" Type="id_String"/>
+    <root xmi:id="_Wr2yWuPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gmx:scope/gco:CharacterString" RelatedColumn="scope" Attribute="branch" Order="10" Type="id_String"/>
+    <root xmi:id="_Wr2yW-PqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gmx:fieldOfApplication" RelatedColumn="" Attribute="branch" Order="11" Type="id_String"/>
+    <root xmi:id="_Wr2yXOPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gmx:fieldOfApplication/gco:CharacterString" RelatedColumn="fieldOfApplication" Attribute="branch" Order="12" Type="id_String"/>
+    <root xmi:id="_Wr2yXePqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gmx:versionNumber" RelatedColumn="" Attribute="branch" Order="13" Type="id_String"/>
+    <root xmi:id="_Wr2yXuPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gmx:versionNumber/gco:CharacterString" RelatedColumn="version" Attribute="branch" Order="14" Type="id_String"/>
+    <root xmi:id="_Wr2yX-PqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gmx:versionDate" RelatedColumn="" Attribute="branch" Order="15" Type="id_String"/>
+    <root xmi:id="_Wr2yYOPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gmx:versionDate/gco:DateTime" RelatedColumn="date" Attribute="branch" Order="16" Type="id_String"/>
+    <root xmi:id="_Wr2yYePqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:producer" RelatedColumn="" Attribute="branch" Order="17" Type="id_String"/>
+    <root xmi:id="_Wr2yYuPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty" RelatedColumn="" Attribute="branch" Order="18" Type="id_String"/>
+    <root xmi:id="_Wr2yY-PqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:individualName" RelatedColumn="" Attribute="branch" Order="19" Type="id_String"/>
+    <root xmi:id="_Wr2yZOPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString" RelatedColumn="individualName" Attribute="branch" Order="20" Type="id_String"/>
+    <root xmi:id="_Wr2yZePqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:organisationName" RelatedColumn="" Attribute="branch" Order="21" Type="id_String"/>
+    <root xmi:id="_Wr2yZuPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString" RelatedColumn="organisationName" Attribute="branch" Order="22" Type="id_String"/>
+    <root xmi:id="_Wr2yZ-PqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:positionName" RelatedColumn="" Attribute="branch" Order="23" Type="id_String"/>
+    <root xmi:id="_Wr2yaOPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:positionName/gco:CharacterString" RelatedColumn="positionName" Attribute="branch" Order="24" Type="id_String"/>
+    <root xmi:id="_Wr2yaePqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo" RelatedColumn="" Attribute="branch" Order="25" Type="id_String"/>
+    <root xmi:id="_Wr2yauPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact" RelatedColumn="" Attribute="branch" Order="26" Type="id_String"/>
+    <root xmi:id="_Wr2ya-PqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address" RelatedColumn="" Attribute="branch" Order="27" Type="id_String"/>
+    <root xmi:id="_Wr2ybOPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address" RelatedColumn="" Attribute="branch" Order="28" Type="id_String"/>
+    <root xmi:id="_Wr2ybePqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:deliveryPoint" RelatedColumn="" Attribute="branch" Order="29" Type="id_String"/>
+    <root xmi:id="_Wr2ybuPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:deliveryPoint/gco:CharacterString" RelatedColumn="deliveryPoint" Attribute="branch" Order="30" Type="id_String"/>
+    <root xmi:id="_Wr2yb-PqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:city" RelatedColumn="" Attribute="branch" Order="31" Type="id_String"/>
+    <root xmi:id="_Wr2ycOPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:city/gco:CharacterString" RelatedColumn="city" Attribute="branch" Order="32" Type="id_String"/>
+    <root xmi:id="_Wr2ycePqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:administrativeArea" RelatedColumn="" Attribute="branch" Order="33" Type="id_String"/>
+    <root xmi:id="_Wr2ycuPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:administrativeArea/gco:CharacterString" RelatedColumn="adminArea" Attribute="branch" Order="34" Type="id_String"/>
+    <root xmi:id="_Wr2yc-PqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:postalCode" RelatedColumn="" Attribute="branch" Order="35" Type="id_String"/>
+    <root xmi:id="_Wr2ydOPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:postalCode/gco:CharacterString" RelatedColumn="postalCode" Attribute="branch" Order="36" Type="id_String"/>
+    <root xmi:id="_Wr2ydePqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:country" RelatedColumn="" Attribute="branch" Order="37" Type="id_String"/>
+    <root xmi:id="_Wr2yduPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:country/gco:CharacterString" RelatedColumn="country" Attribute="branch" Order="38" Type="id_String"/>
+    <root xmi:id="_Wr2yd-PqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress" RelatedColumn="" Attribute="branch" Order="39" Type="id_String"/>
+    <root xmi:id="_Wr2yeOPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString" RelatedColumn="email" Attribute="branch" Order="40" Type="id_String"/>
+    <root xmi:id="_Wr2yeePqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:role" RelatedColumn="" Attribute="branch" Order="41" Type="id_String"/>
+    <root xmi:id="_Wr2yeuPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode" RelatedColumn="" Attribute="branch" Order="42" Type="id_String"/>
+    <root xmi:id="_Wr2ye-PqEeKXY41c3BjRgQ" XMLPath="codeListValue" RelatedColumn="role" Attribute="attri" Order="43" Type="id_String"/>
+    <root xmi:id="_Wr2yfOPqEeKXY41c3BjRgQ" XMLPath="codeList" RelatedColumn="" Attribute="attri" Order="44" Type="id_String"/>
+    <root xmi:id="_Wr2yfePqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType" RelatedColumn="" Attribute="main" Order="45" Type="id_String"/>
+    <root xmi:id="_Wr2yfuPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType" RelatedColumn="" Attribute="main" Order="46" Type="id_String"/>
+    <root xmi:id="_Wr2yf-PqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:typeName" RelatedColumn="" Attribute="branch" Order="47" Type="id_String"/>
+    <root xmi:id="_Wr2ygOPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:typeName/gco:LocalName" RelatedColumn="" Attribute="branch" Order="48" Type="id_String"/>
+    <root xmi:id="_Wr2ygePqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:definition" RelatedColumn="" Attribute="branch" Order="49" Type="id_String"/>
+    <root xmi:id="_Wr2yguPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:definition/gco:CharacterString" RelatedColumn="" Attribute="branch" Order="50" Type="id_String"/>
+    <root xmi:id="_Wr2yg-PqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:isAbstract" RelatedColumn="" Attribute="branch" Order="51" Type="id_String"/>
+    <root xmi:id="_Wr2yhOPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:isAbstract/gco:Boolean" RelatedColumn="isAbstract" Attribute="branch" Order="52" Type="id_String"/>
+    <root xmi:id="_Wr2yhePqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:aliases" RelatedColumn="" Attribute="branch" Order="53" Type="id_String"/>
+    <root xmi:id="_Wr2yhuPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:aliases/gco:LocalName" RelatedColumn="columnAlias" Attribute="branch" Order="54" Type="id_String"/>
+    <root xmi:id="_Wr2yh-PqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:featureCatalogue" RelatedColumn="" Attribute="branch" Order="55" Type="id_String"/>
+    <loop xmi:id="_Wr2yiOPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics" RelatedColumn="" Attribute="main" Order="56" Type="id_String"/>
+    <loop xmi:id="_Wr2yiePqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute" RelatedColumn="" Attribute="branch" Order="57" Type="id_String"/>
+    <loop xmi:id="_Wr2yiuPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:featureType" RelatedColumn="" Attribute="branch" Order="58" Type="id_String"/>
+    <loop xmi:id="_Wr2yi-PqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:memberName" RelatedColumn="" Attribute="branch" Order="59" Type="id_String"/>
+    <loop xmi:id="_Wr2yjOPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:memberName/gco:LocalName" RelatedColumn="columnName" Attribute="branch" Order="60" Type="id_String"/>
+    <loop xmi:id="_Wr2yjePqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:definition" RelatedColumn="" Attribute="branch" Order="61" Type="id_String"/>
+    <loop xmi:id="_Wr2yjuPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:definition/gco:CharacterString" RelatedColumn="columnDefinition" Attribute="branch" Order="62" Type="id_String"/>
+    <loop xmi:id="_Wr2yj-PqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:cardinality" RelatedColumn="" Attribute="branch" Order="63" Type="id_String"/>
+    <loop xmi:id="_Wr2ykOPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:cardinality/gco:Multiplicity" RelatedColumn="" Attribute="branch" Order="64" Type="id_String"/>
+    <loop xmi:id="_Wr2ykePqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:cardinality/gco:Multiplicity/gco:range" RelatedColumn="" Attribute="branch" Order="65" Type="id_String"/>
+    <loop xmi:id="_Wr2ykuPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:cardinality/gco:Multiplicity/gco:range/gco:MultiplicityRange" RelatedColumn="" Attribute="branch" Order="66" Type="id_String"/>
+    <loop xmi:id="_Wr2yk-PqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:cardinality/gco:Multiplicity/gco:range/gco:MultiplicityRange/gco:lower" RelatedColumn="" Attribute="branch" Order="67" Type="id_String"/>
+    <loop xmi:id="_Wr2ylOPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:cardinality/gco:Multiplicity/gco:range/gco:MultiplicityRange/gco:lower/gco:Integer" RelatedColumn="cardinalityMin" Attribute="branch" Order="68" Type="id_String"/>
+    <loop xmi:id="_Wr2ylePqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:cardinality/gco:Multiplicity/gco:range/gco:MultiplicityRange/gco:upper" RelatedColumn="" Attribute="branch" Order="69" Type="id_String"/>
+    <loop xmi:id="_Wr2yluPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:cardinality/gco:Multiplicity/gco:range/gco:MultiplicityRange/gco:upper/gco:UnlimitedInteger" RelatedColumn="" Attribute="branch" Order="70" Type="id_String"/>
+    <loop xmi:id="_Wr2yl-PqEeKXY41c3BjRgQ" XMLPath="isInfinite" RelatedColumn="cardinalityMax" Attribute="attri" Order="71" Type="id_String"/>
+    <loop xmi:id="_Wr2ymOPqEeKXY41c3BjRgQ" XMLPath="xsi:nil" RelatedColumn="" Attribute="attri" Order="72" Type="id_String"/>
+    <loop xmi:id="_Wr2ymePqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:valueType" RelatedColumn="" Attribute="branch" Order="73" Type="id_String"/>
+    <loop xmi:id="_Wr2ymuPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:valueType/gco:TypeName" RelatedColumn="" Attribute="branch" Order="74" Type="id_String"/>
+    <loop xmi:id="_Wr2ym-PqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:valueType/gco:TypeName/gco:aName" RelatedColumn="" Attribute="branch" Order="75" Type="id_String"/>
+    <loop xmi:id="_Wr2ynOPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:valueType/gco:TypeName/gco:aName/gco:CharacterString" RelatedColumn="columnType" Attribute="branch" Order="76" Type="id_String"/>
+    <loop xmi:id="_Wr2ynePqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:listedValue" RelatedColumn="" Attribute="branch" Order="77" Type="id_String"/>
+    <loop xmi:id="_Wr2ynuPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:listedValue/gfc:FC_ListedValue" RelatedColumn="" Attribute="branch" Order="78" Type="id_String"/>
+    <loop xmi:id="_Wr2yn-PqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:listedValue/gfc:FC_ListedValue/gfc:label" RelatedColumn="" Attribute="branch" Order="79" Type="id_String"/>
+    <loop xmi:id="_Wr2yoOPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:listedValue/gfc:FC_ListedValue/gfc:label/gco:CharacterString" RelatedColumn="" Attribute="branch" Order="80" Type="id_String"/>
+    <loop xmi:id="_Wr2yoePqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:listedValue/gfc:FC_ListedValue/gfc:code" RelatedColumn="" Attribute="branch" Order="81" Type="id_String"/>
+    <loop xmi:id="_Wr2youPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:listedValue/gfc:FC_ListedValue/gfc:code/gco:CharacterString" RelatedColumn="" Attribute="branch" Order="82" Type="id_String"/>
+    <loop xmi:id="_Wr2yo-PqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:listedValue/gfc:FC_ListedValue/gfc:definition" RelatedColumn="" Attribute="branch" Order="83" Type="id_String"/>
+    <loop xmi:id="_Wr2ypOPqEeKXY41c3BjRgQ" XMLPath="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:listedValue/gfc:FC_ListedValue/gfc:definition/gco:CharacterString" RelatedColumn="" Attribute="branch" Order="84" Type="id_String"/>
+  </TalendMetadata:XmlFileConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_dwn4tuPJEeKXY41c3BjRgQ" name="default" dataManager="_dwnRgOPJEeKXY41c3BjRgQ">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_dwn4t-PJEeKXY41c3BjRgQ" name="metadata" id="_wgsXQOPHEeKXY41c3BjRgQ" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_dwn4uOPJEeKXY41c3BjRgQ" name="uuid" label="uuid" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_dwn4uePJEeKXY41c3BjRgQ" name="title" label="title" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_dwn4uuPJEeKXY41c3BjRgQ" name="scope" label="scope" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_dwn4u-PJEeKXY41c3BjRgQ" name="fieldOfApplication" label="fieldOfApplication" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_dwn4vOPJEeKXY41c3BjRgQ" name="version" label="version" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_dwn4vePJEeKXY41c3BjRgQ" name="date" label="date" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_dwn4vuPJEeKXY41c3BjRgQ" name="individualName" label="individualName" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_dwn4v-PJEeKXY41c3BjRgQ" name="organisationName" label="organisationName" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_dwn4wOPJEeKXY41c3BjRgQ" name="positionName" label="positionName" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_dwn4wePJEeKXY41c3BjRgQ" name="deliveryPoint" label="deliveryPoint" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_dwn4wuPJEeKXY41c3BjRgQ" name="city" label="city" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_dwn4w-PJEeKXY41c3BjRgQ" name="adminArea" label="adminArea" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_dwn4xOPJEeKXY41c3BjRgQ" name="postalCode" label="postalCode" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_dwn4xePJEeKXY41c3BjRgQ" name="country" label="country" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_dwn4xuPJEeKXY41c3BjRgQ" name="email" label="email" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_dwn4x-PJEeKXY41c3BjRgQ" name="role" label="role" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_dwn4yOPJEeKXY41c3BjRgQ" name="columnName" label="columnName" talendType="id_String">
+        <initialValue xmi:id="_dwn4yePJEeKXY41c3BjRgQ" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_dwn4yuPJEeKXY41c3BjRgQ" name="columnDefinition" label="columnDefinition" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_dwn4y-PJEeKXY41c3BjRgQ" name="isAbstract" label="isAbstract" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_dwn4zOPJEeKXY41c3BjRgQ" name="columnAlias" label="columnAlias" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_dwn4zePJEeKXY41c3BjRgQ" name="columnType" label="columnType" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_dwn4zuPJEeKXY41c3BjRgQ" name="cardinalityMin" label="cardinalityMin" talendType="id_String">
+        <initialValue xmi:id="_dwn4z-PJEeKXY41c3BjRgQ" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_dwn40OPJEeKXY41c3BjRgQ" name="cardinalityMax" label="cardinalityMax" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_dwn40ePJEeKXY41c3BjRgQ" name="columnPrecision" label="columnPrecision" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_dwn40uPJEeKXY41c3BjRgQ" name="columnListOfValues" label="columnListOfValues" talendType="id_String"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>
