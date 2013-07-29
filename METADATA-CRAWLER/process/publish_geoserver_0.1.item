@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="Create or not overview files" name="create_overview" prompt="create_overview?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
+    <contextParameter comment="The CSW user password" name="csw_password" prompt="csw_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;admin&quot;"/>
+    <contextParameter comment="The CSW server to push metadata records into" name="csw_server_host" prompt="csw_server_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;http://apps.titellus.net/geonetwork-pnf/srv/eng/csw-publication&quot;"/>
+    <contextParameter comment="The CSW user name" name="csw_username" prompt="csw_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;admin&quot;"/>
+    <contextParameter comment="The folder to scan" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/spatialdemo/"/>
+    <contextParameter comment="" name="geoserver_password" prompt="geoserver_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;geoserver&quot;"/>
+    <contextParameter comment="" name="geoserver_server_host" prompt="geoserver_server_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;http://localhost:8081/geoserver/rest&quot;"/>
+    <contextParameter comment="" name="geoserver_username" prompt="geoserver_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;admin&quot;"/>
+    <contextParameter comment="" name="geosever_namespace_prefix" prompt="geosever_namespace_prefix?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;gn&quot;"/>
+    <contextParameter comment="The folder to create overview into" name="overview_folder" prompt="overview_folder?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="&quot;/var/www/tmp/&quot;"/>
+    <contextParameter comment="The height of the overview to generate" name="overview_height" prompt="overview_height?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;400&quot;"/>
+    <contextParameter comment="The width of the overview to generate" name="overview_width" prompt="overview_width?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;400&quot;"/>
+    <contextParameter comment="RASTER file extensions" name="raster_file_extension" prompt="raster_file_extension?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.tif|.*\\.tiff|.*\\.ecw|.*\\.asc|.*\\.pdf&quot;"/>
+    <contextParameter comment="RASTER file extensions supported for publication in mapservers" name="raster_file_extension_for_geopublication" prompt="raster_file_extension_for_geopublication?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.tif|.*\\.tiff&quot;"/>
+    <contextParameter comment="The output folder" name="tmp_dir" prompt="tmp_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/csw/"/>
+    <contextParameter comment="Vector file extensions" name="vector_file_extension" prompt="vector_file_extension?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.kml|.*\\.shp|.*\\.mif|.*\\.tab|.*\\.gml|.*\\.dxf&quot;"/>
+    <contextParameter comment="Vector file extensions supported for publication in mapservers" name="vector_file_extension_for_geopublication" prompt="vector_file_extension_for_geopublication?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.shp&quot;"/>
+  </context>
+  <parameters>
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value=" -Xms256M -Xmx1024M"/>
+    <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPTIONS" value="none"/>
+    <elementParameter field="TEXT" name="OEM_CUSTOM_ATTRIBUTE" value=""/>
+    <elementParameter field="TEXT" name="HADOOP_APP_PATH" value=""/>
+    <elementParameter field="TEXT" name="JOBID_FOR_OOZIE" value=""/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value=""/>
+    <elementParameter field="TABLE" name="HADOOP_ADVANCED_PROPERTIES"/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value=""/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;/usr/local/App/talend/TOS_DI-r89249-V5.2.0M3/workspace/.metadata&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ojdbc14-10g.jar"/>
+    <routinesParameter id="_nrrv8AfBEeKRSpL2q-qWEQ" name="DataOperation"/>
+    <routinesParameter id="_nruzQAfBEeKRSpL2q-qWEQ" name="GeoOperation"/>
+    <routinesParameter id="_nrzEsAfBEeKRSpL2q-qWEQ" name="GeometryOperation"/>
+    <routinesParameter id="_nr054AfBEeKRSpL2q-qWEQ" name="GeometryUtility"/>
+    <routinesParameter id="_nrqh0AfBEeKRSpL2q-qWEQ" name="Mathematical"/>
+    <routinesParameter id="_nrtlIAfBEeKRSpL2q-qWEQ" name="Numeric"/>
+    <routinesParameter id="_nrwocAfBEeKRSpL2q-qWEQ" name="OpenStreetMap"/>
+    <routinesParameter id="_nq3QkAfBEeKRSpL2q-qWEQ" name="Relational"/>
+    <routinesParameter id="_nrj0IAfBEeKRSpL2q-qWEQ" name="StringHandling"/>
+    <routinesParameter id="_nrmQYAfBEeKRSpL2q-qWEQ" name="TalendDataGenerator"/>
+    <routinesParameter id="_nrhX4AfBEeKRSpL2q-qWEQ" name="TalendDate"/>
+    <routinesParameter id="_nroFkAfBEeKRSpL2q-qWEQ" name="TalendString"/>
+    <routinesParameter id="_NukzgAnLEeKr_IP06R0Uyw" name="Utility"/>
+  </parameters>
+  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_1"/>
+    <elementParameter field="CHECK" name="START" value="true"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="context.data_dir"/>
+    <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
+    <elementParameter field="CHECK" name="INCLUDSUBDIR" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="CASE_SENSITIVE" value="NO"/>
+    <elementParameter field="CHECK" name="ERROR" value="false"/>
+    <elementParameter field="CHECK" name="GLOBEXPRESSIONS" value="false"/>
+    <elementParameter field="TABLE" name="FILES">
+      <elementValue elementRef="FILEMASK" value="context.raster_file_extension_for_geopublication"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="ORDER_BY_NOTHING" value="true"/>
+    <elementParameter field="RADIO" name="ORDER_BY_FILENAME" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_FILESIZE" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_MODIFIEDDATE" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_ACTION_ASC" value="true"/>
+    <elementParameter field="RADIO" name="ORDER_ACTION_DESC" value="false"/>
+    <elementParameter field="CHECK" name="IFEXCLUDE" value="false"/>
+    <elementParameter field="TEXT" name="EXCLUDEFILEMASK" value="&quot;*.txt&quot;"/>
+    <elementParameter field="CHECK" name="FORMAT_FILEPATH_TO_SLASH" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="listAllRaster"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+  </node>
+  <node componentName="sGeoServerPublisher" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="128" sizeX="51" sizeY="51">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="sGeoServerPublisher_1"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="ACTION" value="INSERT_OR_UPDATE"/>
+    <elementParameter field="FILE" name="DATASTORE_FILE" value="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;))"/>
+    <elementParameter field="TEXT" name="FEATURETYPE" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="NS" value="context.geosever_namespace_prefix"/>
+    <elementParameter field="TEXT" name="URL" value="context.geoserver_server_host"/>
+    <elementParameter field="TEXT" name="USERNAME" value="context.geoserver_username"/>
+    <elementParameter field="TEXT" name="PASSWORD" value="context.geoserver_password"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+  </node>
+  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_2"/>
+    <elementParameter field="CHECK" name="START" value="true"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="context.data_dir"/>
+    <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
+    <elementParameter field="CHECK" name="INCLUDSUBDIR" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="CASE_SENSITIVE" value="NO"/>
+    <elementParameter field="CHECK" name="ERROR" value="false"/>
+    <elementParameter field="CHECK" name="GLOBEXPRESSIONS" value="false"/>
+    <elementParameter field="TABLE" name="FILES">
+      <elementValue elementRef="FILEMASK" value="context.vector_file_extension_for_geopublication"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="ORDER_BY_NOTHING" value="true"/>
+    <elementParameter field="RADIO" name="ORDER_BY_FILENAME" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_FILESIZE" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_MODIFIEDDATE" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_ACTION_ASC" value="true"/>
+    <elementParameter field="RADIO" name="ORDER_ACTION_DESC" value="false"/>
+    <elementParameter field="CHECK" name="IFEXCLUDE" value="false"/>
+    <elementParameter field="TEXT" name="EXCLUDEFILEMASK" value="&quot;*.txt&quot;"/>
+    <elementParameter field="CHECK" name="FORMAT_FILEPATH_TO_SLASH" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="listAllVector"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+  </node>
+  <node componentName="tFileArchive" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileArchive_1"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" value="false"/>
+    <elementParameter field="DIRECTORY" name="SOURCE" value="((String)globalMap.get(&quot;tFileList_2_CURRENT_FILEDIRECTORY&quot;))"/>
+    <elementParameter field="CHECK" name="SUB_DIRECTROY" value="false"/>
+    <elementParameter field="FILE" name="TARGET" value="((String)globalMap.get(&quot;tFileList_2_CURRENT_FILEPATH&quot;)).substring(0, ((String)globalMap.get(&quot;tFileList_2_CURRENT_FILEPATH&quot;)).indexOf(((String)globalMap.get(&quot;tFileList_2_CURRENT_FILEEXTENSION&quot;)))) + &quot;zip&quot;"/>
+    <elementParameter field="CHECK" name="MKDIR" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="LEVEL" value="4"/>
+    <elementParameter field="CHECK" name="ALL_FILES" value="false"/>
+    <elementParameter field="TABLE" name="MASK">
+      <elementValue elementRef="FILEMASK" value="((String)globalMap.get(&quot;tFileList_2_CURRENT_FILE&quot;)).substring(0, ((String)globalMap.get(&quot;tFileList_2_CURRENT_FILE&quot;)).indexOf(((String)globalMap.get(&quot;tFileList_2_CURRENT_FILEEXTENSION&quot;)))) + &quot;dbf&quot;"/>
+      <elementValue elementRef="FILEMASK" value="((String)globalMap.get(&quot;tFileList_2_CURRENT_FILE&quot;)).substring(0, ((String)globalMap.get(&quot;tFileList_2_CURRENT_FILE&quot;)).indexOf(((String)globalMap.get(&quot;tFileList_2_CURRENT_FILEEXTENSION&quot;)))) + &quot;shp&quot;"/>
+      <elementValue elementRef="FILEMASK" value="((String)globalMap.get(&quot;tFileList_2_CURRENT_FILE&quot;)).substring(0, ((String)globalMap.get(&quot;tFileList_2_CURRENT_FILE&quot;)).indexOf(((String)globalMap.get(&quot;tFileList_2_CURRENT_FILEEXTENSION&quot;)))) + &quot;shx&quot;"/>
+      <elementValue elementRef="FILEMASK" value="((String)globalMap.get(&quot;tFileList_2_CURRENT_FILE&quot;)).substring(0, ((String)globalMap.get(&quot;tFileList_2_CURRENT_FILE&quot;)).indexOf(((String)globalMap.get(&quot;tFileList_2_CURRENT_FILEEXTENSION&quot;)))) + &quot;prj&quot;"/>
+    </elementParameter>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="OVERWRITE" value="true"/>
+    <elementParameter field="CHECK" name="ENCRYPT_FILES" value="false"/>
+    <elementParameter field="TEXT" name="PASSWORD" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ZIP64_MODE" value="ASNEEDED"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tFileArchive_1"/>
+  </node>
+  <node componentName="sGeoServerPublisher" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="320" sizeX="51" sizeY="51">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="sGeoServerPublisher_2"/>
+    <elementParameter field="CLOSED_LIST" name="ACTION" value="INSERT_OR_UPDATE"/>
+    <elementParameter field="FILE" name="DATASTORE_FILE" value="((String)globalMap.get(&quot;tFileList_2_CURRENT_FILEPATH&quot;)).substring(0, ((String)globalMap.get(&quot;tFileList_2_CURRENT_FILEPATH&quot;)).indexOf(((String)globalMap.get(&quot;tFileList_2_CURRENT_FILEEXTENSION&quot;)))) + &quot;zip&quot;"/>
+    <elementParameter field="TEXT" name="FEATURETYPE" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="NS" value="context.geosever_namespace_prefix"/>
+    <elementParameter field="TEXT" name="URL" value="context.geoserver_server_host"/>
+    <elementParameter field="TEXT" name="USERNAME" value="context.geoserver_username"/>
+    <elementParameter field="TEXT" name="PASSWORD" value="context.geoserver_password"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+  </node>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="sGeoServerPublisher_1">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate1"/>
+  </connection>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_2" offsetLabelX="0" offsetLabelY="0" source="tFileList_2" target="tFileArchive_1">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate2"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFileArchive_1" offsetLabelX="0" offsetLabelY="0" source="tFileArchive_1" target="sGeoServerPublisher_2">
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="sGeoServerPublisher_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+</talendfile:ProcessType>

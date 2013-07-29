@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:XmlFileConnection xmi:id="_tYF5oEOMEeKQmP8jPsSC2A" name="repository.metadataFileXml" dataPackage="_tYI890OMEeKQmP8jPsSC2A" XmlFilePath="/tmp/capa.xml" Encoding="UTF-8">
+    <schema xmi:id="_tYI88EOMEeKQmP8jPsSC2A" LimitBoucle="-1" AbsoluteXPathQuery="/WMS_Capabilities//Layer">
+      <schemaTargets xmi:id="_tYI88UOMEeKQmP8jPsSC2A" RelativeXPathQuery="Name" TagName="Name"/>
+      <schemaTargets xmi:id="_tYI88kOMEeKQmP8jPsSC2A" RelativeXPathQuery="Title" TagName="Title"/>
+      <schemaTargets xmi:id="_tYI880OMEeKQmP8jPsSC2A" RelativeXPathQuery="EX_GeographicBoundingBox/westBoundLongitude" TagName="westBoundLongitude"/>
+      <schemaTargets xmi:id="_tYI89EOMEeKQmP8jPsSC2A" RelativeXPathQuery="EX_GeographicBoundingBox/eastBoundLongitude" TagName="eastBoundLongitude"/>
+      <schemaTargets xmi:id="_tYI89UOMEeKQmP8jPsSC2A" RelativeXPathQuery="EX_GeographicBoundingBox/southBoundLatitude" TagName="southBoundLatitude"/>
+      <schemaTargets xmi:id="_tYI89kOMEeKQmP8jPsSC2A" RelativeXPathQuery="EX_GeographicBoundingBox/northBoundLatitude" TagName="northBoundLatitude"/>
+    </schema>
+  </TalendMetadata:XmlFileConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_tYI890OMEeKQmP8jPsSC2A" name="repository.metadataFileXml" dataManager="_tYF5oEOMEeKQmP8jPsSC2A">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_tYI8-EOMEeKQmP8jPsSC2A" id="_WA7l8EOMEeKQmP8jPsSC2A" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_tYI8-UOMEeKQmP8jPsSC2A" label="Name" length="66" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_tYI8-kOMEeKQmP8jPsSC2A" label="Title" length="66" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_tYI8-0OMEeKQmP8jPsSC2A" label="westBoundLongitude" length="8" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_tYI8_EOMEeKQmP8jPsSC2A" label="eastBoundLongitude" length="8" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_tYI8_UOMEeKQmP8jPsSC2A" label="southBoundLatitude" length="8" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_tYI8_kOMEeKQmP8jPsSC2A" label="northBoundLatitude" length="8" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

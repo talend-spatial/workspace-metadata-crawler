@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:XmlFileConnection xmi:id="_OkZggO8CEeKCzeIbP-qb6A" name="cswGetRecordById" dataPackage="_OkZghu8CEeKCzeIbP-qb6A" XmlFilePath="/home/francois/Workspace/github/core-geonetwork/web/src/main/webapp/xml/csw/test/csw-GetRecordById.xml" Encoding="UTF-8" inputModel="false">
+    <root xmi:id="_OkZgge8CEeKCzeIbP-qb6A" XMLPath="/csw:GetRecordById" RelatedColumn="" Attribute="main" Order="1" Type="id_String"/>
+    <root xmi:id="_OkZggu8CEeKCzeIbP-qb6A" XMLPath="service" RelatedColumn="" DefaultValue="CSW" Attribute="attri" Order="1" Type="id_String"/>
+    <root xmi:id="_OkZgg-8CEeKCzeIbP-qb6A" XMLPath="version" RelatedColumn="" DefaultValue="2.0.2" Attribute="attri" Order="2" Type="id_String"/>
+    <root xmi:id="_OkZghO8CEeKCzeIbP-qb6A" XMLPath="csw" RelatedColumn="" DefaultValue="http://www.opengis.net/cat/csw/2.0.2" Attribute="ns" Order="3" Type="id_String"/>
+    <loop xmi:id="_OkZghe8CEeKCzeIbP-qb6A" XMLPath="/csw:GetRecordById/csw:Id" RelatedColumn="Id" Attribute="main" Order="4" Type="id_String"/>
+  </TalendMetadata:XmlFileConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_OkZghu8CEeKCzeIbP-qb6A" name="default" dataManager="_OkZggO8CEeKCzeIbP-qb6A">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_OkZgh-8CEeKCzeIbP-qb6A" name="metadata" id="_EQMFwO8CEeKCzeIbP-qb6A" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_OkZgiO8CEeKCzeIbP-qb6A" name="csw:Id" label="Id" talendType="id_String"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

@@ -3,6 +3,7 @@
   <TalendMetadata:DelimitedFileConnection xmi:id="_k2uc8OPnEeKXY41c3BjRgQ" name="metadataProperties" dataPackage="_k2uc8ePnEeKXY41c3BjRgQ" Server="Localhost 127.0.0.1" FilePath="/usr/local/App/talend/TOS_DI-r104014-V5.3.1/workspace/METADATA_CRAWLER/_resources/metadata-properties.csv" Encoding="UTF-8" FieldSeparatorValue="&quot;;&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true"/>
   <orgomg.cwm.resource.record:RecordFile xmi:id="_k2uc8ePnEeKXY41c3BjRgQ" name="default" dataManager="_k2uc8OPnEeKXY41c3BjRgQ">
     <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_k2uc8uPnEeKXY41c3BjRgQ" name="metadata" id="_Ogc-gOPnEeKXY41c3BjRgQ" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_iS47MOftEeK1v9Wc0iGVpA" name="dataType" label="dataType" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_k2uc8-PnEeKXY41c3BjRgQ" name="mdIndividualName" label="mdIndividualName" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;" originalLength="400"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_k2uc9OPnEeKXY41c3BjRgQ" name="mdOrganisationName" label="mdOrganisationName" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;" originalLength="400"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_k2uc9ePnEeKXY41c3BjRgQ" name="mdPositionName" label="mdPositionName" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;" originalLength="400"/>
