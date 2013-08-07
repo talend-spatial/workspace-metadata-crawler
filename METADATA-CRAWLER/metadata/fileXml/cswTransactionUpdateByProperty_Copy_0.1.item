@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:XmlFileConnection xmi:id="_573G8PhcEeKERde_fZ4FZA" name="cswTransactionUpdateByProperty_Copy" dataPackage="_cprmYPhcEeKERde_fZ4FZA" XmlFilePath="/tmp/csw/33ea7e9466c3e24d378186d92f86a7be3f5bd66d9470b631e826ff939f645952.xml" Encoding="UTF-8" inputModel="false">
+    <root xmi:id="_cprmUfhcEeKERde_fZ4FZA" XMLPath="/csw:Transaction" RelatedColumn="" Attribute="main" Order="1" Type="id_String"/>
+    <root xmi:id="_cprmUvhcEeKERde_fZ4FZA" XMLPath="service" RelatedColumn="" DefaultValue="CSW" Attribute="attri" Order="1" Type="id_String"/>
+    <root xmi:id="_cprmU_hcEeKERde_fZ4FZA" XMLPath="version" RelatedColumn="" DefaultValue="2.0.2" Attribute="attri" Order="2" Type="id_String"/>
+    <root xmi:id="_cprmVPhcEeKERde_fZ4FZA" XMLPath="ogc" RelatedColumn="" DefaultValue="http://www.opengis.net/ogc" Attribute="ns" Order="3" Type="id_String"/>
+    <root xmi:id="_cprmVfhcEeKERde_fZ4FZA" XMLPath="csw" RelatedColumn="" DefaultValue="http://www.opengis.net/cat/csw/2.0.2" Attribute="ns" Order="4" Type="id_String"/>
+    <root xmi:id="_cprmVvhcEeKERde_fZ4FZA" XMLPath="/csw:Transaction/csw:Update" RelatedColumn="" Attribute="main" Order="5" Type="id_String"/>
+    <root xmi:id="_cprmV_hcEeKERde_fZ4FZA" XMLPath="/csw:Transaction/csw:Update/csw:Constraint" RelatedColumn="" Attribute="branch" Order="9" Type="id_String"/>
+    <root xmi:id="_cprmWPhcEeKERde_fZ4FZA" XMLPath="version" RelatedColumn="" DefaultValue="1.1.0" Attribute="attri" Order="10" Type="id_String"/>
+    <root xmi:id="_cprmWfhcEeKERde_fZ4FZA" XMLPath="/csw:Transaction/csw:Update/csw:Constraint/ogc:Filter" RelatedColumn="" Attribute="branch" Order="11" Type="id_String"/>
+    <root xmi:id="_cprmWvhcEeKERde_fZ4FZA" XMLPath="/csw:Transaction/csw:Update/csw:Constraint/ogc:Filter/ogc:PropertyIsEqualTo" RelatedColumn="" Attribute="branch" Order="12" Type="id_String"/>
+    <root xmi:id="_cprmW_hcEeKERde_fZ4FZA" XMLPath="/csw:Transaction/csw:Update/csw:Constraint/ogc:Filter/ogc:PropertyIsEqualTo/ogc:PropertyName" RelatedColumn="" DefaultValue="Identifier" Attribute="branch" Order="13" Type="id_String"/>
+    <root xmi:id="_cprmXPhcEeKERde_fZ4FZA" XMLPath="/csw:Transaction/csw:Update/csw:Constraint/ogc:Filter/ogc:PropertyIsEqualTo/ogc:Literal" RelatedColumn="uuid" Attribute="branch" Order="14" Type="id_String"/>
+    <loop xmi:id="_cprmXfhcEeKERde_fZ4FZA" XMLPath="/csw:Transaction/csw:Update/csw:RecordProperty" RelatedColumn="" Attribute="main" Order="6" Type="id_String"/>
+    <loop xmi:id="_cprmXvhcEeKERde_fZ4FZA" XMLPath="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Name" RelatedColumn="PropertyName" Attribute="branch" Order="7" Type="id_String"/>
+    <loop xmi:id="_cprmX_hcEeKERde_fZ4FZA" XMLPath="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Value" RelatedColumn="PropertyValue" Attribute="branch" Order="8" Type="id_String"/>
+  </TalendMetadata:XmlFileConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_cprmYPhcEeKERde_fZ4FZA" name="default" dataManager="_573G8PhcEeKERde_fZ4FZA">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_cprmYfhcEeKERde_fZ4FZA" name="metadata" id="_8JyzkPhbEeKERde_fZ4FZA" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cprmYvhcEeKERde_fZ4FZA" name="uuid" label="uuid" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cprmY_hcEeKERde_fZ4FZA" name="csw:Name" label="Name" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cprmZPhcEeKERde_fZ4FZA" name="csw:Value" label="Value" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cprmZfhcEeKERde_fZ4FZA" name="ogc:PropertyName" label="PropertyName" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cprmZvhcEeKERde_fZ4FZA" name="PropertyValue" label="PropertyValue" talendType="id_String"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

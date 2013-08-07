@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:XmlFileConnection xmi:id="_cprmUPhcEeKERde_fZ4FZA" name="cswTransactionUpdateByProperty" dataPackage="_cprmYPhcEeKERde_fZ4FZA" XmlFilePath="/tmp/csw/33ea7e9466c3e24d378186d92f86a7be3f5bd66d9470b631e826ff939f645952.xml" Encoding="UTF-8" inputModel="false" outputFilePath="">
+    <root xmi:id="_JPnIYPheEeKERde_fZ4FZA" XMLPath="/csw:Transaction" RelatedColumn="" Attribute="main" Order="1" Type="id_String"/>
+    <root xmi:id="_JPnIYfheEeKERde_fZ4FZA" XMLPath="service" RelatedColumn="" DefaultValue="CSW" Attribute="attri" Order="1" Type="id_String"/>
+    <root xmi:id="_JPnIYvheEeKERde_fZ4FZA" XMLPath="version" RelatedColumn="" DefaultValue="2.0.2" Attribute="attri" Order="2" Type="id_String"/>
+    <root xmi:id="_JPnIY_heEeKERde_fZ4FZA" XMLPath="ogc" RelatedColumn="" DefaultValue="http://www.opengis.net/ogc" Attribute="ns" Order="3" Type="id_String"/>
+    <root xmi:id="_JPnIZPheEeKERde_fZ4FZA" XMLPath="csw" RelatedColumn="" DefaultValue="http://www.opengis.net/cat/csw/2.0.2" Attribute="ns" Order="4" Type="id_String"/>
+    <loop xmi:id="_JPnIZfheEeKERde_fZ4FZA" XMLPath="/csw:Transaction/csw:Update" RelatedColumn="" Attribute="main" Order="5" Type="id_String"/>
+    <loop xmi:id="_JPnIZvheEeKERde_fZ4FZA" XMLPath="/csw:Transaction/csw:Update/csw:RecordProperty" RelatedColumn="" Attribute="branch" Order="6" Type="id_String"/>
+    <loop xmi:id="_JPnIZ_heEeKERde_fZ4FZA" XMLPath="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Name" RelatedColumn="" DefaultValue="gmd:spatialRepresentationInfo/gmd:MD_VectorSpatialRepresentation/gmd:geometricObjects/gmd:MD_GeometricObjects/gmd:geometricObjectCount" Attribute="branch" Order="7" Type="id_String"/>
+    <loop xmi:id="_JPnIaPheEeKERde_fZ4FZA" XMLPath="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Value" RelatedColumn="geometryCount" Attribute="branch" Order="8" Type="id_String"/>
+    <loop xmi:id="_JPnIafheEeKERde_fZ4FZA" XMLPath="/csw:Transaction/csw:Update/csw:Constraint" RelatedColumn="" Attribute="branch" Order="9" Type="id_String"/>
+    <loop xmi:id="_JPnIavheEeKERde_fZ4FZA" XMLPath="version" RelatedColumn="" DefaultValue="1.1.0" Attribute="attri" Order="10" Type="id_String"/>
+    <loop xmi:id="_JPnvcPheEeKERde_fZ4FZA" XMLPath="/csw:Transaction/csw:Update/csw:Constraint/ogc:Filter" RelatedColumn="" Attribute="branch" Order="11" Type="id_String"/>
+    <loop xmi:id="_JPnvcfheEeKERde_fZ4FZA" XMLPath="/csw:Transaction/csw:Update/csw:Constraint/ogc:Filter/ogc:PropertyIsEqualTo" RelatedColumn="" Attribute="branch" Order="12" Type="id_String"/>
+    <loop xmi:id="_JPnvcvheEeKERde_fZ4FZA" XMLPath="/csw:Transaction/csw:Update/csw:Constraint/ogc:Filter/ogc:PropertyIsEqualTo/ogc:PropertyName" RelatedColumn="" DefaultValue="Identifier" Attribute="branch" Order="13" Type="id_String"/>
+    <loop xmi:id="_JPnvc_heEeKERde_fZ4FZA" XMLPath="/csw:Transaction/csw:Update/csw:Constraint/ogc:Filter/ogc:PropertyIsEqualTo/ogc:Literal" RelatedColumn="uuid" Attribute="branch" Order="14" Type="id_String"/>
+    <loop xmi:id="_JPnvdPheEeKERde_fZ4FZA" XMLPath="/csw:Transaction/csw:Update/csw:RecordProperty" RelatedColumn="" Attribute="branch" Order="15"/>
+    <loop xmi:id="_JPnvdfheEeKERde_fZ4FZA" XMLPath="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Name" RelatedColumn="" DefaultValue="gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:westBoundLongitude/gco:Decimal" Attribute="branch" Order="16"/>
+    <loop xmi:id="_JPnvdvheEeKERde_fZ4FZA" XMLPath="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Value" RelatedColumn="west" Attribute="branch" Order="17" Type="id_String"/>
+    <loop xmi:id="_JPnvd_heEeKERde_fZ4FZA" XMLPath="/csw:Transaction/csw:Update/csw:RecordProperty" RelatedColumn="" Attribute="branch" Order="18"/>
+    <loop xmi:id="_JPnvePheEeKERde_fZ4FZA" XMLPath="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Name" RelatedColumn="" DefaultValue="gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:southBoundLatitude/gco:Decimal" Attribute="branch" Order="19"/>
+    <loop xmi:id="_JPnvefheEeKERde_fZ4FZA" XMLPath="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Value" RelatedColumn="south" Attribute="branch" Order="20" Type="id_String"/>
+    <loop xmi:id="_JPnvevheEeKERde_fZ4FZA" XMLPath="/csw:Transaction/csw:Update/csw:RecordProperty" RelatedColumn="" Attribute="branch" Order="21"/>
+    <loop xmi:id="_JPnve_heEeKERde_fZ4FZA" XMLPath="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Name" RelatedColumn="" DefaultValue="gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:eastBoundLongitude/gco:Decimal" Attribute="branch" Order="22"/>
+    <loop xmi:id="_JPnvfPheEeKERde_fZ4FZA" XMLPath="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Value" RelatedColumn="east" Attribute="branch" Order="23" Type="id_String"/>
+    <loop xmi:id="_JPnvffheEeKERde_fZ4FZA" XMLPath="/csw:Transaction/csw:Update/csw:RecordProperty" RelatedColumn="" Attribute="branch" Order="24"/>
+    <loop xmi:id="_JPnvfvheEeKERde_fZ4FZA" XMLPath="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Name" RelatedColumn="" DefaultValue="gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:northBoundLatitude/gco:Decimal" Attribute="branch" Order="25"/>
+    <loop xmi:id="_JPnvf_heEeKERde_fZ4FZA" XMLPath="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Value" RelatedColumn="north" Attribute="branch" Order="26" Type="id_String"/>
+  </TalendMetadata:XmlFileConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_cprmYPhcEeKERde_fZ4FZA" name="default" dataManager="_cprmUPhcEeKERde_fZ4FZA">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_cprmYfhcEeKERde_fZ4FZA" name="metadata" id="_8JyzkPhbEeKERde_fZ4FZA" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DTgLwPhdEeKERde_fZ4FZA" name="uuid" label="uuid" talendType="id_String">
+        <initialValue xmi:id="_DTgLwfhdEeKERde_fZ4FZA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DTgL5PhdEeKERde_fZ4FZA" name="srs" label="srs" talendType="id_String">
+        <initialValue xmi:id="_DTgL5fhdEeKERde_fZ4FZA" body="&quot;EPSG:4326&quot;"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DTgL6PhdEeKERde_fZ4FZA" name="publicationDate" label="publicationDate" talendType="id_String">
+        <initialValue xmi:id="_DTgL6fhdEeKERde_fZ4FZA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DTgL6vhdEeKERde_fZ4FZA" name="publicationDateType" label="publicationDateType" talendType="id_String">
+        <initialValue xmi:id="_DTgL6_hdEeKERde_fZ4FZA" body="&quot;publication&quot;"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DTgMCvhdEeKERde_fZ4FZA" name="geometricType" label="geometricType" talendType="id_String">
+        <initialValue xmi:id="_DTgMC_hdEeKERde_fZ4FZA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DTgMDPhdEeKERde_fZ4FZA" name="geometryCount" label="geometryCount" talendType="id_String">
+        <initialValue xmi:id="_DTgMDfhdEeKERde_fZ4FZA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DTgMKPhdEeKERde_fZ4FZA" name="spatialRepresentation" label="spatialRepresentation" talendType="id_String">
+        <initialValue xmi:id="_DTgMKfhdEeKERde_fZ4FZA" body="&quot;vector&quot;"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DTgMNPhdEeKERde_fZ4FZA" name="west" label="west" talendType="id_String">
+        <initialValue xmi:id="_DTgMNfhdEeKERde_fZ4FZA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DTgMNvhdEeKERde_fZ4FZA" name="east" label="east" talendType="id_String">
+        <initialValue xmi:id="_DTgMN_hdEeKERde_fZ4FZA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DTgMOPhdEeKERde_fZ4FZA" name="south" label="south" talendType="id_String">
+        <initialValue xmi:id="_DTgMOfhdEeKERde_fZ4FZA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DTgMOvhdEeKERde_fZ4FZA" name="north" label="north" talendType="id_String">
+        <initialValue xmi:id="_DTgMO_hdEeKERde_fZ4FZA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DTgMPvhdEeKERde_fZ4FZA" name="formatName" label="formatName" talendType="id_String">
+        <initialValue xmi:id="_DTgMP_hdEeKERde_fZ4FZA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DTgMQPhdEeKERde_fZ4FZA" name="formatVersion" label="formatVersion" talendType="id_String">
+        <initialValue xmi:id="_DTgMQfhdEeKERde_fZ4FZA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DTgMQvhdEeKERde_fZ4FZA" name="linkage1URL" label="linkage1URL" talendType="id_String">
+        <initialValue xmi:id="_DTgMQ_hdEeKERde_fZ4FZA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DTgMRPhdEeKERde_fZ4FZA" name="linkage1protocol" label="linkage1protocol" talendType="id_String">
+        <initialValue xmi:id="_DTgMRfhdEeKERde_fZ4FZA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DTgMRvhdEeKERde_fZ4FZA" name="linkage1name" label="linkage1name" talendType="id_String">
+        <initialValue xmi:id="_DTgMR_hdEeKERde_fZ4FZA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DTgMSPhdEeKERde_fZ4FZA" name="linkage1description" label="linkage1description" talendType="id_String">
+        <initialValue xmi:id="_DTgMSfhdEeKERde_fZ4FZA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DTgMSvhdEeKERde_fZ4FZA" name="linkage2URL" label="linkage2URL" talendType="id_String">
+        <initialValue xmi:id="_DTgMS_hdEeKERde_fZ4FZA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DTgMTPhdEeKERde_fZ4FZA" name="linkage2protocol" label="linkage2protocol" talendType="id_String">
+        <initialValue xmi:id="_DTgMTfhdEeKERde_fZ4FZA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DTgMTvhdEeKERde_fZ4FZA" name="linkage2name" label="linkage2name" talendType="id_String">
+        <initialValue xmi:id="_DTgMT_hdEeKERde_fZ4FZA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DTgMUPhdEeKERde_fZ4FZA" name="linkage2description" label="linkage2description" talendType="id_String">
+        <initialValue xmi:id="_DTgMUfhdEeKERde_fZ4FZA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DTgMUvhdEeKERde_fZ4FZA" name="linkage3URL" label="linkage3URL" talendType="id_String">
+        <initialValue xmi:id="_DTgMU_hdEeKERde_fZ4FZA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DTgMVPhdEeKERde_fZ4FZA" name="linkage3protocol" label="linkage3protocol" talendType="id_String">
+        <initialValue xmi:id="_DTgMVfhdEeKERde_fZ4FZA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DTgMVvhdEeKERde_fZ4FZA" name="linkage3name" label="linkage3name" talendType="id_String">
+        <initialValue xmi:id="_DTgMV_hdEeKERde_fZ4FZA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DTgMWPhdEeKERde_fZ4FZA" name="linkage3description" label="linkage3description" talendType="id_String">
+        <initialValue xmi:id="_DTgMWfhdEeKERde_fZ4FZA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DTgMYvhdEeKERde_fZ4FZA" name="fileName" label="fileName" talendType="id_String">
+        <initialValue xmi:id="_DTgMY_hdEeKERde_fZ4FZA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DTgMZPhdEeKERde_fZ4FZA" name="filePath" label="filePath" talendType="id_String">
+        <initialValue xmi:id="_DTgMZfhdEeKERde_fZ4FZA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DTgMZvhdEeKERde_fZ4FZA" name="errors" label="errors" talendType="id_String">
+        <initialValue xmi:id="_DTgMZ_hdEeKERde_fZ4FZA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DTgMaPhdEeKERde_fZ4FZA" name="extra" label="extra" talendType="id_String">
+        <initialValue xmi:id="_DTgMafhdEeKERde_fZ4FZA" body=""/>
+      </feature>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:XmlFileConnection xmi:id="_2NbLYOPZEeKXY41c3BjRgQ" name="Copy_of_iso19139" label="Copy_of_iso19139" dataPackage="_jfv-POPUEeKXY41c3BjRgQ" XmlFilePath="/home/francois/Workspace/github/core-geonetwork/web/src/main/webapp/WEB-INF/data/config/schema_plugins/iso19139/templates/vector.xml" Encoding="UTF-8" inputModel="false" outputFilePath="">
+    <root xmi:id="_jfvWguPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata" RelatedColumn="" Attribute="main" Order="1" Type="id_String"/>
+    <root xmi:id="_jfvWg-PUEeKXY41c3BjRgQ" XMLPath="gml" RelatedColumn="" DefaultValue="http://www.opengis.net/gml" Attribute="ns" Order="1" Type="id_String"/>
+    <root xmi:id="_jfvWhOPUEeKXY41c3BjRgQ" XMLPath="gco" RelatedColumn="" DefaultValue="http://www.isotc211.org/2005/gco" Attribute="ns" Order="2" Type="id_String"/>
+    <root xmi:id="_jfvWhePUEeKXY41c3BjRgQ" XMLPath="gmd" RelatedColumn="" DefaultValue="http://www.isotc211.org/2005/gmd" Attribute="ns" Order="3" Type="id_String"/>
+    <root xmi:id="_jfvWhuPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:fileIdentifier" RelatedColumn="" Attribute="branch" Order="4" Type="id_String"/>
+    <root xmi:id="_jfvWh-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:fileIdentifier/gco:CharacterString" RelatedColumn="uuid" Attribute="branch" Order="5" Type="id_String"/>
+    <root xmi:id="_jfvWiOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:language" RelatedColumn="" Attribute="branch" Order="6" Type="id_String"/>
+    <root xmi:id="_jfvWiePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:language/gmd:LanguageCode" RelatedColumn="" Attribute="branch" Order="7" Type="id_String"/>
+    <root xmi:id="_jfvWiuPUEeKXY41c3BjRgQ" XMLPath="codeList" RelatedColumn="" DefaultValue="http://www.loc.gov/standards/iso639-2/" Attribute="attri" Order="8" Type="id_String"/>
+    <root xmi:id="_jfvWi-PUEeKXY41c3BjRgQ" XMLPath="codeListValue" RelatedColumn="mdLanguage" Attribute="attri" Order="9" Type="id_String"/>
+    <root xmi:id="_jfvWjOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:characterSet" RelatedColumn="" Attribute="branch" Order="10" Type="id_String"/>
+    <root xmi:id="_jfvWjePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:characterSet/gmd:MD_CharacterSetCode" RelatedColumn="" DefaultValue="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#MD_CharacterSetCode" Attribute="branch" Order="11" Type="id_String"/>
+    <root xmi:id="_jfvWjuPUEeKXY41c3BjRgQ" XMLPath="codeListValue" RelatedColumn="mdCharacterSet" Attribute="attri" Order="12" Type="id_String"/>
+    <root xmi:id="_jfvWj-PUEeKXY41c3BjRgQ" XMLPath="codeList" RelatedColumn="" Attribute="attri" Order="13" Type="id_String"/>
+    <root xmi:id="_jfvWkOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:contact" RelatedColumn="" Attribute="branch" Order="14" Type="id_String"/>
+    <root xmi:id="_jfvWkePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty" RelatedColumn="" Attribute="branch" Order="15" Type="id_String"/>
+    <root xmi:id="_jfvWkuPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:individualName" RelatedColumn="" Attribute="branch" Order="16" Type="id_String"/>
+    <root xmi:id="_jfvWk-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString" RelatedColumn="mdIndividualName" Attribute="branch" Order="17" Type="id_String"/>
+    <root xmi:id="_jfvWlOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:organisationName" RelatedColumn="" Attribute="branch" Order="18" Type="id_String"/>
+    <root xmi:id="_jfvWlePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString" RelatedColumn="mdOrganisationName" Attribute="branch" Order="19" Type="id_String"/>
+    <root xmi:id="_jfvWluPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:positionName" RelatedColumn="" Attribute="branch" Order="20" Type="id_String"/>
+    <root xmi:id="_jfvWl-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:positionName/gco:CharacterString" RelatedColumn="mdPositionName" Attribute="branch" Order="21" Type="id_String"/>
+    <root xmi:id="_jfvWmOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo" RelatedColumn="" Attribute="branch" Order="22" Type="id_String"/>
+    <root xmi:id="_jfvWmePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact" RelatedColumn="" Attribute="branch" Order="23" Type="id_String"/>
+    <root xmi:id="_jfvWmuPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone" RelatedColumn="" Attribute="branch" Order="24" Type="id_String"/>
+    <root xmi:id="_jfvWm-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone" RelatedColumn="" Attribute="branch" Order="25" Type="id_String"/>
+    <root xmi:id="_jfvWnOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:voice" RelatedColumn="" Attribute="branch" Order="26" Type="id_String"/>
+    <root xmi:id="_jfvWnePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:voice/gco:CharacterString" RelatedColumn="" Attribute="branch" Order="27" Type="id_String"/>
+    <root xmi:id="_jfvWnuPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:facsimile" RelatedColumn="" Attribute="branch" Order="28" Type="id_String"/>
+    <root xmi:id="_jfvWn-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:facsimile/gco:CharacterString" RelatedColumn="" Attribute="branch" Order="29" Type="id_String"/>
+    <root xmi:id="_jfvWoOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address" RelatedColumn="" Attribute="branch" Order="30" Type="id_String"/>
+    <root xmi:id="_jfvWoePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address" RelatedColumn="" Attribute="branch" Order="31" Type="id_String"/>
+    <root xmi:id="_jfvWouPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:deliveryPoint" RelatedColumn="" Attribute="branch" Order="32" Type="id_String"/>
+    <root xmi:id="_jfvWo-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:deliveryPoint/gco:CharacterString" RelatedColumn="mdDeliveryPoint" Attribute="branch" Order="33" Type="id_String"/>
+    <root xmi:id="_jfvWpOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:city" RelatedColumn="" Attribute="branch" Order="34" Type="id_String"/>
+    <root xmi:id="_jfvWpePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:city/gco:CharacterString" RelatedColumn="mdCity" Attribute="branch" Order="35" Type="id_String"/>
+    <root xmi:id="_jfvWpuPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:administrativeArea" RelatedColumn="" Attribute="branch" Order="36" Type="id_String"/>
+    <root xmi:id="_jfvWp-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:administrativeArea/gco:CharacterString" RelatedColumn="mdAdministrativeArea" Attribute="branch" Order="37" Type="id_String"/>
+    <root xmi:id="_jfvWqOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:postalCode" RelatedColumn="" Attribute="branch" Order="38" Type="id_String"/>
+    <root xmi:id="_jfvWqePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:postalCode/gco:CharacterString" RelatedColumn="mdPostalCode" Attribute="branch" Order="39" Type="id_String"/>
+    <root xmi:id="_jfvWquPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:country" RelatedColumn="" Attribute="branch" Order="40" Type="id_String"/>
+    <root xmi:id="_jfvWq-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:country/gco:CharacterString" RelatedColumn="mdCountry" Attribute="branch" Order="41" Type="id_String"/>
+    <root xmi:id="_jfvWrOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress" RelatedColumn="" Attribute="branch" Order="42" Type="id_String"/>
+    <root xmi:id="_jfvWrePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString" RelatedColumn="mdEmail" Attribute="branch" Order="43" Type="id_String"/>
+    <root xmi:id="_jfvWruPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:role" RelatedColumn="" Attribute="branch" Order="44" Type="id_String"/>
+    <root xmi:id="_jfv9kOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:contact/gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode" RelatedColumn="" Attribute="branch" Order="45" Type="id_String"/>
+    <root xmi:id="_jfv9kePUEeKXY41c3BjRgQ" XMLPath="codeListValue" RelatedColumn="mdRole" Attribute="attri" Order="46" Type="id_String"/>
+    <root xmi:id="_jfv9kuPUEeKXY41c3BjRgQ" XMLPath="codeList" RelatedColumn="" DefaultValue="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#CI_RoleCode" Attribute="attri" Order="47" Type="id_String"/>
+    <root xmi:id="_jfv9k-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:dateStamp" RelatedColumn="" Attribute="branch" Order="48" Type="id_String"/>
+    <root xmi:id="_jfv9lOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:dateStamp/gco:DateTime" RelatedColumn="dateStamp" Attribute="branch" Order="49" Type="id_String"/>
+    <root xmi:id="_jfv9lePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:metadataStandardName" RelatedColumn="" Attribute="branch" Order="50" Type="id_String"/>
+    <root xmi:id="_jfv9luPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:metadataStandardName/gco:CharacterString" RelatedColumn="standardName" Attribute="branch" Order="51" Type="id_String"/>
+    <root xmi:id="_jfv9l-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:metadataStandardVersion" RelatedColumn="" Attribute="branch" Order="52" Type="id_String"/>
+    <root xmi:id="_jfv9mOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:metadataStandardVersion/gco:CharacterString" RelatedColumn="standardVersion" Attribute="branch" Order="53" Type="id_String"/>
+    <root xmi:id="_jfv9mePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:referenceSystemInfo" RelatedColumn="" Attribute="branch" Order="54" Type="id_String"/>
+    <root xmi:id="_jfv9muPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:referenceSystemInfo/gmd:MD_ReferenceSystem" RelatedColumn="" Attribute="branch" Order="55" Type="id_String"/>
+    <root xmi:id="_jfv9m-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier" RelatedColumn="" Attribute="branch" Order="56" Type="id_String"/>
+    <root xmi:id="_jfv9nOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier" RelatedColumn="" Attribute="branch" Order="57" Type="id_String"/>
+    <root xmi:id="_jfv9nePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:code" RelatedColumn="" Attribute="branch" Order="58" Type="id_String"/>
+    <root xmi:id="_jfv9nuPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:code/gco:CharacterString" RelatedColumn="srs" Attribute="branch" Order="59" Type="id_String"/>
+    <root xmi:id="_jfv9n-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:distributionInfo" RelatedColumn="" Attribute="branch" Order="191" Type="id_String"/>
+    <root xmi:id="_jfv9oOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution" RelatedColumn="" Attribute="branch" Order="192" Type="id_String"/>
+    <root xmi:id="_jfv9oePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions" RelatedColumn="" Attribute="branch" Order="193" Type="id_String"/>
+    <root xmi:id="_jfv9ouPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions" RelatedColumn="" Attribute="branch" Order="194" Type="id_String"/>
+    <root xmi:id="_jfv9o-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine" RelatedColumn="" Attribute="branch" Order="195" Type="id_String"/>
+    <root xmi:id="_jfv9pOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource" RelatedColumn="" Attribute="branch" Order="196" Type="id_String"/>
+    <root xmi:id="_jfv9pePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:linkage" RelatedColumn="" Attribute="branch" Order="197" Type="id_String"/>
+    <root xmi:id="_jfv9puPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:linkage/gmd:URL" RelatedColumn="linkage" Attribute="branch" Order="198" Type="id_String"/>
+    <root xmi:id="_jfv9p-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:protocol" RelatedColumn="" Attribute="branch" Order="199" Type="id_String"/>
+    <root xmi:id="_jfv9qOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:protocol/gco:CharacterString" RelatedColumn="protocol" Attribute="branch" Order="200" Type="id_String"/>
+    <root xmi:id="_jfv9qePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:name" RelatedColumn="" Attribute="branch" Order="201" Type="id_String"/>
+    <root xmi:id="_jfv9quPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:name/gco:CharacterString" RelatedColumn="name" Attribute="branch" Order="202" Type="id_String"/>
+    <root xmi:id="_jfv9q-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:description" RelatedColumn="" Attribute="branch" Order="203" Type="id_String"/>
+    <root xmi:id="_jfv9rOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:description/gco:CharacterString" RelatedColumn="description" Attribute="branch" Order="204" Type="id_String"/>
+    <root xmi:id="_jfv9rePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:dataQualityInfo" RelatedColumn="" Attribute="branch" Order="205" Type="id_String"/>
+    <root xmi:id="_jfv9ruPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality" RelatedColumn="" Attribute="branch" Order="206" Type="id_String"/>
+    <root xmi:id="_jfv9r-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:scope" RelatedColumn="" Attribute="branch" Order="207" Type="id_String"/>
+    <root xmi:id="_jfv9sOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:scope/gmd:DQ_Scope" RelatedColumn="" Attribute="branch" Order="208" Type="id_String"/>
+    <root xmi:id="_jfv9sePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:scope/gmd:DQ_Scope/gmd:level" RelatedColumn="" Attribute="branch" Order="209" Type="id_String"/>
+    <root xmi:id="_jfv9suPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:scope/gmd:DQ_Scope/gmd:level/gmd:MD_ScopeCode" RelatedColumn="" Attribute="branch" Order="210" Type="id_String"/>
+    <root xmi:id="_jfv9s-PUEeKXY41c3BjRgQ" XMLPath="codeListValue" RelatedColumn="scopeCode" Attribute="attri" Order="211" Type="id_String"/>
+    <root xmi:id="_jfv9tOPUEeKXY41c3BjRgQ" XMLPath="codeList" RelatedColumn="" DefaultValue="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#MD_ScopeCode" Attribute="attri" Order="212" Type="id_String"/>
+    <root xmi:id="_jfv9tePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:lineage" RelatedColumn="" Attribute="branch" Order="213" Type="id_String"/>
+    <root xmi:id="_jfv9tuPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:lineage/gmd:LI_Lineage" RelatedColumn="" Attribute="branch" Order="214" Type="id_String"/>
+    <root xmi:id="_jfv9t-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:lineage/gmd:LI_Lineage/gmd:statement" RelatedColumn="" Attribute="branch" Order="215" Type="id_String"/>
+    <root xmi:id="_jfv9uOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:lineage/gmd:LI_Lineage/gmd:statement/gco:CharacterString" RelatedColumn="lineage" Attribute="branch" Order="216" Type="id_String"/>
+    <loop xmi:id="_jfv9uePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo" RelatedColumn="" Attribute="main" Order="60" Type="id_String"/>
+    <loop xmi:id="_jfv9uuPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification" RelatedColumn="" Attribute="branch" Order="61" Type="id_String"/>
+    <loop xmi:id="_jfv9u-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation" RelatedColumn="" Attribute="branch" Order="62" Type="id_String"/>
+    <loop xmi:id="_jfv9vOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation" RelatedColumn="" Attribute="branch" Order="63" Type="id_String"/>
+    <loop xmi:id="_jfv9vePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:title" RelatedColumn="" Attribute="branch" Order="64" Type="id_String"/>
+    <loop xmi:id="_jfv9vuPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:title/gco:CharacterString" RelatedColumn="title" Attribute="branch" Order="65" Type="id_String"/>
+    <loop xmi:id="_jfv9v-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date" RelatedColumn="" Attribute="branch" Order="66" Type="id_String"/>
+    <loop xmi:id="_jfv9wOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date/gmd:CI_Date" RelatedColumn="" Attribute="branch" Order="67" Type="id_String"/>
+    <loop xmi:id="_jfv9wePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:date" RelatedColumn="" Attribute="branch" Order="68" Type="id_String"/>
+    <loop xmi:id="_jfv9wuPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:date/gco:DateTime" RelatedColumn="publicationDate" Attribute="branch" Order="69" Type="id_String"/>
+    <loop xmi:id="_jfv9w-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType" RelatedColumn="" Attribute="branch" Order="70" Type="id_String"/>
+    <loop xmi:id="_jfv9xOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode" RelatedColumn="" Attribute="branch" Order="71" Type="id_String"/>
+    <loop xmi:id="_jfv9xePUEeKXY41c3BjRgQ" XMLPath="codeListValue" RelatedColumn="publicationDateType" Attribute="attri" Order="72" Type="id_String"/>
+    <loop xmi:id="_jfv9xuPUEeKXY41c3BjRgQ" XMLPath="codeList" RelatedColumn="" DefaultValue="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#CI_DateTypeCode" Attribute="attri" Order="73" Type="id_String"/>
+    <loop xmi:id="_jfv9x-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:edition" RelatedColumn="" Attribute="branch" Order="74" Type="id_String"/>
+    <loop xmi:id="_jfv9yOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:edition/gco:CharacterString" RelatedColumn="edition" Attribute="branch" Order="75" Type="id_String"/>
+    <loop xmi:id="_jfv9yePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:abstract" RelatedColumn="" Attribute="branch" Order="76" Type="id_String"/>
+    <loop xmi:id="_jfv9yuPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:abstract/gco:CharacterString" RelatedColumn="mdAbstract" Attribute="branch" Order="77" Type="id_String"/>
+    <loop xmi:id="_jfv9y-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:purpose" RelatedColumn="" Attribute="branch" Order="78" Type="id_String"/>
+    <loop xmi:id="_jfv9zOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:purpose/gco:CharacterString" RelatedColumn="purpose" Attribute="branch" Order="79" Type="id_String"/>
+    <loop xmi:id="_jfv9zePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:status" RelatedColumn="" Attribute="branch" Order="80" Type="id_String"/>
+    <loop xmi:id="_jfv9zuPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:status/gmd:MD_ProgressCode" RelatedColumn="" Attribute="branch" Order="81" Type="id_String"/>
+    <loop xmi:id="_jfv9z-PUEeKXY41c3BjRgQ" XMLPath="codeListValue" RelatedColumn="status" Attribute="attri" Order="82" Type="id_String"/>
+    <loop xmi:id="_jfv90OPUEeKXY41c3BjRgQ" XMLPath="codeList" RelatedColumn="" DefaultValue="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#MD_ProgressCode" Attribute="attri" Order="83" Type="id_String"/>
+    <loop xmi:id="_jfv90ePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact" RelatedColumn="" Attribute="branch" Order="84" Type="id_String"/>
+    <loop xmi:id="_jfv90uPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty" RelatedColumn="" Attribute="branch" Order="85" Type="id_String"/>
+    <loop xmi:id="_jfv90-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:individualName" RelatedColumn="" Attribute="branch" Order="86" Type="id_String"/>
+    <loop xmi:id="_jfv91OPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString" RelatedColumn="individualName" Attribute="branch" Order="87" Type="id_String"/>
+    <loop xmi:id="_jfv91ePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:organisationName" RelatedColumn="" Attribute="branch" Order="88" Type="id_String"/>
+    <loop xmi:id="_jfv91uPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString" RelatedColumn="organisationName" Attribute="branch" Order="89" Type="id_String"/>
+    <loop xmi:id="_jfv91-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:positionName" RelatedColumn="" Attribute="branch" Order="90" Type="id_String"/>
+    <loop xmi:id="_jfv92OPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:positionName/gco:CharacterString" RelatedColumn="positionName" Attribute="branch" Order="91" Type="id_String"/>
+    <loop xmi:id="_jfv92ePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo" RelatedColumn="" Attribute="branch" Order="92" Type="id_String"/>
+    <loop xmi:id="_jfv92uPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact" RelatedColumn="" Attribute="branch" Order="93" Type="id_String"/>
+    <loop xmi:id="_jfv92-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone" RelatedColumn="" Attribute="branch" Order="94" Type="id_String"/>
+    <loop xmi:id="_jfv93OPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone" RelatedColumn="" Attribute="branch" Order="95" Type="id_String"/>
+    <loop xmi:id="_jfv93ePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:voice" RelatedColumn="" Attribute="branch" Order="96" Type="id_String"/>
+    <loop xmi:id="_jfv93uPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:voice/gco:CharacterString" RelatedColumn="voice" Attribute="branch" Order="97" Type="id_String"/>
+    <loop xmi:id="_jfv93-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:facsimile" RelatedColumn="" Attribute="branch" Order="98" Type="id_String"/>
+    <loop xmi:id="_jfv94OPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:phone/gmd:CI_Telephone/gmd:facsimile/gco:CharacterString" RelatedColumn="facsimile" Attribute="branch" Order="99" Type="id_String"/>
+    <loop xmi:id="_jfv94ePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address" RelatedColumn="" Attribute="branch" Order="100" Type="id_String"/>
+    <loop xmi:id="_jfv94uPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address" RelatedColumn="" Attribute="branch" Order="101" Type="id_String"/>
+    <loop xmi:id="_jfv94-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:deliveryPoint" RelatedColumn="" Attribute="branch" Order="102" Type="id_String"/>
+    <loop xmi:id="_jfv95OPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:deliveryPoint/gco:CharacterString" RelatedColumn="deliveryPoint" Attribute="branch" Order="103" Type="id_String"/>
+    <loop xmi:id="_jfv95ePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:city" RelatedColumn="" Attribute="branch" Order="104" Type="id_String"/>
+    <loop xmi:id="_jfv95uPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:city/gco:CharacterString" RelatedColumn="city" Attribute="branch" Order="105" Type="id_String"/>
+    <loop xmi:id="_jfv95-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:administrativeArea" RelatedColumn="" Attribute="branch" Order="106" Type="id_String"/>
+    <loop xmi:id="_jfv96OPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:administrativeArea/gco:CharacterString" RelatedColumn="adminArea" Attribute="branch" Order="107" Type="id_String"/>
+    <loop xmi:id="_jfv96ePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:postalCode" RelatedColumn="" Attribute="branch" Order="108" Type="id_String"/>
+    <loop xmi:id="_jfv96uPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:postalCode/gco:CharacterString" RelatedColumn="postalCode" Attribute="branch" Order="109" Type="id_String"/>
+    <loop xmi:id="_jfv96-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:country" RelatedColumn="" Attribute="branch" Order="110" Type="id_String"/>
+    <loop xmi:id="_jfv97OPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:country/gco:CharacterString" RelatedColumn="country" Attribute="branch" Order="111" Type="id_String"/>
+    <loop xmi:id="_jfv97ePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress" RelatedColumn="" Attribute="branch" Order="112" Type="id_String"/>
+    <loop xmi:id="_jfv97uPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString" RelatedColumn="email" Attribute="branch" Order="113" Type="id_String"/>
+    <loop xmi:id="_jfv97-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:role" RelatedColumn="" Attribute="branch" Order="114" Type="id_String"/>
+    <loop xmi:id="_jfv98OPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode" RelatedColumn="" Attribute="branch" Order="115" Type="id_String"/>
+    <loop xmi:id="_jfv98ePUEeKXY41c3BjRgQ" XMLPath="codeListValue" RelatedColumn="role" Attribute="attri" Order="116" Type="id_String"/>
+    <loop xmi:id="_jfv98uPUEeKXY41c3BjRgQ" XMLPath="codeList" RelatedColumn="" DefaultValue="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#CI_RoleCode" Attribute="attri" Order="117" Type="id_String"/>
+    <loop xmi:id="_jfv98-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceMaintenance" RelatedColumn="" Attribute="branch" Order="118" Type="id_String"/>
+    <loop xmi:id="_jfv99OPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceMaintenance/gmd:MD_MaintenanceInformation" RelatedColumn="" Attribute="branch" Order="119" Type="id_String"/>
+    <loop xmi:id="_jfv99ePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceMaintenance/gmd:MD_MaintenanceInformation/gmd:maintenanceAndUpdateFrequency" RelatedColumn="" Attribute="branch" Order="120" Type="id_String"/>
+    <loop xmi:id="_jfv99uPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceMaintenance/gmd:MD_MaintenanceInformation/gmd:maintenanceAndUpdateFrequency/gmd:MD_MaintenanceFrequencyCode" RelatedColumn="" Attribute="branch" Order="121" Type="id_String"/>
+    <loop xmi:id="_jfv99-PUEeKXY41c3BjRgQ" XMLPath="codeListValue" RelatedColumn="maintenanceFrequency" Attribute="attri" Order="122" Type="id_String"/>
+    <loop xmi:id="_jfv9-OPUEeKXY41c3BjRgQ" XMLPath="codeList" RelatedColumn="" Attribute="attri" Order="123" Type="id_String"/>
+    <loop xmi:id="_jfv9-ePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:graphicOverview" RelatedColumn="" Attribute="branch" Order="124" Type="id_String"/>
+    <loop xmi:id="_jfv9-uPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:graphicOverview/gmd:MD_BrowseGraphic" RelatedColumn="" Attribute="branch" Order="125" Type="id_String"/>
+    <loop xmi:id="_jfv9--PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:graphicOverview/gmd:MD_BrowseGraphic/gmd:fileName" RelatedColumn="" Attribute="branch" Order="126" Type="id_String"/>
+    <loop xmi:id="_jfv9_OPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:graphicOverview/gmd:MD_BrowseGraphic/gmd:fileName/gco:CharacterString" RelatedColumn="graphicFileName" Attribute="branch" Order="127" Type="id_String"/>
+    <loop xmi:id="_jfv9_ePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:graphicOverview/gmd:MD_BrowseGraphic/gmd:fileDescription" RelatedColumn="" Attribute="branch" Order="128" Type="id_String"/>
+    <loop xmi:id="_jfv9_uPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:graphicOverview/gmd:MD_BrowseGraphic/gmd:fileDescription/gco:CharacterString" RelatedColumn="graphicFileDesc" Attribute="branch" Order="129" Type="id_String"/>
+    <loop xmi:id="_jfv9_-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords" RelatedColumn="" Attribute="branch" Order="130" Type="id_String"/>
+    <loop xmi:id="_jfv-AOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords" RelatedColumn="" Attribute="branch" Order="131" Type="id_String"/>
+    <loop xmi:id="_jfv-AePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword" RelatedColumn="" Attribute="branch" Order="132" Type="id_String"/>
+    <loop xmi:id="_jfv-AuPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/gco:CharacterString" RelatedColumn="keyword" Attribute="branch" Order="133" Type="id_String"/>
+    <loop xmi:id="_jfv-A-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:type" RelatedColumn="" Attribute="branch" Order="134" Type="id_String"/>
+    <loop xmi:id="_jfv-BOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:type/gmd:MD_KeywordTypeCode" RelatedColumn="" Attribute="branch" Order="135" Type="id_String"/>
+    <loop xmi:id="_jfv-BePUEeKXY41c3BjRgQ" XMLPath="codeListValue" RelatedColumn="keywordType" Attribute="attri" Order="136" Type="id_String"/>
+    <loop xmi:id="_jfv-BuPUEeKXY41c3BjRgQ" XMLPath="codeList" RelatedColumn="" DefaultValue="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#MD_KeywordTypeCode" Attribute="attri" Order="137" Type="id_String"/>
+    <loop xmi:id="_jfv-B-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints" RelatedColumn="" Attribute="branch" Order="138" Type="id_String"/>
+    <loop xmi:id="_jfv-COPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints/gmd:MD_LegalConstraints" RelatedColumn="" Attribute="branch" Order="139" Type="id_String"/>
+    <loop xmi:id="_jfv-CePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:accessConstraints" RelatedColumn="" Attribute="branch" Order="140" Type="id_String"/>
+    <loop xmi:id="_jfv-CuPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:accessConstraints/gmd:MD_RestrictionCode" RelatedColumn="" Attribute="branch" Order="141" Type="id_String"/>
+    <loop xmi:id="_jfv-C-PUEeKXY41c3BjRgQ" XMLPath="codeListValue" RelatedColumn="accessConstraints" Attribute="attri" Order="142" Type="id_String"/>
+    <loop xmi:id="_jfv-DOPUEeKXY41c3BjRgQ" XMLPath="codeList" RelatedColumn="" DefaultValue="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#MD_RestrictionCode" Attribute="attri" Order="143" Type="id_String"/>
+    <loop xmi:id="_jfv-DePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:useConstraints" RelatedColumn="" Attribute="branch" Order="144" Type="id_String"/>
+    <loop xmi:id="_jfv-DuPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:useConstraints/gmd:MD_RestrictionCode" RelatedColumn="" Attribute="branch" Order="145" Type="id_String"/>
+    <loop xmi:id="_jfv-D-PUEeKXY41c3BjRgQ" XMLPath="codeListValue" RelatedColumn="useConstraints" Attribute="attri" Order="146" Type="id_String"/>
+    <loop xmi:id="_jfv-EOPUEeKXY41c3BjRgQ" XMLPath="codeList" RelatedColumn="" DefaultValue="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#MD_RestrictionCode" Attribute="attri" Order="147" Type="id_String"/>
+    <loop xmi:id="_jfv-EePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints" RelatedColumn="" Attribute="branch" Order="148" Type="id_String"/>
+    <loop xmi:id="_jfv-EuPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints/gmd:MD_LegalConstraints/gmd:otherConstraints/gco:CharacterString" RelatedColumn="useConstraintsInfo" Attribute="branch" Order="149" Type="id_String"/>
+    <loop xmi:id="_jfv-E-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:spatialRepresentationType" RelatedColumn="" Attribute="branch" Order="150" Type="id_String"/>
+    <loop xmi:id="_jfv-FOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:spatialRepresentationType/gmd:MD_SpatialRepresentationTypeCode" RelatedColumn="" Attribute="branch" Order="151" Type="id_String"/>
+    <loop xmi:id="_jfv-FePUEeKXY41c3BjRgQ" XMLPath="codeListValue" RelatedColumn="spatialRepresentation" Attribute="attri" Order="152" Type="id_String"/>
+    <loop xmi:id="_jfv-FuPUEeKXY41c3BjRgQ" XMLPath="codeList" RelatedColumn="" DefaultValue="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#MD_SpatialRepresentationTypeCode" Attribute="attri" Order="153" Type="id_String"/>
+    <loop xmi:id="_jfv-F-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:spatialResolution" RelatedColumn="" Attribute="branch" Order="154" Type="id_String"/>
+    <loop xmi:id="_jfv-GOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:spatialResolution/gmd:MD_Resolution" RelatedColumn="" Attribute="branch" Order="155" Type="id_String"/>
+    <loop xmi:id="_jfv-GePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:spatialResolution/gmd:MD_Resolution/gmd:equivalentScale" RelatedColumn="" Attribute="branch" Order="156" Type="id_String"/>
+    <loop xmi:id="_jfv-GuPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:spatialResolution/gmd:MD_Resolution/gmd:equivalentScale/gmd:MD_RepresentativeFraction" RelatedColumn="" Attribute="branch" Order="157" Type="id_String"/>
+    <loop xmi:id="_jfv-G-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:spatialResolution/gmd:MD_Resolution/gmd:equivalentScale/gmd:MD_RepresentativeFraction/gmd:denominator" RelatedColumn="" Attribute="branch" Order="158" Type="id_String"/>
+    <loop xmi:id="_jfv-HOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:spatialResolution/gmd:MD_Resolution/gmd:equivalentScale/gmd:MD_RepresentativeFraction/gmd:denominator/gco:Integer" RelatedColumn="scaleDenominator" Attribute="branch" Order="159" Type="id_String"/>
+    <loop xmi:id="_jfv-HePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:language" RelatedColumn="" Attribute="branch" Order="160" Type="id_String"/>
+    <loop xmi:id="_jfv-HuPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:language/gmd:LanguageCode" RelatedColumn="" Attribute="branch" Order="161" Type="id_String"/>
+    <loop xmi:id="_jfv-H-PUEeKXY41c3BjRgQ" XMLPath="codeList" RelatedColumn="" DefaultValue="http://www.loc.gov/standards/iso639-2/" Attribute="attri" Order="162" Type="id_String"/>
+    <loop xmi:id="_jfv-IOPUEeKXY41c3BjRgQ" XMLPath="codeListValue" RelatedColumn="language" Attribute="attri" Order="163" Type="id_String"/>
+    <loop xmi:id="_jfv-IePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:characterSet" RelatedColumn="" Attribute="branch" Order="164" Type="id_String"/>
+    <loop xmi:id="_jfv-IuPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:characterSet/gmd:MD_CharacterSetCode" RelatedColumn="" Attribute="branch" Order="165" Type="id_String"/>
+    <loop xmi:id="_jfv-I-PUEeKXY41c3BjRgQ" XMLPath="codeListValue" RelatedColumn="" DefaultValue="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#MD_CharacterSetCode" Attribute="attri" Order="166" Type="id_String"/>
+    <loop xmi:id="_jfv-JOPUEeKXY41c3BjRgQ" XMLPath="codeList" RelatedColumn="charset" Attribute="attri" Order="167" Type="id_String"/>
+    <loop xmi:id="_jfv-JePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:topicCategory" RelatedColumn="" Attribute="branch" Order="168" Type="id_String"/>
+    <loop xmi:id="_jfv-JuPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:topicCategory/gmd:MD_TopicCategoryCode" RelatedColumn="topicCategoryCode" Attribute="branch" Order="169" Type="id_String"/>
+    <loop xmi:id="_jfv-J-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent" RelatedColumn="" Attribute="branch" Order="170" Type="id_String"/>
+    <loop xmi:id="_jfv-KOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent" RelatedColumn="" Attribute="branch" Order="171" Type="id_String"/>
+    <loop xmi:id="_jfv-KePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:temporalElement" RelatedColumn="" Attribute="branch" Order="172" Type="id_String"/>
+    <loop xmi:id="_jfv-KuPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:temporalElement/gmd:EX_TemporalExtent" RelatedColumn="" Attribute="branch" Order="173" Type="id_String"/>
+    <loop xmi:id="_jfv-K-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent" RelatedColumn="" Attribute="branch" Order="174" Type="id_String"/>
+    <loop xmi:id="_jfv-LOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent/gml:TimePeriod" RelatedColumn="" Attribute="branch" Order="175" Type="id_String"/>
+    <loop xmi:id="_jfv-LePUEeKXY41c3BjRgQ" XMLPath="gml:id" RelatedColumn="" Attribute="attri" Order="176" Type="id_String"/>
+    <loop xmi:id="_jfv-LuPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent/gml:TimePeriod/gml:beginPosition" RelatedColumn="" Attribute="branch" Order="177" Type="id_String"/>
+    <loop xmi:id="_jfv-L-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent/gml:TimePeriod/gml:endPosition" RelatedColumn="" Attribute="branch" Order="178" Type="id_String"/>
+    <loop xmi:id="_jfv-MOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement" RelatedColumn="" Attribute="branch" Order="179" Type="id_String"/>
+    <loop xmi:id="_jfv-MePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox" RelatedColumn="" Attribute="branch" Order="180" Type="id_String"/>
+    <loop xmi:id="_jfv-MuPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:westBoundLongitude" RelatedColumn="" Attribute="branch" Order="181" Type="id_String"/>
+    <loop xmi:id="_jfv-M-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:westBoundLongitude/gco:Decimal" RelatedColumn="west" Attribute="branch" Order="182" Type="id_String"/>
+    <loop xmi:id="_jfv-NOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:eastBoundLongitude" RelatedColumn="" Attribute="branch" Order="183" Type="id_String"/>
+    <loop xmi:id="_jfv-NePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:eastBoundLongitude/gco:Decimal" RelatedColumn="east" Attribute="branch" Order="184" Type="id_String"/>
+    <loop xmi:id="_jfv-NuPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:southBoundLatitude" RelatedColumn="" Attribute="branch" Order="185" Type="id_String"/>
+    <loop xmi:id="_jfv-N-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:southBoundLatitude/gco:Decimal" RelatedColumn="south" Attribute="branch" Order="186" Type="id_String"/>
+    <loop xmi:id="_jfv-OOPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:northBoundLatitude" RelatedColumn="" Attribute="branch" Order="187" Type="id_String"/>
+    <loop xmi:id="_jfv-OePUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:northBoundLatitude/gco:Decimal" RelatedColumn="north" Attribute="branch" Order="188" Type="id_String"/>
+    <loop xmi:id="_jfv-OuPUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:supplementalInformation" RelatedColumn="" Attribute="branch" Order="189" Type="id_String"/>
+    <loop xmi:id="_jfv-O-PUEeKXY41c3BjRgQ" XMLPath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:supplementalInformation/gco:CharacterString" RelatedColumn="supplementalInformation" Attribute="branch" Order="190" Type="id_String"/>
+  </TalendMetadata:XmlFileConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_jfv-POPUEeKXY41c3BjRgQ" name="default" dataManager="_2NbLYOPZEeKXY41c3BjRgQ">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_jfv-PePUEeKXY41c3BjRgQ" name="metadata" id="_hSc8YOPQEeKXY41c3BjRgQ" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-PuPUEeKXY41c3BjRgQ" name="uuid" label="uuid" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-P-PUEeKXY41c3BjRgQ" name="mdLanguage" label="mdLanguage" talendType="id_String">
+        <initialValue xmi:id="_jfv-QOPUEeKXY41c3BjRgQ" body="eng"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-QePUEeKXY41c3BjRgQ" name="mdCharacterSet" label="mdCharacterSet" talendType="id_String">
+        <initialValue xmi:id="_jfv-QuPUEeKXY41c3BjRgQ" body="utf8"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-Q-PUEeKXY41c3BjRgQ" name="mdIndividualName" label="mdIndividualName" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-ROPUEeKXY41c3BjRgQ" name="mdOrganisationName" label="mdOrganisationName" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-RePUEeKXY41c3BjRgQ" name="mdPositionName" label="mdPositionName" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-RuPUEeKXY41c3BjRgQ" name="mdDeliveryPoint" label="mdDeliveryPoint" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-R-PUEeKXY41c3BjRgQ" name="mdCity" label="mdCity" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-SOPUEeKXY41c3BjRgQ" name="mdAdministrativeArea" label="mdAdministrativeArea" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-SePUEeKXY41c3BjRgQ" name="mdPostalCode" label="mdPostalCode" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-SuPUEeKXY41c3BjRgQ" name="mdCountry" label="mdCountry" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-S-PUEeKXY41c3BjRgQ" name="mdEmail" label="mdEmail" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-TOPUEeKXY41c3BjRgQ" name="mdRole" label="mdRole" talendType="id_String">
+        <initialValue xmi:id="_jfv-TePUEeKXY41c3BjRgQ" body="pointOfContact"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-TuPUEeKXY41c3BjRgQ" name="dateStamp" label="dateStamp" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-T-PUEeKXY41c3BjRgQ" name="standardName" label="standardName" talendType="id_String">
+        <initialValue xmi:id="_jfv-UOPUEeKXY41c3BjRgQ" body="ISO 19115:2003/19139"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-UePUEeKXY41c3BjRgQ" name="standardVersion" label="standardVersion" talendType="id_String">
+        <initialValue xmi:id="_jfv-UuPUEeKXY41c3BjRgQ" body="1.0"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-U-PUEeKXY41c3BjRgQ" name="srs" label="srs" talendType="id_String">
+        <initialValue xmi:id="_jfv-VOPUEeKXY41c3BjRgQ" body="EPSG:4326"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-VePUEeKXY41c3BjRgQ" name="title" label="title" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-VuPUEeKXY41c3BjRgQ" name="publicationDate" label="publicationDate" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-V-PUEeKXY41c3BjRgQ" name="publicationDateType" label="publicationDateType" talendType="id_String">
+        <initialValue xmi:id="_jfv-WOPUEeKXY41c3BjRgQ" body="publication"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-WePUEeKXY41c3BjRgQ" name="edition" label="edition" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-WuPUEeKXY41c3BjRgQ" name="mdAbstract" label="mdAbstract" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-W-PUEeKXY41c3BjRgQ" name="purpose" label="purpose" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-XOPUEeKXY41c3BjRgQ" name="status" label="status" talendType="id_String">
+        <initialValue xmi:id="_jfv-XePUEeKXY41c3BjRgQ" body="completed"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-XuPUEeKXY41c3BjRgQ" name="codeList" label="codeList4" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-X-PUEeKXY41c3BjRgQ" name="individualName" label="individualName" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-YOPUEeKXY41c3BjRgQ" name="organisationName" label="organisationName" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-YePUEeKXY41c3BjRgQ" name="positionName" label="positionName" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-YuPUEeKXY41c3BjRgQ" name="voice" label="voice" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-Y-PUEeKXY41c3BjRgQ" name="facsimile" label="facsimile" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-ZOPUEeKXY41c3BjRgQ" name="deliveryPoint" label="deliveryPoint" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-ZePUEeKXY41c3BjRgQ" name="city" label="city" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-ZuPUEeKXY41c3BjRgQ" name="adminArea" label="adminArea" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-Z-PUEeKXY41c3BjRgQ" name="postalCode" label="postalCode" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-aOPUEeKXY41c3BjRgQ" name="country" label="country" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-aePUEeKXY41c3BjRgQ" name="email" label="email" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-auPUEeKXY41c3BjRgQ" name="role" label="role" talendType="id_String">
+        <initialValue xmi:id="_jfv-a-PUEeKXY41c3BjRgQ" body="pointOfContacta"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-bOPUEeKXY41c3BjRgQ" name="maintenanceFrequency" label="maintenanceFrequency" talendType="id_String">
+        <initialValue xmi:id="_jfv-bePUEeKXY41c3BjRgQ" body="asNeeded"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-buPUEeKXY41c3BjRgQ" name="graphicFileName" label="graphicFileName" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-b-PUEeKXY41c3BjRgQ" name="graphicFileDesc" label="graphicFileDesc" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-cOPUEeKXY41c3BjRgQ" name="keyword" label="keyword" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-cePUEeKXY41c3BjRgQ" name="keywordType" label="keywordType" talendType="id_String">
+        <initialValue xmi:id="_jfv-cuPUEeKXY41c3BjRgQ" body="theme"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfv-c-PUEeKXY41c3BjRgQ" name="accessConstraints" label="accessConstraints" talendType="id_String">
+        <initialValue xmi:id="_jfv-dOPUEeKXY41c3BjRgQ" body="copyright"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfwkoOPUEeKXY41c3BjRgQ" name="useConstraints" label="useConstraints" talendType="id_String">
+        <initialValue xmi:id="_jfwkoePUEeKXY41c3BjRgQ" body="otherRestictions"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfwkouPUEeKXY41c3BjRgQ" name="useConstraintsInfo" label="useConstraintsInfo" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfwko-PUEeKXY41c3BjRgQ" name="spatialRepresentation" label="spatialRepresentation" talendType="id_String">
+        <initialValue xmi:id="_jfwkpOPUEeKXY41c3BjRgQ" body="vector"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfwkpePUEeKXY41c3BjRgQ" name="scaleDenominator" label="scaleDenominator" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfwkpuPUEeKXY41c3BjRgQ" name="language" label="language" talendType="id_String">
+        <initialValue xmi:id="_jfwkp-PUEeKXY41c3BjRgQ" body="eng"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfwkqOPUEeKXY41c3BjRgQ" name="charset" label="charset" talendType="id_String">
+        <initialValue xmi:id="_jfwkqePUEeKXY41c3BjRgQ" body="utf8"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfwkquPUEeKXY41c3BjRgQ" name="topicCategoryCode" label="topicCategoryCode" talendType="id_String">
+        <initialValue xmi:id="_jfwkq-PUEeKXY41c3BjRgQ" body="environment"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfwkrOPUEeKXY41c3BjRgQ" name="west" label="west" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfwkrePUEeKXY41c3BjRgQ" name="east" label="east" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfwkruPUEeKXY41c3BjRgQ" name="south" label="south" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfwkr-PUEeKXY41c3BjRgQ" name="north" label="north" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfwksOPUEeKXY41c3BjRgQ" name="supplementalInformation" label="supplementalInformation" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfwksePUEeKXY41c3BjRgQ" name="linkage" label="linkage" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfwksuPUEeKXY41c3BjRgQ" name="protocol" label="protocol" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfwks-PUEeKXY41c3BjRgQ" name="name" label="name" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfwktOPUEeKXY41c3BjRgQ" name="description" label="description" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfwktePUEeKXY41c3BjRgQ" name="scopeCode" label="scopeCode" talendType="id_String">
+        <initialValue xmi:id="_jfwktuPUEeKXY41c3BjRgQ" body="dataset"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jfwkt-PUEeKXY41c3BjRgQ" name="lineage" label="lineage" talendType="id_String"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>
