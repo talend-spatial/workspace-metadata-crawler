@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema>
+    <column comment="" default="" key="false" label="uuid" length="0"
+        nullable="true" originalDbColumnName="uuid" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="eng" key="false" label="mdLanguage"
+        length="0" nullable="true" originalDbColumnName="mdLanguage"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="utf8" key="false" label="mdCharacterSet"
+        length="0" nullable="true" originalDbColumnName="mdCharacterSet"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="dataset" key="false"
+        label="hierarchyLevel" length="0" nullable="true"
+        originalDbColumnName="hierarchyLevel" pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="mdIndividualName"
+        length="0" nullable="true"
+        originalDbColumnName="mdIndividualName" pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="mdOrganisationName"
+        length="0" nullable="true"
+        originalDbColumnName="mdOrganisationName" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="mdPositionName"
+        length="0" nullable="true" originalDbColumnName="mdPositionName"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="mdVoice" length="0"
+        nullable="true" originalDbColumnName="mdVoice" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="mdDeliveryPoint"
+        length="0" nullable="true"
+        originalDbColumnName="mdDeliveryPoint" pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="mdCity" length="0"
+        nullable="true" originalDbColumnName="mdCity" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false"
+        label="mdAdministrativeArea" length="0" nullable="true"
+        originalDbColumnName="mdAdministrativeArea" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="mdPostalCode"
+        length="0" nullable="true" originalDbColumnName="mdPostalCode"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="mdCountry"
+        length="0" nullable="true" originalDbColumnName="mdCountry"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="mdEmail" length="0"
+        nullable="true" originalDbColumnName="mdEmail" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="pointOfContact" key="false"
+        label="mdRole" length="0" nullable="true"
+        originalDbColumnName="mdRole" pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="dateStamp"
+        length="0" nullable="true" originalDbColumnName="dateStamp"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="ISO 19115:2003/19139" key="false"
+        label="standardName" length="0" nullable="true"
+        originalDbColumnName="standardName" pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="1.0" key="false" label="standardVersion"
+        length="0" nullable="true"
+        originalDbColumnName="standardVersion" pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="EPSG:4326" key="false" label="srs"
+        length="0" nullable="true" originalDbColumnName="srs" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="title" length="0"
+        nullable="true" originalDbColumnName="title" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="publicationDate"
+        length="0" nullable="true"
+        originalDbColumnName="publicationDate" pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="publication" key="false"
+        label="publicationDateType" length="0" nullable="true"
+        originalDbColumnName="publicationDateType" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="edition" length="0"
+        nullable="true" originalDbColumnName="edition" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="mdAbstract"
+        length="0" nullable="true" originalDbColumnName="mdAbstract"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="purpose" length="0"
+        nullable="true" originalDbColumnName="purpose" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="completed" key="false" label="status"
+        length="0" nullable="true" originalDbColumnName="status"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="individualName"
+        length="0" nullable="true" originalDbColumnName="individualName"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="organisationName"
+        length="0" nullable="true"
+        originalDbColumnName="organisationName" pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="positionName"
+        length="0" nullable="true" originalDbColumnName="positionName"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="voice" length="0"
+        nullable="true" originalDbColumnName="voice" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="deliveryPoint"
+        length="0" nullable="true" originalDbColumnName="deliveryPoint"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="city" length="0"
+        nullable="true" originalDbColumnName="city" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="adminArea"
+        length="0" nullable="true" originalDbColumnName="adminArea"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="postalCode"
+        length="0" nullable="true" originalDbColumnName="postalCode"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="country" length="0"
+        nullable="true" originalDbColumnName="country" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="email" length="0"
+        nullable="true" originalDbColumnName="email" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="pointOfContacta" key="false"
+        label="role" length="0" nullable="true"
+        originalDbColumnName="role" pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="geometricType"
+        length="0" nullable="true" originalDbColumnName="geometricType"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="geometryCount"
+        length="0" nullable="true" originalDbColumnName="geometryCount"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="asNeeded" key="false"
+        label="maintenanceFrequency" length="0" nullable="true"
+        originalDbColumnName="maintenanceFrequency" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="graphicFileName"
+        length="0" nullable="true"
+        originalDbColumnName="graphicFileName" pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="graphicFileDesc"
+        length="0" nullable="true"
+        originalDbColumnName="graphicFileDesc" pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="keyword" length="0"
+        nullable="true" originalDbColumnName="keyword" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="keyword2"
+        length="0" nullable="true" originalDbColumnName="keyword2"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="theme" key="false" label="keywordType"
+        length="0" nullable="true" originalDbColumnName="keywordType"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="inspireTheme"
+        length="0" nullable="true" originalDbColumnName="inspireTheme"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="geoKeyword"
+        length="0" nullable="true" originalDbColumnName="geoKeyword"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="place" key="false"
+        label="geoKeywordType" length="0" nullable="true"
+        originalDbColumnName="geoKeywordType" pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="copyright" key="false"
+        label="accessConstraints" length="0" nullable="true"
+        originalDbColumnName="accessConstraints" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="otherRestictions" key="false"
+        label="useConstraints" length="0" nullable="true"
+        originalDbColumnName="useConstraints" pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="useConstraintsInfo"
+        length="0" nullable="true"
+        originalDbColumnName="useConstraintsInfo" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="useLimitation"
+        length="0" nullable="true" originalDbColumnName="useLimitation"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="vector" key="false"
+        label="spatialRepresentation" length="0" nullable="true"
+        originalDbColumnName="spatialRepresentation" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="scaleDenominator"
+        length="0" nullable="true"
+        originalDbColumnName="scaleDenominator" pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="eng" key="false" label="language"
+        length="0" nullable="true" originalDbColumnName="language"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="utf8" key="false" label="charset"
+        length="0" nullable="true" originalDbColumnName="charset"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="environment" key="false"
+        label="topicCategoryCode" length="0" nullable="true"
+        originalDbColumnName="topicCategoryCode" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false"
+        label="geographicDescription" length="0" nullable="true"
+        originalDbColumnName="geographicDescription" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="west" length="0"
+        nullable="true" originalDbColumnName="west" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="east" length="0"
+        nullable="true" originalDbColumnName="east" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="south" length="0"
+        nullable="true" originalDbColumnName="south" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="north" length="0"
+        nullable="true" originalDbColumnName="north" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false"
+        label="supplementalInformation" length="0" nullable="true"
+        originalDbColumnName="supplementalInformation" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="formatName"
+        length="0" nullable="true" originalDbColumnName="formatName"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="formatVersion"
+        length="0" nullable="true" originalDbColumnName="formatVersion"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="linkage1URL"
+        length="0" nullable="true" originalDbColumnName="linkage1URL"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="linkage1protocol"
+        length="0" nullable="true"
+        originalDbColumnName="linkage1protocol" pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="linkage1name"
+        length="0" nullable="true" originalDbColumnName="linkage1name"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false"
+        label="linkage1description" length="0" nullable="true"
+        originalDbColumnName="linkage1description" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="linkage2URL"
+        length="0" nullable="true" originalDbColumnName="linkage2URL"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="linkage2protocol"
+        length="0" nullable="true"
+        originalDbColumnName="linkage2protocol" pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="linkage2name"
+        length="0" nullable="true" originalDbColumnName="linkage2name"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false"
+        label="linkage2description" length="0" nullable="true"
+        originalDbColumnName="linkage2description" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="linkage3URL"
+        length="0" nullable="true" originalDbColumnName="linkage3URL"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="linkage3protocol"
+        length="0" nullable="true"
+        originalDbColumnName="linkage3protocol" pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="linkage3name"
+        length="0" nullable="true" originalDbColumnName="linkage3name"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false"
+        label="linkage3description" length="0" nullable="true"
+        originalDbColumnName="linkage3description" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="dataset" key="false" label="scopeCode"
+        length="0" nullable="true" originalDbColumnName="scopeCode"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="lineage" length="0"
+        nullable="true" originalDbColumnName="lineage" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="featureCatalogUuid"
+        length="0" nullable="true"
+        originalDbColumnName="featureCatalogUuid" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="fileName"
+        length="0" nullable="true" originalDbColumnName="fileName"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="filePath"
+        length="0" nullable="true" originalDbColumnName="filePath"
+        pattern="" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="errors" length="0"
+        nullable="true" originalDbColumnName="errors" pattern=""
+        precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="extra" length="0"
+        nullable="true" originalDbColumnName="extra" pattern=""
+        precision="0" talendType="id_String"/>
+</schema>
