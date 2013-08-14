@@ -316,7 +316,7 @@
       <column comment="" key="false" length="0" name="extra" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="filename" expression="context.isDb ? context.file : new java.io.File(context.file).getName() " type="id_String"/>
         <mapperTableEntries name="filepath" expression="context.file " type="id_String"/>
@@ -348,7 +348,7 @@
         <mapperTableEntries name="dateStamp" expression="Var.dateStamp " type="id_String" nullable="true"/>
         <mapperTableEntries name="standardName" expression="&quot;ISO 19115:2003/19139&quot;" type="id_String" nullable="true"/>
         <mapperTableEntries name="standardVersion" expression="&quot;1.0&quot;" type="id_String" nullable="true"/>
-        <mapperTableEntries name="srs" expression="&quot;EPSG:&quot; + row3.epsg_code " type="id_String" nullable="true"/>
+        <mapperTableEntries name="srs" expression="row3.epsg_code  == -1 ? context.default_projection : &quot;EPSG:&quot; + row3.epsg_code " type="id_String" nullable="true"/>
         <mapperTableEntries name="title" expression="(context.isDb ? &quot;Table &quot; : &quot; Fichier &quot;) + row3.layer_name " type="id_String" nullable="true"/>
         <mapperTableEntries name="publicationDate" expression="Var.dateStamp " type="id_String" nullable="true"/>
         <mapperTableEntries name="publicationDateType" expression="&quot;publication&quot;" type="id_String" nullable="true"/>
