@@ -39,4 +39,8 @@
   <contextParameter comment="" name="ssh_password" prompt="ssh_password?" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
   <contextParameter comment="" name="ssh_dir" prompt="ssh_dir?" promptNeeded="false" type="id_String" value="&quot;/tmp/overview&quot;"/>
   <contextParameter comment="Path to GDAL/OGR bin or empty if in system path" name="gdal_path" prompt="gdal_path?" promptNeeded="false" type="id_Directory" value="&quot;&quot;"/>
+  <contextParameter comment="" name="title_prefix_vector" prompt="title_prefix_vector?" promptNeeded="false" type="id_String" value="&quot;Vector file &quot;"/>
+  <contextParameter comment="" name="title_prefix_raster" prompt="title_prefix_raster?" promptNeeded="false" type="id_String" value="&quot;Raster file &quot;"/>
+  <contextParameter comment="" name="title_prefix_fcat" prompt="title_prefix_fcat?" promptNeeded="false" type="id_String" value="&quot;Feature catalog &quot;"/>
+  <contextParameter comment="" name="title_prefix_db" prompt="title_prefix_db?" promptNeeded="false" type="id_String" value="&quot;Table &quot;"/>
 </talendfile:ContextType>

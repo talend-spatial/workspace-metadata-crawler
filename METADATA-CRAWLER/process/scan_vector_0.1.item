@@ -14,6 +14,10 @@
     <contextParameter comment="The folder to create metadata records into" name="metadata_dir" prompt="metadata_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/spatialdemo/metadata/"/>
     <contextParameter comment="Store the generated metadata file next to the analyzed file" name="metadata_file_with_source" prompt="metadata_file_with_source?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="false"/>
     <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/usr/local/App/talend/TOS_DI-r104014-V5.3.1/workspace/METADATA_CRAWLER/_resources/"/>
+    <contextParameter comment="" name="title_prefix_db" prompt="title_prefix_db?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;Table &quot;"/>
+    <contextParameter comment="" name="title_prefix_fcat" prompt="title_prefix_fcat?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;Feature catalog &quot;"/>
+    <contextParameter comment="" name="title_prefix_raster" prompt="title_prefix_raster?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;Raster file &quot;"/>
+    <contextParameter comment="" name="title_prefix_vector" prompt="title_prefix_vector?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;Vector file &quot;"/>
     <contextParameter comment="The output folder" name="tmp_dir" prompt="tmp_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/spatialdemo/csw-requests/"/>
     <contextParameter comment="Vector file extensions" name="vector_file_extension" prompt="vector_file_extension?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.kml|.*\\.shp|.*\\.mif|.*\\.tab|.*\\.gml|.*\\.gpx|.*\\.dxf&quot;"/>
   </context>
@@ -351,7 +355,7 @@
         <mapperTableEntries name="standardName" expression="&quot;ISO 19115:2003/19139&quot;" type="id_String" nullable="true"/>
         <mapperTableEntries name="standardVersion" expression="&quot;1.0&quot;" type="id_String" nullable="true"/>
         <mapperTableEntries name="srs" expression="row3.epsg_code  == -1 ? context.default_projection : &quot;EPSG:&quot; + row3.epsg_code " type="id_String" nullable="true"/>
-        <mapperTableEntries name="title" expression="(context.isDb ? &quot;Table &quot; : &quot; Fichier &quot;) + row3.layer_name " type="id_String" nullable="true"/>
+        <mapperTableEntries name="title" expression="(context.isDb ? context.title_prefix_db : context.title_prefix_vector) + row3.layer_name  " type="id_String" nullable="true"/>
         <mapperTableEntries name="publicationDate" expression="Var.dateStamp " type="id_String" nullable="true"/>
         <mapperTableEntries name="publicationDateType" expression="&quot;publication&quot;" type="id_String" nullable="true"/>
         <mapperTableEntries name="edition" expression="" type="id_String" nullable="true"/>
@@ -2730,11 +2734,11 @@
       <column comment="" key="false" length="0" name="columnListOfValues" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="iso19110">
         <mapperTableEntries name="uuid" expression="row6.featureCatalogUuid " type="id_String" nullable="true"/>
-        <mapperTableEntries name="title" expression="&quot;Catalogue d'attributs pour &quot; + row6.fileName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="title" expression="context.title_prefix_fcat + row6.fileName " type="id_String" nullable="true"/>
         <mapperTableEntries name="scope" type="id_String" nullable="true"/>
         <mapperTableEntries name="fieldOfApplication" type="id_String" nullable="true"/>
         <mapperTableEntries name="version" expression="&quot;1.0&quot;" type="id_String" nullable="true"/>
