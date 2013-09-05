@@ -379,7 +379,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="properties"/>
   </connection>
   <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tFlowToIterate_1" offsetLabelX="0" offsetLabelY="0" source="tFlowToIterate_1" target="tFileInputXML_1">
-    <elementParameter field="MEMO_JAVA" name="CONDITION" value="((Long)globalMap.get(&quot;row3.size&quot;)) > 0"/>
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="((Long)globalMap.get(&quot;properties.size&quot;)) > 0"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="If3"/>
   </connection>
