@@ -102,8 +102,9 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tForeach_1"/>
     <elementParameter field="CHECK" name="START" value="true"/>
     <elementParameter field="TABLE" name="VALUES">
-      <elementValue elementRef="VALUE" value="&quot;newLine&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;&quot;"/>
     </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="start"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <elementParameter field="CHECK" name="INFORMATION" value="false"/>
     <elementParameter field="MEMO" name="COMMENT" value=""/>
@@ -257,21 +258,6 @@
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate3"/>
   </connection>
-  <note opaque="true" posX="160" posY="416" sizeHeight="64" sizeWidth="225" text="TODO: copy FTP ?">
-    <elementParameter field="COLOR" name="NOTE_COLOR" value="255;255;203"/>
-    <elementParameter field="COLOR" name="NOTETXT_COLOR" value="0;0;0"/>
-    <elementParameter field="RADIO" name="NOTETXT_LEFT" value="false"/>
-    <elementParameter field="RADIO" name="NOTETXT_RIGHT" value="false"/>
-    <elementParameter field="RADIO" name="NOTETXT_CENTER" value="true"/>
-    <elementParameter field="RADIO" name="NOTELABEL_CENTER" value="true"/>
-    <elementParameter field="RADIO" name="NOTETXT_TOP" value="false"/>
-    <elementParameter field="RADIO" name="NOTETXT_BOTTOM" value="false"/>
-    <elementParameter field="TEXT" name="NOTE_FONT" value="Time New Roman"/>
-    <elementParameter field="TEXT" name="FONT_SIZE" value="10"/>
-    <elementParameter field="CHECK" name="FONT_BOLD" value="false"/>
-    <elementParameter field="CHECK" name="FONT_ITALIC" value="false"/>
-    <elementParameter field="COLOR" name="NOTE_LINECOLOR" value="237;201;122"/>
-  </note>
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_2"/>

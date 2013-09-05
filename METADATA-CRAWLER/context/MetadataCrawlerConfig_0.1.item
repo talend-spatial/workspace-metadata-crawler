@@ -5,7 +5,7 @@
   <contextParameter comment="The folder to create overview into" name="overview_folder" prompt="overview_folder?" promptNeeded="false" type="id_Directory" value="&quot;/var/www/tmp/&quot;"/>
   <contextParameter comment="RASTER file extensions" name="raster_file_extension" prompt="raster_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.tif|.*\\.tiff|.*\\.ecw|.*\\.asc|.*\\.pdf&quot;"/>
   <contextParameter comment="The output folder" name="tmp_dir" prompt="tmp_dir?" promptNeeded="false" type="id_Directory" value="/tmp/spatialdemo/csw-requests/"/>
-  <contextParameter comment="Vector file extensions" name="vector_file_extension" prompt="vector_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.kml|.*\\.shp|.*\\.mif|.*\\.tab|.*\\.gml|.*\\.dxf&quot;"/>
+  <contextParameter comment="Vector file extensions" name="vector_file_extension" prompt="vector_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.kml|.*\\.shp|.*\\.mif|.*\\.tab|.*\\.gml|.*\\.gpx|.*\\.dxf&quot;"/>
   <contextParameter comment="The CSW user name" name="csw_username" prompt="csw_username?" promptNeeded="false" type="id_String" value="&quot;admin&quot;"/>
   <contextParameter comment="The CSW user password" name="csw_password" prompt="csw_password?" promptNeeded="false" type="id_String" value="&quot;admin&quot;"/>
   <contextParameter comment="The width of the overview to generate" name="overview_width" prompt="overview_width?" promptNeeded="false" type="id_String" value="&quot;400&quot;"/>
@@ -38,4 +38,5 @@
   <contextParameter comment="" name="ssh_username" prompt="ssh_username?" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
   <contextParameter comment="" name="ssh_password" prompt="ssh_password?" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
   <contextParameter comment="" name="ssh_dir" prompt="ssh_dir?" promptNeeded="false" type="id_String" value="&quot;/tmp/overview&quot;"/>
+  <contextParameter comment="Path to GDAL/OGR bin or empty if in system path" name="gdal_path" prompt="gdal_path?" promptNeeded="false" type="id_Directory" value="&quot;&quot;"/>
 </talendfile:ContextType>
