@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" confirmationNeeded="false" name="Default">
   <contextParameter comment="The CSW server to push metadata records into" name="csw_server_host" prompt="csw_server_host?" promptNeeded="false" type="id_String" value="&quot;http://localhost:8080/geonetwork/srv/fre/csw-publication&quot;"/>
-  <contextParameter comment="The folder to scan" name="data_dir" prompt="data_dir?" promptNeeded="false" type="id_Directory" value="/tmp/talend/data/"/>
-  <contextParameter comment="The folder to create overview into" name="overview_folder" prompt="overview_folder?" promptNeeded="false" type="id_Directory" value="/tmp/talend/www/overviews/"/>
+  <contextParameter comment="The folder to scan" name="data_dir" prompt="data_dir?" promptNeeded="false" type="id_Directory" value="/tmp/talend/data"/>
+  <contextParameter comment="The folder to create overview into" name="overview_folder" prompt="overview_folder?" promptNeeded="false" type="id_Directory" value="/tmp/talend/www/overviews"/>
   <contextParameter comment="RASTER file extensions" name="raster_file_extension" prompt="raster_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.tif|.*\\.tiff|.*\\.ecw|.*\\.asc&quot;"/>
   <contextParameter comment="The output folder" name="tmp_dir" prompt="tmp_dir?" promptNeeded="false" type="id_Directory" value="/tmp/talend/tmp/"/>
   <contextParameter comment="Vector file extensions" name="vector_file_extension" prompt="vector_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.kml|.*\\.shp|.*\\.mif|.*\\.tab|.*\\.gml|.*\\.dxf&quot;"/>
@@ -39,9 +39,13 @@
   <contextParameter comment="" name="ssh_password" prompt="ssh_password?" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
   <contextParameter comment="" name="ssh_dir" prompt="ssh_dir?" promptNeeded="false" type="id_String" value="&quot;/tmp/overview&quot;"/>
   <contextParameter comment="Path to GDAL/OGR bin or empty if in system path" name="gdal_path" prompt="gdal_path?" promptNeeded="false" type="id_Directory" value=""/>
-  <contextParameter comment="" name="title_prefix_vector" prompt="title_prefix_vector?" promptNeeded="false" type="id_String" value="&quot;Vector file &quot;"/>
-  <contextParameter comment="" name="title_prefix_raster" prompt="title_prefix_raster?" promptNeeded="false" type="id_String" value="&quot;Raster file &quot;"/>
-  <contextParameter comment="" name="title_prefix_fcat" prompt="title_prefix_fcat?" promptNeeded="false" type="id_String" value="&quot;Feature catalog &quot;"/>
-  <contextParameter comment="" name="title_prefix_db" prompt="title_prefix_db?" promptNeeded="false" type="id_String" value="&quot;Table &quot;"/>
+  <contextParameter comment="Metadata title prefic for vector" name="title_prefix_vector" prompt="title_prefix_vector?" promptNeeded="false" type="id_String" value="&quot;Vector file &quot;"/>
+  <contextParameter comment="Metadata title prefic for RASTER" name="title_prefix_raster" prompt="title_prefix_raster?" promptNeeded="false" type="id_String" value="&quot;Raster file &quot;"/>
+  <contextParameter comment="Metadata title prefic for feature catalog" name="title_prefix_fcat" prompt="title_prefix_fcat?" promptNeeded="false" type="id_String" value="&quot;Feature catalog &quot;"/>
+  <contextParameter comment="Metadata title prefic for db tables" name="title_prefix_db" prompt="title_prefix_db?" promptNeeded="false" type="id_String" value="&quot;Table &quot;"/>
   <contextParameter comment="The log folder" name="log_dir" prompt="log_dir?" promptNeeded="false" type="id_Directory" value="/tmp/talend/logs/"/>
+  <contextParameter comment="Scan for vector files" name="scan_vector" prompt="scan_vector?" promptNeeded="false" type="id_Boolean" value="true"/>
+  <contextParameter comment="Scan for RASTER files" name="scan_raster" prompt="scan_raster?" promptNeeded="false" type="id_Boolean" value="true"/>
+  <contextParameter comment="List of WFS to scan" name="service_list" prompt="service_list?" promptNeeded="false" type="id_String" value="&lt;http://services.sandre.eaufrance.fr/geo/ouvrage?SERVICE=WFS>"/>
+  <contextParameter comment="True to ping the job and return status response (use when deploy as webservice)" name="ping" prompt="ping?" promptNeeded="false" type="id_Boolean" value="false"/>
 </talendfile:ContextType>
