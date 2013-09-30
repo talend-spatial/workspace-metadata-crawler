@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="file" prompt="file?" promptNeeded="false" type="id_File" value="/tmp/spatialdemo/SHP/PAG_AOA.shp"/>
+    <contextParameter comment="" name="file" prompt="file?" promptNeeded="false" type="id_File" value="http://services.sandre.eaufrance.fr/geo/ouvrage?SERVICE=WFS"/>
     <contextParameter comment="" name="isDb" prompt="isDb?" promptNeeded="false" type="id_Boolean" value="false"/>
     <contextParameter comment="Does the metadata record exists in the target catalog" name="isUpdate" prompt="isUpdate?" promptNeeded="false" type="id_Boolean" value="false"/>
     <contextParameter comment="Create or not overview files" name="create_overview" prompt="create_overview?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
