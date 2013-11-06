@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="file" prompt="file?" promptNeeded="false" type="id_File" value="http://services.sandre.eaufrance.fr/geo/ouvrage?SERVICE=WFS"/>
-    <contextParameter comment="" name="isDb" prompt="isDb?" promptNeeded="false" type="id_Boolean" value="false"/>
+    <contextParameter comment="" name="file" prompt="file?" promptNeeded="false" type="id_File" value="PG:dbname=talend2 host=localhost port=5432 user=www-data password=www-data"/>
+    <contextParameter comment="" name="isDb" prompt="isDb?" promptNeeded="false" type="id_Boolean" value="true"/>
     <contextParameter comment="Does the metadata record exists in the target catalog" name="isUpdate" prompt="isUpdate?" promptNeeded="false" type="id_Boolean" value="false"/>
     <contextParameter comment="Create or not overview files" name="create_overview" prompt="create_overview?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="The folder to scan" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/talend/data"/>
@@ -37,6 +37,7 @@
     <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
     <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" value=""/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value=""/>
     <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value=""/>
     <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value=""/>
@@ -328,7 +329,7 @@
       <column comment="" key="false" length="0" name="extra" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="filename" expression="context.isDb ? context.file : new java.io.File(context.file).getName() " type="id_String"/>
         <mapperTableEntries name="filepath" expression="context.file " type="id_String"/>
@@ -336,10 +337,10 @@
         <mapperTableEntries name="uuidbase" expression="Var.filename + &quot;#&quot; + row3.layer_name " type="id_String"/>
         <mapperTableEntries name="mdUuid" expression="Utility.sha256Digest(Var.uuidbase ) " type="id_String"/>
         <mapperTableEntries name="fcatUuid" expression="Utility.sha256Digest(Var.uuidbase  + &quot;#iso19110&quot;) " type="id_String"/>
-        <mapperTableEntries name="west" expression="row3.latlon_extent != null ?&#xA;  GeometryOperation.GETCOORDINATE(row3.latlon_extent ,0,&quot;X&quot;)  + &quot;&quot; &#xA;  :  &#xA;  (&#xA;    context.default_projection != null ?&#xA;      GeometryOperation.GETCOORDINATE(&#xA;        GeometryOperation.PROJ(row3.geo_extent, context.default_projection, &quot;EPSG:4326&quot;, false)&#xA;       ,0,&quot;X&quot;)  + &quot;&quot;&#xA;    : &#xA;    context.default_ymax&#xA;  )        " type="id_String"/>
-        <mapperTableEntries name="east" expression="row3.latlon_extent != null ?&#xA;  GeometryOperation.GETCOORDINATE(row3.latlon_extent ,2,&quot;X&quot;)  + &quot;&quot; &#xA;  :  &#xA;  (&#xA;    context.default_projection != null ?&#xA;      GeometryOperation.GETCOORDINATE(&#xA;        GeometryOperation.PROJ(row3.geo_extent, context.default_projection, &quot;EPSG:4326&quot;, false)&#xA;       ,2,&quot;X&quot;)  + &quot;&quot;&#xA;    : &#xA;    context.default_ymax&#xA;  )        " type="id_String"/>
-        <mapperTableEntries name="south" expression="row3.latlon_extent != null ?&#xA;  GeometryOperation.GETCOORDINATE(row3.latlon_extent ,2,&quot;Y&quot;)  + &quot;&quot; &#xA;  :  &#xA;  (&#xA;    context.default_projection != null ?&#xA;      GeometryOperation.GETCOORDINATE(&#xA;        GeometryOperation.PROJ(row3.geo_extent, context.default_projection, &quot;EPSG:4326&quot;, false)&#xA;       ,2,&quot;Y&quot;)  + &quot;&quot;&#xA;    : &#xA;    context.default_ymax&#xA;  )        " type="id_String"/>
-        <mapperTableEntries name="north" expression="row3.latlon_extent != null ?&#xA;  GeometryOperation.GETCOORDINATE(row3.latlon_extent ,0,&quot;Y&quot;)  + &quot;&quot; &#xA;  :  &#xA;  (&#xA;    context.default_projection != null ?&#xA;      GeometryOperation.GETCOORDINATE(&#xA;        GeometryOperation.PROJ(row3.geo_extent, context.default_projection, &quot;EPSG:4326&quot;, false)&#xA;       ,0,&quot;Y&quot;)  + &quot;&quot;&#xA;    : &#xA;    context.default_ymax&#xA;  )        " type="id_String"/>
+        <mapperTableEntries name="west" expression="row3.latlon_extent != null ?&#xA;  GeometryOperation.GETCOORDINATE(row3.latlon_extent ,0,&quot;X&quot;)  + &quot;&quot; &#xA;  :  &#xA;  (&#xA;    context.default_projection != null &amp;&amp; row3.geo_extent != null ?&#xA;      GeometryOperation.GETCOORDINATE(&#xA;        GeometryOperation.PROJ(row3.geo_extent, context.default_projection, &quot;EPSG:4326&quot;, false)&#xA;       ,0,&quot;X&quot;)  + &quot;&quot;&#xA;    : &#xA;    context.default_xmin&#xA;  )         " type="id_String"/>
+        <mapperTableEntries name="east" expression="row3.latlon_extent != null ?&#xA;  GeometryOperation.GETCOORDINATE(row3.latlon_extent ,2,&quot;X&quot;)  + &quot;&quot; &#xA;  :  &#xA;  (&#xA;    context.default_projection != null &amp;&amp; row3.geo_extent != null  ?&#xA;      GeometryOperation.GETCOORDINATE(&#xA;        GeometryOperation.PROJ(row3.geo_extent, context.default_projection, &quot;EPSG:4326&quot;, false)&#xA;       ,2,&quot;X&quot;)  + &quot;&quot;&#xA;    : &#xA;    context.default_xmax&#xA;  )         " type="id_String"/>
+        <mapperTableEntries name="south" expression="row3.latlon_extent != null ?&#xA;  GeometryOperation.GETCOORDINATE(row3.latlon_extent ,2,&quot;Y&quot;)  + &quot;&quot; &#xA;  :  &#xA;  (&#xA;    context.default_projection != null &amp;&amp; row3.geo_extent != null ?&#xA;      GeometryOperation.GETCOORDINATE(&#xA;        GeometryOperation.PROJ(row3.geo_extent, context.default_projection, &quot;EPSG:4326&quot;, false)&#xA;       ,2,&quot;Y&quot;)  + &quot;&quot;&#xA;    : &#xA;    context.default_ymin&#xA;  )         " type="id_String"/>
+        <mapperTableEntries name="north" expression="row3.latlon_extent != null ?&#xA;  GeometryOperation.GETCOORDINATE(row3.latlon_extent ,0,&quot;Y&quot;)  + &quot;&quot; &#xA;  :  &#xA;  (&#xA;    context.default_projection != null &amp;&amp; row3.geo_extent != null ?&#xA;      GeometryOperation.GETCOORDINATE(&#xA;        GeometryOperation.PROJ(row3.geo_extent, context.default_projection, &quot;EPSG:4326&quot;, false)&#xA;       ,0,&quot;Y&quot;)  + &quot;&quot;&#xA;    : &#xA;    context.default_ymax&#xA;  )         " type="id_String"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="info">
         <mapperTableEntries name="uuid" expression="Var.mdUuid " type="id_String" nullable="true"/>
