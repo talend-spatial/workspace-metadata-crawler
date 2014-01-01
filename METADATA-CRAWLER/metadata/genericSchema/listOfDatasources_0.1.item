@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
+  <TalendMetadata:GenericSchemaConnection xmi:id="_wR4vIG8EEeOPCZAhcLE4Vg" comment="connectionComment" label="connectionLabel" dataPackage="_wR4vIW8EEeOPCZAhcLE4Vg"/>
+  <TalendMetadata:GenericPackage xmi:id="_wR4vIW8EEeOPCZAhcLE4Vg" dataManager="_wR4vIG8EEeOPCZAhcLE4Vg">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_wR5WMG8EEeOPCZAhcLE4Vg" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wR5WMW8EEeOPCZAhcLE4Vg" name="uuid" id="70667" label="uuid" sourceType="" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_wR5WMm8EEeOPCZAhcLE4Vg"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wR5WM28EEeOPCZAhcLE4Vg" name="driver" id="70668" label="driver" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_wR5WNG8EEeOPCZAhcLE4Vg"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wR5WNW8EEeOPCZAhcLE4Vg" name="files" id="70669" label="files" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_wR5WNm8EEeOPCZAhcLE4Vg"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wR5WN28EEeOPCZAhcLE4Vg" name="layer_name" id="70670" label="layer_name" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_wR5WOG8EEeOPCZAhcLE4Vg"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wR5WOW8EEeOPCZAhcLE4Vg" name="fid_column" id="70671" label="fid_column" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_wR5WOm8EEeOPCZAhcLE4Vg"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wR5WO28EEeOPCZAhcLE4Vg" name="geom_column" id="70672" label="geom_column" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_wR5WPG8EEeOPCZAhcLE4Vg"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wR5WPW8EEeOPCZAhcLE4Vg" name="geom_type" id="70674" label="geom_type" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_wR5WPm8EEeOPCZAhcLE4Vg"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wR5WP28EEeOPCZAhcLE4Vg" name="epsg_code" id="70676" label="epsg_code" sourceType="" talendType="id_Integer">
+        <initialValue xmi:id="_wR5WQG8EEeOPCZAhcLE4Vg" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wR5WQW8EEeOPCZAhcLE4Vg" name="nb_features" id="70679" label="nb_features" sourceType="" talendType="id_Integer">
+        <initialValue xmi:id="_wR5WQm8EEeOPCZAhcLE4Vg" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wR5WQ28EEeOPCZAhcLE4Vg" name="error" id="70680" label="error" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_wR5WRG8EEeOPCZAhcLE4Vg"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_9AH20HLqEeOUTKlCwJVJoQ" name="datatype" label="datatype" talendType="id_String"/>
+    </ownedElement>
+  </TalendMetadata:GenericPackage>
+</xmi:XMI>

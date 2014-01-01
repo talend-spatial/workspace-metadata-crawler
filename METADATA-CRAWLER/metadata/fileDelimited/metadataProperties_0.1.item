@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
-  <TalendMetadata:DelimitedFileConnection xmi:id="_k2uc8OPnEeKXY41c3BjRgQ" name="metadataProperties" dataPackage="_k2uc8ePnEeKXY41c3BjRgQ" Server="Localhost 127.0.0.1" FilePath="/usr/local/App/talend/TOS_DI-r104014-V5.3.1/workspace/METADATA_CRAWLER/_resources/metadata-properties.csv" Encoding="UTF-8" FieldSeparatorValue="&quot;;&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true"/>
+  <TalendMetadata:DelimitedFileConnection xmi:id="_k2uc8OPnEeKXY41c3BjRgQ" name="metadataProperties" dataPackage="_k2uc8ePnEeKXY41c3BjRgQ" Server="Localhost 127.0.0.1" FilePath="/home/francois/Project/2014/eea/contract03/map-archive/resources/metadata-properties.csv" Encoding="UTF-8" FieldSeparatorValue="&quot;;&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true"/>
   <orgomg.cwm.resource.record:RecordFile xmi:id="_k2uc8ePnEeKXY41c3BjRgQ" name="default" dataManager="_k2uc8OPnEeKXY41c3BjRgQ">
     <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_k2uc8uPnEeKXY41c3BjRgQ" name="metadata" id="_Ogc-gOPnEeKXY41c3BjRgQ" label="metadata">
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_iS47MOftEeK1v9Wc0iGVpA" name="dataType" label="dataType" talendType="id_String"/>
@@ -47,6 +47,7 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Me5AUOPwEeKq6LfAQc0w9A" name="wmsUrl" label="wmsUrl" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_MiQdYOPwEeKq6LfAQc0w9A" name="wmsProtocol" label="wmsProtocol" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jcrKsOPwEeKq6LfAQc0w9A" name="wmsDesc" label="wmsDesc" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_KPZFIGIvEeOA3vYxAn2LXg" name="mapFormat" label="mapFormat" talendType="id_String"/>
     </ownedElement>
   </orgomg.cwm.resource.record:RecordFile>
 </xmi:XMI>

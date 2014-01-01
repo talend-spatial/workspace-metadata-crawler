@@ -12,6 +12,8 @@ For vector resources, 2 metadata records are created :
 
 For RASTER dataset, only the dataset metadata record is created.
 
+For maps, one record is created for the map and one record for each datasources.
+
 Data formats
 ------------
 
@@ -32,7 +34,8 @@ The following have been tested:
   * ASC
   * GeoPDF
   * ECW
-
+ * Map
+  * QGIS map
 
 GIS file extracted properties
 -----------------------------
