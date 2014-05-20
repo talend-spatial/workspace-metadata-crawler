@@ -50,3 +50,8 @@ From the analyzed file, the following properties are extracted :
  * and for vector file 
   * list of columns and type
 
+
+Documentation
+-------------
+
+https://github.com/talend-spatial/talend-spatial/wiki/Data-inventory
