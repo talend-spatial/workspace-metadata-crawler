@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="file" prompt="file?" promptNeeded="false" type="id_File" value="PG:dbname=talend host=localhost port=5432 user=www-data password=www-data"/>
-    <contextParameter comment="" name="isDb" prompt="isDb?" promptNeeded="false" type="id_Boolean" value="true"/>
+    <contextParameter comment="" name="file" prompt="file?" promptNeeded="false" type="id_File" value="/home/francois/data/CCM.shp"/>
+    <contextParameter comment="" name="isDb" prompt="isDb?" promptNeeded="false" type="id_Boolean" value="false"/>
     <contextParameter comment="Does the metadata record exists in the target catalog" name="isUpdate" prompt="isUpdate?" promptNeeded="false" type="id_Boolean" value="false"/>
     <contextParameter comment="Create or not overview files" name="create_overview" prompt="create_overview?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="The CSW user password" name="csw_password" prompt="csw_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;admin&quot;"/>
@@ -10,7 +10,7 @@
     <contextParameter comment="The CSW user name" name="csw_username" prompt="csw_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;admin&quot;"/>
     <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/talend/data"/>
     <contextParameter comment="List of database to scan" name="db_list" prompt="db_list?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_List Of Value" value="&quot;PG:dbname=talend host=localhost port=5432 user=www-data password=www-data&quot;"/>
-    <contextParameter comment="Hide database connection information" name="db_password_hide" prompt="db_password_hide?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="false"/>
+    <contextParameter comment="Hide database connection information" name="db_password_hide" prompt="db_password_hide?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="An EPSG code of a projection to use in case the projection could not be defined from the file" name="default_projection" prompt="default_projection?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;EPSG:4326&quot;"/>
     <contextParameter comment="" name="default_xmax" prompt="default_xmax?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;180&quot;"/>
     <contextParameter comment="" name="default_xmin" prompt="default_xmin?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;-180&quot;"/>
@@ -413,6 +413,7 @@
         <mapperTableEntries name="filename" expression="context.isDb ? context.file : new java.io.File(context.file).getName() " type="id_String"/>
         <mapperTableEntries name="filepath" expression="// Set the filename and hide user connection information from db path if requested&#xA;context.isDb ? (&#xA;  context.db_password_hide ? &#xA;  context.file&#xA;  &#x9;.replaceAll(&quot;user=[\\S]+&quot;, &quot;user=****&quot;)&#xA;    .replaceAll(&quot;password=[\\S]+&quot;, &quot;password=****&quot;) :&#xA;  context.file &#xA;) : context.file        " type="id_String"/>
         <mapperTableEntries name="dateStamp" expression="TalendDate.formatDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,TalendDate.getCurrentDate()) " type="id_String"/>
+        <mapperTableEntries name="fileDateStamp" expression="context.isDb ?  Var.dateStamp : &#xA;TalendDate.formatDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;, new Date(new java.io.File(context.file).lastModified())) &#xA; " type="id_String"/>
         <mapperTableEntries name="uuidbase" expression="Var.filename + &quot;#&quot; + row3.layer_name " type="id_String"/>
         <mapperTableEntries name="mdUuid" expression="Utility.sha256Digest(Var.uuidbase ) " type="id_String"/>
         <mapperTableEntries name="fcatUuid" expression="Utility.sha256Digest(Var.uuidbase  + &quot;#iso19110&quot;) " type="id_String"/>
@@ -442,8 +443,8 @@
         <mapperTableEntries name="standardVersion" expression="&quot;1.0&quot;" type="id_String" nullable="true"/>
         <mapperTableEntries name="srs" expression="row3.epsg_code  == -1 ? context.default_projection : &quot;EPSG:&quot; + row3.epsg_code " type="id_String" nullable="true"/>
         <mapperTableEntries name="title" expression="(context.isDb ? context.title_prefix_db : context.title_prefix_vector) + row3.layer_name  " type="id_String" nullable="true"/>
-        <mapperTableEntries name="publicationDate" expression="Var.dateStamp " type="id_String" nullable="true"/>
-        <mapperTableEntries name="publicationDateType" expression="&quot;publication&quot;" type="id_String" nullable="true"/>
+        <mapperTableEntries name="publicationDate" expression="Var.fileDateStamp " type="id_String" nullable="true"/>
+        <mapperTableEntries name="publicationDateType" expression="&quot;creation&quot;" type="id_String" nullable="true"/>
         <mapperTableEntries name="edition" expression="" type="id_String" nullable="true"/>
         <mapperTableEntries name="mdAbstract" expression="" type="id_String" nullable="true"/>
         <mapperTableEntries name="purpose" type="id_String" nullable="true"/>
