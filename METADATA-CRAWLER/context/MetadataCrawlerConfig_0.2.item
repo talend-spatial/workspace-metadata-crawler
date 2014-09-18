@@ -55,6 +55,7 @@
     <contextParameter comment="The folder to scan for maps" name="map_data_dir" prompt="map_data_dir?" promptNeeded="false" type="id_Directory" value="/tmp/talend/maps"/>
     <contextParameter comment="For each datasources find in a map, create metadata" name="scan_map_and_datasources" prompt="scan_map_and_datasources?" promptNeeded="false" type="id_Boolean" value="true"/>
     <contextParameter comment="Always run update by sending the complete metadata record (not only some properties like bounding box)" name="publish_metadata_full_update" prompt="publish_metadata_full_update?" promptNeeded="false" type="id_Boolean" value="false"/>
+    <contextParameter comment="Hide database connection information" name="db_password_hide" prompt="db_password_hide?" promptNeeded="false" type="id_Boolean" value="true"/>
   </talendfile:ContextType>
   <talendfile:ContextType confirmationNeeded="false" name="prod">
     <contextParameter comment="The CSW server to push metadata records into" name="csw_server_host" prompt="csw_server_host?" promptNeeded="false" type="id_String" value="&quot;http://localhost:8080/geonetwork/srv/eng/csw-publication&quot;"/>
@@ -111,5 +112,6 @@
     <contextParameter comment="The folder to scan for maps" name="map_data_dir" prompt="map_data_dir?" promptNeeded="false" type="id_Directory" value="/tmp/talend/maps"/>
     <contextParameter comment="For each datasources find in a map, create metadata" name="scan_map_and_datasources" prompt="scan_map_and_datasources?" promptNeeded="false" type="id_Boolean" value="true"/>
     <contextParameter comment="Always run update by sending the complete metadata record (not only some properties like bounding box)" name="publish_metadata_full_update" prompt="publish_metadata_full_update?" promptNeeded="false" type="id_Boolean" value="false"/>
+    <contextParameter comment="" name="db_password_hide" prompt="db_password_hide?" promptNeeded="false" type="id_Boolean" value="false"/>
   </talendfile:ContextType>
 </xmi:XMI>
