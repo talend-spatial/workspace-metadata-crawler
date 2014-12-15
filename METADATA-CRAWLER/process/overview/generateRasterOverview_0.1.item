@@ -66,7 +66,7 @@
     <elementParameter field="CHECK" name="ROOTDIR" value="false"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;/usr/local/App/talend/TOS_DI-r89249-V5.2.0M3/workspace&quot;"/>
     <elementParameter field="RADIO" name="USE_SINGLE_COMMAND" value="true"/>
-    <elementParameter field="MEMO_JAVA" name="COMMAND" value="context.gdal_path + &quot;gdal_translate -of PNG -outsize &quot; + context.overview_width + &quot; &quot; + context.overview_height + &quot; -b 1 &quot; + context.input + &quot; &quot; + context.output + &quot;_overview.png&quot;"/>
+    <elementParameter field="MEMO_JAVA" name="COMMAND" value="context.gdal_path + &quot;gdal_translate -of PNG -outsize &quot; + context.overview_width + &quot; &quot; + context.overview_height + &quot; -b 1 &quot; + context.input.replcae(&quot;\\\\&quot;, &quot;/&quot;) + &quot; &quot; + context.output.replcae(&quot;\\\\&quot;, &quot;/&quot;) + &quot;_overview.png&quot;"/>
     <elementParameter field="RADIO" name="USE_ARRAY_COMMAND" value="false"/>
     <elementParameter field="TABLE" name="ARRAY_COMMAND"/>
     <elementParameter field="CLOSED_LIST" name="OUTPUT" value="OUTPUT_TO_CONSOLE"/>

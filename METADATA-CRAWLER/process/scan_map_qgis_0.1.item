@@ -3,10 +3,10 @@
   <context confirmationNeeded="false" name="Default">
     <contextParameter comment="The map file to analyze" name="qgs_file" prompt="qgs_file?" promptNeeded="false" type="id_File" value="/home/francois/Project/2014/eea/contract03/inputs/TITELLUS-TEST/MAP-WITH-RASTER-AND-VECTOR.qgs"/>
     <contextParameter comment="Create or not overview files" name="create_overview" prompt="create_overview?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
-    <contextParameter comment="The CSW user password" name="csw_password" prompt="csw_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;admin&quot;"/>
-    <contextParameter comment="The CSW server to push metadata records into" name="csw_server_host" prompt="csw_server_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;http://localhost:8080/geonetwork/srv/eng/csw-publication&quot;"/>
+    <contextParameter comment="The CSW user password" name="csw_password" prompt="csw_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;!!inspire**pnf!!&quot;"/>
+    <contextParameter comment="The CSW server to push metadata records into" name="csw_server_host" prompt="csw_server_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;http://extranet.parcnational.fr/catalogue/pnf/fre/csw-publication&quot;"/>
     <contextParameter comment="The CSW user name" name="csw_username" prompt="csw_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;admin&quot;"/>
-    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/talend/data"/>
+    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/home/francois/data/urbanatlas/fr026l_grenoble/"/>
     <contextParameter comment="List of database to scan" name="db_list" prompt="db_list?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_List Of Value" value="&quot;PG:dbname=talend host=localhost port=5432 user=www-data password=www-data&quot;"/>
     <contextParameter comment="An EPSG code of a projection to use in case the projection could not be defined from the file" name="default_projection" prompt="default_projection?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;EPSG:4326&quot;"/>
     <contextParameter comment="" name="default_xmax" prompt="default_xmax?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;180&quot;"/>
@@ -72,7 +72,6 @@
     <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
     <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" value=""/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value=""/>
     <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value=""/>
     <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value=""/>
@@ -322,7 +321,7 @@
       <column comment="" key="false" length="0" name="extra" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="filename" expression="new java.io.File(context.qgs_file).getName()" type="id_String"/>
         <mapperTableEntries name="filepath" expression="context.qgs_file" type="id_String"/>
@@ -364,7 +363,7 @@
         <mapperTableEntries name="publicationDate" expression="Var.dateStamp " type="id_String" nullable="true"/>
         <mapperTableEntries name="publicationDateType" expression="&quot;publication&quot;" type="id_String" nullable="true"/>
         <mapperTableEntries name="edition" expression="" type="id_String" nullable="true"/>
-        <mapperTableEntries name="mdAbstract" expression="" type="id_String" nullable="true"/>
+        <mapperTableEntries name="mdAbstract" expression="row4.abstractText " type="id_String" nullable="true"/>
         <mapperTableEntries name="purpose" type="id_String" nullable="true"/>
         <mapperTableEntries name="status" type="id_String" nullable="true"/>
         <mapperTableEntries name="individualName" expression="row4.individualName" type="id_String" nullable="true"/>
@@ -504,6 +503,7 @@
         <mapperTableEntries name="email" type="id_String" nullable="true"/>
         <mapperTableEntries name="role" type="id_String" nullable="true"/>
         <mapperTableEntries name="overviewUrlPrefix" type="id_String" nullable="true"/>
+        <mapperTableEntries name="abstractText" type="id_String" nullable="true"/>
         <mapperTableEntries name="keyword" type="id_String" nullable="true"/>
         <mapperTableEntries name="keyword2" type="id_String" nullable="true"/>
         <mapperTableEntries name="geokeyword" type="id_String" nullable="true"/>
@@ -606,6 +606,8 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="overviewUrlPrefix"/>
       <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="abstractText"/>
+      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="keyword"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="keyword2"/>
@@ -686,6 +688,7 @@
       <column comment="" key="false" length="0" name="email" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="role" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="overviewUrlPrefix" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="abstractText" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="keyword" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="keyword2" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geokeyword" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
@@ -733,6 +736,7 @@
       <column comment="" key="false" length="0" name="email" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="role" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="overviewUrlPrefix" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="abstractText" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="keyword" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="keyword2" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geokeyword" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
@@ -2675,6 +2679,7 @@
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
     <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100"/>
+    <elementParameter field="TEXT" name="XMLNODE_OPT_NUM" value="100"/>
     <elementParameter field="TEXT" name="LABEL" value="metadataOnMap"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <elementParameter field="CHECK" name="INFORMATION" value="false"/>
