@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="file" prompt="file?" promptNeeded="false" type="id_File" value="/tmp/spatialdemo/data/SC25_TOPO_0310_6260_L93.tif"/>
+    <contextParameter comment="" name="file" prompt="file?" promptNeeded="false" type="id_File" value="/home/francois/data/ebk1km1.tif"/>
     <contextParameter comment="Create or not overview files" name="create_overview" prompt="create_overview?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
-    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/home/francois/data/urbanatlas/fr026l_grenoble/"/>
+    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/talend/data/"/>
     <contextParameter comment="An EPSG code of a projection to use in case the projection could not be defined from the file" name="default_projection" prompt="default_projection?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;EPSG:4326&quot;"/>
     <contextParameter comment="" name="default_xmax" prompt="default_xmax?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;180&quot;"/>
     <contextParameter comment="" name="default_xmin" prompt="default_xmin?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;-180&quot;"/>
@@ -360,7 +360,7 @@
         <mapperTableEntries name="linkage3name" expression="Var.filename " type="id_String" nullable="true"/>
         <mapperTableEntries name="linkage3description" expression="Var.layerName " type="id_String" nullable="true"/>
         <mapperTableEntries name="scopeCode" expression="&quot;dataset&quot;" type="id_String" nullable="true"/>
-        <mapperTableEntries name="lineage" type="id_String" nullable="true"/>
+        <mapperTableEntries name="lineage" expression="row4.lineageText " type="id_String" nullable="true"/>
         <mapperTableEntries name="featureCatalogUuid" expression="" type="id_String" nullable="true"/>
         <mapperTableEntries name="featureCatalogCols" expression="" type="id_String" nullable="true"/>
         <mapperTableEntries name="fileName" expression="" type="id_String" nullable="true"/>
@@ -437,6 +437,8 @@
         <mapperTableEntries name="mdCountry" type="id_String" nullable="true"/>
         <mapperTableEntries name="mdEmail" type="id_String" nullable="true"/>
         <mapperTableEntries name="mdRole" type="id_String" nullable="true"/>
+        <mapperTableEntries name="abstractText" type="id_String" nullable="true"/>
+        <mapperTableEntries name="lineageText" type="id_String" nullable="true"/>
         <mapperTableEntries name="individualName" type="id_String" nullable="true"/>
         <mapperTableEntries name="organisationName" type="id_String" nullable="true"/>
         <mapperTableEntries name="positionName" type="id_String" nullable="true"/>
@@ -449,7 +451,6 @@
         <mapperTableEntries name="email" type="id_String" nullable="true"/>
         <mapperTableEntries name="role" type="id_String" nullable="true"/>
         <mapperTableEntries name="overviewUrlPrefix" type="id_String" nullable="true"/>
-        <mapperTableEntries name="abstractText" type="id_String" nullable="true"/>
         <mapperTableEntries name="keyword" type="id_String" nullable="true"/>
         <mapperTableEntries name="keyword2" type="id_String" nullable="true"/>
         <mapperTableEntries name="geokeyword" type="id_String" nullable="true"/>
@@ -1352,7 +1353,7 @@
       <elementValue elementRef="ORDER" value="157"/>
       <elementValue elementRef="PATH" value="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString"/>
       <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value="GEMET - INSPIRE themes, version 1.0 INSPIRE themes"/>
+      <elementValue elementRef="VALUE" value="GEMET - INSPIRE themes, version 1.0"/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
       <elementValue elementRef="ORDER" value="158"/>
       <elementValue elementRef="PATH" value="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:date"/>
@@ -2113,6 +2114,10 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="mdRole"/>
       <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="abstractText"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="lineageText"/>
+      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="individualName"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="organisationName"/>
@@ -2136,8 +2141,6 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="role"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="overviewUrlPrefix"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="abstractText"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="keyword"/>
       <elementValue elementRef="TRIM" value="false"/>
@@ -2207,6 +2210,8 @@
       <column comment="" key="false" length="0" name="mdCountry" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="mdEmail" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="mdRole" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="abstractText" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="lineageText" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="individualName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="organisationName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="positionName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
@@ -2219,7 +2224,6 @@
       <column comment="" key="false" length="0" name="email" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="role" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="overviewUrlPrefix" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="abstractText" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="keyword" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="keyword2" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geokeyword" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
@@ -2255,6 +2259,8 @@
       <column comment="" key="false" length="0" name="mdCountry" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="mdEmail" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="mdRole" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="abstractText" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="lineageText" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="individualName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="organisationName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="positionName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
@@ -2267,7 +2273,6 @@
       <column comment="" key="false" length="0" name="email" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="role" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="overviewUrlPrefix" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="abstractText" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="keyword" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="keyword2" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geokeyword" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>

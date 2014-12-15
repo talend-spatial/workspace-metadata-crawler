@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="file" prompt="file?" promptNeeded="false" type="id_File" value="/home/francois/data/CCM.shp"/>
-    <contextParameter comment="" name="isDb" prompt="isDb?" promptNeeded="false" type="id_Boolean" value="false"/>
+    <contextParameter comment="" name="file" prompt="file?" promptNeeded="false" type="id_File" value="&quot;PG:dbname=talend host=localhost port=5432 user=www-data password=www-data&quot;"/>
+    <contextParameter comment="" name="isDb" prompt="isDb?" promptNeeded="false" type="id_Boolean" value="true"/>
     <contextParameter comment="Does the metadata record exists in the target catalog" name="isUpdate" prompt="isUpdate?" promptNeeded="false" type="id_Boolean" value="false"/>
     <contextParameter comment="Create or not overview files" name="create_overview" prompt="create_overview?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
-    <contextParameter comment="The CSW user password" name="csw_password" prompt="csw_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;!!inspire**pnf!!&quot;"/>
-    <contextParameter comment="The CSW server to push metadata records into" name="csw_server_host" prompt="csw_server_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;http://extranet.parcnational.fr/catalogue/pnf/fre/csw-publication&quot;"/>
+    <contextParameter comment="The CSW user password" name="csw_password" prompt="csw_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;admin&quot;"/>
+    <contextParameter comment="The CSW server to push metadata records into" name="csw_server_host" prompt="csw_server_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;http://localhost:8080/geonetwork/srv/eng/csw-publication&quot;"/>
     <contextParameter comment="The CSW user name" name="csw_username" prompt="csw_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;admin&quot;"/>
-    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/home/francois/data/urbanatlas/fr026l_grenoble/"/>
+    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/talend/data/"/>
     <contextParameter comment="List of database to scan" name="db_list" prompt="db_list?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_List Of Value" value="&quot;PG:dbname=talend host=localhost port=5432 user=www-data password=www-data&quot;"/>
     <contextParameter comment="Hide database connection information" name="db_password_hide" prompt="db_password_hide?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="An EPSG code of a projection to use in case the projection could not be defined from the file" name="default_projection" prompt="default_projection?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;EPSG:4326&quot;"/>
@@ -101,7 +101,7 @@
     <routinesParameter id="_nroFkAfBEeKRSpL2q-qWEQ" name="TalendString"/>
     <routinesParameter id="_NukzgAnLEeKr_IP06R0Uyw" name="Utility"/>
   </parameters>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="192">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_1"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value=""/>
@@ -115,7 +115,7 @@
     <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="true"/>
     <elementParameter field="TABLE" name="CONTEXTPARAMS">
       <elementValue elementRef="PARAM_NAME_COLUMN" value="input"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.isDb ?  &quot;\&quot;&quot; + context.file + &quot;\&quot; -l &quot; + ((String)globalMap.get(&quot;row8.layer_name&quot;)) : context.file"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.isDb ?  &quot;\&quot;&quot; + context.file + &quot;\&quot; -l &quot; + ((String)globalMap.get(&quot;row8.layer_name&quot;)) : context.file.replace(&quot;\\\\&quot;, &quot;/&quot;)"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="output"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="(!context.metadata_file_with_source || context.isDb ? context.metadata_dir + (context.isDb ? context.file : new java.io.File(context.file).getName()) : context.file ) "/>
     </elementParameter>
@@ -501,7 +501,7 @@
         <mapperTableEntries name="linkage3name" expression="row3.layer_name " type="id_String" nullable="true"/>
         <mapperTableEntries name="linkage3description" expression="row4.wmsDesc  + row3.layer_name " type="id_String" nullable="true"/>
         <mapperTableEntries name="scopeCode" expression="&quot;dataset&quot;" type="id_String" nullable="true"/>
-        <mapperTableEntries name="lineage" type="id_String" nullable="true"/>
+        <mapperTableEntries name="lineage" expression="row4.lineageText " type="id_String" nullable="true"/>
         <mapperTableEntries name="featureCatalogUuid" expression="Var.fcatUuid " type="id_String" nullable="true"/>
         <mapperTableEntries name="featureCatalogCols" expression="row3.columns_def " type="id_String" nullable="true"/>
         <mapperTableEntries name="fileName" expression="Var.filename " type="id_String" nullable="true"/>
@@ -578,6 +578,8 @@
         <mapperTableEntries name="mdCountry" type="id_String" nullable="true"/>
         <mapperTableEntries name="mdEmail" type="id_String" nullable="true"/>
         <mapperTableEntries name="mdRole" type="id_String" nullable="true"/>
+        <mapperTableEntries name="abstractText" type="id_String" nullable="true"/>
+        <mapperTableEntries name="lineageText" type="id_String" nullable="true"/>
         <mapperTableEntries name="individualName" type="id_String" nullable="true"/>
         <mapperTableEntries name="organisationName" type="id_String" nullable="true"/>
         <mapperTableEntries name="positionName" type="id_String" nullable="true"/>
@@ -590,7 +592,6 @@
         <mapperTableEntries name="email" type="id_String" nullable="true"/>
         <mapperTableEntries name="role" type="id_String" nullable="true"/>
         <mapperTableEntries name="overviewUrlPrefix" type="id_String" nullable="true"/>
-        <mapperTableEntries name="abstractText" type="id_String" nullable="true"/>
         <mapperTableEntries name="keyword" type="id_String" nullable="true"/>
         <mapperTableEntries name="keyword2" type="id_String" nullable="true"/>
         <mapperTableEntries name="geokeyword" type="id_String" nullable="true"/>
@@ -1544,7 +1545,7 @@
       <elementValue elementRef="ORDER" value="167"/>
       <elementValue elementRef="PATH" value="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString"/>
       <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value="GEMET - INSPIRE themes, version 1.0 INSPIRE themes"/>
+      <elementValue elementRef="VALUE" value="GEMET - INSPIRE themes, version 1.0"/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
       <elementValue elementRef="ORDER" value="168"/>
       <elementValue elementRef="PATH" value="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation/gmd:date"/>
@@ -2308,6 +2309,10 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="mdRole"/>
       <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="abstractText"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="lineageText"/>
+      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="individualName"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="organisationName"/>
@@ -2331,8 +2336,6 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="role"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="overviewUrlPrefix"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="abstractText"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="keyword"/>
       <elementValue elementRef="TRIM" value="false"/>
@@ -2402,6 +2405,8 @@
       <column comment="" key="false" length="0" name="mdCountry" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="mdEmail" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="mdRole" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="abstractText" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="lineageText" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="individualName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="organisationName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="positionName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
@@ -2414,7 +2419,6 @@
       <column comment="" key="false" length="0" name="email" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="role" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="overviewUrlPrefix" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="abstractText" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="keyword" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="keyword2" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geokeyword" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
@@ -2450,6 +2454,8 @@
       <column comment="" key="false" length="0" name="mdCountry" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="mdEmail" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="mdRole" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="abstractText" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="lineageText" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="individualName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="organisationName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="positionName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
@@ -2462,7 +2468,6 @@
       <column comment="" key="false" length="0" name="email" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="role" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="overviewUrlPrefix" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="abstractText" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="keyword" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="keyword2" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geokeyword" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="400" usefulColumn="true"/>
@@ -2956,7 +2961,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tAdvancedFileOutputXML" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="864" posY="512">
+  <node componentName="tAdvancedFileOutputXML" componentVersion="0.102" offsetLabelX="14" offsetLabelY="-82" posX="864" posY="512">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAdvancedFileOutputXML_2"/>
     <elementParameter field="CHECK" name="END_OF_FLOW" value="true"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
@@ -3529,22 +3534,22 @@
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value="CSW"/>
       <elementValue elementRef="ATTRIBUTE" value="attri"/>
-      <elementValue elementRef="ORDER" value="1"/>
+      <elementValue elementRef="ORDER" value="2"/>
       <elementValue elementRef="PATH" value="version"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value="2.0.2"/>
       <elementValue elementRef="ATTRIBUTE" value="attri"/>
-      <elementValue elementRef="ORDER" value="2"/>
+      <elementValue elementRef="ORDER" value="3"/>
       <elementValue elementRef="PATH" value="ogc"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value="http://www.opengis.net/ogc"/>
       <elementValue elementRef="ATTRIBUTE" value="ns"/>
-      <elementValue elementRef="ORDER" value="3"/>
+      <elementValue elementRef="ORDER" value="4"/>
       <elementValue elementRef="PATH" value="csw"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value="http://www.opengis.net/cat/csw/2.0.2"/>
       <elementValue elementRef="ATTRIBUTE" value="ns"/>
-      <elementValue elementRef="ORDER" value="4"/>
+      <elementValue elementRef="ORDER" value="5"/>
     </elementParameter>
     <elementParameter field="TABLE" name="GROUP"/>
     <elementParameter field="TABLE" name="LOOP">
@@ -3552,112 +3557,112 @@
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="main"/>
-      <elementValue elementRef="ORDER" value="5"/>
+      <elementValue elementRef="ORDER" value="6"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="6"/>
+      <elementValue elementRef="ORDER" value="25"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Name"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value="gmd:spatialRepresentationInfo/gmd:MD_VectorSpatialRepresentation/gmd:geometricObjects/gmd:MD_GeometricObjects/gmd:geometricObjectCount"/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="7"/>
+      <elementValue elementRef="ORDER" value="26"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Value"/>
       <elementValue elementRef="COLUMN" value="geometryCount"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="8"/>
+      <elementValue elementRef="ORDER" value="27"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:Constraint"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="9"/>
+      <elementValue elementRef="ORDER" value="10"/>
       <elementValue elementRef="PATH" value="version"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value="1.1.0"/>
       <elementValue elementRef="ATTRIBUTE" value="attri"/>
-      <elementValue elementRef="ORDER" value="10"/>
+      <elementValue elementRef="ORDER" value="11"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:Constraint/ogc:Filter"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="11"/>
+      <elementValue elementRef="ORDER" value="12"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:Constraint/ogc:Filter/ogc:PropertyIsEqualTo"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="12"/>
+      <elementValue elementRef="ORDER" value="13"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:Constraint/ogc:Filter/ogc:PropertyIsEqualTo/ogc:PropertyName"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value="Identifier"/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="13"/>
+      <elementValue elementRef="ORDER" value="14"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:Constraint/ogc:Filter/ogc:PropertyIsEqualTo/ogc:Literal"/>
       <elementValue elementRef="COLUMN" value="uuid"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="14"/>
+      <elementValue elementRef="ORDER" value="15"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="15"/>
+      <elementValue elementRef="ORDER" value="25"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Name"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value="gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:westBoundLongitude/gco:Decimal"/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="16"/>
+      <elementValue elementRef="ORDER" value="26"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Value"/>
       <elementValue elementRef="COLUMN" value="west"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="17"/>
+      <elementValue elementRef="ORDER" value="27"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="18"/>
+      <elementValue elementRef="ORDER" value="25"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Name"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value="gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:southBoundLatitude/gco:Decimal"/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="19"/>
+      <elementValue elementRef="ORDER" value="26"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Value"/>
       <elementValue elementRef="COLUMN" value="south"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="20"/>
+      <elementValue elementRef="ORDER" value="27"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="21"/>
+      <elementValue elementRef="ORDER" value="25"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Name"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value="gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:eastBoundLongitude/gco:Decimal"/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="22"/>
+      <elementValue elementRef="ORDER" value="26"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Value"/>
       <elementValue elementRef="COLUMN" value="east"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="23"/>
+      <elementValue elementRef="ORDER" value="27"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="24"/>
+      <elementValue elementRef="ORDER" value="25"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Name"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value="gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:northBoundLatitude/gco:Decimal"/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="25"/>
+      <elementValue elementRef="ORDER" value="26"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Value"/>
       <elementValue elementRef="COLUMN" value="north"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="26"/>
+      <elementValue elementRef="ORDER" value="27"/>
     </elementParameter>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY"/>
@@ -3859,7 +3864,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1"/>
   </connection>
   <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="sOGRInfoInput_2" offsetLabelX="0" offsetLabelY="0" source="sOGRInfoInput_2" target="tRunJob_1">
-    <elementParameter field="MEMO_JAVA" name="CONDITION" value="context.create_overview &amp;&amp; context.isDb == false"/>
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="context.create_overview"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="If1"/>
   </connection>
