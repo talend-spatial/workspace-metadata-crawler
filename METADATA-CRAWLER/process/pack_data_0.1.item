@@ -276,14 +276,14 @@
     <elementParameter field="RADIO" name="USE_ARRAY_COMMAND" value="true"/>
     <elementParameter field="TABLE" name="ARRAY_COMMAND">
       <elementValue elementRef="VALUE" value="context.resource_dir + &quot;convert_db_to_shapefile.sh&quot;"/>
-      <elementValue elementRef="VALUE" value="context.pack_data_dir + &quot;/&quot; + context.layerName + &quot;.shp&quot;"/>
+      <elementValue elementRef="VALUE" value="context.pack_data_dir + context.layerName + &quot;.shp&quot;"/>
       <elementValue elementRef="VALUE" value="context.fileToPack"/>
       <elementValue elementRef="VALUE" value="context.layerName"/>
     </elementParameter>
     <elementParameter field="CLOSED_LIST" name="OUTPUT" value="OUTPUT_TO_CONSOLE"/>
     <elementParameter field="CLOSED_LIST" name="ERROROUTPUT" value="OUTPUT_TO_CONSOLE_AND_RETRIVE_OUTPUT"/>
     <elementParameter field="TABLE" name="PARAMS"/>
-    <elementParameter field="TEXT" name="LABEL" value="createOverview"/>
+    <elementParameter field="TEXT" name="LABEL" value="convertToShapefile"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tSystem_1"/>
   </node>
