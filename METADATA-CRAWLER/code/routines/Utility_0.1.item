@@ -3,6 +3,8 @@ package routines;
 import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
 
+import org.talend.sdi.geometry.Geometry;
+
 /*
  * user specification: the function's comment should contain keys as follows: 1. write about the function's comment.but
  * it must be before the "{talendTypes}" key.
@@ -64,5 +66,45 @@ public class Utility {
 		} else {
 			return "";
 		}
+	}
+	
+
+    public static Geometry PROJ(Geometry geom, String fromEPSG, String toEPSG, boolean lenient) {
+
+        org.opengis.referencing.crs.CoordinateReferenceSystem sourceCRS = null;
+        org.opengis.referencing.crs.CoordinateReferenceSystem targetCRS = null;
+        org.opengis.referencing.operation.MathTransform transform = null;
+        try {
+            sourceCRS = org.geotools.referencing.CRS.decode(fromEPSG, false);
+            targetCRS = org.geotools.referencing.CRS.decode(toEPSG, false);
+            transform = org.geotools.referencing.CRS.findMathTransform(
+                    sourceCRS, targetCRS, false);
+            org.talend.sdi.geometry.Geometry geomProj = new org.talend.sdi.geometry.Geometry(
+                    org.geotools.geometry.jts.JTS.transform(
+                            geom._getInternalGeometry(), transform));
+
+            geomProj.setCRS(targetCRS);
+            return geomProj;
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+            return null;
+        }
+    }
+	/**
+	 * convertAccentsToRegularLetters: Convert accents to regular letters
+	 * 
+	 * 
+	 * {talendTypes} String
+	 * 
+	 * {Category} User Defined
+	 * 
+	 * {param} string("text") input: The string need to be converted.
+	 * 
+	 * {example} convertAccentsToRegularLetters("âéèï")
+	 */
+	public static String convertAccentsToRegularLetters(String text) {
+		return java.text.Normalizer
+	        .normalize(text, java.text.Normalizer.Form.NFD)
+	        .replaceAll("[^\\p{ASCII}]", "");
 	}
 }
