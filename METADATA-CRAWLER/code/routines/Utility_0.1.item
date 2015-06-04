@@ -107,4 +107,30 @@ public class Utility {
 	        .normalize(text, java.text.Normalizer.Form.NFD)
 	        .replaceAll("[^\\p{ASCII}]", "");
 	}
+	
+
+	/**
+	 * returnFirstNotNullOrBlank: return the first argument not null or blank.
+	 * If no arguments match these conditions, return empty string.
+	 * 
+	 * {talendTypes} String
+	 * 
+	 * {Category} User Defined
+	 * 
+	 * {param} string("one") input: The list of string need to be checked
+	 * 
+	 * {example} returnFirstNotNullOrBlank(null, "  ", "one", null) # "one"
+	 */
+	public static String returnFirstNotNullOrBlank(String... stringToCheck) {
+		for (String s : stringToCheck) {
+			if (s != null && !s.trim().equals("null") && !s.trim().equals("")) {
+				return s;
+			}
+		}
+		return "";
+	}
+	
+	public static boolean isWindows() {
+		return System.getProperty("os.name").startsWith("Windows");
+	}
 }

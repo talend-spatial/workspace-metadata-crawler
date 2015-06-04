@@ -4,11 +4,16 @@
     <contextParameter comment="" name="file" prompt="file?" promptNeeded="false" type="id_File" value="&quot;PG:dbname=talend host=localhost port=5432 user=www-data password=www-data&quot;"/>
     <contextParameter comment="" name="isDb" prompt="isDb?" promptNeeded="false" type="id_Boolean" value="true"/>
     <contextParameter comment="Does the metadata record exists in the target catalog" name="isUpdate" prompt="isUpdate?" promptNeeded="false" type="id_Boolean" value="false"/>
+    <contextParameter comment="The folder to create overview into" name="overview_folder" prompt="overview_folder?" promptNeeded="false" type="id_Directory" value="/tmp/talend/www/overviews/"/>
+    <contextParameter comment="" name="ssh_dir" prompt="ssh_dir?" promptNeeded="false" type="id_String" value="&quot;/tmp/www/overview/&quot;"/>
+    <contextParameter comment="" name="administrativeArea" prompt="administrativeArea?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
+    <contextParameter comment="" name="city" prompt="city?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
+    <contextParameter comment="" name="country" prompt="country?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
     <contextParameter comment="Create or not overview files" name="create_overview" prompt="create_overview?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="The CSW user password" name="csw_password" prompt="csw_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;admin&quot;"/>
     <contextParameter comment="The CSW server to push metadata records into" name="csw_server_host" prompt="csw_server_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;http://localhost:8080/geonetwork/srv/eng/csw-publication&quot;"/>
     <contextParameter comment="The CSW user name" name="csw_username" prompt="csw_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;admin&quot;"/>
-    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/var/data/"/>
+    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/home/francois/data/test/toscanall/"/>
     <contextParameter comment="List of database to scan" name="db_list" prompt="db_list?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_List Of Value" value="&quot;PG:dbname=talend host=localhost port=5432 user=www-data password=www-data&quot;"/>
     <contextParameter comment="Hide database connection information" name="db_password_hide" prompt="db_password_hide?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="An EPSG code of a projection to use in case the projection could not be defined from the file" name="default_projection" prompt="default_projection?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;EPSG:4326&quot;"/>
@@ -16,7 +21,8 @@
     <contextParameter comment="" name="default_xmin" prompt="default_xmin?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;-180&quot;"/>
     <contextParameter comment="" name="default_ymax" prompt="default_ymax?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;90&quot;"/>
     <contextParameter comment="" name="default_ymin" prompt="default_ymin?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;-90&quot;"/>
-    <contextParameter comment="The remove directory in the FTP server" name="overview_publication_dir" prompt="overview_publication_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="/var/www/html/overview/"/>
+    <contextParameter comment="" name="deliveryPoint" prompt="deliveryPoint?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
+    <contextParameter comment="" name="email" prompt="email?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
     <contextParameter comment="The FTP host" name="ftp_host" prompt="ftp_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="null"/>
     <contextParameter comment="The user password" name="ftp_password" prompt="ftp_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="null"/>
     <contextParameter comment="The FTP port" name="ftp_port" prompt="ftp_port?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Integer" value="21"/>
@@ -26,33 +32,48 @@
     <contextParameter comment="" name="geoserver_server_host" prompt="geoserver_server_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;http://localhost:8081/geoserver/rest&quot;"/>
     <contextParameter comment="" name="geoserver_username" prompt="geoserver_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;admin&quot;"/>
     <contextParameter comment="" name="geosever_namespace_prefix" prompt="geosever_namespace_prefix?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;gn&quot;"/>
+    <contextParameter comment="" name="individualName" prompt="individualName?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
     <contextParameter comment="The log folder" name="log_dir" prompt="log_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/talend/logs/"/>
     <contextParameter comment="The folder to scan for maps" name="map_data_dir" prompt="map_data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/talend/maps/"/>
     <contextParameter comment="Map file extensions" name="map_file_extension" prompt="map_file_extension?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.qgs&quot;"/>
+    <contextParameter comment="" name="mdAdministrativeArea" prompt="mdAdministrativeArea?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
+    <contextParameter comment="" name="mdCity" prompt="mdCity?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
+    <contextParameter comment="" name="mdCountry" prompt="mdCountry?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
+    <contextParameter comment="" name="mdDeliveryPoint" prompt="mdDeliveryPoint?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
+    <contextParameter comment="" name="mdEmail" prompt="mdEmail?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
+    <contextParameter comment="" name="mdIndividualName" prompt="mdIndividualName?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;BOB&quot;"/>
+    <contextParameter comment="" name="mdOrganisationName" prompt="mdOrganisationName?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
+    <contextParameter comment="" name="mdPositionName" prompt="mdPositionName?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
+    <contextParameter comment="" name="mdPostalCode" prompt="mdPostalCode?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
+    <contextParameter comment="" name="mdVoice" prompt="mdVoice?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
     <contextParameter comment="The folder to create metadata records into" name="metadata_dir" prompt="metadata_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/talend/metadata/"/>
     <contextParameter comment="Store the generated metadata file next to the analyzed file" name="metadata_file_with_source" prompt="metadata_file_with_source?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="false"/>
+    <contextParameter comment="" name="organisationName" prompt="organisationName?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
     <contextParameter comment="Define the way to copy overview (ssh, ftp, copy)" name="overview_and_file_copy_mode" prompt="overview_and_file_copy_mode?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;copy&quot;"/>
-    <contextParameter comment="The folder to create overview into" name="overview_folder" prompt="overview_folder?" promptNeeded="false" type="id_Directory" value="/tmp/talend/www/overviews/"/>
     <contextParameter comment="The height of the overview to generate" name="overview_height" prompt="overview_height?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;800&quot;"/>
+    <contextParameter comment="The remove directory in the FTP server" name="overview_publication_dir" prompt="overview_publication_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="/var/www/html/overview/"/>
     <contextParameter comment="" name="overview_url_prefix" prompt="overview_url_prefix?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;http://localhost/overview/&quot;"/>
     <contextParameter comment="The width of the overview to generate" name="overview_width" prompt="overview_width?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;800&quot;"/>
     <contextParameter comment="" name="pack_data" prompt="pack_data?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="" name="pack_data_create_checksum" prompt="pack_data_create_checksum?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="" name="pack_data_dir" prompt="pack_data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/talend/download/"/>
     <contextParameter comment="" name="pack_data_link_prefix" prompt="pack_data_link_prefix?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;Download data in {{format}} format&quot;"/>
+    <contextParameter comment="" name="pack_data_publication_dir" prompt="pack_data_publication_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/var/www/html/data/"/>
+    <contextParameter comment="" name="pack_data_publish" prompt="pack_data_publish?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="" name="pack_data_url_prefix" prompt="pack_data_url_prefix?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;http://localhost/data/&quot;"/>
     <contextParameter comment="True to ping the job and return status response (use when deploy as webservice)" name="ping" prompt="ping?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="false"/>
+    <contextParameter comment="" name="positionName" prompt="positionName?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
+    <contextParameter comment="" name="postalCode" prompt="postalCode?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
     <contextParameter comment="Publish metadata or not in the CSW catalogue defined" name="publish_metadata" prompt="publish_metadata?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="Always run update by sending the complete metadata record (not only some properties like bounding box)" name="publish_metadata_full_update" prompt="publish_metadata_full_update?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="false"/>
     <contextParameter comment="RASTER file extensions" name="raster_file_extension" prompt="raster_file_extension?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.tif|.*\\.tiff|.*\\.ecw|.*\\.asc|.*\\.ovr|.*\\.grd|.*\\.jpg&quot;"/>
     <contextParameter comment="RASTER file extensions supported for publication in mapservers" name="raster_file_extension_for_geopublication" prompt="raster_file_extension_for_geopublication?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.tif|.*\\.tiff&quot;"/>
-    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/var/app/crawler/resources/"/>
+    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/home/francois/data/test/resources/"/>
     <contextParameter comment="Scan for maps" name="scan_map" prompt="scan_map?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="false"/>
     <contextParameter comment="For each datasources find in a map, create metadata" name="scan_map_and_datasources" prompt="scan_map_and_datasources?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="Scan for RASTER files" name="scan_raster" prompt="scan_raster?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="Scan for vector files" name="scan_vector" prompt="scan_vector?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="List of WFS to scan" name="service_list" prompt="service_list?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_List Of Value" value=""/>
-    <contextParameter comment="" name="ssh_dir" prompt="ssh_dir?" promptNeeded="false" type="id_String" value="&quot;/tmp/www/overview/&quot;"/>
     <contextParameter comment="" name="ssh_host" prompt="ssh_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;&quot;"/>
     <contextParameter comment="" name="ssh_password" prompt="ssh_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;&quot;"/>
     <contextParameter comment="" name="ssh_port" prompt="ssh_port?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Integer" value="22"/>
@@ -65,6 +86,7 @@
     <contextParameter comment="The output folder" name="tmp_dir" prompt="tmp_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/talend/tmp/"/>
     <contextParameter comment="Vector file extensions" name="vector_file_extension" prompt="vector_file_extension?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.kml|.*\\.shp|.*\\.mif|.*\\.tab|.*\\.gml|.*\\.dxf|.*\\.itf&quot;"/>
     <contextParameter comment="Vector file extensions supported for publication in mapservers" name="vector_file_extension_for_geopublication" prompt="vector_file_extension_for_geopublication?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.shp&quot;"/>
+    <contextParameter comment="" name="voice" prompt="voice?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value=" -Xms256M -Xmx1024M -Djava.library.path=/path/to/gdal/swig/java "/>
@@ -667,20 +689,20 @@
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="info">
         <mapperTableEntries name="uuid" expression="Var.mdUuid " type="id_String" nullable="true"/>
-        <mapperTableEntries name="mdLanguage" expression="row4.language" type="id_String" nullable="true"/>
+        <mapperTableEntries name="mdLanguage" expression="metadataProperties.language" type="id_String" nullable="true"/>
         <mapperTableEntries name="mdCharacterSet" expression="&quot;utf8&quot;" type="id_String" nullable="true"/>
         <mapperTableEntries name="hierarchyLevel" expression="&quot;dataset&quot;" type="id_String" nullable="true"/>
-        <mapperTableEntries name="mdIndividualName" expression="row4.mdIndividualName" type="id_String" nullable="true"/>
-        <mapperTableEntries name="mdOrganisationName" expression="row4.mdOrganisationName" type="id_String" nullable="true"/>
-        <mapperTableEntries name="mdPositionName" expression="row4.mdPositionName" type="id_String" nullable="true"/>
-        <mapperTableEntries name="mdVoice" expression="row4.mdVoice" type="id_String" nullable="true"/>
-        <mapperTableEntries name="mdDeliveryPoint" expression="row4.mdDeliveryPoint" type="id_String" nullable="true"/>
-        <mapperTableEntries name="mdCity" expression="row4.mdCity" type="id_String" nullable="true"/>
-        <mapperTableEntries name="mdAdministrativeArea" expression="row4.mdAdministrativeArea" type="id_String" nullable="true"/>
-        <mapperTableEntries name="mdPostalCode" expression="row4.mdPostalCode" type="id_String" nullable="true"/>
-        <mapperTableEntries name="mdCountry" expression="row4.mdCountry" type="id_String" nullable="true"/>
-        <mapperTableEntries name="mdEmail" expression="row4.mdEmail" type="id_String" nullable="true"/>
-        <mapperTableEntries name="mdRole" expression="row4.mdRole" type="id_String" nullable="true"/>
+        <mapperTableEntries name="mdIndividualName" expression="Utility.returnFirstNotNullOrBlank(context.mdIndividualName, metadataProperties.mdIndividualName) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="mdOrganisationName" expression="Utility.returnFirstNotNullOrBlank(context.mdOrganisationName, metadataProperties.mdOrganisationName) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="mdPositionName" expression="Utility.returnFirstNotNullOrBlank(context.mdPositionName, metadataProperties.mdPositionName) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="mdVoice" expression="Utility.returnFirstNotNullOrBlank(context.mdVoice, metadataProperties.mdVoice) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="mdDeliveryPoint" expression="Utility.returnFirstNotNullOrBlank(context.mdDeliveryPoint, metadataProperties.mdDeliveryPoint) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="mdCity" expression="Utility.returnFirstNotNullOrBlank(context.mdCity, metadataProperties.mdCity) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="mdAdministrativeArea" expression="Utility.returnFirstNotNullOrBlank(context.mdAdministrativeArea, metadataProperties.mdAdministrativeArea) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="mdPostalCode" expression="Utility.returnFirstNotNullOrBlank(context.mdPostalCode, metadataProperties.mdPostalCode) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="mdCountry" expression="Utility.returnFirstNotNullOrBlank(context.mdCountry, metadataProperties.mdCountry) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="mdEmail" expression="Utility.returnFirstNotNullOrBlank(context.mdEmail, metadataProperties.mdEmail) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="mdRole" expression=" metadataProperties.mdRole" type="id_String" nullable="true"/>
         <mapperTableEntries name="dateStamp" expression="Var.dateStamp " type="id_String" nullable="true"/>
         <mapperTableEntries name="standardName" expression="&quot;ISO 19115:2003/19139&quot;" type="id_String" nullable="true"/>
         <mapperTableEntries name="standardVersion" expression="&quot;1.0&quot;" type="id_String" nullable="true"/>
@@ -689,40 +711,40 @@
         <mapperTableEntries name="publicationDate" expression="Var.fileDateStamp " type="id_String" nullable="true"/>
         <mapperTableEntries name="publicationDateType" expression="&quot;creation&quot;" type="id_String" nullable="true"/>
         <mapperTableEntries name="edition" expression="" type="id_String" nullable="true"/>
-        <mapperTableEntries name="mdAbstract" expression="row4.abstractText " type="id_String" nullable="true"/>
+        <mapperTableEntries name="mdAbstract" expression="metadataProperties.abstractText" type="id_String" nullable="true"/>
         <mapperTableEntries name="purpose" type="id_String" nullable="true"/>
         <mapperTableEntries name="status" type="id_String" nullable="true"/>
-        <mapperTableEntries name="individualName" expression="row4.individualName" type="id_String" nullable="true"/>
-        <mapperTableEntries name="organisationName" expression="row4.organisationName" type="id_String" nullable="true"/>
-        <mapperTableEntries name="positionName" expression="row4.positionName" type="id_String" nullable="true"/>
-        <mapperTableEntries name="voice" expression="row4.voice" type="id_String" nullable="true"/>
-        <mapperTableEntries name="deliveryPoint" expression="row4.deliveryPoint" type="id_String" nullable="true"/>
-        <mapperTableEntries name="city" expression="row4.city" type="id_String" nullable="true"/>
-        <mapperTableEntries name="adminArea" expression="row4.adminArea" type="id_String" nullable="true"/>
-        <mapperTableEntries name="postalCode" expression="row4.postalCode" type="id_String" nullable="true"/>
-        <mapperTableEntries name="country" expression="row4.country" type="id_String" nullable="true"/>
-        <mapperTableEntries name="email" expression="row4.email" type="id_String" nullable="true"/>
-        <mapperTableEntries name="role" expression="row4.role" type="id_String" nullable="true"/>
+        <mapperTableEntries name="individualName" expression="Utility.returnFirstNotNullOrBlank(context.individualName, metadataProperties.individualName) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="organisationName" expression="Utility.returnFirstNotNullOrBlank(context.organisationName, metadataProperties.organisationName) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="positionName" expression="Utility.returnFirstNotNullOrBlank(context.positionName, metadataProperties.positionName) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="voice" expression="Utility.returnFirstNotNullOrBlank(context.voice, metadataProperties.voice) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="deliveryPoint" expression="Utility.returnFirstNotNullOrBlank(context.deliveryPoint, metadataProperties.deliveryPoint) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="city" expression="Utility.returnFirstNotNullOrBlank(context.city, metadataProperties.city) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="adminArea" expression="Utility.returnFirstNotNullOrBlank(context.administrativeArea, metadataProperties.adminArea) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="postalCode" expression="Utility.returnFirstNotNullOrBlank(context.postalCode, metadataProperties.postalCode) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="country" expression="Utility.returnFirstNotNullOrBlank(context.country, metadataProperties.country) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="email" expression="Utility.returnFirstNotNullOrBlank(context.email, metadataProperties.individualName)" type="id_String" nullable="true"/>
+        <mapperTableEntries name="role" expression="metadataProperties.role" type="id_String" nullable="true"/>
         <mapperTableEntries name="geometricType" expression="row9.geom_type " type="id_String" nullable="true"/>
         <mapperTableEntries name="geometryCount" expression="row9.nb_features  + &quot;&quot;" type="id_String" nullable="true"/>
         <mapperTableEntries name="maintenanceFrequency" expression="" type="id_String" nullable="true"/>
         <mapperTableEntries name="graphicFileName" expression="context.overview_url_prefix + &#xA;  (context.isDb ? row9.layer_name : Var.filename) +&#xA;  &quot;_overview.png&quot; " type="id_String" nullable="true"/>
         <mapperTableEntries name="graphicFileDesc" expression="" type="id_String" nullable="true"/>
-        <mapperTableEntries name="keyword" expression="row4.keyword" type="id_String" nullable="true"/>
-        <mapperTableEntries name="keyword2" expression="row4.keyword2" type="id_String" nullable="true"/>
+        <mapperTableEntries name="keyword" expression="metadataProperties.keyword" type="id_String" nullable="true"/>
+        <mapperTableEntries name="keyword2" expression="metadataProperties.keyword2" type="id_String" nullable="true"/>
         <mapperTableEntries name="keywordType" type="id_String" nullable="true"/>
         <mapperTableEntries name="inspireTheme" type="id_String" nullable="true"/>
-        <mapperTableEntries name="geoKeyword" expression="row4.geokeyword" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geoKeyword" expression="metadataProperties.geokeyword" type="id_String" nullable="true"/>
         <mapperTableEntries name="geoKeywordType" type="id_String" nullable="true"/>
-        <mapperTableEntries name="accessConstraints" expression="row4.accessConstraints" type="id_String" nullable="true"/>
-        <mapperTableEntries name="useConstraints" expression="row4.useConstraints" type="id_String" nullable="true"/>
-        <mapperTableEntries name="useConstraintsInfo" expression="row4.useConstraintsInfo" type="id_String" nullable="true"/>
-        <mapperTableEntries name="useLimitation" expression="row4.useLimitation" type="id_String" nullable="true"/>
+        <mapperTableEntries name="accessConstraints" expression="metadataProperties.accessConstraints" type="id_String" nullable="true"/>
+        <mapperTableEntries name="useConstraints" expression="metadataProperties.useConstraints" type="id_String" nullable="true"/>
+        <mapperTableEntries name="useConstraintsInfo" expression="metadataProperties.useConstraintsInfo" type="id_String" nullable="true"/>
+        <mapperTableEntries name="useLimitation" expression="metadataProperties.useLimitation" type="id_String" nullable="true"/>
         <mapperTableEntries name="spatialRepresentation" type="id_String" nullable="true"/>
-        <mapperTableEntries name="scaleDenominator" expression="row4.scaleDenominator" type="id_String" nullable="true"/>
-        <mapperTableEntries name="language" expression="row4.language" type="id_String" nullable="true"/>
-        <mapperTableEntries name="charset" expression="row4.charset" type="id_String" nullable="true"/>
-        <mapperTableEntries name="topicCategoryCode" expression="row4.topicCategoryCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="scaleDenominator" expression="metadataProperties.scaleDenominator" type="id_String" nullable="true"/>
+        <mapperTableEntries name="language" expression="metadataProperties.language" type="id_String" nullable="true"/>
+        <mapperTableEntries name="charset" expression="metadataProperties.charset" type="id_String" nullable="true"/>
+        <mapperTableEntries name="topicCategoryCode" expression="metadataProperties.topicCategoryCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="geographicDescription" type="id_String" nullable="true"/>
         <mapperTableEntries name="west" expression="Var.west " type="id_String" nullable="true"/>
         <mapperTableEntries name="east" expression="Var.east " type="id_String" nullable="true"/>
@@ -731,20 +753,20 @@
         <mapperTableEntries name="supplementalInformation" expression="" type="id_String" nullable="true"/>
         <mapperTableEntries name="formatName" expression="row9.driver " type="id_String" nullable="true"/>
         <mapperTableEntries name="formatVersion" expression="" type="id_String" nullable="true"/>
-        <mapperTableEntries name="linkage1URL" expression="row4.linkage1URL" type="id_String" nullable="true"/>
-        <mapperTableEntries name="linkage1protocol" expression="row4.linkage1protocol" type="id_String" nullable="true"/>
-        <mapperTableEntries name="linkage1name" expression="row4.linkage1name" type="id_String" nullable="true"/>
-        <mapperTableEntries name="linkage1description" expression="row4.linkage1description" type="id_String" nullable="true"/>
+        <mapperTableEntries name="linkage1URL" expression="metadataProperties.linkage1URL" type="id_String" nullable="true"/>
+        <mapperTableEntries name="linkage1protocol" expression="metadataProperties.linkage1protocol" type="id_String" nullable="true"/>
+        <mapperTableEntries name="linkage1name" expression="metadataProperties.linkage1name" type="id_String" nullable="true"/>
+        <mapperTableEntries name="linkage1description" expression="metadataProperties.linkage1description" type="id_String" nullable="true"/>
         <mapperTableEntries name="linkage2URL" expression="Var.filepath " type="id_String" nullable="true"/>
-        <mapperTableEntries name="linkage2protocol" expression="context.isDb ? &quot;DB:POSTGIS&quot; : row4.lanFileProtocol " type="id_String" nullable="true"/>
-        <mapperTableEntries name="linkage2name" expression="context.isDb ?  row9.layer_name  : row4.lanFileDesc " type="id_String" nullable="true"/>
+        <mapperTableEntries name="linkage2protocol" expression="context.isDb ? &quot;DB:POSTGIS&quot; : metadataProperties.lanFileProtocol " type="id_String" nullable="true"/>
+        <mapperTableEntries name="linkage2name" expression="context.isDb ?  row9.layer_name  : metadataProperties.lanFileDesc " type="id_String" nullable="true"/>
         <mapperTableEntries name="linkage2description" type="id_String" nullable="true"/>
         <mapperTableEntries name="linkage3URL" expression="context.pack_data ? context.pack_data_url_prefix + Var.datapackfilename + &quot;.zip&quot; : &quot;&quot; " type="id_String" nullable="true"/>
         <mapperTableEntries name="linkage3protocol" expression="context.pack_data ? &quot;WWW:DOWNLOAD&quot; : &quot;&quot;" type="id_String" nullable="true"/>
         <mapperTableEntries name="linkage3name" expression="context.pack_data ? &#xA;  context.pack_data_link_prefix.replace(&#xA;    &quot;{{format}}&quot;, &#xA;    (context.isDb ? &quot;ESRI Shapefile&quot; :row9.driver)&#xA;  ) : &quot;&quot; " type="id_String" nullable="true"/>
         <mapperTableEntries name="linkage3description" expression="" type="id_String" nullable="true"/>
         <mapperTableEntries name="scopeCode" expression="&quot;dataset&quot;" type="id_String" nullable="true"/>
-        <mapperTableEntries name="lineage" expression="row4.lineageText " type="id_String" nullable="true"/>
+        <mapperTableEntries name="lineage" expression="metadataProperties.lineageText " type="id_String" nullable="true"/>
         <mapperTableEntries name="featureCatalogUuid" expression="Var.fcatUuid " type="id_String" nullable="true"/>
         <mapperTableEntries name="featureCatalogCols" expression="row9.columns_def " type="id_String" nullable="true"/>
         <mapperTableEntries name="fileName" expression="Var.filename " type="id_String" nullable="true"/>
@@ -776,10 +798,10 @@
         <mapperTableEntries name="north" expression="Var.north " type="id_String" nullable="true"/>
         <mapperTableEntries name="formatName" expression="row9.driver " type="id_String" nullable="true"/>
         <mapperTableEntries name="formatVersion" type="id_String" nullable="true"/>
-        <mapperTableEntries name="linkage1URL" expression="row4.linkage1URL" type="id_String" nullable="true"/>
-        <mapperTableEntries name="linkage1protocol" expression="row4.linkage1protocol" type="id_String" nullable="true"/>
-        <mapperTableEntries name="linkage1name" expression="row4.linkage1name" type="id_String" nullable="true"/>
-        <mapperTableEntries name="linkage1description" expression="row4.linkage1description" type="id_String" nullable="true"/>
+        <mapperTableEntries name="linkage1URL" expression="metadataProperties.linkage1URL" type="id_String" nullable="true"/>
+        <mapperTableEntries name="linkage1protocol" expression="metadataProperties.linkage1protocol" type="id_String" nullable="true"/>
+        <mapperTableEntries name="linkage1name" expression="metadataProperties.linkage1name" type="id_String" nullable="true"/>
+        <mapperTableEntries name="linkage1description" expression="metadataProperties.linkage1description" type="id_String" nullable="true"/>
         <mapperTableEntries name="linkage2URL" expression="context.pack_data ? context.pack_data_url_prefix + &quot;/&quot; + Var.filename + &quot;.zip&quot; : &quot;&quot; " type="id_String" nullable="true"/>
         <mapperTableEntries name="linkage2protocol" expression="&quot;WWW:LINK&quot;" type="id_String" nullable="true"/>
         <mapperTableEntries name="linkage2name" expression="context.pack_data ? context.pack_data_link_prefix : &quot;&quot; " type="id_String" nullable="true"/>
@@ -815,7 +837,7 @@
         <mapperTableEntries name="nb_features" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="error" type="id_String" nullable="true"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row4" expressionFilter="&quot;vector&quot;.equals(row4.dataType)" activateExpressionFilter="true" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="metadataProperties" expressionFilter="&quot;vector&quot;.equals(metadataProperties.dataType)" activateExpressionFilter="true" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="dataType" type="id_String" nullable="true"/>
         <mapperTableEntries name="mdIndividualName" type="id_String" nullable="true"/>
         <mapperTableEntries name="mdOrganisationName" type="id_String" nullable="true"/>
@@ -5156,7 +5178,7 @@
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tAdvancedFileOutputXML_1" offsetLabelX="0" offsetLabelY="0" source="tAdvancedFileOutputXML_1" target="tWarn_4">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2"/>
   </connection>
-  <connection connectorName="FLOW" label="row4" lineStyle="8" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tMap_1">
+  <connection connectorName="FLOW" label="metadataProperties" lineStyle="8" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tMap_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
       <elementValue elementRef="TRACE_COLUMN" value="mdIndividualName"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -5274,7 +5296,7 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="metadataProperties"/>
   </connection>
   <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tNormalize_1" offsetLabelX="0" offsetLabelY="0" source="tNormalize_1" target="tExtractDelimitedFields_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
