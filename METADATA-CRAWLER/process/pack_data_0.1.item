@@ -275,7 +275,7 @@
     <elementParameter field="MEMO_JAVA" name="COMMAND" value=""/>
     <elementParameter field="RADIO" name="USE_ARRAY_COMMAND" value="true"/>
     <elementParameter field="TABLE" name="ARRAY_COMMAND">
-      <elementValue elementRef="VALUE" value="context.resource_dir + &quot;convert_db_to_shapefile.sh&quot;"/>
+      <elementValue elementRef="VALUE" value="context.resource_dir + &quot;convert_db_to_shapefile.&quot; + (Utility.isWindows() ? &quot;bat&quot; : &quot;sh&quot;)"/>
       <elementValue elementRef="VALUE" value="context.pack_data_dir + context.layerName + &quot;.shp&quot;"/>
       <elementValue elementRef="VALUE" value="context.fileToPack"/>
       <elementValue elementRef="VALUE" value="context.layerName"/>

@@ -2,7 +2,7 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
   <talendfile:ContextType confirmationNeeded="false" name="test">
     <contextParameter comment="The CSW server to push metadata records into" name="csw_server_host" prompt="csw_server_host?" promptNeeded="false" type="id_String" value="&quot;http://localhost:8080/geonetwork/srv/eng/csw-publication&quot;"/>
-    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" type="id_Directory" value="/home/francois/data/test/toscanall/"/>
+    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" type="id_Directory" value="/tmp/talend/data/"/>
     <contextParameter comment="RASTER file extensions" name="raster_file_extension" prompt="raster_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.tif|.*\\.tiff|.*\\.ecw|.*\\.asc|.*\\.ovr|.*\\.grd|.*\\.jpg&quot;"/>
     <contextParameter comment="The output folder" name="tmp_dir" prompt="tmp_dir?" promptNeeded="false" type="id_Directory" value="/tmp/talend/tmp/"/>
     <contextParameter comment="Vector file extensions" name="vector_file_extension" prompt="vector_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.kml|.*\\.shp|.*\\.mif|.*\\.tab|.*\\.gml|.*\\.dxf|.*\\.itf&quot;"/>
@@ -60,9 +60,9 @@
     <contextParameter comment="" name="pack_data_publication_dir" prompt="pack_data_publication_dir?" promptNeeded="false" type="id_Directory" value="/var/www/html/data/"/>
     <contextParameter comment="" name="overview_url_prefix" prompt="overview_url_prefix?" promptNeeded="false" type="id_String" value="&quot;http://localhost/overview/&quot;"/>
     <contextParameter comment="" name="pack_data_url_prefix" prompt="pack_data_url_prefix?" promptNeeded="false" type="id_String" value="&quot;http://localhost/data/&quot;"/>
-    <contextParameter comment="" name="pack_data_link_prefix" prompt="pack_data_link_prefix?" promptNeeded="false" type="id_String" value="&quot;Download data in {{format}} format&quot;"/>
+    <contextParameter comment="" name="pack_data_link_template" prompt="pack_data_link_template?" promptNeeded="false" type="id_String" value="&quot;Download data in {{format}} format&quot;"/>
     <contextParameter comment="" name="pack_data_publish" prompt="pack_data_publish?" promptNeeded="false" type="id_Boolean" value="true"/>
-    <contextParameter comment="" name="mdIndividualName" prompt="mdIndividualName?" promptNeeded="false" type="id_String" value="&quot;BOB&quot;"/>
+    <contextParameter comment="" name="mdIndividualName" prompt="mdIndividualName?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="mdOrganisationName" prompt="mdOrganisationName?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="mdEmail" prompt="mdEmail?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="mdPositionName" prompt="mdPositionName?" promptNeeded="false" type="id_String" value=""/>
@@ -143,27 +143,27 @@
     <contextParameter comment="" name="pack_data_publication_dir" prompt="pack_data_publication_dir?" promptNeeded="false" type="id_Directory" value="/tmp/talend/www/data/"/>
     <contextParameter comment="" name="overview_url_prefix" prompt="overview_url_prefix?" promptNeeded="false" type="id_String" value="&quot;http://organisation.org/overview/&quot;"/>
     <contextParameter comment="" name="pack_data_url_prefix" prompt="pack_data_url_prefix?" promptNeeded="false" type="id_String" value="http://organisation.org/data/&quot;"/>
-    <contextParameter comment="" name="pack_data_link_prefix" prompt="pack_data_link_prefix?" promptNeeded="false" type="id_String" value="&quot;Download data in {{format}} format&quot;"/>
+    <contextParameter comment="" name="pack_data_link_template" prompt="pack_data_link_template?" promptNeeded="false" type="id_String" value="&quot;Download data in {{format}} format&quot;"/>
     <contextParameter comment="" name="pack_data_publish" prompt="pack_data_publish?" promptNeeded="false" type="id_Boolean" value="true"/>
     <contextParameter comment="" name="mdIndividualName" prompt="mdIndividualName?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="mdOrganisationName" prompt="mdOrganisationName?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="mdEmail" prompt="mdEmail?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="mdPositionName" prompt="mdPositionName?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="mdVoice" prompt="mdVoice?" promptNeeded="false" type="id_String" value="null"/>
-    <contextParameter comment="" name="mdDeliveryPoint" prompt="mdDeliveryPoint?" promptNeeded="false" type="id_String" value="null"/>
-    <contextParameter comment="" name="mdCity" prompt="mdCity?" promptNeeded="false" type="id_String" value="null"/>
-    <contextParameter comment="" name="mdAdministrativeArea" prompt="mdAdministrativeArea?" promptNeeded="false" type="id_String" value="null"/>
-    <contextParameter comment="" name="mdPostalCode" prompt="mdPostalCode?" promptNeeded="false" type="id_String" value="null"/>
-    <contextParameter comment="" name="mdCountry" prompt="mdCountry?" promptNeeded="false" type="id_String" value="null"/>
-    <contextParameter comment="" name="individualName" prompt="individualName?" promptNeeded="false" type="id_String" value="null"/>
-    <contextParameter comment="" name="organisationName" prompt="organisationName?" promptNeeded="false" type="id_String" value="null"/>
-    <contextParameter comment="" name="positionName" prompt="positionName?" promptNeeded="false" type="id_String" value="null"/>
-    <contextParameter comment="" name="voice" prompt="voice?" promptNeeded="false" type="id_String" value="null"/>
-    <contextParameter comment="" name="deliveryPoint" prompt="deliveryPoint?" promptNeeded="false" type="id_String" value="null"/>
-    <contextParameter comment="" name="city" prompt="city?" promptNeeded="false" type="id_String" value="null"/>
-    <contextParameter comment="" name="administrativeArea" prompt="administrativeArea?" promptNeeded="false" type="id_String" value="null"/>
-    <contextParameter comment="" name="postalCode" prompt="postalCode?" promptNeeded="false" type="id_String" value="null"/>
-    <contextParameter comment="" name="country" prompt="country?" promptNeeded="false" type="id_String" value="null"/>
-    <contextParameter comment="" name="email" prompt="email?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="mdVoice" prompt="mdVoice?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="mdDeliveryPoint" prompt="mdDeliveryPoint?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="mdCity" prompt="mdCity?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="mdAdministrativeArea" prompt="mdAdministrativeArea?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="mdPostalCode" prompt="mdPostalCode?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="mdCountry" prompt="mdCountry?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="individualName" prompt="individualName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="organisationName" prompt="organisationName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="positionName" prompt="positionName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="voice" prompt="voice?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="deliveryPoint" prompt="deliveryPoint?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="city" prompt="city?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="administrativeArea" prompt="administrativeArea?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="postalCode" prompt="postalCode?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="country" prompt="country?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="email" prompt="email?" promptNeeded="false" type="id_String" value=""/>
   </talendfile:ContextType>
 </xmi:XMI>

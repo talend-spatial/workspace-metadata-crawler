@@ -2,28 +2,87 @@
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
   <context confirmationNeeded="false" name="Default">
     <contextParameter comment="" name="file" prompt="file?" promptNeeded="false" type="id_File" value="/home/francois/data/ebk1km1.tif"/>
+    <contextParameter comment="" name="administrativeArea" prompt="administrativeArea?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
+    <contextParameter comment="" name="city" prompt="city?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
+    <contextParameter comment="" name="country" prompt="country?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
     <contextParameter comment="Create or not overview files" name="create_overview" prompt="create_overview?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
-    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/home/francois/data/test/toscanall/"/>
+    <contextParameter comment="The CSW user password" name="csw_password" prompt="csw_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;admin&quot;"/>
+    <contextParameter comment="The CSW server to push metadata records into" name="csw_server_host" prompt="csw_server_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;http://localhost:8080/geonetwork/srv/eng/csw-publication&quot;"/>
+    <contextParameter comment="The CSW user name" name="csw_username" prompt="csw_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;admin&quot;"/>
+    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/talend/data/"/>
+    <contextParameter comment="List of database to scan" name="db_list" prompt="db_list?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_List Of Value" value="&quot;PG:dbname=talend host=localhost port=5432 user=www-data password=www-data&quot;"/>
+    <contextParameter comment="Hide database connection information" name="db_password_hide" prompt="db_password_hide?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="An EPSG code of a projection to use in case the projection could not be defined from the file" name="default_projection" prompt="default_projection?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;EPSG:4326&quot;"/>
     <contextParameter comment="" name="default_xmax" prompt="default_xmax?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;180&quot;"/>
     <contextParameter comment="" name="default_xmin" prompt="default_xmin?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;-180&quot;"/>
     <contextParameter comment="" name="default_ymax" prompt="default_ymax?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;90&quot;"/>
     <contextParameter comment="" name="default_ymin" prompt="default_ymin?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;-90&quot;"/>
+    <contextParameter comment="" name="deliveryPoint" prompt="deliveryPoint?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
+    <contextParameter comment="" name="email" prompt="email?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
+    <contextParameter comment="The FTP host" name="ftp_host" prompt="ftp_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="null"/>
+    <contextParameter comment="The user password" name="ftp_password" prompt="ftp_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="null"/>
+    <contextParameter comment="The FTP port" name="ftp_port" prompt="ftp_port?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Integer" value="21"/>
+    <contextParameter comment="The user name to log in the FTP server" name="ftp_username" prompt="ftp_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="null"/>
+    <contextParameter comment="Path to GDAL/OGR bin or empty if in system path" name="gdal_path" prompt="gdal_path?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value=""/>
+    <contextParameter comment="" name="geoserver_password" prompt="geoserver_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;geoserver&quot;"/>
+    <contextParameter comment="" name="geoserver_server_host" prompt="geoserver_server_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;http://localhost:8081/geoserver/rest&quot;"/>
+    <contextParameter comment="" name="geoserver_username" prompt="geoserver_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;admin&quot;"/>
+    <contextParameter comment="" name="geosever_namespace_prefix" prompt="geosever_namespace_prefix?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;gn&quot;"/>
+    <contextParameter comment="" name="individualName" prompt="individualName?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
     <contextParameter comment="The log folder" name="log_dir" prompt="log_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/talend/logs/"/>
+    <contextParameter comment="The folder to scan for maps" name="map_data_dir" prompt="map_data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/talend/maps/"/>
+    <contextParameter comment="Map file extensions" name="map_file_extension" prompt="map_file_extension?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.qgs&quot;"/>
+    <contextParameter comment="" name="mdAdministrativeArea" prompt="mdAdministrativeArea?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
+    <contextParameter comment="" name="mdCity" prompt="mdCity?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
+    <contextParameter comment="" name="mdCountry" prompt="mdCountry?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
+    <contextParameter comment="" name="mdDeliveryPoint" prompt="mdDeliveryPoint?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
+    <contextParameter comment="" name="mdEmail" prompt="mdEmail?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
+    <contextParameter comment="" name="mdIndividualName" prompt="mdIndividualName?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
+    <contextParameter comment="" name="mdOrganisationName" prompt="mdOrganisationName?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
+    <contextParameter comment="" name="mdPositionName" prompt="mdPositionName?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
+    <contextParameter comment="" name="mdPostalCode" prompt="mdPostalCode?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
+    <contextParameter comment="" name="mdVoice" prompt="mdVoice?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
     <contextParameter comment="The folder to create metadata records into" name="metadata_dir" prompt="metadata_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/talend/metadata/"/>
     <contextParameter comment="Store the generated metadata file next to the analyzed file" name="metadata_file_with_source" prompt="metadata_file_with_source?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="false"/>
+    <contextParameter comment="" name="organisationName" prompt="organisationName?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
+    <contextParameter comment="Define the way to copy overview (ssh, ftp, copy)" name="overview_and_file_copy_mode" prompt="overview_and_file_copy_mode?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;copy&quot;"/>
+    <contextParameter comment="The height of the overview to generate" name="overview_height" prompt="overview_height?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;800&quot;"/>
+    <contextParameter comment="The remove directory in the FTP server" name="overview_publication_dir" prompt="overview_publication_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="/var/www/html/overview/"/>
     <contextParameter comment="" name="overview_url_prefix" prompt="overview_url_prefix?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;http://localhost/overview/&quot;"/>
+    <contextParameter comment="The width of the overview to generate" name="overview_width" prompt="overview_width?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;800&quot;"/>
     <contextParameter comment="" name="pack_data" prompt="pack_data?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="" name="pack_data_create_checksum" prompt="pack_data_create_checksum?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="" name="pack_data_dir" prompt="pack_data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/talend/download/"/>
-    <contextParameter comment="" name="pack_data_link_prefix" prompt="pack_data_link_prefix?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;Download data in {{format}} format&quot;"/>
+    <contextParameter comment="" name="pack_data_link_template" prompt="pack_data_link_template?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;Download data in {{format}} format&quot;"/>
     <contextParameter comment="" name="pack_data_publication_dir" prompt="pack_data_publication_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/var/www/html/data/"/>
     <contextParameter comment="" name="pack_data_publish" prompt="pack_data_publish?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="" name="pack_data_url_prefix" prompt="pack_data_url_prefix?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;http://localhost/data/&quot;"/>
+    <contextParameter comment="True to ping the job and return status response (use when deploy as webservice)" name="ping" prompt="ping?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="false"/>
+    <contextParameter comment="" name="positionName" prompt="positionName?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
+    <contextParameter comment="" name="postalCode" prompt="postalCode?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
+    <contextParameter comment="Publish metadata or not in the CSW catalogue defined" name="publish_metadata" prompt="publish_metadata?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
+    <contextParameter comment="Always run update by sending the complete metadata record (not only some properties like bounding box)" name="publish_metadata_full_update" prompt="publish_metadata_full_update?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="false"/>
     <contextParameter comment="RASTER file extensions" name="raster_file_extension" prompt="raster_file_extension?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.tif|.*\\.tiff|.*\\.ecw|.*\\.asc|.*\\.ovr|.*\\.grd|.*\\.jpg&quot;"/>
+    <contextParameter comment="RASTER file extensions supported for publication in mapservers" name="raster_file_extension_for_geopublication" prompt="raster_file_extension_for_geopublication?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.tif|.*\\.tiff&quot;"/>
     <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/home/francois/data/test/resources/"/>
+    <contextParameter comment="Scan for maps" name="scan_map" prompt="scan_map?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="false"/>
+    <contextParameter comment="For each datasources find in a map, create metadata" name="scan_map_and_datasources" prompt="scan_map_and_datasources?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
+    <contextParameter comment="Scan for RASTER files" name="scan_raster" prompt="scan_raster?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
+    <contextParameter comment="Scan for vector files" name="scan_vector" prompt="scan_vector?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
+    <contextParameter comment="List of WFS to scan" name="service_list" prompt="service_list?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_List Of Value" value=""/>
+    <contextParameter comment="" name="ssh_host" prompt="ssh_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;&quot;"/>
+    <contextParameter comment="" name="ssh_password" prompt="ssh_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;&quot;"/>
+    <contextParameter comment="" name="ssh_port" prompt="ssh_port?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Integer" value="22"/>
+    <contextParameter comment="" name="ssh_username" prompt="ssh_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;&quot;"/>
+    <contextParameter comment="Metadata title prefix for db tables" name="title_prefix_db" prompt="title_prefix_db?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;Table &quot;"/>
+    <contextParameter comment="Metadata title prefix for feature catalog" name="title_prefix_fcat" prompt="title_prefix_fcat?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;Feature catalog &quot;"/>
+    <contextParameter comment="Metadata title prefix for maps" name="title_prefix_map" prompt="title_prefix_map?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;Map &quot;"/>
     <contextParameter comment="Metadata title prefix for RASTER" name="title_prefix_raster" prompt="title_prefix_raster?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;Raster file &quot;"/>
+    <contextParameter comment="Metadata title prefix for vector" name="title_prefix_vector" prompt="title_prefix_vector?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;Vector file &quot;"/>
     <contextParameter comment="The output folder" name="tmp_dir" prompt="tmp_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/talend/tmp/"/>
+    <contextParameter comment="Vector file extensions" name="vector_file_extension" prompt="vector_file_extension?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.kml|.*\\.shp|.*\\.mif|.*\\.tab|.*\\.gml|.*\\.dxf|.*\\.itf&quot;"/>
+    <contextParameter comment="Vector file extensions supported for publication in mapservers" name="vector_file_extension_for_geopublication" prompt="vector_file_extension_for_geopublication?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.shp&quot;"/>
+    <contextParameter comment="" name="voice" prompt="voice?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value=" -Xms256M -Xmx1024M -Djava.library.path=/path/to/gdal/swig/java/"/>
@@ -313,6 +372,7 @@
       <column comment="" key="false" length="0" name="linkage3protocol" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="linkage3name" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="linkage3description" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="linkage3xpath" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="fileName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="filePath" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="errors" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -368,7 +428,7 @@
         <mapperTableEntries name="voice" expression="Utility.returnFirstNotNullOrBlank(context.voice,metadataProperties.voice)" type="id_String" nullable="true"/>
         <mapperTableEntries name="deliveryPoint" expression="Utility.returnFirstNotNullOrBlank(context.deliveryPoint,metadataProperties.deliveryPoint)" type="id_String" nullable="true"/>
         <mapperTableEntries name="city" expression="Utility.returnFirstNotNullOrBlank(context.city,metadataProperties.city)" type="id_String" nullable="true"/>
-        <mapperTableEntries name="adminArea" expression="Utility.returnFirstNotNullOrBlank(context.adminArea,metadataProperties.adminArea)" type="id_String" nullable="true"/>
+        <mapperTableEntries name="adminArea" expression="Utility.returnFirstNotNullOrBlank(context.administrativeArea,metadataProperties.adminArea)" type="id_String" nullable="true"/>
         <mapperTableEntries name="postalCode" expression="Utility.returnFirstNotNullOrBlank(context.postalCode,metadataProperties.postalCode)" type="id_String" nullable="true"/>
         <mapperTableEntries name="country" expression="Utility.returnFirstNotNullOrBlank(context.country,metadataProperties.country)" type="id_String" nullable="true"/>
         <mapperTableEntries name="email" expression="Utility.returnFirstNotNullOrBlank(context.email,metadataProperties.email)" type="id_String" nullable="true"/>
@@ -410,7 +470,7 @@
         <mapperTableEntries name="linkage2description" expression="" type="id_String" nullable="true"/>
         <mapperTableEntries name="linkage3URL" expression="context.pack_data ? context.pack_data_url_prefix + Var.datapackfile  + &quot;.zip&quot; : &quot;&quot;" type="id_String" nullable="true"/>
         <mapperTableEntries name="linkage3protocol" expression="context.pack_data ? &quot;WWW:DOWNLOAD&quot;  :  &quot;&quot;" type="id_String" nullable="true"/>
-        <mapperTableEntries name="linkage3name" expression="context.pack_data ? &#xA;  context.pack_data_link_prefix.replace(&#xA;    &quot;{{format}}&quot;, row1.driver) : &#xA;  &quot;&quot; " type="id_String" nullable="true"/>
+        <mapperTableEntries name="linkage3name" expression="context.pack_data ? &#xA;  context.pack_data_link_template.replace(&#xA;    &quot;{{format}}&quot;, row1.driver) : &#xA;  &quot;&quot; " type="id_String" nullable="true"/>
         <mapperTableEntries name="linkage3description" expression="" type="id_String" nullable="true"/>
         <mapperTableEntries name="scopeCode" expression="&quot;dataset&quot;" type="id_String" nullable="true"/>
         <mapperTableEntries name="lineage" expression="metadataProperties.lineageText " type="id_String" nullable="true"/>
@@ -453,10 +513,11 @@
         <mapperTableEntries name="linkage2protocol" type="id_String" nullable="true"/>
         <mapperTableEntries name="linkage2name" type="id_String" nullable="true"/>
         <mapperTableEntries name="linkage2description" type="id_String" nullable="true"/>
-        <mapperTableEntries name="linkage3URL" type="id_String" nullable="true"/>
-        <mapperTableEntries name="linkage3protocol" type="id_String" nullable="true"/>
-        <mapperTableEntries name="linkage3name" type="id_String" nullable="true"/>
-        <mapperTableEntries name="linkage3description" type="id_String" nullable="true"/>
+        <mapperTableEntries name="linkage3URL" expression="context.pack_data ? context.pack_data_url_prefix + Var.datapackfile  + &quot;.zip&quot; : &quot;&quot;" type="id_String" nullable="true"/>
+        <mapperTableEntries name="linkage3protocol" expression="context.pack_data ? &quot;WWW:DOWNLOAD&quot;  :  &quot;&quot;" type="id_String" nullable="true"/>
+        <mapperTableEntries name="linkage3name" expression="context.pack_data ? &#xA;  context.pack_data_link_template.replace(&#xA;    &quot;{{format}}&quot;, row1.driver) : &#xA;  &quot;&quot; " type="id_String" nullable="true"/>
+        <mapperTableEntries name="linkage3description" expression="" type="id_String" nullable="true"/>
+        <mapperTableEntries name="linkage3xpath" expression="&quot;gmd:distributionInfo/gmd:MD_Distribution/gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine&quot; + (context.pack_data ? &quot;[.//gmd:protocol/gco:CharacterString = 'WWW:DOWNLOAD' or .//gmd:protocol/gco:CharacterString = '']&quot; : &quot;/dummyxpath/fornotupdateingrecord&quot;) " type="id_String" nullable="true"/>
         <mapperTableEntries name="fileName" type="id_String" nullable="true"/>
         <mapperTableEntries name="filePath" type="id_String" nullable="true"/>
         <mapperTableEntries name="errors" type="id_String" nullable="true"/>
@@ -2448,22 +2509,32 @@
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value="CSW"/>
       <elementValue elementRef="ATTRIBUTE" value="attri"/>
-      <elementValue elementRef="ORDER" value="1"/>
+      <elementValue elementRef="ORDER" value="2"/>
       <elementValue elementRef="PATH" value="version"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value="2.0.2"/>
       <elementValue elementRef="ATTRIBUTE" value="attri"/>
-      <elementValue elementRef="ORDER" value="2"/>
+      <elementValue elementRef="ORDER" value="3"/>
       <elementValue elementRef="PATH" value="ogc"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value="http://www.opengis.net/ogc"/>
       <elementValue elementRef="ATTRIBUTE" value="ns"/>
-      <elementValue elementRef="ORDER" value="3"/>
+      <elementValue elementRef="ORDER" value="4"/>
       <elementValue elementRef="PATH" value="csw"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value="http://www.opengis.net/cat/csw/2.0.2"/>
       <elementValue elementRef="ATTRIBUTE" value="ns"/>
-      <elementValue elementRef="ORDER" value="4"/>
+      <elementValue elementRef="ORDER" value="5"/>
+      <elementValue elementRef="PATH" value="gco"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value="http://www.isotc211.org/2005/gco"/>
+      <elementValue elementRef="ATTRIBUTE" value="ns"/>
+      <elementValue elementRef="ORDER" value="6"/>
+      <elementValue elementRef="PATH" value="gmd"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value="http://www.isotc211.org/2005/gmd"/>
+      <elementValue elementRef="ATTRIBUTE" value="ns"/>
+      <elementValue elementRef="ORDER" value="7"/>
     </elementParameter>
     <elementParameter field="TABLE" name="GROUP"/>
     <elementParameter field="TABLE" name="LOOP">
@@ -2471,64 +2542,49 @@
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="main"/>
-      <elementValue elementRef="ORDER" value="5"/>
+      <elementValue elementRef="ORDER" value="8"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="6"/>
+      <elementValue elementRef="ORDER" value="30"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Name"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value="gmd:spatialRepresentationInfo/gmd:MD_VectorSpatialRepresentation/gmd:geometricObjects/gmd:MD_GeometricObjects/gmd:geometricObjectCount"/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="7"/>
+      <elementValue elementRef="ORDER" value="31"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Value"/>
       <elementValue elementRef="COLUMN" value="geometryCount"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="8"/>
+      <elementValue elementRef="ORDER" value="32"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:Constraint"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="9"/>
+      <elementValue elementRef="ORDER" value="12"/>
       <elementValue elementRef="PATH" value="version"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value="1.1.0"/>
       <elementValue elementRef="ATTRIBUTE" value="attri"/>
-      <elementValue elementRef="ORDER" value="10"/>
+      <elementValue elementRef="ORDER" value="13"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:Constraint/ogc:Filter"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="11"/>
+      <elementValue elementRef="ORDER" value="14"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:Constraint/ogc:Filter/ogc:PropertyIsEqualTo"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="12"/>
+      <elementValue elementRef="ORDER" value="15"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:Constraint/ogc:Filter/ogc:PropertyIsEqualTo/ogc:PropertyName"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value="Identifier"/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="13"/>
+      <elementValue elementRef="ORDER" value="16"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:Constraint/ogc:Filter/ogc:PropertyIsEqualTo/ogc:Literal"/>
       <elementValue elementRef="COLUMN" value="uuid"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="14"/>
-      <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="15"/>
-      <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Name"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value="gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:westBoundLongitude/gco:Decimal"/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="16"/>
-      <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Value"/>
-      <elementValue elementRef="COLUMN" value="west"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
       <elementValue elementRef="ORDER" value="17"/>
@@ -2536,51 +2592,119 @@
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="18"/>
+      <elementValue elementRef="ORDER" value="30"/>
+      <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Name"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value="gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:westBoundLongitude/gco:Decimal"/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="31"/>
+      <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Value"/>
+      <elementValue elementRef="COLUMN" value="west"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="32"/>
+      <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="30"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Name"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value="gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:southBoundLatitude/gco:Decimal"/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="19"/>
+      <elementValue elementRef="ORDER" value="31"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Value"/>
       <elementValue elementRef="COLUMN" value="south"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="20"/>
+      <elementValue elementRef="ORDER" value="32"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="21"/>
+      <elementValue elementRef="ORDER" value="30"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Name"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value="gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:eastBoundLongitude/gco:Decimal"/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="22"/>
+      <elementValue elementRef="ORDER" value="31"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Value"/>
       <elementValue elementRef="COLUMN" value="east"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="23"/>
+      <elementValue elementRef="ORDER" value="32"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="24"/>
+      <elementValue elementRef="ORDER" value="30"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Name"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value="gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:northBoundLatitude/gco:Decimal"/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="25"/>
+      <elementValue elementRef="ORDER" value="31"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Value"/>
       <elementValue elementRef="COLUMN" value="north"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="26"/>
+      <elementValue elementRef="ORDER" value="32"/>
+      <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="30"/>
+      <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Name"/>
+      <elementValue elementRef="COLUMN" value="linkage3xpath"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="31"/>
+      <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Value"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="32"/>
+      <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Value/gmd:onLine"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="33"/>
+      <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Value/gmd:onLine/gmd:CI_OnlineResource"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="34"/>
+      <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Value/gmd:onLine/gmd:CI_OnlineResource/gmd:linkage"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="35"/>
+      <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Value/gmd:onLine/gmd:CI_OnlineResource/gmd:linkage/gmd:URL"/>
+      <elementValue elementRef="COLUMN" value="linkage3URL"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="36"/>
+      <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Value/gmd:onLine/gmd:CI_OnlineResource/gmd:protocol"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="37"/>
+      <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Value/gmd:onLine/gmd:CI_OnlineResource/gmd:protocol/gco:CharacterString"/>
+      <elementValue elementRef="COLUMN" value="linkage3protocol"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="38"/>
+      <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Value/gmd:onLine/gmd:CI_OnlineResource/gmd:name"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="39"/>
+      <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Value/gmd:onLine/gmd:CI_OnlineResource/gmd:name/gco:CharacterString"/>
+      <elementValue elementRef="COLUMN" value="linkage3name"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="40"/>
     </elementParameter>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_cpq_QPhcEeKERde_fZ4FZA - metadata"/>
     <elementParameter field="CHECK" name="MERGE" value="false"/>
     <elementParameter field="CHECK" name="PRETTY_COMPACT" value="false"/>
     <elementParameter field="CHECK" name="FILE_VALID" value="false"/>
@@ -2611,35 +2735,36 @@
     <elementParameter field="TEXT" name="LABEL" value="metadataPropertiesToUpdate"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="metadata" name="tAdvancedFileOutputXML_2">
-      <column comment="" defaultValue="" key="false" length="0" name="uuid" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="uuid" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;EPSG:4326&quot;" key="false" length="0" name="srs" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="publicationDate" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="publicationDate" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;publication&quot;" key="false" length="0" name="publicationDateType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="geometricType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="geometryCount" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="geometricType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="geometryCount" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;vector&quot;" key="false" length="0" name="spatialRepresentation" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="west" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="east" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="south" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="north" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="formatName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="formatVersion" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="linkage1URL" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="linkage1protocol" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="linkage1name" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="linkage1description" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="linkage2URL" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="linkage2protocol" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="linkage2name" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="linkage2description" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="linkage3URL" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="linkage3protocol" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="linkage3name" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="linkage3description" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="fileName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="filePath" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="errors" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="extra" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="west" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="east" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="south" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="north" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="formatName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="formatVersion" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="linkage1URL" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="linkage1protocol" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="linkage1name" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="linkage1description" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="linkage2URL" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="linkage2protocol" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="linkage2name" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="linkage2description" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="linkage3URL" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="linkage3protocol" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="linkage3name" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="linkage3description" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="linkage3xpath" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="fileName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="filePath" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="errors" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="extra" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="320">
@@ -3226,6 +3351,9 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="extra"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="linkage3xpath"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>

@@ -129,7 +129,16 @@ public class Utility {
 		}
 		return "";
 	}
-	
+
+	/**
+	 * isWindows: return true if operating system is Windows.
+	 * 
+	 * {talendTypes} boolean
+	 * 
+	 * {Category} User Defined
+	 * 
+	 * {example} isWindows()
+	 */
 	public static boolean isWindows() {
 		return System.getProperty("os.name").startsWith("Windows");
 	}
