@@ -64,7 +64,7 @@
     <contextParameter comment="Always run update by sending the complete metadata record (not only some properties like bounding box)" name="publish_metadata_full_update" prompt="publish_metadata_full_update?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="false"/>
     <contextParameter comment="RASTER file extensions" name="raster_file_extension" prompt="raster_file_extension?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.tif|.*\\.tiff|.*\\.ecw|.*\\.asc|.*\\.ovr|.*\\.grd|.*\\.jpg&quot;"/>
     <contextParameter comment="RASTER file extensions supported for publication in mapservers" name="raster_file_extension_for_geopublication" prompt="raster_file_extension_for_geopublication?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.tif|.*\\.tiff&quot;"/>
-    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/var/app/talend/config/"/>
+    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/"/>
     <contextParameter comment="Scan for maps" name="scan_map" prompt="scan_map?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="false"/>
     <contextParameter comment="For each datasources find in a map, create metadata" name="scan_map_and_datasources" prompt="scan_map_and_datasources?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="Scan for RASTER files" name="scan_raster" prompt="scan_raster?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
@@ -80,6 +80,7 @@
     <contextParameter comment="Metadata title prefix for RASTER" name="title_prefix_raster" prompt="title_prefix_raster?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;Raster file &quot;"/>
     <contextParameter comment="Metadata title prefix for vector" name="title_prefix_vector" prompt="title_prefix_vector?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;Vector file &quot;"/>
     <contextParameter comment="The output folder" name="tmp_dir" prompt="tmp_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/tmp/"/>
+    <contextParameter comment="" name="uuidCreatedFromFilePath" prompt="uuidCreatedFromFilePath?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="Vector file extensions" name="vector_file_extension" prompt="vector_file_extension?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.kml|.*\\.shp|.*\\.mif|.*\\.tab|.*\\.gml|.*\\.dxf|.*\\.dwg|.*\\.itf|.*\\.gdb&quot;"/>
     <contextParameter comment="Vector file extensions supported for publication in mapservers" name="vector_file_extension_for_geopublication" prompt="vector_file_extension_for_geopublication?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.shp&quot;"/>
     <contextParameter comment="" name="voice" prompt="voice?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
@@ -214,7 +215,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWarn_1"/>
   </node>
-  <node componentName="sGdalInfoInput" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="224" posY="192">
+  <node componentName="sGdalInfoInput" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="320" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="sGdalInfoInput_1"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150508_1414-V5.6.2/configuration/lib/java"/>
     <elementParameter field="FILE" name="FILENAME" value="context.file"/>
@@ -238,7 +239,7 @@
       <column defaultValue="" key="false" length="255" name="bands" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="384" posY="192">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="480" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150508_1414-V5.6.2/configuration/lib/java"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
@@ -393,7 +394,6 @@
         <mapperTableEntries name="west" expression="row1.latlon_extent != null ?&#xA;  GeometryOperation.GETCOORDINATE(row1.latlon_extent ,0,&quot;X&quot;)  + &quot;&quot; &#xA;  :  &#xA;  (&#xA;    context.default_projection != null ?&#xA;      GeometryOperation.GETCOORDINATE(&#xA;        GeometryOperation.PROJ(row1.geo_extent, context.default_projection, &quot;EPSG:4326&quot;, false)&#xA;       ,0,&quot;X&quot;)  + &quot;&quot;&#xA;    : &#xA;    context.default_xmin&#xA;  )      " type="id_String"/>
         <mapperTableEntries name="south" expression="row1.latlon_extent != null ?&#xA;  GeometryOperation.GETCOORDINATE(row1.latlon_extent ,2,&quot;Y&quot;)  + &quot;&quot; &#xA;  :  &#xA;  (&#xA;    context.default_projection != null ?&#xA;      GeometryOperation.GETCOORDINATE(&#xA;        GeometryOperation.PROJ(row1.geo_extent, context.default_projection, &quot;EPSG:4326&quot;, false)&#xA;       ,2,&quot;Y&quot;)  + &quot;&quot;&#xA;    : &#xA;    context.default_ymin&#xA;  )       " type="id_String"/>
         <mapperTableEntries name="north" expression="row1.latlon_extent != null ?&#xA;  GeometryOperation.GETCOORDINATE(row1.latlon_extent ,0,&quot;Y&quot;)  + &quot;&quot; &#xA;  :  &#xA;  (&#xA;    context.default_projection != null ?&#xA;      GeometryOperation.GETCOORDINATE(&#xA;        GeometryOperation.PROJ(row1.geo_extent, context.default_projection, &quot;EPSG:4326&quot;, false)&#xA;       ,0,&quot;Y&quot;)  + &quot;&quot;&#xA;    : &#xA;    context.default_ymax&#xA;  )        " type="id_String"/>
-        <mapperTableEntries name="datapackfile" expression="new java.io.File(context.file).getName() + &quot;-raster&quot; " type="id_String"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="info">
         <mapperTableEntries name="uuid" expression="Var.mdUuid " type="id_String" nullable="true"/>
@@ -468,7 +468,7 @@
         <mapperTableEntries name="linkage2protocol" expression="metadataProperties.lanFileProtocol " type="id_String" nullable="true"/>
         <mapperTableEntries name="linkage2name" expression="metadataProperties.lanFileDesc " type="id_String" nullable="true"/>
         <mapperTableEntries name="linkage2description" expression="" type="id_String" nullable="true"/>
-        <mapperTableEntries name="linkage3URL" expression="context.pack_data ? context.pack_data_url_prefix + Var.datapackfile  + &quot;.zip&quot; : &quot;&quot;" type="id_String" nullable="true"/>
+        <mapperTableEntries name="linkage3URL" expression="context.pack_data ? context.pack_data_url_prefix + ((String)globalMap.get(&quot;packArchiveFileName&quot;))  + &quot;.zip&quot; : &quot;&quot; " type="id_String" nullable="true"/>
         <mapperTableEntries name="linkage3protocol" expression="context.pack_data ? &quot;WWW:DOWNLOAD&quot;  :  &quot;&quot;" type="id_String" nullable="true"/>
         <mapperTableEntries name="linkage3name" expression="context.pack_data ? &#xA;  context.pack_data_link_template.replace(&#xA;    &quot;{{format}}&quot;, row1.driver) : &#xA;  &quot;&quot; " type="id_String" nullable="true"/>
         <mapperTableEntries name="linkage3description" expression="" type="id_String" nullable="true"/>
@@ -513,7 +513,7 @@
         <mapperTableEntries name="linkage2protocol" type="id_String" nullable="true"/>
         <mapperTableEntries name="linkage2name" type="id_String" nullable="true"/>
         <mapperTableEntries name="linkage2description" type="id_String" nullable="true"/>
-        <mapperTableEntries name="linkage3URL" expression="context.pack_data ? context.pack_data_url_prefix + Var.datapackfile  + &quot;.zip&quot; : &quot;&quot;" type="id_String" nullable="true"/>
+        <mapperTableEntries name="linkage3URL" expression="context.pack_data ? context.pack_data_url_prefix + ((String)globalMap.get(&quot;packArchiveFileName&quot;))  + &quot;.zip&quot; : &quot;&quot; " type="id_String" nullable="true"/>
         <mapperTableEntries name="linkage3protocol" expression="context.pack_data ? &quot;WWW:DOWNLOAD&quot;  :  &quot;&quot;" type="id_String" nullable="true"/>
         <mapperTableEntries name="linkage3name" expression="context.pack_data ? &#xA;  context.pack_data_link_template.replace(&#xA;    &quot;{{format}}&quot;, row1.driver) : &#xA;  &quot;&quot; " type="id_String" nullable="true"/>
         <mapperTableEntries name="linkage3description" expression="" type="id_String" nullable="true"/>
@@ -588,7 +588,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tReplicate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="192">
+  <node componentName="tReplicate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tReplicate_1"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150508_1414-V5.6.2/configuration/lib/java"/>
     <elementParameter field="TEXT" name="LABEL" value="replicate"/>
@@ -680,7 +680,7 @@
       <column comment="" key="false" length="0" name="extra" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tAdvancedFileOutputXML" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="544" posY="320">
+  <node componentName="tAdvancedFileOutputXML" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="640" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAdvancedFileOutputXML_1"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150508_1414-V5.6.2/configuration/lib/java"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
@@ -2168,7 +2168,7 @@
       <column comment="" key="false" length="0" name="extra" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="64">
+  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150508_1414-V5.6.2/configuration/lib/java"/>
     <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
@@ -2493,7 +2493,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tAdvancedFileOutputXML" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="64">
+  <node componentName="tAdvancedFileOutputXML" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="704" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAdvancedFileOutputXML_2"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150508_1414-V5.6.2/configuration/lib/java"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
@@ -2767,7 +2767,7 @@
       <column comment="" key="false" length="0" name="extra" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="320">
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_3"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150508_1414-V5.6.2/configuration/lib/java"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;Metadata record created for layer : &quot;+ logger.layer_name +&quot; from raster files : &quot; + logger.files + &quot; (with driver &quot;+ logger.driver + &quot;)&quot;"/>
@@ -2813,6 +2813,8 @@
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.file"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="layerName"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;raster&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="fileName"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="((String)globalMap.get(&quot;packArchiveFilePathName&quot;))"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
@@ -2858,6 +2860,19 @@
       <column comment="" key="false" name="filename" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" name="filepath" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
+  </node>
+  <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="192" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetGlobalVar_1"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150508_1414-V5.6.2/configuration/lib/java"/>
+    <elementParameter field="TABLE" name="VARIABLES">
+      <elementValue elementRef="KEY" value="&quot;packArchiveFileName&quot;"/>
+      <elementValue elementRef="VALUE" value="context.file.replace(context.data_dir, &quot;&quot;).replaceAll(&quot;/&quot;, &quot;-&quot;)"/>
+      <elementValue elementRef="KEY" value="&quot;packArchiveFilePathName&quot;"/>
+      <elementValue elementRef="VALUE" value="context.pack_data_dir + ((String)globalMap.get(&quot;packArchiveFileName&quot;))"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="setVariables"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tSetGlobalVar_1"/>
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="sGdalInfoInput_1" offsetLabelX="0" offsetLabelY="0" source="sGdalInfoInput_1" target="tMap_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
@@ -3678,8 +3693,11 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="metadataProperties"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tWarn_4" offsetLabelX="0" offsetLabelY="0" source="tWarn_4" target="sGdalInfoInput_1">
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tWarn_4" offsetLabelX="0" offsetLabelY="0" source="tWarn_4" target="tSetGlobalVar_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSetGlobalVar_1" offsetLabelX="0" offsetLabelY="0" source="tSetGlobalVar_1" target="sGdalInfoInput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk2"/>
   </connection>
   <note opaque="true" posX="128" posY="512" sizeHeight="64" sizeWidth="225" text="Overview fails with geopdf&#xA;CPLAcquireMutex: Error = 22CPLMutexHolder: Failed to acquire mutex!&#xA;"/>
   <subjob>
@@ -3716,6 +3734,11 @@
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_5"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetGlobalVar_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
   </subjob>
