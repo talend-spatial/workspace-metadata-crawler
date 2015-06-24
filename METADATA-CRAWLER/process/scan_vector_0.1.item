@@ -13,7 +13,8 @@
     <contextParameter comment="The CSW user password" name="csw_password" prompt="csw_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;admin&quot;"/>
     <contextParameter comment="The CSW server to push metadata records into" name="csw_server_host" prompt="csw_server_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;http://localhost:8080/geonetwork/srv/eng/csw-publication&quot;"/>
     <contextParameter comment="The CSW user name" name="csw_username" prompt="csw_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;admin&quot;"/>
-    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="a"/>
+    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/data/"/>
+    <contextParameter comment="" name="data_dir_uuid_ignored_path" prompt="data_dir_uuid_ignored_path?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/data/"/>
     <contextParameter comment="List of database to scan" name="db_list" prompt="db_list?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_List Of Value" value="&quot;PG:dbname=talend host=localhost port=5432 user=www-data password=www-data&quot;"/>
     <contextParameter comment="Hide database connection information" name="db_password_hide" prompt="db_password_hide?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="An EPSG code of a projection to use in case the projection could not be defined from the file" name="default_projection" prompt="default_projection?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;EPSG:4326&quot;"/>
@@ -49,7 +50,7 @@
     <contextParameter comment="The folder to create metadata records into" name="metadata_dir" prompt="metadata_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/metadata/"/>
     <contextParameter comment="Store the generated metadata file next to the analyzed file" name="metadata_file_with_source" prompt="metadata_file_with_source?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="false"/>
     <contextParameter comment="" name="organisationName" prompt="organisationName?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
-    <contextParameter comment="Define the way to copy overview (ssh, ftp, copy)" name="overview_and_file_copy_mode" prompt="overview_and_file_copy_mode?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;copy&quot;"/>
+    <contextParameter comment="Define the way to copy files (ssh, ftp, copy)" name="overview_and_file_copy_mode" prompt="overview_and_file_copy_mode?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;copy&quot;"/>
     <contextParameter comment="The height of the overview to generate" name="overview_height" prompt="overview_height?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;800&quot;"/>
     <contextParameter comment="The remove directory in the FTP server" name="overview_publication_dir" prompt="overview_publication_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="/var/www/html/overview/"/>
     <contextParameter comment="" name="overview_url_prefix" prompt="overview_url_prefix?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;http://localhost/overview/&quot;"/>
@@ -680,8 +681,8 @@
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="filename" expression="context.isDb ? context.file : new java.io.File(context.file).getName() " type="id_String"/>
         <mapperTableEntries name="filepath" expression="// Set the filename and hide user connection information from db path if requested&#xA;context.isDb ? (&#xA;  context.db_password_hide ? &#xA;  context.file&#xA;  &#x9;.replaceAll(&quot;user=[\\S]+&quot;, &quot;user=****&quot;)&#xA;    .replaceAll(&quot;password=[\\S]+&quot;, &quot;password=****&quot;) :&#xA;  context.file &#xA;) : context.file " type="id_String"/>
-        <mapperTableEntries name="filepathBase" expression="// Filepath without data dir prefix&#xA;context.isDb ? &#xA;  context.file : &#xA;  context.file.replace(context.data_dir, &quot;&quot;) " type="id_String"/>
-        <mapperTableEntries name="fullLayerName" expression="// Layer name is table name for a db&#xA;context.isDb ? &#xA;  row9.layer_name : &#xA;  // ... filepath after data dir for a file&#xA;  context.file.replace(context.data_dir, &quot;&quot;) +&#xA;  // + feature type name for gdb&#xA;  (context.file.endsWith(&quot;.gdb&quot;) ? &quot; &quot; + row9.layer_name : &quot;&quot;) " type="id_String"/>
+        <mapperTableEntries name="filepathBase" expression="context.file.replaceAll(&quot;\\\\&quot;, &quot;/&quot;)&#xA;    .replace(context.data_dir_uuid_ignored_path, &quot;&quot;) " type="id_String"/>
+        <mapperTableEntries name="fullLayerName" expression="// Layer name is table name for a db&#xA;context.isDb ? &#xA;  ((String)globalMap.get(&quot;dbname&quot;)) + &quot;.&quot; + row9.layer_name : &#xA;  // ... filepath after data dir for a file&#xA;  context.file.replaceAll(&quot;\\\\&quot;, &quot;/&quot;).replace(context.data_dir_uuid_ignored_path, &quot;&quot;).replaceAll(&quot;/&quot;, &quot; &quot;) +&#xA;  // + feature type name for gdb&#xA;  (context.file.endsWith(&quot;.gdb&quot;) ? &quot; &quot; + row9.layer_name : &quot;&quot;) " type="id_String"/>
         <mapperTableEntries name="dateStamp" expression="TalendDate.formatDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;,TalendDate.getCurrentDate()) " type="id_String"/>
         <mapperTableEntries name="fileDateStamp" expression="context.isDb ?  Var.dateStamp : &#xA;TalendDate.formatDate(&quot;yyyy-MM-dd'T'HH:mm:ss&quot;, new Date(new java.io.File(context.file).lastModified())) &#xA; " type="id_String"/>
         <mapperTableEntries name="uuidbase" expression="context.uuidCreatedFromFilePath ? &#xA;   Var.filepathBase + &quot;#&quot; + row9.layer_name : &#xA;   Var.filename + &quot;#&quot; + row9.layer_name " type="id_String"/>
@@ -719,7 +720,7 @@
         <mapperTableEntries name="publicationDate" expression="Var.fileDateStamp " type="id_String" nullable="true"/>
         <mapperTableEntries name="publicationDateType" expression="&quot;revision&quot;" type="id_String" nullable="true"/>
         <mapperTableEntries name="edition" expression="" type="id_String" nullable="true"/>
-        <mapperTableEntries name="mdAbstract" expression="metadataProperties.abstractText + &quot; base: &quot; + Var.filepathBase + &quot;/&quot; + context.file" type="id_String" nullable="true"/>
+        <mapperTableEntries name="mdAbstract" expression="metadataProperties.abstractText " type="id_String" nullable="true"/>
         <mapperTableEntries name="purpose" expression="" type="id_String" nullable="true"/>
         <mapperTableEntries name="status" expression="" type="id_String" nullable="true"/>
         <mapperTableEntries name="individualName" expression="Utility.returnFirstNotNullOrBlank(context.individualName, metadataProperties.individualName) " type="id_String" nullable="true"/>
@@ -4173,7 +4174,7 @@
       <elementValue elementRef="KEY" value="&quot;dbname&quot;"/>
       <elementValue elementRef="VALUE" value="context.isDb ? context.file.split(&quot; &quot;)[0].replace(&quot;PG:dbname=&quot;, &quot;&quot;) : (context.file.endsWith(&quot;.gdb&quot;) ? new java.io.File(context.file).getName() : &quot;&quot;)"/>
       <elementValue elementRef="KEY" value="&quot;baseName&quot;"/>
-      <elementValue elementRef="VALUE" value="!context.metadata_file_with_source || context.isDb ? context.metadata_dir + ((String)globalMap.get(&quot;dbname&quot;)) + (context.isDb || context.file.endsWith(&quot;.gdb&quot;) ? ((String)globalMap.get(&quot;row8.layer_name&quot;)) : context.file.replace(context.data_dir, &quot;&quot;).replaceAll(&quot;/&quot;, &quot;-&quot;)) : context.file "/>
+      <elementValue elementRef="VALUE" value="!context.metadata_file_with_source || context.isDb ? context.metadata_dir + ((String)globalMap.get(&quot;dbname&quot;)) + (context.isDb || context.file.endsWith(&quot;.gdb&quot;) ? ((String)globalMap.get(&quot;row8.layer_name&quot;)) : context.file.replaceAll(&quot;\\\\&quot;, &quot;/&quot;).replace(context.data_dir_uuid_ignored_path, &quot;&quot;).replaceAll(&quot;/&quot;, &quot;-&quot;)) : context.file "/>
       <elementValue elementRef="KEY" value="&quot;iso19139fileName&quot;"/>
       <elementValue elementRef="VALUE" value="((String)globalMap.get(&quot;baseName&quot;)) + &quot;_md_iso19139-.xml&quot;"/>
       <elementValue elementRef="KEY" value="&quot;iso19110fileName&quot;"/>
@@ -4183,13 +4184,13 @@
       <elementValue elementRef="KEY" value="&quot;overviewInputFileName&quot;"/>
       <elementValue elementRef="VALUE" value="context.isDb ?  context.file : context.file.replace(&quot;\\\\&quot;, &quot;/&quot;)"/>
       <elementValue elementRef="KEY" value="&quot;overviewFileName&quot;"/>
-      <elementValue elementRef="VALUE" value="((String)globalMap.get(&quot;dbname&quot;)) + (context.isDb || context.file.endsWith(&quot;.gdb&quot;) ? ((String)globalMap.get(&quot;row8.layer_name&quot;)) : context.file.replace(context.data_dir, &quot;&quot;).replaceAll(&quot;/&quot;, &quot;-&quot;))"/>
+      <elementValue elementRef="VALUE" value="((String)globalMap.get(&quot;dbname&quot;)) + (context.isDb || context.file.endsWith(&quot;.gdb&quot;) ? ((String)globalMap.get(&quot;row8.layer_name&quot;)) : context.file.replaceAll(&quot;\\\\&quot;, &quot;&quot;).replace(context.data_dir_uuid_ignored_path, &quot;&quot;).replaceAll(&quot;/&quot;, &quot;-&quot;))"/>
       <elementValue elementRef="KEY" value="&quot;overviewOutputFilePrefix&quot;"/>
       <elementValue elementRef="VALUE" value="((String)globalMap.get(&quot;baseName&quot;)) "/>
       <elementValue elementRef="KEY" value="&quot;overviewOutputFileName&quot;"/>
       <elementValue elementRef="VALUE" value="((String)globalMap.get(&quot;overviewOutputFilePrefix&quot;))  + &quot;_overview.png&quot;"/>
       <elementValue elementRef="KEY" value="&quot;packArchiveFileName&quot;"/>
-      <elementValue elementRef="VALUE" value="((String)globalMap.get(&quot;dbname&quot;)) + (context.isDb || context.file.endsWith(&quot;.gdb&quot;) ? ((String)globalMap.get(&quot;row8.layer_name&quot;)) : context.file.replace(context.data_dir, &quot;&quot;).replaceAll(&quot;/&quot;, &quot;-&quot;))"/>
+      <elementValue elementRef="VALUE" value="((String)globalMap.get(&quot;dbname&quot;)) + (context.isDb || context.file.endsWith(&quot;.gdb&quot;) ? ((String)globalMap.get(&quot;row8.layer_name&quot;)) : context.file.replace(context.data_dir_uuid_ignored_path, &quot;&quot;).replaceAll(&quot;/&quot;, &quot;-&quot;))"/>
       <elementValue elementRef="KEY" value="&quot;packArchiveFilePathName&quot;"/>
       <elementValue elementRef="VALUE" value="context.pack_data_dir + ((String)globalMap.get(&quot;packArchiveFileName&quot;))"/>
       <elementValue elementRef="KEY" value="&quot;packFileName&quot;"/>
