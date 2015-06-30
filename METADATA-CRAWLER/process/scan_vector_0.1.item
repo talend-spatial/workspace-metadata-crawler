@@ -13,9 +13,9 @@
     <contextParameter comment="The CSW user password" name="csw_password" prompt="csw_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;admin&quot;"/>
     <contextParameter comment="The CSW server to push metadata records into" name="csw_server_host" prompt="csw_server_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;http://localhost:8080/geonetwork/srv/eng/csw-publication&quot;"/>
     <contextParameter comment="The CSW user name" name="csw_username" prompt="csw_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;admin&quot;"/>
-    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/data/"/>
-    <contextParameter comment="" name="data_dir_uuid_ignored_path" prompt="data_dir_uuid_ignored_path?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/data/"/>
-    <contextParameter comment="List of database to scan" name="db_list" prompt="db_list?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_List Of Value" value="&quot;PG:dbname=talend host=localhost port=5432 user=www-data password=www-data&quot;"/>
+    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/home/francois/data/test/toscan/"/>
+    <contextParameter comment="" name="data_dir_uuid_ignored_path" prompt="data_dir_uuid_ignored_path?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/home/francois/data/test/toscan/"/>
+    <contextParameter comment="List of database to scan" name="db_list" prompt="db_list?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_List Of Value" value=""/>
     <contextParameter comment="Hide database connection information" name="db_password_hide" prompt="db_password_hide?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="An EPSG code of a projection to use in case the projection could not be defined from the file" name="default_projection" prompt="default_projection?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;EPSG:4326&quot;"/>
     <contextParameter comment="" name="default_xmax" prompt="default_xmax?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;180&quot;"/>
@@ -69,7 +69,7 @@
     <contextParameter comment="Always run update by sending the complete metadata record (not only some properties like bounding box)" name="publish_metadata_full_update" prompt="publish_metadata_full_update?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="false"/>
     <contextParameter comment="RASTER file extensions" name="raster_file_extension" prompt="raster_file_extension?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.tif|.*\\.tiff|.*\\.ecw|.*\\.asc|.*\\.ovr|.*\\.grd|.*\\.jpg&quot;"/>
     <contextParameter comment="RASTER file extensions supported for publication in mapservers" name="raster_file_extension_for_geopublication" prompt="raster_file_extension_for_geopublication?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.tif|.*\\.tiff&quot;"/>
-    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/var/app/talend/config/"/>
+    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/home/francois/data/test/config/"/>
     <contextParameter comment="Scan for maps" name="scan_map" prompt="scan_map?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="false"/>
     <contextParameter comment="For each datasources find in a map, create metadata" name="scan_map_and_datasources" prompt="scan_map_and_datasources?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="Scan for RASTER files" name="scan_raster" prompt="scan_raster?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
@@ -3875,6 +3875,36 @@
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="main"/>
       <elementValue elementRef="ORDER" value="8"/>
+      <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:Constraint"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="9"/>
+      <elementValue elementRef="PATH" value="version"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value="1.1.0"/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="10"/>
+      <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:Constraint/ogc:Filter"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="11"/>
+      <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:Constraint/ogc:Filter/ogc:PropertyIsEqualTo"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="12"/>
+      <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:Constraint/ogc:Filter/ogc:PropertyIsEqualTo/ogc:PropertyName"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value="Identifier"/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="13"/>
+      <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:Constraint/ogc:Filter/ogc:PropertyIsEqualTo/ogc:Literal"/>
+      <elementValue elementRef="COLUMN" value="uuid"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="14"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value=""/>
@@ -3882,7 +3912,7 @@
       <elementValue elementRef="ORDER" value="30"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Name"/>
       <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value="gmd:spatialRepresentationInfo/gmd:MD_VectorSpatialRepresentation/gmd:geometricObjects/gmd:MD_GeometricObjects/gmd:geometricObjectCount"/>
+      <elementValue elementRef="VALUE" value="gmd:spatialRepresentationInfo/gmd:MD_VectorSpatialRepresentation/gmd:geometricObjects/gmd:MD_GeometricObjects/gmd:geometricObjectCount/gco:Integer"/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
       <elementValue elementRef="ORDER" value="31"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty/csw:Value"/>
@@ -3890,36 +3920,6 @@
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="ATTRIBUTE" value="branch"/>
       <elementValue elementRef="ORDER" value="32"/>
-      <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:Constraint"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="12"/>
-      <elementValue elementRef="PATH" value="version"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value="1.1.0"/>
-      <elementValue elementRef="ATTRIBUTE" value="attri"/>
-      <elementValue elementRef="ORDER" value="13"/>
-      <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:Constraint/ogc:Filter"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="14"/>
-      <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:Constraint/ogc:Filter/ogc:PropertyIsEqualTo"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="15"/>
-      <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:Constraint/ogc:Filter/ogc:PropertyIsEqualTo/ogc:PropertyName"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value="Identifier"/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="16"/>
-      <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:Constraint/ogc:Filter/ogc:PropertyIsEqualTo/ogc:Literal"/>
-      <elementValue elementRef="COLUMN" value="uuid"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="17"/>
       <elementValue elementRef="PATH" value="/csw:Transaction/csw:Update/csw:RecordProperty"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value=""/>
@@ -4180,7 +4180,7 @@
       <elementValue elementRef="KEY" value="&quot;iso19110fileName&quot;"/>
       <elementValue elementRef="VALUE" value="((String)globalMap.get(&quot;baseName&quot;)) + &quot;_md_iso19110.xml&quot;"/>
       <elementValue elementRef="KEY" value="&quot;cswtUpdatefileName&quot;"/>
-      <elementValue elementRef="VALUE" value="((String)globalMap.get(&quot;baseName&quot;)) + &quot;_md_iso19139-0.xml-csw-update-by-props.xml&quot;"/>
+      <elementValue elementRef="VALUE" value="context.tmp_dir + ((String)globalMap.get(&quot;dbname&quot;)) + (context.isDb || context.file.endsWith(&quot;.gdb&quot;) ? ((String)globalMap.get(&quot;row8.layer_name&quot;)) : context.file.replaceAll(&quot;\\\\&quot;, &quot;/&quot;).replace(context.data_dir_uuid_ignored_path, &quot;&quot;).replaceAll(&quot;/&quot;, &quot;-&quot;)) + &quot;_md_iso19139-0.xml-csw-update-by-props.xml&quot;"/>
       <elementValue elementRef="KEY" value="&quot;overviewInputFileName&quot;"/>
       <elementValue elementRef="VALUE" value="context.isDb ?  context.file : context.file.replace(&quot;\\\\&quot;, &quot;/&quot;)"/>
       <elementValue elementRef="KEY" value="&quot;overviewFileName&quot;"/>
