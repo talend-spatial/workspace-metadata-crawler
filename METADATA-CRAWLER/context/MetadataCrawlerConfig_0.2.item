@@ -15,7 +15,7 @@
     <contextParameter comment="Scan for vector files" name="scan_vector" prompt="scan_vector?" promptNeeded="false" type="id_Boolean" value="true"/>
     <contextParameter comment="Vector file extensions" name="vector_file_extension" prompt="vector_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.kml|.*\\.shp|.*\\.mif|.*\\.tab|.*\\.gml|.*\\.dxf|.*\\.dwg|.*\\.itf|.*\\.gdb&quot;"/>
     <contextParameter comment="Scan for RASTER files" name="scan_raster" prompt="scan_raster?" promptNeeded="false" type="id_Boolean" value="true"/>
-    <contextParameter comment="RASTER file extensions" name="raster_file_extension" prompt="raster_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.tif|.*\\.tiff|.*\\.ecw|.*\\.asc|.*\\.ovr|.*\\.grd|.*\\.jpg&quot;"/>
+    <contextParameter comment="RASTER file extensions" name="raster_file_extension" prompt="raster_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.tif|.*\\.tiff|.*\\.ecw|.*\\.asc|.*\\.rst|.*\\.grd|.*\\.jpg&quot;"/>
     <contextParameter comment="List of database to scan" name="db_list" prompt="db_list?" promptNeeded="false" type="id_List Of Value" value="&quot;PG:dbname=talend host=localhost port=5432 user=www-data password=www-data&quot;"/>
     <contextParameter comment="Hide database connection information" name="db_password_hide" prompt="db_password_hide?" promptNeeded="false" type="id_Boolean" value="true"/>
     <contextParameter comment="List of WFS to scan" name="service_list" prompt="service_list?" promptNeeded="false" type="id_List Of Value" value=""/>
@@ -84,10 +84,17 @@
     <contextParameter comment="Vector file extensions supported for publication in mapservers" name="vector_file_extension_for_geopublication" prompt="vector_file_extension_for_geopublication?" promptNeeded="false" type="id_String" value="&quot;.*\\.shp&quot;"/>
     <contextParameter comment="RASTER file extensions supported for publication in mapservers" name="raster_file_extension_for_geopublication" prompt="raster_file_extension_for_geopublication?" promptNeeded="false" type="id_String" value="&quot;.*\\.tif|.*\\.tiff&quot;"/>
     <contextParameter comment="" name="geosever_namespace_prefix" prompt="geosever_namespace_prefix?" promptNeeded="false" type="id_String" value="&quot;gn&quot;"/>
+    <contextParameter comment="" name="bboxcheck_xmin" prompt="bboxcheck_xmin?" promptNeeded="false" type="id_Double" value="-180"/>
+    <contextParameter comment="" name="bboxcheck_xmax" prompt="bboxcheck_xmax?" promptNeeded="false" type="id_Double" value="180"/>
+    <contextParameter comment="" name="bboxcheck_ymin" prompt="bboxcheck_ymin?" promptNeeded="false" type="id_Double" value="-90"/>
+    <contextParameter comment="" name="bboxcheck_ymax" prompt="bboxcheck_ymax?" promptNeeded="false" type="id_Double" value="90"/>
+    <contextParameter comment="" name="statusArchiveFlag" prompt="statusArchiveFlag?" promptNeeded="false" type="id_String" value="&quot;archive&quot;"/>
+    <contextParameter comment="" name="statusObsoleteFlag" prompt="statusObsoleteFlag?" promptNeeded="false" type="id_String" value="&quot;obsolete&quot;"/>
+    <contextParameter comment="" name="statusUnderDevelopmentFlag" prompt="statusUnderDevelopmentFlag?" promptNeeded="false" type="id_String" value="&quot;underdevelopment&quot;"/>
   </talendfile:ContextType>
   <talendfile:ContextType confirmationNeeded="false" name="prod">
     <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" type="id_Directory" value="/data/"/>
-    <contextParameter comment="" name="uuidCreatedFromFilePath" prompt="uuidCreatedFromFilePath?" promptNeeded="false" type="id_Boolean" value="true"/>
+    <contextParameter comment="" name="uuidCreatedFromFilePath" prompt="uuidCreatedFromFilePath?" promptNeeded="false" type="id_Boolean" value=""/>
     <contextParameter comment="" name="data_dir_uuid_ignored_path" prompt="data_dir_uuid_ignored_path?" promptNeeded="false" type="id_Directory" value="/data/"/>
     <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" type="id_Directory" value="r"/>
     <contextParameter comment="The output folder" name="tmp_dir" prompt="tmp_dir?" promptNeeded="false" type="id_Directory" value="/tmp/scan/tmp/"/>
@@ -169,5 +176,12 @@
     <contextParameter comment="Vector file extensions supported for publication in mapservers" name="vector_file_extension_for_geopublication" prompt="vector_file_extension_for_geopublication?" promptNeeded="false" type="id_String" value="&quot;.*\\.shp&quot;"/>
     <contextParameter comment="RASTER file extensions supported for publication in mapservers" name="raster_file_extension_for_geopublication" prompt="raster_file_extension_for_geopublication?" promptNeeded="false" type="id_String" value="&quot;.*\\.tif|.*\\.tiff&quot;"/>
     <contextParameter comment="" name="geosever_namespace_prefix" prompt="geosever_namespace_prefix?" promptNeeded="false" type="id_String" value="&quot;gn&quot;"/>
+    <contextParameter comment="" name="bboxcheck_xmin" prompt="bboxcheck_xmin?" promptNeeded="false" type="id_Double" value=""/>
+    <contextParameter comment="" name="bboxcheck_xmax" prompt="bboxcheck_xmax?" promptNeeded="false" type="id_Double" value=""/>
+    <contextParameter comment="" name="bboxcheck_ymin" prompt="bboxcheck_ymin?" promptNeeded="false" type="id_Double" value=""/>
+    <contextParameter comment="" name="bboxcheck_ymax" prompt="bboxcheck_ymax?" promptNeeded="false" type="id_Double" value=""/>
+    <contextParameter comment="" name="statusArchiveFlag" prompt="statusArchiveFlag?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="statusObsoleteFlag" prompt="statusObsoleteFlag?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="statusUnderDevelopmentFlag" prompt="statusUnderDevelopmentFlag?" promptNeeded="false" type="id_String" value=""/>
   </talendfile:ContextType>
 </xmi:XMI>

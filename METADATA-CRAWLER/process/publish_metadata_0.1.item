@@ -4,16 +4,15 @@
     <contextParameter comment="The CSW user password" name="csw_password" prompt="csw_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;admin&quot;"/>
     <contextParameter comment="The CSW server to push metadata records into" name="csw_server_host" prompt="csw_server_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;http://localhost:8080/geonetwork/srv/eng/csw-publication&quot;"/>
     <contextParameter comment="The CSW user name" name="csw_username" prompt="csw_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;admin&quot;"/>
-    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/home/francois/data/test/toscan/"/>
+    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/data/"/>
     <contextParameter comment="The log folder" name="log_dir" prompt="log_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/logs/"/>
     <contextParameter comment="The folder to create metadata records into" name="metadata_dir" prompt="metadata_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/metadata/"/>
     <contextParameter comment="Store the generated metadata file next to the analyzed file" name="metadata_file_with_source" prompt="metadata_file_with_source?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="false"/>
-    <contextParameter comment="The folder to create overview into" name="overview_folder" prompt="overview_folder?" promptNeeded="false" type="id_Directory" value="/tmp/talend/www/overviews/"/>
     <contextParameter comment="Always run update by sending the complete metadata record (not only some properties like bounding box)" name="publish_metadata_full_update" prompt="publish_metadata_full_update?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="false"/>
     <contextParameter comment="The output folder" name="tmp_dir" prompt="tmp_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/tmp/"/>
   </context>
   <parameters>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="380"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value=""/>
     <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true"/>
@@ -42,8 +41,8 @@
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value=""/>
-    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning"/>
     <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false"/>
     <elementParameter field="CHECK" name="DISABLE_ERROR" value="false"/>
     <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false"/>
@@ -116,7 +115,7 @@
     <elementParameter field="CHECK" name="ERROR" value="false"/>
     <elementParameter field="CHECK" name="GLOBEXPRESSIONS" value="false"/>
     <elementParameter field="TABLE" name="FILES">
-      <elementValue elementRef="FILEMASK" value="&quot;.*_md_iso.*\\-[0-9]{1}.xml&quot;"/>
+      <elementValue elementRef="FILEMASK" value="&quot;.*_md_iso.*xml&quot;"/>
     </elementParameter>
     <elementParameter field="RADIO" name="ORDER_BY_NOTHING" value="true"/>
     <elementParameter field="RADIO" name="ORDER_BY_FILENAME" value="false"/>
@@ -156,7 +155,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFlowToIterate_1"/>
   </node>
-  <node componentName="sCSWRequest" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="320">
+  <node componentName="sCSWRequest" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="512">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="sCSWRequest_1"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150508_1414-V5.6.2/configuration/lib/java"/>
     <elementParameter field="CHECK" name="BYURL" value="true"/>
@@ -169,14 +168,14 @@
     <elementParameter field="CHECK" name="BA" value="true"/>
     <elementParameter field="TEXT" name="USERNAME" value="context.csw_username"/>
     <elementParameter field="TEXT" name="PASSWORD" value="context.csw_password"/>
-    <elementParameter field="FILE" name="FILE" value="context.tmp_dir + ((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)) + &quot;-csw-insert.xml&quot;"/>
+    <elementParameter field="FILE" name="FILE" value="context.tmp_dir + ((String)globalMap.get(&quot;tFileList_2_CURRENT_FILE&quot;)) + &quot;-csw-insert.xml&quot;"/>
     <elementParameter field="TEXT" name="LABEL" value="insertMetadata"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="sCSWRequest_1">
       <column defaultValue="" key="false" length="0" name="ResponseContent" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="sCSWRequest" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="608" posY="320">
+  <node componentName="sCSWRequest" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="512">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="sCSWRequest_3"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150508_1414-V5.6.2/configuration/lib/java"/>
     <elementParameter field="CHECK" name="BYURL" value="true"/>
@@ -189,7 +188,7 @@
     <elementParameter field="CHECK" name="BA" value="true"/>
     <elementParameter field="TEXT" name="USERNAME" value="context.csw_username"/>
     <elementParameter field="TEXT" name="PASSWORD" value="context.csw_password"/>
-    <elementParameter field="FILE" name="FILE" value="context.tmp_dir + ((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)) + &quot;-csw-update-by-props.xml&quot;"/>
+    <elementParameter field="FILE" name="FILE" value="context.tmp_dir + ((String)globalMap.get(&quot;tFileList_2_CURRENT_FILE&quot;)) + &quot;-csw-update-by-props.xml&quot;"/>
     <elementParameter field="TEXT" name="LABEL" value="updateMetadata"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="sCSWRequest_3">
@@ -243,7 +242,7 @@
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150508_1414-V5.6.2/configuration/lib/java"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" value="outputStream"/>
-    <elementParameter field="FILE" name="FILENAME" value="context.tmp_dir + ((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)) + &quot;-csw-insert.xml&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.tmp_dir + ((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;))  + &quot;-csw-insert.xml&quot;"/>
     <elementParameter field="TABLE" name="ROOT">
       <elementValue elementRef="PATH" value="/csw:Transaction"/>
       <elementValue elementRef="COLUMN" value=""/>
@@ -390,29 +389,147 @@
       <column comment="" key="false" length="0" name="uuid" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="960" posY="64">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFlowToIterate_2"/>
+  <node componentName="sCSWRequest" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="512">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="sCSWRequest_2"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150508_1414-V5.6.2/configuration/lib/java"/>
+    <elementParameter field="CHECK" name="BYURL" value="true"/>
+    <elementParameter field="TEXT" name="URL" value="context.csw_server_host"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="8080"/>
+    <elementParameter field="TEXT" name="SERVLET" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SERVICENAME" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="LOGIN" value="true"/>
+    <elementParameter field="CHECK" name="BA" value="true"/>
+    <elementParameter field="TEXT" name="USERNAME" value="context.csw_username"/>
+    <elementParameter field="TEXT" name="PASSWORD" value="context.csw_password"/>
+    <elementParameter field="FILE" name="FILE" value="context.tmp_dir + ((String)globalMap.get(&quot;tFileList_2_CURRENT_FILE&quot;)) + &quot;-csw-full-update.xml&quot;"/>
+    <elementParameter field="TEXT" name="LABEL" value="updateMetadata"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="sCSWRequest_2">
+      <column defaultValue="" key="false" length="0" name="ResponseContent" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="960" posY="512">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_2"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150508_1414-V5.6.2/configuration/lib/java"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Check returns &quot; + ((Integer)globalMap.get(&quot;tRunJob_1_CHILD_RETURN_CODE&quot;)) + &quot; CSW update file: &quot; + context.tmp_dir + ((String)globalMap.get(&quot;tFileList_2_CURRENT_FILE&quot;)) + &quot;-csw-update-by-props.xml / Check return &quot; + (((Integer)globalMap.get(&quot;tRunJob_1_CHILD_RETURN_CODE&quot;)) != 4 &amp;&amp; context.publish_metadata_full_update == false &amp;&amp; new java.io.File(context.tmp_dir + ((String)globalMap.get(&quot;tFileList_2_CURRENT_FILE&quot;)) + &quot;-csw-update-by-props.xml&quot;).exists() )"/>
+    <elementParameter field="TEXT" name="CODE" value="42"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="2"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tWarn_2"/>
+  </node>
+  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_2"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150508_1414-V5.6.2/configuration/lib/java"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="context.metadata_file_with_source ? context.data_dir : context.metadata_dir"/>
+    <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
+    <elementParameter field="CHECK" name="INCLUDSUBDIR" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="CASE_SENSITIVE" value="NO"/>
+    <elementParameter field="CHECK" name="ERROR" value="false"/>
+    <elementParameter field="CHECK" name="GLOBEXPRESSIONS" value="false"/>
+    <elementParameter field="TABLE" name="FILES">
+      <elementValue elementRef="FILEMASK" value="&quot;.*_md_iso.*xml&quot;"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="ORDER_BY_NOTHING" value="true"/>
+    <elementParameter field="RADIO" name="ORDER_BY_FILENAME" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_FILESIZE" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_MODIFIEDDATE" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_ACTION_ASC" value="true"/>
+    <elementParameter field="RADIO" name="ORDER_ACTION_DESC" value="false"/>
+    <elementParameter field="CHECK" name="IFEXCLUDE" value="false"/>
+    <elementParameter field="TEXT" name="EXCLUDEFILEMASK" value="&quot;*.txt&quot;"/>
+    <elementParameter field="CHECK" name="FORMAT_FILEPATH_TO_SLASH" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="listAllMetadata"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tFileProperties" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileProperties_2"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150508_1414-V5.6.2/configuration/lib/java"/>
+    <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_2_CURRENT_FILEPATH&quot;))"/>
+    <elementParameter field="CHECK" name="MD5" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="fileProperties"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileProperties_2">
+      <column key="false" length="255" name="abs_path" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="255" name="dirname" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="255" name="basename" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="10" name="mode_string" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="size" nullable="true" precision="0" sourceType="" type="id_Long" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="mtime" nullable="true" precision="0" sourceType="" type="id_Long" usefulColumn="true"/>
+      <column key="false" length="20" name="mtime_string" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="448">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFlowToIterate_3"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150508_1414-V5.6.2/configuration/lib/java"/>
     <elementParameter field="CHECK" name="DEFAULT_MAP" value="true"/>
     <elementParameter field="TABLE" name="MAP"/>
-    <elementParameter field="TEXT" name="LABEL" value="iterate"/>
+    <elementParameter field="TEXT" name="LABEL" value="checkFileSize"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tFlowToIterate_2"/>
+    <metadata connector="FLOW" name="tFlowToIterate_3"/>
   </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="960" posY="192">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_1"/>
+  <node componentName="tFileInputXML" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputXML_2"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150508_1414-V5.6.2/configuration/lib/java"/>
-    <elementParameter field="TEXT" name="MESSAGE" value="&quot;CSW transaction request generated for record with UUID &quot;+ ((String)globalMap.get(&quot;row3.uuid&quot;)) + &quot;. Checking if metadata exists.&quot;"/>
-    <elementParameter field="TEXT" name="CODE" value="0"/>
-    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="3"/>
-    <elementParameter field="TEXT" name="LABEL" value="log"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_SsHI0OP2EeKq6LfAQc0w9A - metadata"/>
+    <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_2_CURRENT_FILEPATH&quot;))"/>
+    <elementParameter field="TEXT" name="LOOP_QUERY" value="&quot;/&quot;"/>
+    <elementParameter field="TABLE" name="MAPPING">
+      <elementValue elementRef="SCHEMA_COLUMN" value="xml"/>
+      <elementValue elementRef="QUERY" value="&quot;/&quot;"/>
+      <elementValue elementRef="NODECHECK" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="uuid"/>
+      <elementValue elementRef="QUERY" value="&quot;gmd:MD_Metadata/gmd:fileIdentifier/gco:CharacterString|*/@uuid&quot;"/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LIMIT" value=""/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;"/>
+    <elementParameter field="CHECK" name="IGNORE_NS" value="false"/>
+    <elementParameter field="CHECK" name="IGNORE_DTD" value="false"/>
+    <elementParameter field="FILE" name="TMP_FILENAME" value="&quot;/usr/local/App/talend/TOS_DI-r104014-V5.3.1/workspace/temp.xml&quot;"/>
+    <elementParameter field="CHECK" name="USE_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="FIELD_SEPARATOR" value="&quot;,&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="GENERATION_MODE" value="Dom4j"/>
+    <elementParameter field="CHECK" name="CHECK_DATE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="metadata" name="tWarn_1">
+    <metadata connector="FLOW" label="metadata" name="tFileInputXML_2">
       <column comment="" key="false" length="0" name="xml" nullable="true" pattern="" precision="0" type="id_Document" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="uuid" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
+    <metadata connector="REJECT" label="metadata" name="REJECT">
+      <column comment="" key="false" length="0" name="xml" nullable="true" pattern="" precision="0" type="id_Document" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="uuid" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="192">
+  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFlowToIterate_4"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150508_1414-V5.6.2/configuration/lib/java"/>
+    <elementParameter field="CHECK" name="DEFAULT_MAP" value="true"/>
+    <elementParameter field="TABLE" name="MAP"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFlowToIterate_4"/>
+  </node>
+  <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetGlobalVar_1"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150508_1414-V5.6.2/configuration/lib/java"/>
+    <elementParameter field="TABLE" name="VARIABLES">
+      <elementValue elementRef="KEY" value="&quot;uuid&quot;"/>
+      <elementValue elementRef="VALUE" value="((String)globalMap.get(&quot;row5.uuid&quot;))"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="variables"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tSetGlobalVar_1"/>
+  </node>
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="960" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_1"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150508_1414-V5.6.2/configuration/lib/java"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
@@ -427,7 +544,7 @@
     <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="true"/>
     <elementParameter field="TABLE" name="CONTEXTPARAMS">
       <elementValue elementRef="PARAM_NAME_COLUMN" value="uuid"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="((String)globalMap.get(&quot;row3.uuid&quot;))"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="((String)globalMap.get(&quot;uuid&quot;))"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
@@ -439,39 +556,13 @@
       <column comment="" key="false" length="0" name="uuid" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="sCSWRequest" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="768" posY="320">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="sCSWRequest_2"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150508_1414-V5.6.2/configuration/lib/java"/>
-    <elementParameter field="CHECK" name="BYURL" value="true"/>
-    <elementParameter field="TEXT" name="URL" value="context.csw_server_host"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="PORT" value="8080"/>
-    <elementParameter field="TEXT" name="SERVLET" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="SERVICENAME" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="LOGIN" value="true"/>
-    <elementParameter field="CHECK" name="BA" value="true"/>
-    <elementParameter field="TEXT" name="USERNAME" value="context.csw_username"/>
-    <elementParameter field="TEXT" name="PASSWORD" value="context.csw_password"/>
-    <elementParameter field="FILE" name="FILE" value="context.tmp_dir + ((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)) + &quot;-csw-full-update.xml&quot;"/>
-    <elementParameter field="TEXT" name="LABEL" value="updateMetadata"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="sCSWRequest_2">
-      <column defaultValue="" key="false" length="0" name="ResponseContent" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="960" posY="320">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_2"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150508_1414-V5.6.2/configuration/lib/java"/>
-    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Check returns &quot; + ((Integer)globalMap.get(&quot;tRunJob_1_CHILD_RETURN_CODE&quot;)) + &quot; &quot; + context.tmp_dir + ((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)) + &quot;-csw-update-by-props.xml&quot;"/>
-    <elementParameter field="TEXT" name="CODE" value="42"/>
-    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="2"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tWarn_2"/>
-  </node>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileProperties_1">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate1"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileList_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1"/>
   </connection>
   <connection connectorName="FLOW" label="properties" lineStyle="0" metaname="tFileProperties_1" offsetLabelX="0" offsetLabelY="0" source="tFileProperties_1" target="tFlowToIterate_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
@@ -502,7 +593,7 @@
   </connection>
   <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tFlowToIterate_1" offsetLabelX="0" offsetLabelY="0" source="tFlowToIterate_1" target="tFileInputXML_1">
     <elementParameter field="MEMO_JAVA" name="CONDITION" value="((Long)globalMap.get(&quot;properties.size&quot;)) > 0"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If3"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If6"/>
   </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputXML_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputXML_1" target="tAdvancedFileOutputXML_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
@@ -528,24 +619,43 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2"/>
   </connection>
-  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tAdvancedFileOutputXML_2" offsetLabelX="0" offsetLabelY="0" source="tAdvancedFileOutputXML_2" target="tFlowToIterate_2">
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_2" offsetLabelX="0" offsetLabelY="0" source="tFileList_2" target="tFileProperties_2">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate4"/>
+  </connection>
+  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tFileProperties_2" offsetLabelX="0" offsetLabelY="0" source="tFileProperties_2" target="tFlowToIterate_3">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
-      <elementValue elementRef="TRACE_COLUMN" value="xml"/>
+      <elementValue elementRef="TRACE_COLUMN" value="abs_path"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="uuid"/>
+      <elementValue elementRef="TRACE_COLUMN" value="dirname"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="basename"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="mode_string"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="size"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="mtime"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="mtime_string"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4"/>
   </connection>
-  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFlowToIterate_2" offsetLabelX="0" offsetLabelY="0" source="tFlowToIterate_2" target="tWarn_1">
-    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
-    <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate2"/>
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tFlowToIterate_3" offsetLabelX="0" offsetLabelY="0" source="tFlowToIterate_3" target="tFileInputXML_2">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="((Long)globalMap.get(&quot;properties.size&quot;)) > 0"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If7"/>
   </connection>
-  <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tWarn_1" offsetLabelX="0" offsetLabelY="0" source="tWarn_1" target="tRunJob_1">
+  <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tFileInputXML_2" offsetLabelX="0" offsetLabelY="0" source="tFileInputXML_2" target="tFlowToIterate_4">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
       <elementValue elementRef="TRACE_COLUMN" value="xml"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -557,20 +667,28 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row5"/>
   </connection>
-  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tRunJob_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tRunJob_1" target="sCSWRequest_1">
-    <elementParameter field="MEMO_JAVA" name="CONDITION" value="((Integer)globalMap.get(&quot;tRunJob_1_CHILD_RETURN_CODE&quot;)) == 4"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If1"/>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFlowToIterate_4" offsetLabelX="0" offsetLabelY="0" source="tFlowToIterate_4" target="tSetGlobalVar_1">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate2"/>
   </connection>
-  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tRunJob_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tRunJob_1" target="sCSWRequest_3">
-    <elementParameter field="MEMO_JAVA" name="CONDITION" value="((Integer)globalMap.get(&quot;tRunJob_1_CHILD_RETURN_CODE&quot;)) != 4 &amp;&amp; new java.io.File(context.tmp_dir + ((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)) + &quot;-csw-update-by-props.xml&quot;).exists() &amp;&amp; context.publish_metadata_full_update == false"/>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tSetGlobalVar_1" offsetLabelX="0" offsetLabelY="0" source="tSetGlobalVar_1" target="tRunJob_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2"/>
+  </connection>
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tRunJob_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tRunJob_1" target="sCSWRequest_3">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="((Integer)globalMap.get(&quot;tRunJob_1_CHILD_RETURN_CODE&quot;)) != 4 &amp;&amp; &#xA;context.publish_metadata_full_update == false &amp;&amp;&#xA;new java.io.File(context.tmp_dir + ((String)globalMap.get(&quot;tFileList_2_CURRENT_FILE&quot;)) + &quot;-csw-update-by-props.xml&quot;).exists()&#xA;"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="If2"/>
-  </connection>
-  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tRunJob_1" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tRunJob_1" target="sCSWRequest_2">
-    <elementParameter field="MEMO_JAVA" name="CONDITION" value="((Integer)globalMap.get(&quot;tRunJob_1_CHILD_RETURN_CODE&quot;)) != 4 &amp;&amp; new java.io.File(context.tmp_dir + ((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)) + &quot;-csw-full-update.xml&quot;).exists() &amp;&amp; context.publish_metadata_full_update == true"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If4"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tRunJob_1" offsetLabelX="0" offsetLabelY="0" source="tRunJob_1" target="tWarn_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1"/>
+  </connection>
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tRunJob_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tRunJob_1" target="sCSWRequest_2">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="((Integer)globalMap.get(&quot;tRunJob_1_CHILD_RETURN_CODE&quot;)) != 4 &amp;&amp; &#xA;context.publish_metadata_full_update == true &amp;&amp;&#xA;new java.io.File(context.tmp_dir + ((String)globalMap.get(&quot;tFileList_2_CURRENT_FILE&quot;)) + &quot;-csw-full-update.xml&quot;).exists()&#xA;"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If4"/>
+  </connection>
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tRunJob_1" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tRunJob_1" target="sCSWRequest_1">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="((Integer)globalMap.get(&quot;tRunJob_1_CHILD_RETURN_CODE&quot;)) == 4 &amp;&amp; &#xA;new java.io.File(context.tmp_dir + ((String)globalMap.get(&quot;tFileList_2_CURRENT_FILE&quot;)) + &quot;-csw-insert.xml&quot;).exists()"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If1"/>
   </connection>
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
@@ -603,6 +721,23 @@
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_2"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Get metadata to publish"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputXML_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
   </subjob>

@@ -2,3 +2,5 @@ OGR_TYPE;ISO_TYPE
 Polygon;surface
 Point;point
 Line String;curve
+3D Multi curve;curve
+3D point:point

@@ -35,6 +35,14 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_k2udDuPnEeKXY41c3BjRgQ" name="useConstraints" label="useConstraints" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;" originalLength="400"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_k2udD-PnEeKXY41c3BjRgQ" name="useConstraintsInfo" label="useConstraintsInfo" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;" originalLength="400"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_k2udEOPnEeKXY41c3BjRgQ" name="useLimitation" label="useLimitation" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_MgrCQCY7EeWBdtNXVhJv1Q" name="date" label="date" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_-76AQCY7EeWBdtNXVhJv1Q" name="dateType" label="dateType" talendType="id_String">
+        <initialValue xmi:id="_Auh0cCY8EeWBdtNXVhJv1Q" body="&quot;creation&quot;"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_F-MMsCY7EeWBdtNXVhJv1Q" name="beginPosition" label="beginPosition" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_GAiWECY7EeWBdtNXVhJv1Q" name="endPosition" label="endPosition" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_GCmyoCY7EeWBdtNXVhJv1Q" name="updateFrequency" label="updateFrequency" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_GE8U8CY7EeWBdtNXVhJv1Q" name="edition" label="edition" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_k2udEePnEeKXY41c3BjRgQ" name="scaleDenominator" label="scaleDenominator" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_k2udEuPnEeKXY41c3BjRgQ" name="language" label="language" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_k2udE-PnEeKXY41c3BjRgQ" name="charset" label="charset" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
