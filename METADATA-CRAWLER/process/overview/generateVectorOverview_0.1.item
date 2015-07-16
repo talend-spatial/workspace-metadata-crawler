@@ -8,7 +8,7 @@
     <contextParameter comment="The log folder" name="log_dir" prompt="log_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/logs/"/>
     <contextParameter comment="The height of the overview to generate" name="overview_height" prompt="overview_height?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;800&quot;"/>
     <contextParameter comment="The width of the overview to generate" name="overview_width" prompt="overview_width?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;800&quot;"/>
-    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/var/app/talend/config/"/>
+    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/home/francois/data/test/config/"/>
     <contextParameter comment="The output folder" name="tmp_dir" prompt="tmp_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/tmp/"/>
     <contextParameter comment="" name="layer" prompt="layer?" promptNeeded="false" type="id_String" value="&quot;country&quot;"/>
   </context>
@@ -269,24 +269,24 @@
       <column comment="" key="false" name="filepath" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSystem_1" offsetLabelX="0" offsetLabelY="0" source="tSystem_1" target="tFileDelete_1">
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk2"/>
-  </connection>
   <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tSystem_1" offsetLabelX="0" offsetLabelY="0" source="tSystem_1" target="tWarn_2">
     <elementParameter field="MEMO_JAVA" name="CONDITION" value="((String)globalMap.get(&quot;tSystem_1_ERROROUTPUT&quot;))!= null"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="If2"/>
   </connection>
-  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tSystem_2" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tSystem_2" target="tSystem_1">
-    <elementParameter field="MEMO_JAVA" name="CONDITION" value="((String)globalMap.get(&quot;tSystem_2_ERROROUTPUT&quot;)) == null"/>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSystem_1" offsetLabelX="0" offsetLabelY="0" source="tSystem_1" target="tFileDelete_1">
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If3"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk2"/>
   </connection>
-  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tSystem_2" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tSystem_2" target="tWarn_1">
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tSystem_2" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tSystem_2" target="tWarn_1">
     <elementParameter field="MEMO_JAVA" name="CONDITION" value="((String)globalMap.get(&quot;tSystem_2_ERROROUTPUT&quot;)) != null"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="If1"/>
+  </connection>
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tSystem_2" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tSystem_2" target="tSystem_1">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="((String)globalMap.get(&quot;tSystem_2_ERROROUTPUT&quot;)) == null"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If3"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSystem_3" offsetLabelX="0" offsetLabelY="0" source="tSystem_3" target="tFileDelete_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk3"/>

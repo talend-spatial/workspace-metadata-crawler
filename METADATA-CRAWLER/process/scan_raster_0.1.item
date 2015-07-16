@@ -16,8 +16,8 @@
     <contextParameter comment="The CSW user password" name="csw_password" prompt="csw_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Password" value="RX/CTwlUNiA="/>
     <contextParameter comment="The CSW server to push metadata records into" name="csw_server_host" prompt="csw_server_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;http://localhost:8080/geonetwork/srv/eng/csw-publication&quot;"/>
     <contextParameter comment="The CSW user name" name="csw_username" prompt="csw_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;admin&quot;"/>
-    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="t"/>
-    <contextParameter comment="" name="data_dir_uuid_ignored_path" prompt="data_dir_uuid_ignored_path?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/data/"/>
+    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/home/francois/data/test/toscan/"/>
+    <contextParameter comment="" name="data_dir_uuid_ignored_path" prompt="data_dir_uuid_ignored_path?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/home/francois/data/test/toscan/"/>
     <contextParameter comment="List of database to scan" name="db_list" prompt="db_list?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_List Of Value" value="&quot;PG:dbname=talend host=localhost port=5432 user=www-data password=www-data&quot;"/>
     <contextParameter comment="Hide database connection information" name="db_password_hide" prompt="db_password_hide?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="An EPSG code of a projection to use in case the projection could not be defined from the file" name="default_projection" prompt="default_projection?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;EPSG:4326&quot;"/>
@@ -84,7 +84,7 @@
     <contextParameter comment="Always run update by sending the complete metadata record (not only some properties like bounding box)" name="publish_metadata_full_update" prompt="publish_metadata_full_update?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="false"/>
     <contextParameter comment="RASTER file extensions" name="raster_file_extension" prompt="raster_file_extension?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.tif|.*\\.tiff|.*\\.ecw|.*\\.asc|.*\\.rst|.*\\.grd|.*\\.jpg|.*\\.xyz&quot;"/>
     <contextParameter comment="RASTER file extensions supported for publication in mapservers" name="raster_file_extension_for_geopublication" prompt="raster_file_extension_for_geopublication?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.tif|.*\\.tiff&quot;"/>
-    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/var/app/talend/config/"/>
+    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/home/francois/data/test/config/"/>
     <contextParameter comment="Scan for maps" name="scan_map" prompt="scan_map?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="false"/>
     <contextParameter comment="For each datasources find in a map, create metadata" name="scan_map_and_datasources" prompt="scan_map_and_datasources?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="Scan for RASTER files" name="scan_raster" prompt="scan_raster?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
@@ -477,6 +477,10 @@
       <column comment="" key="false" name="layer_name" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="6" name="epsg_code" nullable="true" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column defaultValue="" key="false" length="0" name="geo_extent" nullable="true" precision="0" sourceType="" type="id_Geometry" usefulColumn="true"/>
+      <column comment="" key="false" name="geo_extent_xmin" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="geo_extent_xmax" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="geo_extent_ymin" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="geo_extent_ymax" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="0" name="latlon_extent" nullable="true" precision="0" sourceType="" type="id_Geometry" usefulColumn="true"/>
       <column comment="" key="false" name="nb_features" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" name="bboxcheck_xmin" nullable="true" pattern="" sourceType="" type="id_Double" usefulColumn="true"/>
@@ -489,7 +493,7 @@
       <column comment="" key="false" name="north" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="filename" expression="new java.io.File(context.file).getName()" type="id_String"/>
         <mapperTableEntries name="fullLayerName" expression="context.file.replaceAll(&quot;\\\\&quot;, &quot;/&quot;).replace&#x9;&#x9;(context.data_dir_uuid_ignored_path, &quot;&quot;).replaceAll(&quot;/&quot;, &quot; &quot;) " type="id_String"/>
@@ -505,6 +509,10 @@
         <mapperTableEntries name="west" expression="row2.latlon_extent != null ?&#xA;  GeometryOperation.GETCOORDINATE(row2.latlon_extent ,0,&quot;X&quot;)  + &quot;&quot; &#xA;  :  &#xA;  (&#xA;    context.default_projection != null ?&#xA;      GeometryOperation.GETCOORDINATE(&#xA;        GeometryOperation.PROJ(row2.geo_extent, context.default_projection, &quot;EPSG:4326&quot;, false)&#xA;       ,0,&quot;X&quot;)  + &quot;&quot;&#xA;    : &#xA;    context.default_xmin&#xA;  )      " type="id_String"/>
         <mapperTableEntries name="south" expression="row2.latlon_extent != null ?&#xA;  GeometryOperation.GETCOORDINATE(row2.latlon_extent ,2,&quot;Y&quot;)  + &quot;&quot; &#xA;  :  &#xA;  (&#xA;    context.default_projection != null ?&#xA;      GeometryOperation.GETCOORDINATE(&#xA;        GeometryOperation.PROJ(row2.geo_extent, context.default_projection, &quot;EPSG:4326&quot;, false)&#xA;       ,2,&quot;Y&quot;)  + &quot;&quot;&#xA;    : &#xA;    context.default_ymin&#xA;  )       " type="id_String"/>
         <mapperTableEntries name="north" expression="row2.latlon_extent != null ?&#xA;  GeometryOperation.GETCOORDINATE(row2.latlon_extent ,0,&quot;Y&quot;)  + &quot;&quot; &#xA;  :  &#xA;  (&#xA;    context.default_projection != null ?&#xA;      GeometryOperation.GETCOORDINATE(&#xA;        GeometryOperation.PROJ(row2.geo_extent, context.default_projection, &quot;EPSG:4326&quot;, false)&#xA;       ,0,&quot;Y&quot;)  + &quot;&quot;&#xA;    : &#xA;    context.default_ymax&#xA;  )        " type="id_String"/>
+        <mapperTableEntries name="geo_extent_xmin" expression="GeometryOperation.GETCOORDINATE(row2.geo_extent,0,&quot;X&quot;) + &quot;&quot; " type="id_String"/>
+        <mapperTableEntries name="geo_extent_xmax" expression="GeometryOperation.GETCOORDINATE(row2.geo_extent,2,&quot;X&quot;)  + &quot;&quot; " type="id_String"/>
+        <mapperTableEntries name="geo_extent_ymin" expression="GeometryOperation.GETCOORDINATE(row2.geo_extent,2,&quot;Y&quot;)  + &quot;&quot;  " type="id_String"/>
+        <mapperTableEntries name="geo_extent_ymax" expression="GeometryOperation.GETCOORDINATE(row2.geo_extent,0,&quot;Y&quot;)  + &quot;&quot; " type="id_String"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="info" minimized="true">
         <mapperTableEntries name="uuid" expression="Var.mdUuid " type="id_String" nullable="true"/>
@@ -608,7 +616,7 @@
         <mapperTableEntries name="filename" expression="Var.filename " type="id_String"/>
         <mapperTableEntries name="filepath" expression="Var.filepath " type="id_String"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="cswUpdateProps">
+      <outputTables sizeState="INTERMEDIATE" name="cswUpdateProps" minimized="true">
         <mapperTableEntries name="uuid" expression="Var.mdUuid " type="id_String" nullable="true"/>
         <mapperTableEntries name="srs" expression="row2.srs" type="id_String" nullable="true"/>
         <mapperTableEntries name="publicationDate" type="id_String" nullable="true"/>
@@ -642,11 +650,15 @@
         <mapperTableEntries name="errors" type="id_String" nullable="true"/>
         <mapperTableEntries name="extra" type="id_String" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="listOfLayersOutOfExtent" minimized="true" expressionFilter="Double.parseDouble(Var.west) &lt; context.bboxcheck_xmin ||&#xA;Double.parseDouble(Var.east) > context.bboxcheck_xmax ||&#xA;Double.parseDouble(Var.south) &lt; context.bboxcheck_ymin ||&#xA;Double.parseDouble(Var.north) > context.bboxcheck_ymax&#xA;" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="listOfLayersOutOfExtent" expressionFilter="Double.parseDouble(Var.west) &lt; context.bboxcheck_xmin ||&#xA;Double.parseDouble(Var.east) > context.bboxcheck_xmax ||&#xA;Double.parseDouble(Var.south) &lt; context.bboxcheck_ymin ||&#xA;Double.parseDouble(Var.north) > context.bboxcheck_ymax&#xA;" activateExpressionFilter="true">
         <mapperTableEntries name="files" expression="row2.files " type="id_String" nullable="true"/>
         <mapperTableEntries name="layer_name" type="id_String" nullable="true"/>
         <mapperTableEntries name="epsg_code" expression="row2.epsg_code " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="geo_extent" expression="row2.geo_extent " type="id_Geometry" nullable="true"/>
+        <mapperTableEntries name="geo_extent_xmin" expression="Var.geo_extent_xmin " type="id_String"/>
+        <mapperTableEntries name="geo_extent_xmax" expression="Var.geo_extent_xmax " type="id_String"/>
+        <mapperTableEntries name="geo_extent_ymin" expression="Var.geo_extent_ymin " type="id_String"/>
+        <mapperTableEntries name="geo_extent_ymax" expression="Var.geo_extent_ymax " type="id_String"/>
         <mapperTableEntries name="latlon_extent" expression="row2.latlon_extent " type="id_Geometry" nullable="true"/>
         <mapperTableEntries name="nb_features" type="id_String" nullable="true"/>
         <mapperTableEntries name="bboxcheck_xmin" expression="context.bboxcheck_xmin" type="id_Double" nullable="true"/>
@@ -3259,6 +3271,10 @@
       <column comment="" key="false" name="layer_name" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="6" name="epsg_code" nullable="true" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column defaultValue="" key="false" length="0" name="geo_extent" nullable="true" precision="0" sourceType="" type="id_Geometry" usefulColumn="true"/>
+      <column comment="" key="false" name="geo_extent_xmin" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="geo_extent_xmax" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="geo_extent_ymin" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="geo_extent_ymax" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="0" name="latlon_extent" nullable="true" precision="0" sourceType="" type="id_Geometry" usefulColumn="true"/>
       <column comment="" key="false" name="nb_features" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" name="bboxcheck_xmin" nullable="true" pattern="" sourceType="" type="id_Double" usefulColumn="true"/>
@@ -3983,6 +3999,18 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="west"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="geo_extent_ymin"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="geo_extent_ymax"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="geo_extent_xmax"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="geo_extent_xmin"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
