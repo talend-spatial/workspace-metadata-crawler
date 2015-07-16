@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
   <talendfile:ContextType confirmationNeeded="false" name="test">
-    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" type="id_Directory" value="/data/"/>
+    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" type="id_Directory" value="t"/>
     <contextParameter comment="" name="uuidCreatedFromFilePath" prompt="uuidCreatedFromFilePath?" promptNeeded="false" type="id_Boolean" value="true"/>
     <contextParameter comment="" name="data_dir_uuid_ignored_path" prompt="data_dir_uuid_ignored_path?" promptNeeded="false" type="id_Directory" value="/data/"/>
     <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" type="id_Directory" value="/var/app/talend/config/"/>
@@ -11,11 +11,11 @@
     <contextParameter comment="Publish metadata or not in the CSW catalogue defined" name="publish_metadata" prompt="publish_metadata?" promptNeeded="false" type="id_Boolean" value="true"/>
     <contextParameter comment="The CSW server to push metadata records into" name="csw_server_host" prompt="csw_server_host?" promptNeeded="false" type="id_String" value="&quot;http://localhost:8080/geonetwork/srv/eng/csw-publication&quot;"/>
     <contextParameter comment="The CSW user name" name="csw_username" prompt="csw_username?" promptNeeded="false" type="id_String" value="&quot;admin&quot;"/>
-    <contextParameter comment="The CSW user password" name="csw_password" prompt="csw_password?" promptNeeded="false" type="id_String" value="&quot;admin&quot;"/>
+    <contextParameter comment="The CSW user password" name="csw_password" prompt="csw_password?" promptNeeded="false" type="id_Password" value="RX/CTwlUNiA="/>
     <contextParameter comment="Scan for vector files" name="scan_vector" prompt="scan_vector?" promptNeeded="false" type="id_Boolean" value="true"/>
     <contextParameter comment="Vector file extensions" name="vector_file_extension" prompt="vector_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.kml|.*\\.shp|.*\\.mif|.*\\.tab|.*\\.gml|.*\\.dxf|.*\\.dwg|.*\\.itf|.*\\.gdb&quot;"/>
     <contextParameter comment="Scan for RASTER files" name="scan_raster" prompt="scan_raster?" promptNeeded="false" type="id_Boolean" value="true"/>
-    <contextParameter comment="RASTER file extensions" name="raster_file_extension" prompt="raster_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.tif|.*\\.tiff|.*\\.ecw|.*\\.asc|.*\\.rst|.*\\.grd|.*\\.jpg&quot;"/>
+    <contextParameter comment="RASTER file extensions" name="raster_file_extension" prompt="raster_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.tif|.*\\.tiff|.*\\.ecw|.*\\.asc|.*\\.rst|.*\\.grd|.*\\.jpg|.*\\.xyz&quot;"/>
     <contextParameter comment="List of database to scan" name="db_list" prompt="db_list?" promptNeeded="false" type="id_List Of Value" value="&quot;PG:dbname=talend host=localhost port=5432 user=www-data password=www-data&quot;"/>
     <contextParameter comment="Hide database connection information" name="db_password_hide" prompt="db_password_hide?" promptNeeded="false" type="id_Boolean" value="true"/>
     <contextParameter comment="List of WFS to scan" name="service_list" prompt="service_list?" promptNeeded="false" type="id_List Of Value" value=""/>
@@ -48,12 +48,12 @@
     <contextParameter comment="The FTP host" name="ftp_host" prompt="ftp_host?" promptNeeded="false" type="id_String" value="null"/>
     <contextParameter comment="The FTP port" name="ftp_port" prompt="ftp_port?" promptNeeded="false" type="id_Integer" value="21"/>
     <contextParameter comment="The user name to log in the FTP server" name="ftp_username" prompt="ftp_username?" promptNeeded="false" type="id_String" value="null"/>
-    <contextParameter comment="The user password" name="ftp_password" prompt="ftp_password?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="The user password" name="ftp_password" prompt="ftp_password?" promptNeeded="false" type="id_Password" value=""/>
     <contextParameter comment="The remove directory in the FTP server" name="overview_publication_dir" prompt="overview_publication_dir?" promptNeeded="false" type="id_String" value="/var/www/html/overview/"/>
     <contextParameter comment="" name="ssh_host" prompt="ssh_host?" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
     <contextParameter comment="" name="ssh_port" prompt="ssh_port?" promptNeeded="false" type="id_Integer" value="22"/>
     <contextParameter comment="" name="ssh_username" prompt="ssh_username?" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
-    <contextParameter comment="" name="ssh_password" prompt="ssh_password?" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
+    <contextParameter comment="" name="ssh_password" prompt="ssh_password?" promptNeeded="false" type="id_Password" value=""/>
     <contextParameter comment="Store the generated metadata file next to the analyzed file" name="metadata_file_with_source" prompt="metadata_file_with_source?" promptNeeded="false" type="id_Boolean" value="false"/>
     <contextParameter comment="Path to GDAL/OGR bin or empty if in system path" name="gdal_path" prompt="gdal_path?" promptNeeded="false" type="id_Directory" value=""/>
     <contextParameter comment="True to ping the job and return status response (use when deploy as webservice)" name="ping" prompt="ping?" promptNeeded="false" type="id_Boolean" value="false"/>
@@ -80,17 +80,32 @@
     <contextParameter comment="" name="email" prompt="email?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="geoserver_server_host" prompt="geoserver_server_host?" promptNeeded="false" type="id_String" value="&quot;http://localhost:8081/geoserver/rest&quot;"/>
     <contextParameter comment="" name="geoserver_username" prompt="geoserver_username?" promptNeeded="false" type="id_String" value="&quot;admin&quot;"/>
-    <contextParameter comment="" name="geoserver_password" prompt="geoserver_password?" promptNeeded="false" type="id_String" value="&quot;geoserver&quot;"/>
+    <contextParameter comment="" name="geoserver_password" prompt="geoserver_password?" promptNeeded="false" type="id_Password" value=""/>
     <contextParameter comment="Vector file extensions supported for publication in mapservers" name="vector_file_extension_for_geopublication" prompt="vector_file_extension_for_geopublication?" promptNeeded="false" type="id_String" value="&quot;.*\\.shp&quot;"/>
     <contextParameter comment="RASTER file extensions supported for publication in mapservers" name="raster_file_extension_for_geopublication" prompt="raster_file_extension_for_geopublication?" promptNeeded="false" type="id_String" value="&quot;.*\\.tif|.*\\.tiff&quot;"/>
     <contextParameter comment="" name="geosever_namespace_prefix" prompt="geosever_namespace_prefix?" promptNeeded="false" type="id_String" value="&quot;gn&quot;"/>
     <contextParameter comment="" name="bboxcheck_xmin" prompt="bboxcheck_xmin?" promptNeeded="false" type="id_Double" value="-180"/>
-    <contextParameter comment="" name="bboxcheck_xmax" prompt="bboxcheck_xmax?" promptNeeded="false" type="id_Double" value="180"/>
+    <contextParameter comment="" name="bboxcheck_xmax" prompt="bboxcheck_xmax?" promptNeeded="false" type="id_Double" value="-170"/>
     <contextParameter comment="" name="bboxcheck_ymin" prompt="bboxcheck_ymin?" promptNeeded="false" type="id_Double" value="-90"/>
     <contextParameter comment="" name="bboxcheck_ymax" prompt="bboxcheck_ymax?" promptNeeded="false" type="id_Double" value="90"/>
     <contextParameter comment="" name="statusArchiveFlag" prompt="statusArchiveFlag?" promptNeeded="false" type="id_String" value="&quot;archive&quot;"/>
     <contextParameter comment="" name="statusObsoleteFlag" prompt="statusObsoleteFlag?" promptNeeded="false" type="id_String" value="&quot;obsolete&quot;"/>
     <contextParameter comment="" name="statusUnderDevelopmentFlag" prompt="statusUnderDevelopmentFlag?" promptNeeded="false" type="id_String" value="&quot;underdevelopment&quot;"/>
+    <contextParameter comment="" name="mail_server" prompt="mail_server?" promptNeeded="false" type="id_String" value="&quot;smtp.organisation.org&quot;"/>
+    <contextParameter comment="" name="mail_port" prompt="mail_port?" promptNeeded="false" type="id_String" value="&quot;465&quot;"/>
+    <contextParameter comment="" name="mail_username" prompt="mail_username?" promptNeeded="false" type="id_String" value="&quot;username&quot;"/>
+    <contextParameter comment="" name="mail_password" prompt="mail_password?" promptNeeded="false" type="id_Password" value="orisbc/xTqQ="/>
+    <contextParameter comment="" name="mail_send_to_emails" prompt="mail_send_to_emails?" promptNeeded="false" type="id_String" value="&quot;gis-guy@myorganization.org&quot;"/>
+    <contextParameter comment="" name="mail_from_email" prompt="mail_from_email?" promptNeeded="false" type="id_String" value="&quot;metadata-scan-alert@myorganization.org&quot;"/>
+    <contextParameter comment="" name="mail_subject_outofextent" prompt="mail_subject_outofextent?" promptNeeded="false" type="id_String" value="&quot;Metadata scan / Alert / Layers out of extent&quot;"/>
+    <contextParameter comment="" name="mail_msg_outofextent" prompt="mail_msg_outofextent?" promptNeeded="false" type="id_String" value="&quot; layer(s) found having extent outside the restricted extent. Check that extent and projection are valid.  \nThe metadata scanner&quot;"/>
+    <contextParameter comment="" name="mail_subject_log" prompt="mail_subject_log?" promptNeeded="false" type="id_String" value="&quot;Metadata scan / Notification / Log file for last scan: &quot;"/>
+    <contextParameter comment="" name="mail_msg_log" prompt="mail_msg_log?" promptNeeded="false" type="id_String" value="&quot;Hi, \nattached to this email, you will find the log file of last scan. Enjoy!.  \nThe metadata scanner&quot;"/>
+    <contextParameter comment="" name="mail_subject_check_resource" prompt="mail_subject_check_resource?" promptNeeded="false" type="id_String" value="&quot;Metadata scan / Notification / Metadata records link to non existing files &quot;"/>
+    <contextParameter comment="" name="mail_msg_check_resource" prompt="mail_msg_check_resource?" promptNeeded="false" type="id_String" value="&quot; record(s) found having link to file on the network which does not exist anymore. Check those records and see if files were deleted or moved.  \nThe metadata scanner&quot;"/>
+    <contextParameter comment="" name="catalog_search_records_url" prompt="catalog_search_records_url?" promptNeeded="false" type="id_String" value="&quot;http://localhost:8080/geonetwork/srv/fre/q?fast=index&quot;"/>
+    <contextParameter comment="" name="csv_file_list_of_layers_out_of_extent" prompt="csv_file_list_of_layers_out_of_extent?" promptNeeded="false" type="id_String" value="&quot;listOfLayersOutOfExtent.csv&quot;"/>
+    <contextParameter comment="" name="csv_file_list_of_record_with_file_not_found" prompt="csv_file_list_of_record_with_file_not_found?" promptNeeded="false" type="id_String" value="&quot;listOfRecordsWithFileNotFound.csv&quot;"/>
   </talendfile:ContextType>
   <talendfile:ContextType confirmationNeeded="false" name="prod">
     <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" type="id_Directory" value="/data/"/>
@@ -103,7 +118,7 @@
     <contextParameter comment="Publish metadata or not in the CSW catalogue defined" name="publish_metadata" prompt="publish_metadata?" promptNeeded="false" type="id_Boolean" value="true"/>
     <contextParameter comment="The CSW server to push metadata records into" name="csw_server_host" prompt="csw_server_host?" promptNeeded="false" type="id_String" value="&quot;http://localhost:8080/geonetwork/srv/eng/csw-publication&quot;"/>
     <contextParameter comment="The CSW user name" name="csw_username" prompt="csw_username?" promptNeeded="false" type="id_String" value="&quot;admin&quot;"/>
-    <contextParameter comment="The CSW user password" name="csw_password" prompt="csw_password?" promptNeeded="false" type="id_String" value="&quot;admin&quot;"/>
+    <contextParameter comment="The CSW user password" name="csw_password" prompt="csw_password?" promptNeeded="false" type="id_Password" value=""/>
     <contextParameter comment="Scan for vector files" name="scan_vector" prompt="scan_vector?" promptNeeded="false" type="id_Boolean" value="true"/>
     <contextParameter comment="Vector file extensions" name="vector_file_extension" prompt="vector_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.kml|.*\\.shp|.*\\.mif|.*\\.tab|.*\\.gml|.*\\.dxf|.*\\.dwg|.*\\.itf|.*\\.gdb&quot;"/>
     <contextParameter comment="Scan for RASTER files" name="scan_raster" prompt="scan_raster?" promptNeeded="false" type="id_Boolean" value="true"/>
@@ -140,12 +155,12 @@
     <contextParameter comment="The FTP host" name="ftp_host" prompt="ftp_host?" promptNeeded="false" type="id_String" value="null"/>
     <contextParameter comment="The FTP port" name="ftp_port" prompt="ftp_port?" promptNeeded="false" type="id_Integer" value="21"/>
     <contextParameter comment="The user name to log in the FTP server" name="ftp_username" prompt="ftp_username?" promptNeeded="false" type="id_String" value="null"/>
-    <contextParameter comment="The user password" name="ftp_password" prompt="ftp_password?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="The user password" name="ftp_password" prompt="ftp_password?" promptNeeded="false" type="id_Password" value=""/>
     <contextParameter comment="The remove directory in the FTP server" name="overview_publication_dir" prompt="overview_publication_dir?" promptNeeded="false" type="id_String" value="/var/www/html/overview/"/>
     <contextParameter comment="" name="ssh_host" prompt="ssh_host?" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
     <contextParameter comment="" name="ssh_port" prompt="ssh_port?" promptNeeded="false" type="id_Integer" value="22"/>
     <contextParameter comment="" name="ssh_username" prompt="ssh_username?" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
-    <contextParameter comment="" name="ssh_password" prompt="ssh_password?" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
+    <contextParameter comment="" name="ssh_password" prompt="ssh_password?" promptNeeded="false" type="id_Password" value=""/>
     <contextParameter comment="Store the generated metadata file next to the analyzed file" name="metadata_file_with_source" prompt="metadata_file_with_source?" promptNeeded="false" type="id_Boolean" value="false"/>
     <contextParameter comment="Path to GDAL/OGR bin or empty if in system path" name="gdal_path" prompt="gdal_path?" promptNeeded="false" type="id_Directory" value=""/>
     <contextParameter comment="True to ping the job and return status response (use when deploy as webservice)" name="ping" prompt="ping?" promptNeeded="false" type="id_Boolean" value="false"/>
@@ -172,7 +187,7 @@
     <contextParameter comment="" name="email" prompt="email?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="geoserver_server_host" prompt="geoserver_server_host?" promptNeeded="false" type="id_String" value="&quot;http://localhost:8081/geoserver/rest&quot;"/>
     <contextParameter comment="" name="geoserver_username" prompt="geoserver_username?" promptNeeded="false" type="id_String" value="&quot;admin&quot;"/>
-    <contextParameter comment="" name="geoserver_password" prompt="geoserver_password?" promptNeeded="false" type="id_String" value="&quot;geoserver&quot;"/>
+    <contextParameter comment="" name="geoserver_password" prompt="geoserver_password?" promptNeeded="false" type="id_Password" value=""/>
     <contextParameter comment="Vector file extensions supported for publication in mapservers" name="vector_file_extension_for_geopublication" prompt="vector_file_extension_for_geopublication?" promptNeeded="false" type="id_String" value="&quot;.*\\.shp&quot;"/>
     <contextParameter comment="RASTER file extensions supported for publication in mapservers" name="raster_file_extension_for_geopublication" prompt="raster_file_extension_for_geopublication?" promptNeeded="false" type="id_String" value="&quot;.*\\.tif|.*\\.tiff&quot;"/>
     <contextParameter comment="" name="geosever_namespace_prefix" prompt="geosever_namespace_prefix?" promptNeeded="false" type="id_String" value="&quot;gn&quot;"/>
@@ -183,5 +198,20 @@
     <contextParameter comment="" name="statusArchiveFlag" prompt="statusArchiveFlag?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="statusObsoleteFlag" prompt="statusObsoleteFlag?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="statusUnderDevelopmentFlag" prompt="statusUnderDevelopmentFlag?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="mail_server" prompt="mail_server?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="mail_port" prompt="mail_port?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="mail_username" prompt="mail_username?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="mail_password" prompt="mail_password?" promptNeeded="false" type="id_Password" value=""/>
+    <contextParameter comment="" name="mail_send_to_emails" prompt="mail_send_to_emails?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="mail_from_email" prompt="mail_from_email?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="mail_subject_outofextent" prompt="mail_subject_outofextent?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="mail_msg_outofextent" prompt="mail_msg_outofextent?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="mail_subject_log" prompt="mail_subject_log?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="mail_msg_log" prompt="mail_msg_log?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="mail_subject_check_resource" prompt="mail_subject_check_resource?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="mail_msg_check_resource" prompt="mail_msg_check_resource?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="catalog_search_records_url" prompt="catalog_search_records_url?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="csv_file_list_of_layers_out_of_extent" prompt="csv_file_list_of_layers_out_of_extent?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="csv_file_list_of_record_with_file_not_found" prompt="csv_file_list_of_record_with_file_not_found?" promptNeeded="false" type="id_String" value=""/>
   </talendfile:ContextType>
 </xmi:XMI>

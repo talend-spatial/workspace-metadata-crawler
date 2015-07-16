@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="file" prompt="file?" promptNeeded="false" type="id_String" value="/home/francois/data/test/toscan/SWISS_TLM.gdb"/>
+    <contextParameter comment="" name="file" prompt="file?" promptNeeded="false" type="id_String" value="/home/francois/data/test/toscan/CCM.aa.shp"/>
     <contextParameter comment="" name="isDb" prompt="isDb?" promptNeeded="false" type="id_Boolean" value="false"/>
     <contextParameter comment="Does the metadata record exists in the target catalog" name="isUpdate" prompt="isUpdate?" promptNeeded="false" type="id_Boolean" value="false"/>
     <contextParameter comment="The folder to create overview into" name="overview_folder" prompt="overview_folder?" promptNeeded="false" type="id_Directory" value="/tmp/talend/www/overviews/"/>
     <contextParameter comment="" name="ssh_dir" prompt="ssh_dir?" promptNeeded="false" type="id_String" value="&quot;/tmp/www/overview/&quot;"/>
     <contextParameter comment="" name="administrativeArea" prompt="administrativeArea?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
-    <contextParameter comment="" name="bboxcheck_xmax" prompt="bboxcheck_xmax?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Double" value="180"/>
+    <contextParameter comment="" name="bboxcheck_xmax" prompt="bboxcheck_xmax?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Double" value="-170"/>
     <contextParameter comment="" name="bboxcheck_xmin" prompt="bboxcheck_xmin?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Double" value="-180"/>
     <contextParameter comment="" name="bboxcheck_ymax" prompt="bboxcheck_ymax?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Double" value="90"/>
     <contextParameter comment="" name="bboxcheck_ymin" prompt="bboxcheck_ymin?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Double" value="-90"/>
+    <contextParameter comment="" name="catalog_search_records_url" prompt="catalog_search_records_url?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;http://localhost:8080/geonetwork/srv/fre/q?fast=index&quot;"/>
     <contextParameter comment="" name="city" prompt="city?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
     <contextParameter comment="" name="country" prompt="country?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
     <contextParameter comment="Create or not overview files" name="create_overview" prompt="create_overview?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
-    <contextParameter comment="The CSW user password" name="csw_password" prompt="csw_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;admin&quot;"/>
+    <contextParameter comment="" name="csv_file_list_of_layers_out_of_extent" prompt="csv_file_list_of_layers_out_of_extent?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;listOfLayersOutOfExtent.csv&quot;"/>
+    <contextParameter comment="" name="csv_file_list_of_record_with_file_not_found" prompt="csv_file_list_of_record_with_file_not_found?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;listOfRecordsWithFileNotFound.csv&quot;"/>
+    <contextParameter comment="The CSW user password" name="csw_password" prompt="csw_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Password" value="RX/CTwlUNiA="/>
     <contextParameter comment="The CSW server to push metadata records into" name="csw_server_host" prompt="csw_server_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;http://localhost:8080/geonetwork/srv/eng/csw-publication&quot;"/>
     <contextParameter comment="The CSW user name" name="csw_username" prompt="csw_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;admin&quot;"/>
-    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="a"/>
-    <contextParameter comment="" name="data_dir_uuid_ignored_path" prompt="data_dir_uuid_ignored_path?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/home/francois/data/test/toscan/"/>
+    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="t"/>
+    <contextParameter comment="" name="data_dir_uuid_ignored_path" prompt="data_dir_uuid_ignored_path?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/data/"/>
     <contextParameter comment="List of database to scan" name="db_list" prompt="db_list?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_List Of Value" value="&quot;PG:dbname=talend host=localhost port=5432 user=www-data password=www-data&quot;"/>
     <contextParameter comment="Hide database connection information" name="db_password_hide" prompt="db_password_hide?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="An EPSG code of a projection to use in case the projection could not be defined from the file" name="default_projection" prompt="default_projection?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;EPSG:4326&quot;"/>
@@ -29,16 +32,28 @@
     <contextParameter comment="" name="deliveryPoint" prompt="deliveryPoint?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
     <contextParameter comment="" name="email" prompt="email?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
     <contextParameter comment="The FTP host" name="ftp_host" prompt="ftp_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="null"/>
-    <contextParameter comment="The user password" name="ftp_password" prompt="ftp_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="null"/>
+    <contextParameter comment="The user password" name="ftp_password" prompt="ftp_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Password" value=""/>
     <contextParameter comment="The FTP port" name="ftp_port" prompt="ftp_port?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Integer" value="21"/>
     <contextParameter comment="The user name to log in the FTP server" name="ftp_username" prompt="ftp_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="null"/>
     <contextParameter comment="Path to GDAL/OGR bin or empty if in system path" name="gdal_path" prompt="gdal_path?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value=""/>
-    <contextParameter comment="" name="geoserver_password" prompt="geoserver_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;geoserver&quot;"/>
+    <contextParameter comment="" name="geoserver_password" prompt="geoserver_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Password" value=""/>
     <contextParameter comment="" name="geoserver_server_host" prompt="geoserver_server_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;http://localhost:8081/geoserver/rest&quot;"/>
     <contextParameter comment="" name="geoserver_username" prompt="geoserver_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;admin&quot;"/>
     <contextParameter comment="" name="geosever_namespace_prefix" prompt="geosever_namespace_prefix?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;gn&quot;"/>
     <contextParameter comment="" name="individualName" prompt="individualName?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
     <contextParameter comment="The log folder" name="log_dir" prompt="log_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/logs/"/>
+    <contextParameter comment="" name="mail_from_email" prompt="mail_from_email?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;metadata-scan-alert@myorganization.org&quot;"/>
+    <contextParameter comment="" name="mail_msg_check_resource" prompt="mail_msg_check_resource?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot; record(s) found having link to file on the network which does not exist anymore. Check those records and see if files were deleted or moved.  \nThe metadata scanner&quot;"/>
+    <contextParameter comment="" name="mail_msg_log" prompt="mail_msg_log?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;Hi, \nattached to this email, you will find the log file of last scan. Enjoy!.  \nThe metadata scanner&quot;"/>
+    <contextParameter comment="" name="mail_msg_outofextent" prompt="mail_msg_outofextent?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot; layer(s) found having extent outside the restricted extent. Check that extent and projection are valid.  \nThe metadata scanner&quot;"/>
+    <contextParameter comment="" name="mail_password" prompt="mail_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Password" value="orisbc/xTqQ="/>
+    <contextParameter comment="" name="mail_port" prompt="mail_port?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;465&quot;"/>
+    <contextParameter comment="" name="mail_send_to_emails" prompt="mail_send_to_emails?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;gis-guy@myorganization.org&quot;"/>
+    <contextParameter comment="" name="mail_server" prompt="mail_server?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;smtp.organisation.org&quot;"/>
+    <contextParameter comment="" name="mail_subject_check_resource" prompt="mail_subject_check_resource?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;Metadata scan / Notification / Metadata records link to non existing files &quot;"/>
+    <contextParameter comment="" name="mail_subject_log" prompt="mail_subject_log?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;Metadata scan / Notification / Log file for last scan: &quot;"/>
+    <contextParameter comment="" name="mail_subject_outofextent" prompt="mail_subject_outofextent?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;Metadata scan / Alert / Layers out of extent&quot;"/>
+    <contextParameter comment="" name="mail_username" prompt="mail_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;username&quot;"/>
     <contextParameter comment="The folder to scan for maps" name="map_data_dir" prompt="map_data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/maps/"/>
     <contextParameter comment="Map file extensions" name="map_file_extension" prompt="map_file_extension?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.qgs&quot;"/>
     <contextParameter comment="" name="mdAdministrativeArea" prompt="mdAdministrativeArea?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
@@ -71,16 +86,16 @@
     <contextParameter comment="" name="postalCode" prompt="postalCode?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
     <contextParameter comment="Publish metadata or not in the CSW catalogue defined" name="publish_metadata" prompt="publish_metadata?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="Always run update by sending the complete metadata record (not only some properties like bounding box)" name="publish_metadata_full_update" prompt="publish_metadata_full_update?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="false"/>
-    <contextParameter comment="RASTER file extensions" name="raster_file_extension" prompt="raster_file_extension?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.tif|.*\\.tiff|.*\\.ecw|.*\\.asc|.*\\.rst|.*\\.grd|.*\\.jpg&quot;"/>
+    <contextParameter comment="RASTER file extensions" name="raster_file_extension" prompt="raster_file_extension?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.tif|.*\\.tiff|.*\\.ecw|.*\\.asc|.*\\.rst|.*\\.grd|.*\\.jpg|.*\\.xyz&quot;"/>
     <contextParameter comment="RASTER file extensions supported for publication in mapservers" name="raster_file_extension_for_geopublication" prompt="raster_file_extension_for_geopublication?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.tif|.*\\.tiff&quot;"/>
-    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/home/francois/data/test/config/"/>
+    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/var/app/talend/config/"/>
     <contextParameter comment="Scan for maps" name="scan_map" prompt="scan_map?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="false"/>
     <contextParameter comment="For each datasources find in a map, create metadata" name="scan_map_and_datasources" prompt="scan_map_and_datasources?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="Scan for RASTER files" name="scan_raster" prompt="scan_raster?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="Scan for vector files" name="scan_vector" prompt="scan_vector?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="List of WFS to scan" name="service_list" prompt="service_list?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_List Of Value" value=""/>
     <contextParameter comment="" name="ssh_host" prompt="ssh_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;&quot;"/>
-    <contextParameter comment="" name="ssh_password" prompt="ssh_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;&quot;"/>
+    <contextParameter comment="" name="ssh_password" prompt="ssh_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Password" value=""/>
     <contextParameter comment="" name="ssh_port" prompt="ssh_port?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Integer" value="22"/>
     <contextParameter comment="" name="ssh_username" prompt="ssh_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;&quot;"/>
     <contextParameter comment="" name="statusArchiveFlag" prompt="statusArchiveFlag?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;archive&quot;"/>
@@ -99,7 +114,7 @@
   </context>
   <parameters>
     <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value=" -Xms256M -Xmx1024M -Djava.library.path=/path/to/gdal/swig/java "/>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="635"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value=""/>
     <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true"/>
@@ -1031,7 +1046,7 @@
         <mapperTableEntries name="var2" expression="Utility.PROJ(row9.geo_extent, context.default_projection, &quot;EPSG:4326&quot;, true) " type="id_Geometry"/>
         <mapperTableEntries name="keywordList" expression="context.isDb ? &quot;&quot; : Var.filepathBase " type="id_String"/>
       </varTables>
-      <outputTables sizeState="INTERMEDIATE" name="info" minimized="true">
+      <outputTables sizeState="INTERMEDIATE" name="info">
         <mapperTableEntries name="uuid" expression="Var.mdUuid " type="id_String" nullable="true"/>
         <mapperTableEntries name="fullLayerName" expression="Var.fullLayerName" type="id_String" nullable="true"/>
         <mapperTableEntries name="mdLanguage" expression="metadataProperties.language" type="id_String" nullable="true"/>
@@ -1176,7 +1191,7 @@
         <mapperTableEntries name="geo_extent" expression="row9.geo_extent " type="id_Geometry" nullable="true"/>
         <mapperTableEntries name="latlon_extent" expression="row9.latlon_extent " type="id_Geometry" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="allLayerOutsideBbox" minimized="true" expressionFilter="row9.nb_features  > 0 &amp;&amp; (&#xA;Double.parseDouble(Var.west) &lt; context.bboxcheck_xmin ||&#xA;Double.parseDouble(Var.east) > context.bboxcheck_xmax ||&#xA;Double.parseDouble(Var.south) &lt; context.bboxcheck_ymin ||&#xA;Double.parseDouble(Var.north) > context.bboxcheck_ymax&#xA;)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="allLayerOutsideBbox" expressionFilter="row9.nb_features  > 0 &amp;&amp; (&#xA;Double.parseDouble(Var.west) &lt; context.bboxcheck_xmin ||&#xA;Double.parseDouble(Var.east) > context.bboxcheck_xmax ||&#xA;Double.parseDouble(Var.south) &lt; context.bboxcheck_ymin ||&#xA;Double.parseDouble(Var.north) > context.bboxcheck_ymax&#xA;)" activateExpressionFilter="true">
         <mapperTableEntries name="files" expression="row9.files " type="id_String" nullable="true"/>
         <mapperTableEntries name="layer_name" expression="row9.layer_name " type="id_String" nullable="true"/>
         <mapperTableEntries name="epsg_code" expression="row9.epsg_code " type="id_Integer" nullable="true"/>
@@ -1811,13 +1826,13 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tExtractDelimitedFields_1"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150508_1414-V5.6.2/configuration/lib/java"/>
     <elementParameter field="PREV_COLUMN_LIST" name="FIELD" value="featureCatalogCols"/>
-    <elementParameter field="CHECK" name="IGNORE_SOURCE_NULL" value="true"/>
+    <elementParameter field="CHECK" name="IGNORE_SOURCE_NULL" value="false"/>
     <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;#&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
     <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;"/>
     <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;"/>
-    <elementParameter field="CHECK" name="TRIM" value="false"/>
+    <elementParameter field="CHECK" name="TRIM" value="true"/>
     <elementParameter field="CHECK" name="CHECK_FIELDS_NUM" value="false"/>
     <elementParameter field="CHECK" name="CHECK_DATE" value="false"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100"/>
@@ -1826,9 +1841,9 @@
     <metadata connector="FLOW" label="metadata" name="tExtractDelimitedFields_1">
       <column comment="" key="false" length="0" name="uuid" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" name="fullLayerName" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="eng" key="false" length="0" name="mdLanguage" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="utf8" key="false" length="0" name="mdCharacterSet" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="dataset" key="false" length="0" name="hierarchyLevel" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;eng&quot;" key="false" length="0" name="mdLanguage" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;utf8&quot;" key="false" length="0" name="mdCharacterSet" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;dataset&quot;" key="false" length="0" name="hierarchyLevel" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="mdIndividualName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="mdOrganisationName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="mdPositionName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -1839,18 +1854,20 @@
       <column comment="" key="false" length="0" name="mdPostalCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="mdCountry" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="mdEmail" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="pointOfContact" key="false" length="0" name="mdRole" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;pointOfContact&quot;" key="false" length="0" name="mdRole" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="dateStamp" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="ISO 19115:2003/19139" key="false" length="0" name="standardName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="1.0" key="false" length="0" name="standardVersion" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="EPSG:4326" key="false" length="0" name="srs" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;ISO 19115:2003/19139&quot;" key="false" length="0" name="standardName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;1.0&quot;" key="false" length="0" name="standardVersion" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;EPSG:4326&quot;" key="false" length="0" name="srs" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="title" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="publicationDate" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="publication" key="false" length="0" name="publicationDateType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="date" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;publication&quot;" key="false" length="0" name="dateType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="revisionDate" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="revisionDateType" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="edition" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="mdAbstract" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="purpose" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="completed" key="false" length="0" name="status" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;completed&quot;" key="false" length="0" name="status" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="individualName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="organisationName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="positionName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -1861,27 +1878,28 @@
       <column comment="" key="false" length="0" name="postalCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="country" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="email" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="pointOfContacta" key="false" length="0" name="role" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;pointOfContacta&quot;" key="false" length="0" name="role" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geometricType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geometryCount" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="asNeeded" key="false" length="0" name="maintenanceFrequency" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;asNeeded&quot;" key="false" length="0" name="maintenanceFrequency" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="graphicFileName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="graphicFileDesc" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="keyword" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="keyword2" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="theme" key="false" length="0" name="keywordType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="keywordList" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;theme&quot;" key="false" length="0" name="keywordType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="inspireTheme" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geoKeyword" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="place" key="false" length="0" name="geoKeywordType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="copyright" key="false" length="0" name="accessConstraints" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="otherRestictions" key="false" length="0" name="useConstraints" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;place&quot;" key="false" length="0" name="geoKeywordType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;copyright&quot;" key="false" length="0" name="accessConstraints" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;otherRestictions&quot;" key="false" length="0" name="useConstraints" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="useConstraintsInfo" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="useLimitation" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="vector" key="false" length="0" name="spatialRepresentation" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;vector&quot;" key="false" length="0" name="spatialRepresentation" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="scaleDenominator" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="eng" key="false" length="0" name="language" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="utf8" key="false" length="0" name="charset" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="environment" key="false" length="0" name="topicCategoryCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;eng&quot;" key="false" length="0" name="language" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;utf8&quot;" key="false" length="0" name="charset" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;environment&quot;" key="false" length="0" name="topicCategoryCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geographicDescription" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="west" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="east" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -1902,7 +1920,7 @@
       <column comment="" key="false" length="0" name="linkage3protocol" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="linkage3name" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="linkage3description" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="dataset" key="false" length="0" name="scopeCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;dataset&quot;" key="false" length="0" name="scopeCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="lineage" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="featureCatalogUuid" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="featureCatalogCols" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -1911,6 +1929,8 @@
       <column comment="" key="false" length="0" name="filePath" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="errors" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="extra" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="beginPosition" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="endPosition" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" name="colName" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" name="colType" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" name="colPrecision" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
@@ -1918,9 +1938,9 @@
     <metadata connector="REJECT" label="metadata" name="REJECT">
       <column comment="" key="false" length="0" name="uuid" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" name="fullLayerName" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="eng" key="false" length="0" name="mdLanguage" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="utf8" key="false" length="0" name="mdCharacterSet" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="dataset" key="false" length="0" name="hierarchyLevel" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;eng&quot;" key="false" length="0" name="mdLanguage" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;utf8&quot;" key="false" length="0" name="mdCharacterSet" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;dataset&quot;" key="false" length="0" name="hierarchyLevel" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="mdIndividualName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="mdOrganisationName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="mdPositionName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -1931,18 +1951,20 @@
       <column comment="" key="false" length="0" name="mdPostalCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="mdCountry" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="mdEmail" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="pointOfContact" key="false" length="0" name="mdRole" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;pointOfContact&quot;" key="false" length="0" name="mdRole" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="dateStamp" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="ISO 19115:2003/19139" key="false" length="0" name="standardName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="1.0" key="false" length="0" name="standardVersion" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="EPSG:4326" key="false" length="0" name="srs" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;ISO 19115:2003/19139&quot;" key="false" length="0" name="standardName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;1.0&quot;" key="false" length="0" name="standardVersion" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;EPSG:4326&quot;" key="false" length="0" name="srs" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="title" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="publicationDate" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="publication" key="false" length="0" name="publicationDateType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="date" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;publication&quot;" key="false" length="0" name="dateType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="revisionDate" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="revisionDateType" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="edition" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="mdAbstract" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="purpose" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="completed" key="false" length="0" name="status" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;completed&quot;" key="false" length="0" name="status" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="individualName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="organisationName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="positionName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -1953,27 +1975,28 @@
       <column comment="" key="false" length="0" name="postalCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="country" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="email" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="pointOfContacta" key="false" length="0" name="role" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;pointOfContacta&quot;" key="false" length="0" name="role" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geometricType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geometryCount" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="asNeeded" key="false" length="0" name="maintenanceFrequency" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;asNeeded&quot;" key="false" length="0" name="maintenanceFrequency" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="graphicFileName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="graphicFileDesc" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="keyword" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="keyword2" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="theme" key="false" length="0" name="keywordType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="keywordList" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;theme&quot;" key="false" length="0" name="keywordType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="inspireTheme" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geoKeyword" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="place" key="false" length="0" name="geoKeywordType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="copyright" key="false" length="0" name="accessConstraints" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="otherRestictions" key="false" length="0" name="useConstraints" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;place&quot;" key="false" length="0" name="geoKeywordType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;copyright&quot;" key="false" length="0" name="accessConstraints" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;otherRestictions&quot;" key="false" length="0" name="useConstraints" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="useConstraintsInfo" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="useLimitation" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="vector" key="false" length="0" name="spatialRepresentation" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;vector&quot;" key="false" length="0" name="spatialRepresentation" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="scaleDenominator" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="eng" key="false" length="0" name="language" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="utf8" key="false" length="0" name="charset" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="environment" key="false" length="0" name="topicCategoryCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;eng&quot;" key="false" length="0" name="language" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;utf8&quot;" key="false" length="0" name="charset" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;environment&quot;" key="false" length="0" name="topicCategoryCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geographicDescription" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="west" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="east" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -1994,7 +2017,7 @@
       <column comment="" key="false" length="0" name="linkage3protocol" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="linkage3name" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="linkage3description" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="dataset" key="false" length="0" name="scopeCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="&quot;dataset&quot;" key="false" length="0" name="scopeCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="lineage" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="featureCatalogUuid" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="featureCatalogCols" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -2003,6 +2026,8 @@
       <column comment="" key="false" length="0" name="filePath" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="errors" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="extra" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="beginPosition" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="endPosition" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" name="colName" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" name="colType" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" name="colPrecision" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
@@ -2050,10 +2075,23 @@
       <column comment="" key="false" length="0" name="columnPrecision" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="columnListOfValues" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
+    <metadata connector="FLOW" name="out1">
+      <column comment="" key="false" length="0" name="featureCatalogCols" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="fileName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="layerName" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="filePath" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="errors" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="extra" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="beginPosition" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="endPosition" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="colName" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="colType" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="colPrecision" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
     <nodeData xsi:type="MapperData">
       <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="iso19110">
+      <outputTables sizeState="INTERMEDIATE" name="iso19110" minimized="true">
         <mapperTableEntries name="uuid" expression="row6.featureCatalogUuid " type="id_String" nullable="true"/>
         <mapperTableEntries name="title" expression="context.title_prefix_fcat +  row6.fullLayerName " type="id_String" nullable="true"/>
         <mapperTableEntries name="scope" type="id_String" nullable="true"/>
@@ -2080,6 +2118,19 @@
         <mapperTableEntries name="columnPrecision" expression="row6.colPrecision " type="id_String" nullable="true"/>
         <mapperTableEntries name="columnListOfValues" type="id_String" nullable="true"/>
       </outputTables>
+      <outputTables sizeState="INTERMEDIATE" name="out1">
+        <mapperTableEntries name="featureCatalogCols" expression="row6.featureCatalogCols " type="id_String" nullable="true"/>
+        <mapperTableEntries name="fileName" expression="row6.fileName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="layerName" expression="row6.layerName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="filePath" expression="row6.filePath " type="id_String" nullable="true"/>
+        <mapperTableEntries name="errors" expression="row6.errors " type="id_String" nullable="true"/>
+        <mapperTableEntries name="extra" expression="row6.extra " type="id_String" nullable="true"/>
+        <mapperTableEntries name="beginPosition" expression="row6.beginPosition " type="id_String" nullable="true"/>
+        <mapperTableEntries name="endPosition" expression="row6.endPosition " type="id_String" nullable="true"/>
+        <mapperTableEntries name="colName" expression="row6.colName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="colType" expression="row6.colType " type="id_String" nullable="true"/>
+        <mapperTableEntries name="colPrecision" expression="row6.colPrecision " type="id_String" nullable="true"/>
+      </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row6" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="uuid" type="id_String" nullable="true"/>
         <mapperTableEntries name="fullLayerName" type="id_String" nullable="true"/>
@@ -2102,8 +2153,10 @@
         <mapperTableEntries name="standardVersion" type="id_String" nullable="true"/>
         <mapperTableEntries name="srs" type="id_String" nullable="true"/>
         <mapperTableEntries name="title" type="id_String" nullable="true"/>
-        <mapperTableEntries name="publicationDate" type="id_String" nullable="true"/>
-        <mapperTableEntries name="publicationDateType" type="id_String" nullable="true"/>
+        <mapperTableEntries name="date" type="id_String" nullable="true"/>
+        <mapperTableEntries name="dateType" type="id_String" nullable="true"/>
+        <mapperTableEntries name="revisionDate" type="id_String" nullable="true"/>
+        <mapperTableEntries name="revisionDateType" type="id_String" nullable="true"/>
         <mapperTableEntries name="edition" type="id_String" nullable="true"/>
         <mapperTableEntries name="mdAbstract" type="id_String" nullable="true"/>
         <mapperTableEntries name="purpose" type="id_String" nullable="true"/>
@@ -2126,6 +2179,7 @@
         <mapperTableEntries name="graphicFileDesc" type="id_String" nullable="true"/>
         <mapperTableEntries name="keyword" type="id_String" nullable="true"/>
         <mapperTableEntries name="keyword2" type="id_String" nullable="true"/>
+        <mapperTableEntries name="keywordList" type="id_String" nullable="true"/>
         <mapperTableEntries name="keywordType" type="id_String" nullable="true"/>
         <mapperTableEntries name="inspireTheme" type="id_String" nullable="true"/>
         <mapperTableEntries name="geoKeyword" type="id_String" nullable="true"/>
@@ -2168,507 +2222,13 @@
         <mapperTableEntries name="filePath" type="id_String" nullable="true"/>
         <mapperTableEntries name="errors" type="id_String" nullable="true"/>
         <mapperTableEntries name="extra" type="id_String" nullable="true"/>
+        <mapperTableEntries name="beginPosition" type="id_String" nullable="true"/>
+        <mapperTableEntries name="endPosition" type="id_String" nullable="true"/>
         <mapperTableEntries name="colName" type="id_String" nullable="true"/>
         <mapperTableEntries name="colType" type="id_String" nullable="true"/>
         <mapperTableEntries name="colPrecision" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
-  </node>
-  <node componentName="tAdvancedFileOutputXML" componentVersion="0.102" offsetLabelX="1" offsetLabelY="-3" posX="864" posY="512">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAdvancedFileOutputXML_3"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150508_1414-V5.6.2/configuration/lib/java"/>
-    <elementParameter field="CHECK" name="USESTREAM" value="false"/>
-    <elementParameter field="TEXT" name="STREAMNAME" value="outputStream"/>
-    <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;iso19110fileName&quot;))"/>
-    <elementParameter field="TABLE" name="ROOT">
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="main"/>
-      <elementValue elementRef="ORDER" value="1"/>
-      <elementValue elementRef="PATH" value="uuid"/>
-      <elementValue elementRef="COLUMN" value="uuid"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="attri"/>
-      <elementValue elementRef="ORDER" value="1"/>
-      <elementValue elementRef="PATH" value="gml"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value="http://www.opengis.net/gml"/>
-      <elementValue elementRef="ATTRIBUTE" value="ns"/>
-      <elementValue elementRef="ORDER" value="2"/>
-      <elementValue elementRef="PATH" value="gmd"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value="http://www.isotc211.org/2005/gmd"/>
-      <elementValue elementRef="ATTRIBUTE" value="ns"/>
-      <elementValue elementRef="ORDER" value="3"/>
-      <elementValue elementRef="PATH" value="gco"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value="http://www.isotc211.org/2005/gco"/>
-      <elementValue elementRef="ATTRIBUTE" value="ns"/>
-      <elementValue elementRef="ORDER" value="4"/>
-      <elementValue elementRef="PATH" value="gmx"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value="http://www.isotc211.org/2005/gmx"/>
-      <elementValue elementRef="ATTRIBUTE" value="ns"/>
-      <elementValue elementRef="ORDER" value="5"/>
-      <elementValue elementRef="PATH" value="gfc"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value="http://www.isotc211.org/2005/gfc"/>
-      <elementValue elementRef="ATTRIBUTE" value="ns"/>
-      <elementValue elementRef="ORDER" value="6"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gmx:name"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="7"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gmx:name/gco:CharacterString"/>
-      <elementValue elementRef="COLUMN" value="title"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="8"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gmx:scope"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="9"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gmx:scope/gco:CharacterString"/>
-      <elementValue elementRef="COLUMN" value="scope"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="10"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gmx:fieldOfApplication"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="11"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gmx:fieldOfApplication/gco:CharacterString"/>
-      <elementValue elementRef="COLUMN" value="fieldOfApplication"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="12"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gmx:versionNumber"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="13"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gmx:versionNumber/gco:CharacterString"/>
-      <elementValue elementRef="COLUMN" value="version"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="14"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gmx:versionDate"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="15"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gmx:versionDate/gco:DateTime"/>
-      <elementValue elementRef="COLUMN" value="date"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="16"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="17"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="18"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:individualName"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="19"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString"/>
-      <elementValue elementRef="COLUMN" value="individualName"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="20"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:organisationName"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="21"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString"/>
-      <elementValue elementRef="COLUMN" value="organisationName"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="22"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:positionName"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="23"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:positionName/gco:CharacterString"/>
-      <elementValue elementRef="COLUMN" value="positionName"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="24"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="25"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="26"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="27"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="28"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:deliveryPoint"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="29"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:deliveryPoint/gco:CharacterString"/>
-      <elementValue elementRef="COLUMN" value="deliveryPoint"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="30"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:city"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="31"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:city/gco:CharacterString"/>
-      <elementValue elementRef="COLUMN" value="city"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="32"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:administrativeArea"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="33"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:administrativeArea/gco:CharacterString"/>
-      <elementValue elementRef="COLUMN" value="adminArea"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="34"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:postalCode"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="35"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:postalCode/gco:CharacterString"/>
-      <elementValue elementRef="COLUMN" value="postalCode"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="36"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:country"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="37"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:country/gco:CharacterString"/>
-      <elementValue elementRef="COLUMN" value="country"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="38"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="39"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString"/>
-      <elementValue elementRef="COLUMN" value="email"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="40"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:role"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="41"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="42"/>
-      <elementValue elementRef="PATH" value="codeListValue"/>
-      <elementValue elementRef="COLUMN" value="role"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="attri"/>
-      <elementValue elementRef="ORDER" value="43"/>
-      <elementValue elementRef="PATH" value="codeList"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="attri"/>
-      <elementValue elementRef="ORDER" value="44"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="main"/>
-      <elementValue elementRef="ORDER" value="45"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="main"/>
-      <elementValue elementRef="ORDER" value="46"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:typeName"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="47"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:typeName/gco:LocalName"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="48"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:definition"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="49"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:definition/gco:CharacterString"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="50"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:isAbstract"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="51"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:isAbstract/gco:Boolean"/>
-      <elementValue elementRef="COLUMN" value="isAbstract"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="52"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:aliases"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="53"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:aliases/gco:LocalName"/>
-      <elementValue elementRef="COLUMN" value="columnAlias"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="54"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:featureCatalogue"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="55"/>
-    </elementParameter>
-    <elementParameter field="TABLE" name="GROUP"/>
-    <elementParameter field="TABLE" name="LOOP">
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="main"/>
-      <elementValue elementRef="ORDER" value="56"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="57"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:featureType"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="58"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:memberName"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="59"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:memberName/gco:LocalName"/>
-      <elementValue elementRef="COLUMN" value="columnName"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="60"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:definition"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="61"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:definition/gco:CharacterString"/>
-      <elementValue elementRef="COLUMN" value="columnDefinition"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="62"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:cardinality"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="63"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:cardinality/gco:Multiplicity"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="64"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:cardinality/gco:Multiplicity/gco:range"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="65"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:cardinality/gco:Multiplicity/gco:range/gco:MultiplicityRange"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="66"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:cardinality/gco:Multiplicity/gco:range/gco:MultiplicityRange/gco:lower"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="67"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:cardinality/gco:Multiplicity/gco:range/gco:MultiplicityRange/gco:lower/gco:Integer"/>
-      <elementValue elementRef="COLUMN" value="cardinalityMin"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="68"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:cardinality/gco:Multiplicity/gco:range/gco:MultiplicityRange/gco:upper"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="69"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:cardinality/gco:Multiplicity/gco:range/gco:MultiplicityRange/gco:upper/gco:UnlimitedInteger"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="70"/>
-      <elementValue elementRef="PATH" value="isInfinite"/>
-      <elementValue elementRef="COLUMN" value="cardinalityMax"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="attri"/>
-      <elementValue elementRef="ORDER" value="71"/>
-      <elementValue elementRef="PATH" value="xsi:nil"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="attri"/>
-      <elementValue elementRef="ORDER" value="72"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:valueType"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="73"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:valueType/gco:TypeName"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="74"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:valueType/gco:TypeName/gco:aName"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="75"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:valueType/gco:TypeName/gco:aName/gco:CharacterString"/>
-      <elementValue elementRef="COLUMN" value="columnType"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="76"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:listedValue"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="77"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:listedValue/gfc:FC_ListedValue"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="78"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:listedValue/gfc:FC_ListedValue/gfc:label"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="79"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:listedValue/gfc:FC_ListedValue/gfc:label/gco:CharacterString"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="80"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:listedValue/gfc:FC_ListedValue/gfc:code"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="81"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:listedValue/gfc:FC_ListedValue/gfc:code/gco:CharacterString"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="82"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:listedValue/gfc:FC_ListedValue/gfc:definition"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="83"/>
-      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:listedValue/gfc:FC_ListedValue/gfc:definition/gco:CharacterString"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="84"/>
-    </elementParameter>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_dwdggOPJEeKXY41c3BjRgQ - metadata"/>
-    <elementParameter field="CHECK" name="MERGE" value="false"/>
-    <elementParameter field="CHECK" name="PRETTY_COMPACT" value="false"/>
-    <elementParameter field="CHECK" name="FILE_VALID" value="false"/>
-    <elementParameter field="RADIO" name="DTD_VALID" value="true"/>
-    <elementParameter field="TEXT" name="DTD_NAME" value="&quot;Root&quot;"/>
-    <elementParameter field="TEXT" name="DTD_SYSTEMID" value="&quot;Talend.dtd&quot;"/>
-    <elementParameter field="RADIO" name="XSL_VALID" value="false"/>
-    <elementParameter field="TEXT" name="XSL_TYPE" value="&quot;text/xsl&quot;"/>
-    <elementParameter field="TEXT" name="XSL_HREF" value="&quot;Talend.xsl&quot;"/>
-    <elementParameter field="CHECK" name="SPLIT" value="false"/>
-    <elementParameter field="TEXT" name="SPLIT_EVERY" value="1"/>
-    <elementParameter field="CHECK" name="TRIM" value="false"/>
-    <elementParameter field="CHECK" name="CREATE" value="true"/>
-    <elementParameter field="CHECK" name="CREATE_EMPTY_ELEMENT" value="true"/>
-    <elementParameter field="CHECK" name="ADD_EMPTY_ATTRIBUTE" value="false"/>
-    <elementParameter field="CHECK" name="ADD_UNMAPPED_ATTRIBUTE" value="false"/>
-    <elementParameter field="CHECK" name="ADD_DOCUMENT_AS_NODE" value="false"/>
-    <elementParameter field="CHECK" name="OUTPUT_AS_XSD" value="false"/>
-    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
-    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;"/>
-    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="GENERATION_MODE" value="Dom4j"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
-    <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
-    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100"/>
-    <elementParameter field="TEXT" name="XMLNODE_OPT_NUM" value="100"/>
-    <elementParameter field="TEXT" name="LABEL" value="iso19110"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="metadata" name="tAdvancedFileOutputXML_3">
-      <column comment="" key="false" length="0" name="uuid" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="title" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="scope" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="fieldOfApplication" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="version" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="date" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="individualName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="organisationName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="positionName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="deliveryPoint" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="city" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="adminArea" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="postalCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="country" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="email" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="role" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="columnName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="columnDefinition" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="isAbstract" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="columnAlias" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="columnType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="cardinalityMin" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="cardinalityMax" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="columnPrecision" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="columnListOfValues" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-    </metadata>
   </node>
   <node componentName="tNormalize" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tNormalize_2"/>
@@ -4342,7 +3902,7 @@
     <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100"/>
     <elementParameter field="TEXT" name="XMLNODE_OPT_NUM" value="100"/>
-    <elementParameter field="TEXT" name="LABEL" value="row4"/>
+    <elementParameter field="TEXT" name="LABEL" value="iso19139"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="metadata" name="tAdvancedFileOutputXML_1">
       <column comment="" key="false" length="0" name="uuid" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -4444,7 +4004,7 @@
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150508_1414-V5.6.2/configuration/lib/java"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" value="outputStream"/>
-    <elementParameter field="FILE" name="FILENAME" value="context.log_dir + &quot;listOfLayersOutOfExtent.csv&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.log_dir + context.csv_file_list_of_layers_out_of_extent"/>
     <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
     <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" value="true"/>
     <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" value="&quot;\n&quot;"/>
@@ -4485,6 +4045,600 @@
       <column comment="" key="false" name="south" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" name="east" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" name="north" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="864" posY="512">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="CHECK" name="DUMMY" value="true"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150508_1414-V5.6.2/configuration/lib/java"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS">
+      <elementValue elementRef="SCHEMA_COLUMN" value="uuid"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="title"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="scope"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="fieldOfApplication"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="version"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="date"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="individualName"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="organisationName"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="positionName"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="deliveryPoint"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="city"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="adminArea"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="postalCode"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="country"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="email"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="role"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="columnName"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="columnDefinition"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="isAbstract"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="columnAlias"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="columnType"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="cardinalityMin"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="cardinalityMax"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="columnPrecision"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="columnListOfValues"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tLogRow_2">
+      <column comment="" key="false" length="0" name="uuid" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="title" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="scope" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="fieldOfApplication" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="version" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="date" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="individualName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="organisationName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="positionName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="deliveryPoint" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="city" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="adminArea" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="postalCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="country" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="email" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="role" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="columnName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="columnDefinition" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="isAbstract" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="columnAlias" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="columnType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="cardinalityMin" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="cardinalityMax" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="columnPrecision" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="columnListOfValues" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tAdvancedFileOutputXML" componentVersion="0.102" offsetLabelX="1" offsetLabelY="-3" posX="864" posY="608">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAdvancedFileOutputXML_3"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150508_1414-V5.6.2/configuration/lib/java"/>
+    <elementParameter field="CHECK" name="USESTREAM" value="false"/>
+    <elementParameter field="TEXT" name="STREAMNAME" value="outputStream"/>
+    <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;iso19110fileName&quot;))"/>
+    <elementParameter field="TABLE" name="ROOT">
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="main"/>
+      <elementValue elementRef="ORDER" value="1"/>
+      <elementValue elementRef="PATH" value="uuid"/>
+      <elementValue elementRef="COLUMN" value="uuid"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="1"/>
+      <elementValue elementRef="PATH" value="gml"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value="http://www.opengis.net/gml"/>
+      <elementValue elementRef="ATTRIBUTE" value="ns"/>
+      <elementValue elementRef="ORDER" value="2"/>
+      <elementValue elementRef="PATH" value="gmd"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value="http://www.isotc211.org/2005/gmd"/>
+      <elementValue elementRef="ATTRIBUTE" value="ns"/>
+      <elementValue elementRef="ORDER" value="3"/>
+      <elementValue elementRef="PATH" value="gco"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value="http://www.isotc211.org/2005/gco"/>
+      <elementValue elementRef="ATTRIBUTE" value="ns"/>
+      <elementValue elementRef="ORDER" value="4"/>
+      <elementValue elementRef="PATH" value="gmx"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value="http://www.isotc211.org/2005/gmx"/>
+      <elementValue elementRef="ATTRIBUTE" value="ns"/>
+      <elementValue elementRef="ORDER" value="5"/>
+      <elementValue elementRef="PATH" value="gfc"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value="http://www.isotc211.org/2005/gfc"/>
+      <elementValue elementRef="ATTRIBUTE" value="ns"/>
+      <elementValue elementRef="ORDER" value="6"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gmx:name"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="7"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gmx:name/gco:CharacterString"/>
+      <elementValue elementRef="COLUMN" value="title"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="8"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gmx:scope"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="9"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gmx:scope/gco:CharacterString"/>
+      <elementValue elementRef="COLUMN" value="scope"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="10"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gmx:fieldOfApplication"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="11"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gmx:fieldOfApplication/gco:CharacterString"/>
+      <elementValue elementRef="COLUMN" value="fieldOfApplication"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="12"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gmx:versionNumber"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="13"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gmx:versionNumber/gco:CharacterString"/>
+      <elementValue elementRef="COLUMN" value="version"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="14"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gmx:versionDate"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="15"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gmx:versionDate/gco:DateTime"/>
+      <elementValue elementRef="COLUMN" value="date"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="16"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="17"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="18"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:individualName"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="19"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:individualName/gco:CharacterString"/>
+      <elementValue elementRef="COLUMN" value="individualName"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="20"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:organisationName"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="21"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString"/>
+      <elementValue elementRef="COLUMN" value="organisationName"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="22"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:positionName"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="23"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:positionName/gco:CharacterString"/>
+      <elementValue elementRef="COLUMN" value="positionName"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="24"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="25"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="26"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="27"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="28"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:deliveryPoint"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="29"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:deliveryPoint/gco:CharacterString"/>
+      <elementValue elementRef="COLUMN" value="deliveryPoint"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="30"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:city"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="31"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:city/gco:CharacterString"/>
+      <elementValue elementRef="COLUMN" value="city"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="32"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:administrativeArea"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="33"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:administrativeArea/gco:CharacterString"/>
+      <elementValue elementRef="COLUMN" value="adminArea"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="34"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:postalCode"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="35"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:postalCode/gco:CharacterString"/>
+      <elementValue elementRef="COLUMN" value="postalCode"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="36"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:country"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="37"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:country/gco:CharacterString"/>
+      <elementValue elementRef="COLUMN" value="country"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="38"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="39"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString"/>
+      <elementValue elementRef="COLUMN" value="email"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="40"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:role"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="41"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:producer/gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="42"/>
+      <elementValue elementRef="PATH" value="codeListValue"/>
+      <elementValue elementRef="COLUMN" value="role"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="43"/>
+      <elementValue elementRef="PATH" value="codeList"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="44"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="main"/>
+      <elementValue elementRef="ORDER" value="45"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="main"/>
+      <elementValue elementRef="ORDER" value="46"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:typeName"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="47"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:typeName/gco:LocalName"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="48"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:definition"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="49"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:definition/gco:CharacterString"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="50"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:isAbstract"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="51"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:isAbstract/gco:Boolean"/>
+      <elementValue elementRef="COLUMN" value="isAbstract"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="52"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:aliases"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="53"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:aliases/gco:LocalName"/>
+      <elementValue elementRef="COLUMN" value="columnAlias"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="54"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:featureCatalogue"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="55"/>
+    </elementParameter>
+    <elementParameter field="TABLE" name="GROUP"/>
+    <elementParameter field="TABLE" name="LOOP">
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="main"/>
+      <elementValue elementRef="ORDER" value="56"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="57"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:featureType"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="58"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:memberName"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="59"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:memberName/gco:LocalName"/>
+      <elementValue elementRef="COLUMN" value="columnName"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="60"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:definition"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="61"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:definition/gco:CharacterString"/>
+      <elementValue elementRef="COLUMN" value="columnDefinition"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="62"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:cardinality"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="63"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:cardinality/gco:Multiplicity"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="64"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:cardinality/gco:Multiplicity/gco:range"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="65"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:cardinality/gco:Multiplicity/gco:range/gco:MultiplicityRange"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="66"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:cardinality/gco:Multiplicity/gco:range/gco:MultiplicityRange/gco:lower"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="67"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:cardinality/gco:Multiplicity/gco:range/gco:MultiplicityRange/gco:lower/gco:Integer"/>
+      <elementValue elementRef="COLUMN" value="cardinalityMin"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="68"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:cardinality/gco:Multiplicity/gco:range/gco:MultiplicityRange/gco:upper"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="69"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:cardinality/gco:Multiplicity/gco:range/gco:MultiplicityRange/gco:upper/gco:UnlimitedInteger"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="70"/>
+      <elementValue elementRef="PATH" value="isInfinite"/>
+      <elementValue elementRef="COLUMN" value="cardinalityMax"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="71"/>
+      <elementValue elementRef="PATH" value="xsi:nil"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="72"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:valueType"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="73"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:valueType/gco:TypeName"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="74"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:valueType/gco:TypeName/gco:aName"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="75"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:valueType/gco:TypeName/gco:aName/gco:CharacterString"/>
+      <elementValue elementRef="COLUMN" value="columnType"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="76"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:listedValue"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="77"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:listedValue/gfc:FC_ListedValue"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="78"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:listedValue/gfc:FC_ListedValue/gfc:label"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="79"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:listedValue/gfc:FC_ListedValue/gfc:label/gco:CharacterString"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="80"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:listedValue/gfc:FC_ListedValue/gfc:code"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="81"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:listedValue/gfc:FC_ListedValue/gfc:code/gco:CharacterString"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="82"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:listedValue/gfc:FC_ListedValue/gfc:definition"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="83"/>
+      <elementValue elementRef="PATH" value="/gfc:FC_FeatureCatalogue/gfc:featureType/gfc:FC_FeatureType/gfc:carrierOfCharacteristics/gfc:FC_FeatureAttribute/gfc:listedValue/gfc:FC_ListedValue/gfc:definition/gco:CharacterString"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="84"/>
+    </elementParameter>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_dwdggOPJEeKXY41c3BjRgQ - metadata"/>
+    <elementParameter field="CHECK" name="MERGE" value="false"/>
+    <elementParameter field="CHECK" name="PRETTY_COMPACT" value="false"/>
+    <elementParameter field="CHECK" name="FILE_VALID" value="false"/>
+    <elementParameter field="RADIO" name="DTD_VALID" value="true"/>
+    <elementParameter field="TEXT" name="DTD_NAME" value="&quot;Root&quot;"/>
+    <elementParameter field="TEXT" name="DTD_SYSTEMID" value="&quot;Talend.dtd&quot;"/>
+    <elementParameter field="RADIO" name="XSL_VALID" value="false"/>
+    <elementParameter field="TEXT" name="XSL_TYPE" value="&quot;text/xsl&quot;"/>
+    <elementParameter field="TEXT" name="XSL_HREF" value="&quot;Talend.xsl&quot;"/>
+    <elementParameter field="CHECK" name="SPLIT" value="false"/>
+    <elementParameter field="TEXT" name="SPLIT_EVERY" value="1"/>
+    <elementParameter field="CHECK" name="TRIM" value="false"/>
+    <elementParameter field="CHECK" name="CREATE" value="true"/>
+    <elementParameter field="CHECK" name="CREATE_EMPTY_ELEMENT" value="true"/>
+    <elementParameter field="CHECK" name="ADD_EMPTY_ATTRIBUTE" value="false"/>
+    <elementParameter field="CHECK" name="ADD_UNMAPPED_ATTRIBUTE" value="false"/>
+    <elementParameter field="CHECK" name="ADD_DOCUMENT_AS_NODE" value="false"/>
+    <elementParameter field="CHECK" name="OUTPUT_AS_XSD" value="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="GENERATION_MODE" value="Dom4j"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
+    <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100"/>
+    <elementParameter field="TEXT" name="XMLNODE_OPT_NUM" value="100"/>
+    <elementParameter field="TEXT" name="LABEL" value="iso19110"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tAdvancedFileOutputXML_3">
+      <column comment="" key="false" length="0" name="uuid" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="title" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="scope" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="fieldOfApplication" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="version" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="date" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="individualName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="organisationName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="positionName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="deliveryPoint" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="city" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="adminArea" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="postalCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="country" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="email" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="role" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="columnName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="columnDefinition" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="isAbstract" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="columnAlias" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="columnType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="cardinalityMin" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="cardinalityMax" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="columnPrecision" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="columnListOfValues" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="64" posY="512">
@@ -4595,7 +4749,7 @@
       <column comment="" key="false" name="filepath" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="864" posY="608">
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="864" posY="736">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_5"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150508_1414-V5.6.2/configuration/lib/java"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;### Metadata record for feature catalog  &quot; + ((String)globalMap.get(&quot;iso19110fileName&quot;)) + &quot; created for :  &quot; + ((String)globalMap.get(&quot;row8.layer_name&quot;))"/>
@@ -5997,10 +6151,10 @@
       <elementValue elementRef="TRACE_COLUMN" value="title"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="publicationDate"/>
+      <elementValue elementRef="TRACE_COLUMN" value="data"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="publicationDateType"/>
+      <elementValue elementRef="TRACE_COLUMN" value="dataType"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="edition"/>
@@ -6204,11 +6358,26 @@
       <elementValue elementRef="TRACE_COLUMN" value="fullLayerName"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="beginPosition"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="keywordList"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="endPosition"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="revisionDateType"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="revisionDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6"/>
   </connection>
-  <connection connectorName="FLOW" label="iso19110" lineStyle="0" metaname="iso19110" offsetLabelX="9" offsetLabelY="21" source="tMap_2" target="tAdvancedFileOutputXML_3">
+  <connection connectorName="FLOW" label="iso19110" lineStyle="0" metaname="iso19110" offsetLabelX="9" offsetLabelY="21" source="tMap_2" target="tLogRow_2">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
       <elementValue elementRef="TRACE_COLUMN" value="uuid"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -6288,9 +6457,6 @@
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="iso19110"/>
-  </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tAdvancedFileOutputXML_3" offsetLabelX="0" offsetLabelY="0" source="tAdvancedFileOutputXML_3" target="tWarn_5">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk3"/>
   </connection>
   <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tNormalize_2" offsetLabelX="0" offsetLabelY="0" source="tNormalize_2" target="tAdvancedFileOutputXML_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
@@ -6564,6 +6730,90 @@
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tAdvancedFileOutputXML_1" offsetLabelX="0" offsetLabelY="0" source="tAdvancedFileOutputXML_1" target="tWarn_4">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2"/>
+  </connection>
+  <connection connectorName="FLOW" label="row10" lineStyle="0" metaname="tLogRow_2" offsetLabelX="0" offsetLabelY="0" source="tLogRow_2" target="tAdvancedFileOutputXML_3">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="uuid"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="title"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="scope"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="fieldOfApplication"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="version"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="date"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="individualName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="organisationName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="positionName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="deliveryPoint"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="city"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="adminArea"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="postalCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="country"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="email"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="role"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="columnName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="columnDefinition"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="isAbstract"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="columnAlias"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="columnType"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="cardinalityMin"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="cardinalityMax"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="columnPrecision"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="columnListOfValues"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row10"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tAdvancedFileOutputXML_3" offsetLabelX="0" offsetLabelY="0" source="tAdvancedFileOutputXML_3" target="tWarn_5">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk3"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSetGlobalVar_1" offsetLabelX="0" offsetLabelY="0" source="tSetGlobalVar_1" target="sOGRInfoInput_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk2"/>
