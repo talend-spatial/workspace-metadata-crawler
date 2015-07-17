@@ -1031,7 +1031,7 @@
       <column comment="" key="false" name="north" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="filename" expression="context.isDb ? context.file : new java.io.File(context.file).getName() " type="id_String"/>
         <mapperTableEntries name="filepath" expression="// Set the filename and hide user connection information from db path if requested&#xA;context.isDb ? (&#xA;  context.db_password_hide ? &#xA;  context.file&#xA;  &#x9;.replaceAll(&quot;user=[\\S]+&quot;, &quot;user=****&quot;)&#xA;    .replaceAll(&quot;password=[\\S]+&quot;, &quot;password=****&quot;) :&#xA;  context.file &#xA;) : context.file " type="id_String"/>
@@ -4674,7 +4674,7 @@
       <elementValue elementRef="KEY" value="&quot;overviewInputFileName&quot;"/>
       <elementValue elementRef="VALUE" value="context.isDb ?  context.file : context.file.replace(&quot;\\\\&quot;, &quot;/&quot;)"/>
       <elementValue elementRef="KEY" value="&quot;overviewFileName&quot;"/>
-      <elementValue elementRef="VALUE" value="((String)globalMap.get(&quot;dbname&quot;)) + (context.isDb || context.file.endsWith(&quot;.gdb&quot;) ? ((String)globalMap.get(&quot;row8.layer_name&quot;)) : context.file.replaceAll(&quot;\\\\&quot;, &quot;&quot;).replace(context.data_dir_uuid_ignored_path, &quot;&quot;).replaceAll(&quot;/&quot;, &quot;-&quot;))"/>
+      <elementValue elementRef="VALUE" value="((String)globalMap.get(&quot;dbname&quot;)) + (context.isDb || context.file.endsWith(&quot;.gdb&quot;) ? ((String)globalMap.get(&quot;row8.layer_name&quot;)) : context.file.replaceAll(&quot;\\\\&quot;, &quot;/&quot;).replace(context.data_dir_uuid_ignored_path, &quot;&quot;).replaceAll(&quot;/&quot;, &quot;-&quot;))"/>
       <elementValue elementRef="KEY" value="&quot;overviewOutputFilePrefix&quot;"/>
       <elementValue elementRef="VALUE" value="((String)globalMap.get(&quot;baseName&quot;)) "/>
       <elementValue elementRef="KEY" value="&quot;overviewOutputFileName&quot;"/>
