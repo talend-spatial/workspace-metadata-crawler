@@ -133,7 +133,7 @@
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150508_1414-V5.6.2/configuration/lib/java"/>
     <elementParameter field="DIRECTORY" name="SOURCE" value="((String)globalMap.get(&quot;filedir&quot;))"/>
     <elementParameter field="CHECK" name="SUB_DIRECTROY" value="false"/>
-    <elementParameter field="FILE" name="TARGET" value="((String)globalMap.get(&quot;archiveFilename&quot;))"/>
+    <elementParameter field="FILE" name="TARGET" value="context.pack_data_dir + ((String)globalMap.get(&quot;archiveFilename&quot;))"/>
     <elementParameter field="CHECK" name="MKDIR" value="true"/>
     <elementParameter field="CLOSED_LIST" name="LEVEL" value="4"/>
     <elementParameter field="CHECK" name="ALL_FILES" value="false"/>
@@ -160,7 +160,7 @@
       <elementValue elementRef="KEY" value="&quot;basename&quot;"/>
       <elementValue elementRef="VALUE" value="((String)globalMap.get(&quot;filename&quot;)).split(&quot;\\.(?=[^\\.]+$)&quot;)[0] "/>
       <elementValue elementRef="KEY" value="&quot;archiveFilename&quot;"/>
-      <elementValue elementRef="VALUE" value="context.fileName + &quot;.zip&quot;"/>
+      <elementValue elementRef="VALUE" value="((String)globalMap.get(&quot;filename&quot;)) + &quot;.zip&quot;"/>
       <elementValue elementRef="KEY" value="&quot;filedir&quot;"/>
       <elementValue elementRef="VALUE" value="context.fileToPack.startsWith(&quot;PG&quot;)  ? context.pack_data_dir  : new java.io.File(context.fileToPack).getParentFile().getAbsolutePath()"/>
     </elementParameter>
@@ -316,7 +316,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileDelete_2"/>
   </node>
-  <node componentName="tFileDelete" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="608">
+  <node componentName="tFileDelete" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="608">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileDelete_3"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150508_1414-V5.6.2/configuration/lib/java"/>
     <elementParameter field="FILE" name="FILENAME" value="context.fileName + &quot;.shx&quot;"/>

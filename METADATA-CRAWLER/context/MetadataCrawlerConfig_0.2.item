@@ -85,7 +85,7 @@
     <contextParameter comment="RASTER file extensions supported for publication in mapservers" name="raster_file_extension_for_geopublication" prompt="raster_file_extension_for_geopublication?" promptNeeded="false" type="id_String" value="&quot;.*\\.tif|.*\\.tiff&quot;"/>
     <contextParameter comment="" name="geosever_namespace_prefix" prompt="geosever_namespace_prefix?" promptNeeded="false" type="id_String" value="&quot;gn&quot;"/>
     <contextParameter comment="" name="bboxcheck_xmin" prompt="bboxcheck_xmin?" promptNeeded="false" type="id_Double" value="-180"/>
-    <contextParameter comment="" name="bboxcheck_xmax" prompt="bboxcheck_xmax?" promptNeeded="false" type="id_Double" value="-170"/>
+    <contextParameter comment="" name="bboxcheck_xmax" prompt="bboxcheck_xmax?" promptNeeded="false" type="id_Double" value="180"/>
     <contextParameter comment="" name="bboxcheck_ymin" prompt="bboxcheck_ymin?" promptNeeded="false" type="id_Double" value="-90"/>
     <contextParameter comment="" name="bboxcheck_ymax" prompt="bboxcheck_ymax?" promptNeeded="false" type="id_Double" value="90"/>
     <contextParameter comment="" name="statusArchiveFlag" prompt="statusArchiveFlag?" promptNeeded="false" type="id_String" value="&quot;archive&quot;"/>
@@ -111,7 +111,7 @@
     <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" type="id_Directory" value="/data/"/>
     <contextParameter comment="" name="uuidCreatedFromFilePath" prompt="uuidCreatedFromFilePath?" promptNeeded="false" type="id_Boolean" value=""/>
     <contextParameter comment="" name="data_dir_uuid_ignored_path" prompt="data_dir_uuid_ignored_path?" promptNeeded="false" type="id_Directory" value="/data/"/>
-    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" type="id_Directory" value="r"/>
+    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" type="id_Directory" value="/data/"/>
     <contextParameter comment="The output folder" name="tmp_dir" prompt="tmp_dir?" promptNeeded="false" type="id_Directory" value="/tmp/scan/tmp/"/>
     <contextParameter comment="The folder to create metadata records into" name="metadata_dir" prompt="metadata_dir?" promptNeeded="false" type="id_Directory" value="/tmp/scan/metadata/"/>
     <contextParameter comment="The log folder" name="log_dir" prompt="log_dir?" promptNeeded="false" type="id_Directory" value="/tmp/scan/logs/"/>
