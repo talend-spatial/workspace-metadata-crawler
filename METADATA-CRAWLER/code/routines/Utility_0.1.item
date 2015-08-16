@@ -69,6 +69,44 @@ public class Utility {
 	}
 	
 
+	/**
+	 * <datasource>dbname='talend' host=localhost port=5432 user='www-data' password='www-data' 
+	 * sslmode=disable key='tid' srid=0 type=POLYGON table="public"."country" (the_geom) sql=</datasource>
+	 * <PG:dbname=talend host=localhost port=5432 user=www-data password=www-data>
+	 * @param qgisDbConnection
+	 * @return
+	 */
+	public static java.util.Map<String, String> parseQGSDbConnection(String qgisDbConnection) {
+		java.util.Map<String, String> dbConnectionParameter = new java.util.HashMap<String, String>();
+		java.util.List<String> arrayOfParameters = java.util.Arrays.asList(qgisDbConnection.split(" "));
+		if (arrayOfParameters.size() > 0) {
+			for (String param : arrayOfParameters) {
+				String[] token = param.split("=");
+				if (token.length == 2) {
+					String value = token[1].replace("'", "").replace("\"", "");
+					dbConnectionParameter.put(
+							token[0], 
+							value);
+					if (token[0].equals("table")) {
+						if (value.contains(".")) {
+							String[] tableToken = value.split("\\.");
+							if (tableToken.length == 2) {
+								dbConnectionParameter.put("tableSchema", tableToken[0]);
+								dbConnectionParameter.put("tableName", tableToken[1]);									
+							}
+						} else {
+							dbConnectionParameter.put("tableSchema", "public");
+							dbConnectionParameter.put("tableName", value);									
+						}
+					}
+				} else {
+					// TODO: eg. (the_geom)
+				}
+			}
+		}
+		return dbConnectionParameter;
+	}
+
     public static Geometry PROJ(Geometry geom, String fromEPSG, String toEPSG, boolean lenient) {
 
         org.opengis.referencing.crs.CoordinateReferenceSystem sourceCRS = null;

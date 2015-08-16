@@ -28,8 +28,8 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_k2udBuPnEeKXY41c3BjRgQ" name="country" label="country" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;" originalLength="400"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_k2udB-PnEeKXY41c3BjRgQ" name="email" label="email" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;" originalLength="400"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_k2udCOPnEeKXY41c3BjRgQ" name="role" label="role" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;" originalLength="400"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_JYleMEJOEeWPUuRRygW3UA" name="inspireTheme" label="inspireTheme" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_k2udCuPnEeKXY41c3BjRgQ" name="keyword" label="keyword" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;" originalLength="400"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_k2udC-PnEeKXY41c3BjRgQ" name="keyword2" label="keyword2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;" originalLength="400"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_k2udDOPnEeKXY41c3BjRgQ" name="geokeyword" label="geokeyword" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;" originalLength="400"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_k2udDePnEeKXY41c3BjRgQ" name="accessConstraints" label="accessConstraints" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;" originalLength="400"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_k2udDuPnEeKXY41c3BjRgQ" name="useConstraints" label="useConstraints" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;" originalLength="400"/>

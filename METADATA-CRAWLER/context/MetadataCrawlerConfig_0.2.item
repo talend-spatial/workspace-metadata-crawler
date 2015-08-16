@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
   <talendfile:ContextType confirmationNeeded="false" name="test">
-    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" type="id_Directory" value="t"/>
+    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" type="id_Directory" value="/data/"/>
     <contextParameter comment="" name="uuidCreatedFromFilePath" prompt="uuidCreatedFromFilePath?" promptNeeded="false" type="id_Boolean" value="true"/>
     <contextParameter comment="" name="data_dir_uuid_ignored_path" prompt="data_dir_uuid_ignored_path?" promptNeeded="false" type="id_Directory" value="/data/"/>
-    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" type="id_Directory" value="/var/app/talend/config/"/>
+    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" type="id_Directory" value="/var/talend/config/"/>
     <contextParameter comment="The output folder" name="tmp_dir" prompt="tmp_dir?" promptNeeded="false" type="id_Directory" value="/tmp/scan/tmp/"/>
     <contextParameter comment="The folder to create metadata records into" name="metadata_dir" prompt="metadata_dir?" promptNeeded="false" type="id_Directory" value="/tmp/scan/metadata/"/>
     <contextParameter comment="The log folder" name="log_dir" prompt="log_dir?" promptNeeded="false" type="id_Directory" value="/tmp/scan/logs/"/>
@@ -16,12 +16,12 @@
     <contextParameter comment="Vector file extensions" name="vector_file_extension" prompt="vector_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.kml|.*\\.shp|.*\\.mif|.*\\.tab|.*\\.gml|.*\\.dxf|.*\\.dwg|.*\\.itf|.*\\.gdb&quot;"/>
     <contextParameter comment="Scan for RASTER files" name="scan_raster" prompt="scan_raster?" promptNeeded="false" type="id_Boolean" value="true"/>
     <contextParameter comment="RASTER file extensions" name="raster_file_extension" prompt="raster_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.tif|.*\\.tiff|.*\\.ecw|.*\\.asc|.*\\.rst|.*\\.grd|.*\\.jpg|.*\\.xyz&quot;"/>
-    <contextParameter comment="List of database to scan" name="db_list" prompt="db_list?" promptNeeded="false" type="id_List Of Value" value="&quot;PG:dbname=talend host=localhost port=5432 user=www-data password=www-data&quot;"/>
+    <contextParameter comment="List of database to scan" name="db_list" prompt="db_list?" promptNeeded="false" type="id_List Of Value" value=""/>
     <contextParameter comment="Hide database connection information" name="db_password_hide" prompt="db_password_hide?" promptNeeded="false" type="id_Boolean" value="true"/>
     <contextParameter comment="List of WFS to scan" name="service_list" prompt="service_list?" promptNeeded="false" type="id_List Of Value" value=""/>
-    <contextParameter comment="Scan for maps" name="scan_map" prompt="scan_map?" promptNeeded="false" type="id_Boolean" value="false"/>
+    <contextParameter comment="Scan for maps" name="scan_map" prompt="scan_map?" promptNeeded="false" type="id_Boolean" value="true"/>
     <contextParameter comment="Map file extensions" name="map_file_extension" prompt="map_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.qgs&quot;"/>
-    <contextParameter comment="The folder to scan for maps" name="map_data_dir" prompt="map_data_dir?" promptNeeded="false" type="id_Directory" value="/maps/"/>
+    <contextParameter comment="The folder to scan for maps" name="map_data_dir" prompt="map_data_dir?" promptNeeded="false" type="id_Directory" value="/home/francois/data/test/toscan/"/>
     <contextParameter comment="For each datasources find in a map, create metadata" name="scan_map_and_datasources" prompt="scan_map_and_datasources?" promptNeeded="false" type="id_Boolean" value="true"/>
     <contextParameter comment="Metadata title prefix for vector" name="title_prefix_vector" prompt="title_prefix_vector?" promptNeeded="false" type="id_String" value="&quot;Vector file &quot;"/>
     <contextParameter comment="Metadata title prefix for RASTER" name="title_prefix_raster" prompt="title_prefix_raster?" promptNeeded="false" type="id_String" value="&quot;Raster file &quot;"/>
@@ -91,7 +91,7 @@
     <contextParameter comment="" name="statusArchiveFlag" prompt="statusArchiveFlag?" promptNeeded="false" type="id_String" value="&quot;archive&quot;"/>
     <contextParameter comment="" name="statusObsoleteFlag" prompt="statusObsoleteFlag?" promptNeeded="false" type="id_String" value="&quot;obsolete&quot;"/>
     <contextParameter comment="" name="statusUnderDevelopmentFlag" prompt="statusUnderDevelopmentFlag?" promptNeeded="false" type="id_String" value="&quot;underdevelopment&quot;"/>
-    <contextParameter comment="" name="mail_server" prompt="mail_server?" promptNeeded="false" type="id_String" value="&quot;smtp.organisation.org&quot;"/>
+    <contextParameter comment="" name="mail_server" prompt="mail_server?" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
     <contextParameter comment="" name="mail_port" prompt="mail_port?" promptNeeded="false" type="id_String" value="&quot;465&quot;"/>
     <contextParameter comment="" name="mail_username" prompt="mail_username?" promptNeeded="false" type="id_String" value="&quot;username&quot;"/>
     <contextParameter comment="" name="mail_password" prompt="mail_password?" promptNeeded="false" type="id_Password" value="orisbc/xTqQ="/>
@@ -106,12 +106,14 @@
     <contextParameter comment="" name="catalog_search_records_url" prompt="catalog_search_records_url?" promptNeeded="false" type="id_String" value="&quot;http://localhost:8080/geonetwork/srv/fre/q?fast=index&quot;"/>
     <contextParameter comment="" name="csv_file_list_of_layers_out_of_extent" prompt="csv_file_list_of_layers_out_of_extent?" promptNeeded="false" type="id_String" value="&quot;listOfLayersOutOfExtent.csv&quot;"/>
     <contextParameter comment="" name="csv_file_list_of_record_with_file_not_found" prompt="csv_file_list_of_record_with_file_not_found?" promptNeeded="false" type="id_String" value="&quot;listOfRecordsWithFileNotFound.csv&quot;"/>
+    <contextParameter comment="" name="map_missing_datasource_msg" prompt="map_missing_datasource_msg?" promptNeeded="false" type="id_String" value="&quot;List of missing map datasources:%n&quot;"/>
+    <contextParameter comment="" name="map_missing_datasource_status" prompt="map_missing_datasource_status?" promptNeeded="false" type="id_String" value="&quot;underDevelopment&quot;"/>
   </talendfile:ContextType>
   <talendfile:ContextType confirmationNeeded="false" name="prod">
     <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" type="id_Directory" value="/data/"/>
     <contextParameter comment="" name="uuidCreatedFromFilePath" prompt="uuidCreatedFromFilePath?" promptNeeded="false" type="id_Boolean" value=""/>
     <contextParameter comment="" name="data_dir_uuid_ignored_path" prompt="data_dir_uuid_ignored_path?" promptNeeded="false" type="id_Directory" value="/data/"/>
-    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" type="id_Directory" value="/data/"/>
+    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" type="id_Directory" value="r"/>
     <contextParameter comment="The output folder" name="tmp_dir" prompt="tmp_dir?" promptNeeded="false" type="id_Directory" value="/tmp/scan/tmp/"/>
     <contextParameter comment="The folder to create metadata records into" name="metadata_dir" prompt="metadata_dir?" promptNeeded="false" type="id_Directory" value="/tmp/scan/metadata/"/>
     <contextParameter comment="The log folder" name="log_dir" prompt="log_dir?" promptNeeded="false" type="id_Directory" value="/tmp/scan/logs/"/>
@@ -213,5 +215,7 @@
     <contextParameter comment="" name="catalog_search_records_url" prompt="catalog_search_records_url?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="csv_file_list_of_layers_out_of_extent" prompt="csv_file_list_of_layers_out_of_extent?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="csv_file_list_of_record_with_file_not_found" prompt="csv_file_list_of_record_with_file_not_found?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="map_missing_datasource_msg" prompt="map_missing_datasource_msg?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="map_missing_datasource_status" prompt="map_missing_datasource_status?" promptNeeded="false" type="id_String" value=""/>
   </talendfile:ContextType>
 </xmi:XMI>
