@@ -4,7 +4,7 @@
     <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" type="id_Directory" value="/data/"/>
     <contextParameter comment="" name="uuidCreatedFromFilePath" prompt="uuidCreatedFromFilePath?" promptNeeded="false" type="id_Boolean" value="true"/>
     <contextParameter comment="" name="data_dir_uuid_ignored_path" prompt="data_dir_uuid_ignored_path?" promptNeeded="false" type="id_Directory" value="/data/"/>
-    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" type="id_Directory" value="/var/talend/config/"/>
+    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" type="id_Directory" value="/var/app/talend/config/"/>
     <contextParameter comment="The output folder" name="tmp_dir" prompt="tmp_dir?" promptNeeded="false" type="id_Directory" value="/tmp/scan/tmp/"/>
     <contextParameter comment="The folder to create metadata records into" name="metadata_dir" prompt="metadata_dir?" promptNeeded="false" type="id_Directory" value="/tmp/scan/metadata/"/>
     <contextParameter comment="The log folder" name="log_dir" prompt="log_dir?" promptNeeded="false" type="id_Directory" value="/tmp/scan/logs/"/>
