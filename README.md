@@ -58,4 +58,6 @@ From the analyzed file, the following properties are extracted :
 Documentation
 -------------
 
-https://github.com/talend-spatial/talend-spatial/wiki/Data-inventory
+* [In english](https://docs.google.com/document/d/1Z-lJDGMX1tO3377Ytgoos0nGxqqN2rF-GyqiOB4iAVY/edit?usp=sharing)
+* [In french](https://docs.google.com/document/d/10GyQLL9XORawurILl6AUCpP7PDfcQ3D3nkBO1Le3UI8/edit) pour réaliser un inventaire automatique du patrimoine d'information géographique avec Talend Spatial
+* https://github.com/talend-spatial/talend-spatial/wiki/Data-inventory
