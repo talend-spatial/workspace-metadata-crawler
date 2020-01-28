@@ -1048,10 +1048,10 @@
         <mapperTableEntries name="var1" expression="null " type="id_Geometry"/>
         <mapperTableEntries name="var2" expression="null " type="id_Geometry"/>
         <mapperTableEntries name="keywordList" expression="context.isDb ? &quot;&quot; : Var.filepathBase.replace(&quot;/&quot; + Var.filename, &quot;&quot;) " type="id_String"/>
-        <mapperTableEntries name="geo_extent_xmin" expression="(row9.nb_features == 0 ||Utility.returnFirstNotNullOrBlank(row9.geom_column)) ? &quot;&quot; : (&#xD;&#xA;GeometryOperation.GETCOORDINATE(row9.geo_extent,0,&quot;X&quot;)  + &quot;&quot;  &#xD;&#xA;) &#xA;" type="id_String"/>
-        <mapperTableEntries name="geo_extent_xmax" expression="(row9.nb_features == 0 ||Utility.returnFirstNotNullOrBlank(row9.geom_column)) ? &quot;&quot; : (&#xD;&#xA;GeometryOperation.GETCOORDINATE(row9.geo_extent,2,&quot;X&quot;)  + &quot;&quot; &#xD;&#xA;) &#xA;" type="id_String"/>
-        <mapperTableEntries name="geo_extent_ymin" expression="(row9.nb_features == 0 ||Utility.returnFirstNotNullOrBlank(row9.geom_column)) ? &quot;&quot; : (&#xD;&#xA;GeometryOperation.GETCOORDINATE(row9.geo_extent,2,&quot;Y&quot;)  + &quot;&quot;  &#xD;&#xA;) &#xA;" type="id_String"/>
-        <mapperTableEntries name="geo_extent_ymax" expression="(row9.nb_features == 0 ||Utility.returnFirstNotNullOrBlank(row9.geom_column)) ? &quot;&quot; : (&#xD;&#xA;GeometryOperation.GETCOORDINATE(row9.geo_extent,0,&quot;Y&quot;)  + &quot;&quot; &#xD;&#xA;) &#xA;" type="id_String"/>
+        <mapperTableEntries name="geo_extent_xmin" expression="(row9.nb_features == 0 ||"".equals(Utility.returnFirstNotNullOrBlank(row9.geom_column))) ? &quot;&quot; : (&#xD;&#xA;GeometryOperation.GETCOORDINATE(row9.geo_extent,0,&quot;X&quot;)  + &quot;&quot;  &#xD;&#xA;) &#xA;" type="id_String"/>
+        <mapperTableEntries name="geo_extent_xmax" expression="(row9.nb_features == 0 ||"".equals(Utility.returnFirstNotNullOrBlank(row9.geom_column))) ? &quot;&quot; : (&#xD;&#xA;GeometryOperation.GETCOORDINATE(row9.geo_extent,2,&quot;X&quot;)  + &quot;&quot; &#xD;&#xA;) &#xA;" type="id_String"/>
+        <mapperTableEntries name="geo_extent_ymin" expression="(row9.nb_features == 0 ||"".equals(Utility.returnFirstNotNullOrBlank(row9.geom_column))) ? &quot;&quot; : (&#xD;&#xA;GeometryOperation.GETCOORDINATE(row9.geo_extent,2,&quot;Y&quot;)  + &quot;&quot;  &#xD;&#xA;) &#xA;" type="id_String"/>
+        <mapperTableEntries name="geo_extent_ymax" expression="(row9.nb_features == 0 ||"".equals(Utility.returnFirstNotNullOrBlank(row9.geom_column))) ? &quot;&quot; : (&#xD;&#xA;GeometryOperation.GETCOORDINATE(row9.geo_extent,0,&quot;Y&quot;)  + &quot;&quot; &#xD;&#xA;) &#xA;" type="id_String"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="metadata">
         <mapperTableEntries name="uuid" expression="Var.mdUuid " type="id_String" nullable="true"/>
