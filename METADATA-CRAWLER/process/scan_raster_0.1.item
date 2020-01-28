@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="test">
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="test" jobType="Standard">
   <context confirmationNeeded="false" name="test">
     <contextParameter comment="" name="file" prompt="file?" promptNeeded="false" type="id_File" value="/home/francois/data/test/toscan/subfolder/key1/key2/ebk1km1.tif"/>
     <contextParameter comment="" name="administrativeArea" prompt="administrativeArea?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
@@ -16,7 +16,7 @@
     <contextParameter comment="The CSW user password" name="csw_password" prompt="csw_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Password" value="RX/CTwlUNiA="/>
     <contextParameter comment="The CSW server to push metadata records into" name="csw_server_host" prompt="csw_server_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;http://localhost:8080/geonetwork/srv/eng/csw-publication&quot;"/>
     <contextParameter comment="The CSW user name" name="csw_username" prompt="csw_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;admin&quot;"/>
-    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="a"/>
+    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/data/geo/"/>
     <contextParameter comment="" name="data_dir_uuid_ignored_path" prompt="data_dir_uuid_ignored_path?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/data/"/>
     <contextParameter comment="List of database to scan" name="db_list" prompt="db_list?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_List Of Value" value=""/>
     <contextParameter comment="Hide database connection information" name="db_password_hide" prompt="db_password_hide?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
@@ -50,7 +50,7 @@
     <contextParameter comment="" name="mail_subject_log" prompt="mail_subject_log?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;Metadata scan / Notification / Log file for last scan: &quot;"/>
     <contextParameter comment="" name="mail_subject_outofextent" prompt="mail_subject_outofextent?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;Metadata scan / Alert / Layers out of extent&quot;"/>
     <contextParameter comment="" name="mail_username" prompt="mail_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;username&quot;"/>
-    <contextParameter comment="The folder to scan for maps" name="map_data_dir" prompt="map_data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/home/francois/data/test/toscan/"/>
+    <contextParameter comment="The folder to scan for maps" name="map_data_dir" prompt="map_data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/"/>
     <contextParameter comment="Map file extensions" name="map_file_extension" prompt="map_file_extension?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.qgs&quot;"/>
     <contextParameter comment="" name="mdAdministrativeArea" prompt="mdAdministrativeArea?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
     <contextParameter comment="" name="mdCity" prompt="mdCity?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
@@ -74,7 +74,7 @@
     <contextParameter comment="" name="pack_data_create_checksum" prompt="pack_data_create_checksum?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="" name="pack_data_dir" prompt="pack_data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/download/"/>
     <contextParameter comment="" name="pack_data_link_template" prompt="pack_data_link_template?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;Download data in {{format}} format&quot;"/>
-    <contextParameter comment="" name="pack_data_publication_dir" prompt="pack_data_publication_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/var/www/html/data/"/>
+    <contextParameter comment="" name="pack_data_publication_dir" prompt="pack_data_publication_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/"/>
     <contextParameter comment="" name="pack_data_publish" prompt="pack_data_publish?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="" name="pack_data_url_prefix" prompt="pack_data_url_prefix?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;http://localhost/data/&quot;"/>
     <contextParameter comment="True to ping the job and return status response (use when deploy as webservice)" name="ping" prompt="ping?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="false"/>
@@ -84,7 +84,7 @@
     <contextParameter comment="Always run update by sending the complete metadata record (not only some properties like bounding box)" name="publish_metadata_full_update" prompt="publish_metadata_full_update?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="false"/>
     <contextParameter comment="RASTER file extensions" name="raster_file_extension" prompt="raster_file_extension?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.tif|.*\\.tiff|.*\\.ecw|.*\\.asc|.*\\.rst|.*\\.grd|.*\\.jpg|.*\\.xyz&quot;"/>
     <contextParameter comment="RASTER file extensions supported for publication in mapservers" name="raster_file_extension_for_geopublication" prompt="raster_file_extension_for_geopublication?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.tif|.*\\.tiff&quot;"/>
-    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/var/app/talend/config/"/>
+    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/data/geo/config/"/>
     <contextParameter comment="Scan for maps" name="scan_map" prompt="scan_map?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="For each datasources find in a map, create metadata" name="scan_map_and_datasources" prompt="scan_map_and_datasources?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="Scan for RASTER files" name="scan_raster" prompt="scan_raster?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
@@ -217,10 +217,24 @@
     <contextParameter comment="" name="voice" prompt="voice?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
   </context>
   <parameters>
-    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value=" -Xms256M -Xmx1024M -Djava.library.path=/path/to/gdal/swig/java/" show="false"/>
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xms256M&quot;,&quot;-Xmx1024M&quot;,&quot;-Djava.library.path=/path/to/gdal/swig/java/&quot;]}" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" value="" show="false"/>
     <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true" show="false"/>
     <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="false" show="false"/>
     <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
@@ -229,8 +243,6 @@
     <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
     <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:PROPERTY_TYPE" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="" show="false"/>
     <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -247,8 +259,8 @@
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning" show="false"/>
     <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false" show="false"/>
     <elementParameter field="CHECK" name="DISABLE_ERROR" value="false" show="false"/>
     <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false" show="false"/>
@@ -310,16 +322,16 @@
     <routinesParameter id="_nrhX4AfBEeKRSpL2q-qWEQ" name="TalendDate"/>
     <routinesParameter id="_nroFkAfBEeKRSpL2q-qWEQ" name="TalendString"/>
     <routinesParameter id="_NukzgAnLEeKr_IP06R0Uyw" name="Utility"/>
+    <routinesParameter id="_H868YEHlEeqxNJCRKR--7g" name="TalendStringUtil"/>
   </parameters>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="generateRasterOverview"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_JzMOgAo4EeKr_IP06R0Uyw"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
-    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
     <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
     <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="true"/>
     <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="false"/>
@@ -339,7 +351,6 @@
   </node>
   <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="96" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="((String)globalMap.get(&quot;sGdalInfoInput_1_ERROR_MESSAGE&quot;))"/>
     <elementParameter field="TEXT" name="CODE" value="42"/>
     <elementParameter field="CLOSED_LIST" name="PRIORITY" value="4"/>
@@ -348,7 +359,6 @@
   </node>
   <node componentName="sGdalInfoInput" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="320" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="sGdalInfoInput_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="FILE" name="FILENAME" value="context.file"/>
     <elementParameter field="TEXT" name="FIELD_SEPARATOR" value="&quot; | &quot;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="import org.talend.sdi.geometry.Geometry;" show="false"/>
@@ -374,7 +384,6 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_1" show="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="DUMMY" value="true" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
     <elementParameter field="RADIO" name="VERTICAL" value="true"/>
@@ -414,6 +423,7 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="bands"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="false"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tLogRow_1">
@@ -434,13 +444,15 @@
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="576" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
     <elementParameter field="IMAGE" name="PREVIEW" value="__iSqEOfsEeK1v9Wc0iGVpA-tMap_1-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
+    <elementParameter field="TEXT" name="JACCARD" value="0" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -467,8 +479,8 @@
       <column comment="" key="false" length="0" name="title" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="date" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;publication&quot;" key="false" length="0" name="dateType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="revisionDate" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="revisionDateType" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="revisionDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="revisionDateType" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="edition" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="mdAbstract" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="purpose" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -488,7 +500,7 @@
       <column comment="" defaultValue="&quot;asNeeded&quot;" key="false" length="0" name="maintenanceFrequency" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="graphicFileName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="graphicFileDesc" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="keywordList" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="keywordList" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;theme&quot;" key="false" length="0" name="keywordType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="inspireTheme" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geoKeyword" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -499,7 +511,7 @@
       <column comment="" key="false" length="0" name="useLimitation" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;vector&quot;" key="false" length="0" name="spatialRepresentation" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="scaleDenominator" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="resolution" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="resolution" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;eng&quot;" key="false" length="0" name="language" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;utf8&quot;" key="false" length="0" name="charset" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;environment&quot;" key="false" length="0" name="topicCategoryCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -535,21 +547,21 @@
       <column comment="" key="false" length="0" name="endPosition" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="FLOW" name="logger">
-      <column comment="" key="false" name="dateStamp" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dateStamp" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="50" name="driver" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="255" name="files" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="255" name="layer_name" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="mdUuid" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="fcatUuid" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="filename" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="filepath" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="mdUuid" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="fcatUuid" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="filename" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="filepath" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="FLOW" label="metadata" name="cswUpdateProps">
       <column comment="" key="false" length="0" name="uuid" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;EPSG:4326&quot;" key="false" length="0" name="srs" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="publicationDate" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;publication&quot;" key="false" length="0" name="publicationDateType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="dateStamp" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dateStamp" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geometricType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geometryCount" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;vector&quot;" key="false" length="0" name="spatialRepresentation" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -567,12 +579,12 @@
       <column comment="" key="false" length="0" name="linkage2protocol" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="linkage2name" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="linkage2description" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="linkage2xpath" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="linkage2xpath" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="linkage3URL" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="linkage3protocol" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="linkage3name" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="linkage3description" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="linkage3xpath" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="linkage3xpath" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="fileName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="filePath" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="errors" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -580,25 +592,25 @@
     </metadata>
     <metadata connector="FLOW" name="listOfLayersOutOfExtent">
       <column key="false" length="255" name="files" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="layer_name" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="layer_name" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="6" name="epsg_code" nullable="true" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column defaultValue="" key="false" length="0" name="geo_extent" nullable="true" precision="0" sourceType="" type="id_Geometry" usefulColumn="true"/>
-      <column comment="" key="false" name="geo_extent_xmin" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="geo_extent_xmax" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="geo_extent_ymin" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="geo_extent_ymax" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="geo_extent_xmin" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="geo_extent_xmax" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="geo_extent_ymin" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="geo_extent_ymax" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="0" name="latlon_extent" nullable="true" precision="0" sourceType="" type="id_Geometry" usefulColumn="true"/>
-      <column comment="" key="false" name="nb_features" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="bboxcheck_xmin" nullable="true" pattern="" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" name="bboxcheck_ymin" nullable="true" pattern="" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" name="bboxcheck_xmax" nullable="true" pattern="" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" name="bboxcheck_ymax" nullable="true" pattern="" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" name="west" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="south" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="east" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="north" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="nb_features" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="bboxcheck_xmin" nullable="true" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="bboxcheck_ymin" nullable="true" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="bboxcheck_xmax" nullable="true" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="bboxcheck_ymax" nullable="true" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="west" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="south" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="east" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="north" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
-    <nodeData xsi:type="MapperData">
+    <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="filename" expression="new java.io.File(context.file).getName()" type="id_String"/>
@@ -847,7 +859,6 @@
   </node>
   <node componentName="tReplicate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tReplicate_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="replicate"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="metadata" name="tReplicate_1">
@@ -873,8 +884,8 @@
       <column comment="" key="false" length="0" name="title" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="date" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;publication&quot;" key="false" length="0" name="dateType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="revisionDate" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="revisionDateType" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="revisionDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="revisionDateType" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="edition" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="mdAbstract" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="purpose" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -894,7 +905,7 @@
       <column comment="" defaultValue="&quot;asNeeded&quot;" key="false" length="0" name="maintenanceFrequency" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="graphicFileName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="graphicFileDesc" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="keywordList" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="keywordList" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;theme&quot;" key="false" length="0" name="keywordType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="inspireTheme" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geoKeyword" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -905,7 +916,7 @@
       <column comment="" key="false" length="0" name="useLimitation" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;vector&quot;" key="false" length="0" name="spatialRepresentation" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="scaleDenominator" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="resolution" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="resolution" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;eng&quot;" key="false" length="0" name="language" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;utf8&quot;" key="false" length="0" name="charset" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;environment&quot;" key="false" length="0" name="topicCategoryCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -943,7 +954,8 @@
   </node>
   <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_k2t14OPnEeKXY41c3BjRgQ - metadata" show="false"/>
     <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
     <elementParameter field="FILE" name="FILENAME" value="context.resource_dir + &quot;metadata-properties.csv&quot;"/>
     <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
@@ -958,8 +970,6 @@
     <elementParameter field="CHECK" name="REMOVE_EMPTY_ROW" value="false"/>
     <elementParameter field="CHECK" name="UNCOMPRESS" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_k2t14OPnEeKXY41c3BjRgQ - metadata" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:REPOSITORY_SCHEMA_TYPE" value="_k2t14OPnEeKXY41c3BjRgQ - metadata" show="false"/>
     <elementParameter field="DIRECTORY" name="TEMP_DIR" value="&quot;/usr/local/App/talend/TOS_DI-r104014-V5.3.1/workspace&quot;" show="false"/>
@@ -1304,7 +1314,6 @@
   </node>
   <node componentName="tAdvancedFileOutputXML" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="992" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAdvancedFileOutputXML_2" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" value="outputStream" show="false"/>
     <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;cswtUpdatefileName&quot;))"/>
@@ -1578,7 +1587,7 @@
       <column comment="" defaultValue="&quot;EPSG:4326&quot;" key="false" length="0" name="srs" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="publicationDate" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;publication&quot;" key="false" length="0" name="publicationDateType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="dateStamp" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dateStamp" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geometricType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geometryCount" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;vector&quot;" key="false" length="0" name="spatialRepresentation" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -1596,12 +1605,12 @@
       <column comment="" key="false" length="0" name="linkage2protocol" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="linkage2name" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="linkage2description" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="linkage2xpath" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="linkage2xpath" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="linkage3URL" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="linkage3protocol" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="linkage3name" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="linkage3description" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="linkage3xpath" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="linkage3xpath" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="fileName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="filePath" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="errors" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -1610,32 +1619,30 @@
   </node>
   <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_3" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;Metadata record created for layer : &quot;+ logger.layer_name +&quot; from raster files : &quot; + logger.files + &quot; (with driver &quot;+ logger.driver + &quot;)&quot;"/>
     <elementParameter field="TEXT" name="CODE" value="0"/>
     <elementParameter field="CLOSED_LIST" name="PRIORITY" value="3"/>
     <elementParameter field="TEXT" name="LABEL" value="log"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWarn_3">
-      <column comment="" key="false" name="dateStamp" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dateStamp" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="50" name="driver" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="255" name="files" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="255" name="layer_name" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="mdUuid" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="fcatUuid" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="filename" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="filepath" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="mdUuid" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="fcatUuid" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="filename" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="filepath" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tNormalize" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="864" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tNormalize_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="PREV_COLUMN_LIST" name="NORMALIZE_COLUMN" value="keywordList"/>
     <elementParameter field="TEXT" name="ITEMSEPARATOR" value="&quot;/&quot;"/>
     <elementParameter field="CHECK" name="DEDUPLICATE" value="false"/>
     <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
     <elementParameter field="CLOSED_LIST" name="ESCAPE_CHAR" value="ESCAPE_MODE_DOUBLED" show="false"/>
-    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" value="&quot;&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" value="&quot;\&quot;&quot;" show="false"/>
     <elementParameter field="CHECK" name="DISCARD_TRAILING_EMPTY_STR" value="true"/>
     <elementParameter field="CHECK" name="TRIM" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="splitKeywordList"/>
@@ -1663,8 +1670,8 @@
       <column comment="" key="false" length="0" name="title" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="date" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;publication&quot;" key="false" length="0" name="dateType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="revisionDate" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="revisionDateType" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="revisionDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="revisionDateType" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="edition" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="mdAbstract" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="purpose" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -1684,7 +1691,7 @@
       <column comment="" defaultValue="&quot;asNeeded&quot;" key="false" length="0" name="maintenanceFrequency" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="graphicFileName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="graphicFileDesc" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="keywordList" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="keywordList" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;theme&quot;" key="false" length="0" name="keywordType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="inspireTheme" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geoKeyword" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -1695,7 +1702,7 @@
       <column comment="" key="false" length="0" name="useLimitation" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;vector&quot;" key="false" length="0" name="spatialRepresentation" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="scaleDenominator" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="resolution" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="resolution" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;eng&quot;" key="false" length="0" name="language" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;utf8&quot;" key="false" length="0" name="charset" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;environment&quot;" key="false" length="0" name="topicCategoryCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -1733,7 +1740,6 @@
   </node>
   <node componentName="tAdvancedFileOutputXML" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="992" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAdvancedFileOutputXML_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" value="outputStream" show="false"/>
     <elementParameter field="FILE" name="FILENAME" value="(!context.metadata_file_with_source ? ((String)globalMap.get(&quot;metadataFileName&quot;))  : context.file  ) + &quot;_md_iso19139.xml&quot;"/>
@@ -3215,8 +3221,8 @@
       <column comment="" key="false" length="0" name="title" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="date" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;publication&quot;" key="false" length="0" name="dateType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="revisionDate" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="revisionDateType" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="revisionDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="revisionDateType" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="edition" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="mdAbstract" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="purpose" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -3236,7 +3242,7 @@
       <column comment="" defaultValue="&quot;asNeeded&quot;" key="false" length="0" name="maintenanceFrequency" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="graphicFileName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="graphicFileDesc" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="keywordList" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="keywordList" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;theme&quot;" key="false" length="0" name="keywordType" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="inspireTheme" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geoKeyword" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -3247,7 +3253,7 @@
       <column comment="" key="false" length="0" name="useLimitation" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;vector&quot;" key="false" length="0" name="spatialRepresentation" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="scaleDenominator" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="resolution" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="resolution" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;eng&quot;" key="false" length="0" name="language" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;utf8&quot;" key="false" length="0" name="charset" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="&quot;environment&quot;" key="false" length="0" name="topicCategoryCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -3285,7 +3291,6 @@
   </node>
   <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="832" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" value="outputStream" show="false"/>
     <elementParameter field="FILE" name="FILENAME" value="context.log_dir + context.csv_file_list_of_layers_out_of_extent"/>
@@ -3311,33 +3316,33 @@
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
+    <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="false" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="90" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="logLayerOutsideBbox"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileOutputDelimited_1">
       <column key="false" length="255" name="files" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="layer_name" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="layer_name" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="6" name="epsg_code" nullable="true" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column defaultValue="" key="false" length="0" name="geo_extent" nullable="true" precision="0" sourceType="" type="id_Geometry" usefulColumn="true"/>
-      <column comment="" key="false" name="geo_extent_xmin" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="geo_extent_xmax" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="geo_extent_ymin" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="geo_extent_ymax" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="geo_extent_xmin" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="geo_extent_xmax" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="geo_extent_ymin" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="geo_extent_ymax" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="0" name="latlon_extent" nullable="true" precision="0" sourceType="" type="id_Geometry" usefulColumn="true"/>
-      <column comment="" key="false" name="nb_features" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="bboxcheck_xmin" nullable="true" pattern="" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" name="bboxcheck_ymin" nullable="true" pattern="" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" name="bboxcheck_xmax" nullable="true" pattern="" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" name="bboxcheck_ymax" nullable="true" pattern="" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" name="west" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="south" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="east" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="north" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="nb_features" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="bboxcheck_xmin" nullable="true" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="bboxcheck_ymin" nullable="true" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="bboxcheck_xmax" nullable="true" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="bboxcheck_ymax" nullable="true" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="west" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="south" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="east" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="north" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="96" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_2" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;scan_raster_error&quot;"/>
     <elementParameter field="TEXT" name="CODE" value="42"/>
     <elementParameter field="CLOSED_LIST" name="PRIORITY" value="4"/>
@@ -3346,13 +3351,12 @@
   </node>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_2" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="pack_data"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_OoYQENMBEeS-McZj90-IDg"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
-    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
     <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
     <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="false"/>
@@ -3374,45 +3378,42 @@
   </node>
   <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="96" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_4" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;# Analyzing raster datasource : &quot; + context.file"/>
     <elementParameter field="TEXT" name="CODE" value="0"/>
     <elementParameter field="CLOSED_LIST" name="PRIORITY" value="3"/>
     <elementParameter field="TEXT" name="LABEL" value="log"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWarn_4">
-      <column comment="" key="false" name="dateStamp" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dateStamp" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="50" name="driver" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="255" name="files" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="255" name="layer_name" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="mdUuid" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="fcatUuid" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="filename" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="filepath" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="mdUuid" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="fcatUuid" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="filename" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="filepath" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="992" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_5" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;### Metadata record &quot; + (!context.metadata_file_with_source ? ((String)globalMap.get(&quot;metadataFileName&quot;)) : context.file )  + &quot;_md_iso19139-.xml&quot; + &quot; created for :  &quot; + context.file"/>
     <elementParameter field="TEXT" name="CODE" value="0"/>
     <elementParameter field="CLOSED_LIST" name="PRIORITY" value="3"/>
     <elementParameter field="TEXT" name="LABEL" value="log"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWarn_5">
-      <column comment="" key="false" name="dateStamp" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dateStamp" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="50" name="driver" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="255" name="files" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="255" name="layer_name" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="mdUuid" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="fcatUuid" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="filename" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="filepath" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="mdUuid" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="fcatUuid" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="filename" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="filepath" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="192" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetGlobalVar_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="TABLE" name="VARIABLES">
       <elementValue elementRef="KEY" value="&quot;packArchiveFileName&quot;"/>
       <elementValue elementRef="VALUE" value="context.file.replaceAll(&quot;\\\\&quot;, &quot;&quot;).replace(context.data_dir_uuid_ignored_path, &quot;&quot;).replaceAll(&quot;/&quot;, &quot;-&quot;)"/>

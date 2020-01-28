@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
     <contextParameter comment="" name="input" prompt="input?" promptNeeded="false" type="id_File" value="&quot;PG:dbname=talend host=localhost port=5432 user=www-data password=www-data&quot;"/>
     <contextParameter comment="" name="output" prompt="output?" promptNeeded="false" type="id_String" value="&quot;/tmp/dd&quot;"/>
@@ -8,14 +8,52 @@
     <contextParameter comment="The log folder" name="log_dir" prompt="log_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/logs/"/>
     <contextParameter comment="The height of the overview to generate" name="overview_height" prompt="overview_height?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;800&quot;"/>
     <contextParameter comment="The width of the overview to generate" name="overview_width" prompt="overview_width?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;800&quot;"/>
-    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/var/app/talend/config/"/>
+    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/data/geo/config/"/>
     <contextParameter comment="The output folder" name="tmp_dir" prompt="tmp_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/tmp/"/>
     <contextParameter comment="" name="layer" prompt="layer?" promptNeeded="false" type="id_String" value="&quot;country&quot;"/>
+  </context>
+  <context confirmationNeeded="false" name="prod">
+    <contextParameter comment="" name="input" prompt="input?" promptNeeded="false" type="id_File" value="&quot;PG:dbname=talend host=localhost port=5432 user=www-data password=www-data&quot;"/>
+    <contextParameter comment="" name="output" prompt="output?" promptNeeded="false" type="id_String" value="&quot;/tmp/dd&quot;"/>
+    <contextParameter comment="" name="isDb" prompt="isDb?" promptNeeded="false" type="id_Boolean" value=""/>
+    <contextParameter comment="" name="layer" prompt="layer?" promptNeeded="false" type="id_String" value="&quot;country&quot;"/>
+    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="r"/>
+    <contextParameter comment="The output folder" name="tmp_dir" prompt="tmp_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/tmp/"/>
+    <contextParameter comment="The log folder" name="log_dir" prompt="log_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/logs/"/>
+    <contextParameter comment="The width of the overview to generate" name="overview_width" prompt="overview_width?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;800&quot;"/>
+    <contextParameter comment="The height of the overview to generate" name="overview_height" prompt="overview_height?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;800&quot;"/>
+    <contextParameter comment="Path to GDAL/OGR bin or empty if in system path" name="gdal_path" prompt="gdal_path?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value=""/>
+  </context>
+  <context confirmationNeeded="false" name="test">
+    <contextParameter comment="" name="input" prompt="input?" promptNeeded="false" type="id_File" value="&quot;PG:dbname=talend host=localhost port=5432 user=www-data password=www-data&quot;"/>
+    <contextParameter comment="" name="output" prompt="output?" promptNeeded="false" type="id_String" value="&quot;/tmp/dd&quot;"/>
+    <contextParameter comment="" name="isDb" prompt="isDb?" promptNeeded="false" type="id_Boolean" value=""/>
+    <contextParameter comment="" name="layer" prompt="layer?" promptNeeded="false" type="id_String" value="&quot;country&quot;"/>
+    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/data/geo/config/"/>
+    <contextParameter comment="The output folder" name="tmp_dir" prompt="tmp_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/tmp/"/>
+    <contextParameter comment="The log folder" name="log_dir" prompt="log_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/logs/"/>
+    <contextParameter comment="The width of the overview to generate" name="overview_width" prompt="overview_width?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;800&quot;"/>
+    <contextParameter comment="The height of the overview to generate" name="overview_height" prompt="overview_height?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;800&quot;"/>
+    <contextParameter comment="Path to GDAL/OGR bin or empty if in system path" name="gdal_path" prompt="gdal_path?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value=""/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" value="" show="false"/>
     <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true" show="false"/>
     <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="false" show="false"/>
     <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
@@ -24,8 +62,6 @@
     <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
     <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:PROPERTY_TYPE" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="" show="false"/>
     <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -42,8 +78,8 @@
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning" show="false"/>
     <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false" show="false"/>
     <elementParameter field="CHECK" name="DISABLE_ERROR" value="false" show="false"/>
     <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false" show="false"/>
@@ -105,11 +141,11 @@
     <routinesParameter id="_nrhX4AfBEeKRSpL2q-qWEQ" name="TalendDate"/>
     <routinesParameter id="_nroFkAfBEeKRSpL2q-qWEQ" name="TalendString"/>
     <routinesParameter id="_NukzgAnLEeKr_IP06R0Uyw" name="Utility"/>
+    <routinesParameter id="_H868YEHlEeqxNJCRKR--7g" name="TalendStringUtil"/>
   </parameters>
   <node componentName="tSystem" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSystem_1" show="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="ROOTDIR" value="false"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;/usr/local/App/talend/TOS_DI-r89249-V5.2.0M3/workspace&quot;" show="false"/>
     <elementParameter field="RADIO" name="USE_SINGLE_COMMAND" value="true"/>
@@ -126,7 +162,6 @@
   <node componentName="tSystem" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSystem_2" show="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="ROOTDIR" value="false"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;/usr/local/App/talend/TOS_DI-r89249-V5.2.0M3/workspace&quot;" show="false"/>
     <elementParameter field="RADIO" name="USE_SINGLE_COMMAND" value="false"/>
@@ -150,7 +185,6 @@
   <node componentName="tFileDelete" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileDelete_1" show="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="FILE" name="FILENAME" value="context.output + &quot;_overview.tif&quot;"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;/usr/local/App/talend/TOS_DI-r104014-V5.3.1/workspace/delete_folder&quot;" show="false"/>
     <elementParameter field="TEXT" name="PATH" value="&quot;/usr/local/App/talend/TOS_DI-r104014-V5.3.1/workspace/delete_folder or delete_file&quot;" show="false"/>
@@ -165,7 +199,6 @@
   <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_1" show="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;Error generating TIF overview for vector file :&quot; + context.input +&quot; \n Error message : &quot; + ((String)globalMap.get(&quot;tSystem_2_ERROROUTPUT&quot;))"/>
     <elementParameter field="TEXT" name="CODE" value="0"/>
     <elementParameter field="CLOSED_LIST" name="PRIORITY" value="5"/>
@@ -176,7 +209,6 @@
   <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_2" show="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;Error generating PNG overview for vector file :&quot; + context.input +&quot; \n Error message : &quot; + ((String)globalMap.get(&quot;tSystem_1_ERROROUTPUT&quot;))"/>
     <elementParameter field="TEXT" name="CODE" value="0"/>
     <elementParameter field="CLOSED_LIST" name="PRIORITY" value="5"/>
@@ -186,7 +218,6 @@
   </node>
   <node componentName="tSystem" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="64" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSystem_3" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="ROOTDIR" value="false"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;/usr/local/App/talend/TOS_DI-r89249-V5.2.0M3/workspace&quot;" show="false"/>
     <elementParameter field="RADIO" name="USE_SINGLE_COMMAND" value="false"/>
@@ -211,7 +242,6 @@
   <node componentName="tGroovy" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tGroovy_1" show="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="MEMO_JAVA" name="CODE" value="// your Groovy Code&#xA;//println &quot;sh -c gdal_rasterize -ts 400 400 -burn 111 -l endpoints \&quot;PG:dbname=talend host=localhost port=5432 user=www-data password=www-data\&quot; /tmp/madebygroovy/out.tiff&quot;.execute().text&#xA;&#xA;commandArray = new String[8]&#xA;  commandArray[0] = &quot;sh&quot;&#xA;  commandArray[1] = &quot;-c&quot;&#xA;  commandArray[2] = &quot;gdal_rasterize&quot;&#xA;  commandArray[3] = &quot;-ts 400 400&quot;&#xA;  commandArray[4] = &quot;-burn 111&quot;&#xA;  commandArray[5] = &quot;-l CCM&quot;&#xA;  commandArray[6] = &quot;/home/francois/data/CCM.shp&quot;&#xA;//  commandArray[3] = &quot;PG:dbname=talend host=localhost port=5432 user=www-data password=www-data&quot;&#xA;  commandArray[7] = &quot;/tmp/madebygroovy/out.tiff&quot;&#xA;&#xA;&#xA;    println commandArray&#xA;  &#xA;def process = new ProcessBuilder(commandArray).redirectErrorStream(true).start()&#xA;&#xA;process.inputStream.eachLine {println it}&#xA;"/>
     <elementParameter field="TABLE" name="VARIABLES"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -219,7 +249,6 @@
   </node>
   <node componentName="tFileDelete" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileDelete_2" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="FILE" name="FILENAME" value="context.output + &quot;_overview.tif&quot;"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;/usr/local/App/talend/TOS_DI-r104014-V5.3.1/workspace/delete_folder&quot;" show="false"/>
     <elementParameter field="TEXT" name="PATH" value="&quot;/usr/local/App/talend/TOS_DI-r104014-V5.3.1/workspace/delete_folder or delete_file&quot;" show="false"/>
@@ -233,60 +262,58 @@
   </node>
   <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="64" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_3" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;## Creating overview for  : &quot; + context.input"/>
     <elementParameter field="TEXT" name="CODE" value="0"/>
     <elementParameter field="CLOSED_LIST" name="PRIORITY" value="3"/>
     <elementParameter field="TEXT" name="LABEL" value="log"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWarn_3">
-      <column comment="" key="false" name="dateStamp" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dateStamp" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="50" name="driver" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="255" name="files" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="255" name="layer_name" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="mdUuid" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="fcatUuid" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="filename" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="filepath" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="mdUuid" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="fcatUuid" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="filename" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="filepath" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="224" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_4" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;## Overview created  : &quot; + context.output + &quot;_overview.png&quot;"/>
     <elementParameter field="TEXT" name="CODE" value="0"/>
     <elementParameter field="CLOSED_LIST" name="PRIORITY" value="3"/>
     <elementParameter field="TEXT" name="LABEL" value="log"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWarn_4">
-      <column comment="" key="false" name="dateStamp" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dateStamp" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="50" name="driver" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="255" name="files" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="255" name="layer_name" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="mdUuid" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="fcatUuid" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="filename" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="filepath" nullable="false" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="mdUuid" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="fcatUuid" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="filename" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="filepath" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSystem_1" offsetLabelX="0" offsetLabelY="0" source="tSystem_1" target="tFileDelete_1">
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk2" show="false"/>
-  </connection>
   <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tSystem_1" offsetLabelX="0" offsetLabelY="0" source="tSystem_1" target="tWarn_2">
     <elementParameter field="MEMO_JAVA" name="CONDITION" value="((String)globalMap.get(&quot;tSystem_1_ERROROUTPUT&quot;))!= null"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="If2" show="false"/>
   </connection>
-  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tSystem_2" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tSystem_2" target="tSystem_1">
-    <elementParameter field="MEMO_JAVA" name="CONDITION" value="((String)globalMap.get(&quot;tSystem_2_ERROROUTPUT&quot;)) == null"/>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSystem_1" offsetLabelX="0" offsetLabelY="0" source="tSystem_1" target="tFileDelete_1">
     <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If3" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk2" show="false"/>
   </connection>
-  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tSystem_2" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tSystem_2" target="tWarn_1">
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tSystem_2" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tSystem_2" target="tWarn_1">
     <elementParameter field="MEMO_JAVA" name="CONDITION" value="((String)globalMap.get(&quot;tSystem_2_ERROROUTPUT&quot;)) != null"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="If1" show="false"/>
+  </connection>
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tSystem_2" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tSystem_2" target="tSystem_1">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="((String)globalMap.get(&quot;tSystem_2_ERROROUTPUT&quot;)) == null"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If3" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSystem_3" offsetLabelX="0" offsetLabelY="0" source="tSystem_3" target="tFileDelete_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk3" show="false"/>

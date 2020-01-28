@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="a"/>
+    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/data/geo/"/>
     <contextParameter comment="The remove directory in the FTP server" name="overview_publication_dir" prompt="overview_publication_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="/var/www/html/overview/"/>
     <contextParameter comment="The FTP host" name="ftp_host" prompt="ftp_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="null"/>
     <contextParameter comment="The user password" name="ftp_password" prompt="ftp_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Password" value=""/>
@@ -22,10 +22,68 @@
     <contextParameter comment="" name="target_local_folder" prompt="target_local_folder?" promptNeeded="false" type="id_Directory" value="/tmp/talend/www/data/"/>
     <contextParameter comment="" name="file_folder_path" prompt="file_folder_path?" promptNeeded="false" type="id_Directory" value="/tmp/talend/download/"/>
   </context>
+  <context confirmationNeeded="false" name="prod">
+    <contextParameter comment="" name="file_mask" prompt="file_mask?" promptNeeded="false" type="id_String" value="&quot;.*\\.zip.*&quot;"/>
+    <contextParameter comment="" name="target_ssh_folder" prompt="target_ssh_folder?" promptNeeded="false" type="id_Directory" value=""/>
+    <contextParameter comment="" name="target_ftp_folder" prompt="target_ftp_folder?" promptNeeded="false" type="id_Directory" value=""/>
+    <contextParameter comment="" name="target_local_folder" prompt="target_local_folder?" promptNeeded="false" type="id_Directory" value="/tmp/talend/www/data/"/>
+    <contextParameter comment="" name="file_folder_path" prompt="file_folder_path?" promptNeeded="false" type="id_Directory" value="/tmp/talend/download/"/>
+    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/data/"/>
+    <contextParameter comment="The output folder" name="tmp_dir" prompt="tmp_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/tmp/"/>
+    <contextParameter comment="The folder to create metadata records into" name="metadata_dir" prompt="metadata_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/metadata/"/>
+    <contextParameter comment="The log folder" name="log_dir" prompt="log_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/logs/"/>
+    <contextParameter comment="Define the way to copy files (ssh, ftp, copy)" name="overview_and_file_copy_mode" prompt="overview_and_file_copy_mode?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;copy&quot;"/>
+    <contextParameter comment="The FTP host" name="ftp_host" prompt="ftp_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="null"/>
+    <contextParameter comment="The FTP port" name="ftp_port" prompt="ftp_port?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Integer" value="21"/>
+    <contextParameter comment="The user name to log in the FTP server" name="ftp_username" prompt="ftp_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="null"/>
+    <contextParameter comment="The user password" name="ftp_password" prompt="ftp_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Password" value=""/>
+    <contextParameter comment="The remove directory in the FTP server" name="overview_publication_dir" prompt="overview_publication_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="/var/www/html/overview/"/>
+    <contextParameter comment="" name="ssh_host" prompt="ssh_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;&quot;"/>
+    <contextParameter comment="" name="ssh_port" prompt="ssh_port?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Integer" value="22"/>
+    <contextParameter comment="" name="ssh_username" prompt="ssh_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;&quot;"/>
+    <contextParameter comment="" name="ssh_password" prompt="ssh_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Password" value=""/>
+    <contextParameter comment="Store the generated metadata file next to the analyzed file" name="metadata_file_with_source" prompt="metadata_file_with_source?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="false"/>
+  </context>
+  <context confirmationNeeded="false" name="test">
+    <contextParameter comment="" name="file_mask" prompt="file_mask?" promptNeeded="false" type="id_String" value="&quot;.*\\.zip.*&quot;"/>
+    <contextParameter comment="" name="target_ssh_folder" prompt="target_ssh_folder?" promptNeeded="false" type="id_Directory" value=""/>
+    <contextParameter comment="" name="target_ftp_folder" prompt="target_ftp_folder?" promptNeeded="false" type="id_Directory" value=""/>
+    <contextParameter comment="" name="target_local_folder" prompt="target_local_folder?" promptNeeded="false" type="id_Directory" value="/tmp/talend/www/data/"/>
+    <contextParameter comment="" name="file_folder_path" prompt="file_folder_path?" promptNeeded="false" type="id_Directory" value="/tmp/talend/download/"/>
+    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/data/geo/"/>
+    <contextParameter comment="The output folder" name="tmp_dir" prompt="tmp_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/tmp/"/>
+    <contextParameter comment="The folder to create metadata records into" name="metadata_dir" prompt="metadata_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/metadata/"/>
+    <contextParameter comment="The log folder" name="log_dir" prompt="log_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/logs/"/>
+    <contextParameter comment="Define the way to copy files (ssh, ftp, copy)" name="overview_and_file_copy_mode" prompt="overview_and_file_copy_mode?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;copy&quot;"/>
+    <contextParameter comment="The FTP host" name="ftp_host" prompt="ftp_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="null"/>
+    <contextParameter comment="The FTP port" name="ftp_port" prompt="ftp_port?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Integer" value="21"/>
+    <contextParameter comment="The user name to log in the FTP server" name="ftp_username" prompt="ftp_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="null"/>
+    <contextParameter comment="The user password" name="ftp_password" prompt="ftp_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Password" value=""/>
+    <contextParameter comment="The remove directory in the FTP server" name="overview_publication_dir" prompt="overview_publication_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="/var/www/html/overview/"/>
+    <contextParameter comment="" name="ssh_host" prompt="ssh_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;&quot;"/>
+    <contextParameter comment="" name="ssh_port" prompt="ssh_port?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Integer" value="22"/>
+    <contextParameter comment="" name="ssh_username" prompt="ssh_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;&quot;"/>
+    <contextParameter comment="" name="ssh_password" prompt="ssh_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Password" value=""/>
+    <contextParameter comment="Store the generated metadata file next to the analyzed file" name="metadata_file_with_source" prompt="metadata_file_with_source?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="false"/>
+  </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" value="" show="false"/>
     <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true" show="false"/>
     <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="false" show="false"/>
     <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
@@ -34,8 +92,6 @@
     <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
     <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:PROPERTY_TYPE" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="" show="false"/>
     <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -52,8 +108,8 @@
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning" show="false"/>
     <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false" show="false"/>
     <elementParameter field="CHECK" name="DISABLE_ERROR" value="false" show="false"/>
     <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false" show="false"/>
@@ -115,10 +171,10 @@
     <routinesParameter id="_nrhX4AfBEeKRSpL2q-qWEQ" name="TalendDate"/>
     <routinesParameter id="_nroFkAfBEeKRSpL2q-qWEQ" name="TalendString"/>
     <routinesParameter id="_NukzgAnLEeKr_IP06R0Uyw" name="Utility"/>
+    <routinesParameter id="_H868YEHlEeqxNJCRKR--7g" name="TalendStringUtil"/>
   </parameters>
   <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_2" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="context.file_folder_path"/>
     <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
     <elementParameter field="CHECK" name="INCLUDSUBDIR" value="true"/>
@@ -142,7 +198,6 @@
   </node>
   <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileCopy_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_2_CURRENT_FILEPATH&quot;))"/>
     <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
     <elementParameter field="DIRECTORY" name="SOURCE_DERECTORY" value="&quot;/usr/local/App/talend/TOS_DI-r104014-V5.3.1/workspace&quot;" show="false"/>
@@ -152,12 +207,12 @@
     <elementParameter field="CHECK" name="REMOVE_FILE" value="false"/>
     <elementParameter field="CHECK" name="REPLACE_FILE" value="true"/>
     <elementParameter field="CHECK" name="CREATE_DIRECTORY" value="true"/>
+    <elementParameter field="CHECK" name="FAILON" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileCopy_1"/>
   </node>
   <node componentName="tForeach" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tForeach_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="TABLE" name="VALUES">
       <elementValue elementRef="VALUE" value="&quot;&quot;"/>
     </elementParameter>
@@ -166,7 +221,6 @@
   </node>
   <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="context.file_folder_path"/>
     <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
     <elementParameter field="CHECK" name="INCLUDSUBDIR" value="true"/>
@@ -190,11 +244,11 @@
   </node>
   <node componentName="tFTPPut" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFTPPut_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="TEXT" name="HOST" value="context.ftp_host"/>
     <elementParameter field="TEXT" name="PORT" value="context.ftp_port"/>
+    <elementParameter field="TEXT" name="FTPS_PORT" value="990" show="false"/>
     <elementParameter field="TEXT" name="USERNAME" value="context.ftp_username"/>
     <elementParameter field="PASSWORD" name="PASSWORD" value="8pW6Nmy2kud5cU+SwRxPQZVmjryzBAby"/>
     <elementParameter field="CHECK" name="SFTP" value="false"/>
@@ -204,6 +258,7 @@
     <elementParameter field="PASSWORD" name="PASSPHRASE" value="wiXuUBxiyoc5L4zXsOuoEQ==" show="false"/>
     <elementParameter field="DIRECTORY" name="LOCALDIR" value="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;))"/>
     <elementParameter field="TEXT" name="REMOTEDIR" value="context.target_ftp_folder"/>
+    <elementParameter field="CHECK" name="CREATE_DIR_IF_NOT_EXIST" value="false"/>
     <elementParameter field="CHECK" name="MOVE_TO_THE_CURRENT_DIRECTORY" value="true" show="false"/>
     <elementParameter field="FILE" name="KEYSTORE_FILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="PASSWORD" name="KEYSTORE_PASS" value="k0OOTVG4MsZpHb1iYbZyRw==" show="false"/>
@@ -220,9 +275,9 @@
     </elementParameter>
     <elementParameter field="CLOSED_LIST" name="CONNECT_MODE" value="PASSIVE"/>
     <elementParameter field="CLOSED_LIST" name="SECURITY_MODE" value="IMPLICIT" show="false"/>
+    <elementParameter field="CHECK" name="USE_ENCODING" value="false" show="false"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
-    <elementParameter field="CHECK" name="USE_ENCODING" value="false" show="false"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
     <elementParameter field="TEXT" name="PROXY_HOST" value="&quot;61.163.92.4&quot;" show="false"/>
@@ -230,12 +285,14 @@
     <elementParameter field="TEXT" name="PROXY_USERNAME" value="&quot;&quot;" show="false"/>
     <elementParameter field="PASSWORD" name="PROXY_PASSWORD" value="0RMsyjmybrE=" show="false"/>
     <elementParameter field="CHECK" name="IGNORE_FAILURE_AT_QUIT" value="false"/>
+    <elementParameter field="OPENED_LIST" name="FTPS_PROT" value="&quot;P&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FTPS_PROTECTION_BUFF_SIZE" value="0" show="false"/>
+    <elementParameter field="CHECK" name="REMOTE_VERIFICATION" value="true" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFTPPut_1"/>
   </node>
   <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_3" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="context.file_folder_path"/>
     <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
     <elementParameter field="CHECK" name="INCLUDSUBDIR" value="true"/>
@@ -259,7 +316,6 @@
   </node>
   <node componentName="tSCPPut" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSCPPut_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="TEXT" name="HOST" value="context.ssh_host"/>

@@ -142,6 +142,7 @@
     </elementParameter>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="false"/>
     <metadata connector="FLOW" name="tLogRow_1">
       <column defaultValue="" key="false" length="0" name="Body" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="0" name="ERROR_CODE" nullable="true" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
@@ -189,6 +190,7 @@
     </elementParameter>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="false"/>
     <metadata connector="FLOW" name="tLogRow_2">
       <column defaultValue="" key="false" length="0" name="Body" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="0" name="ERROR_CODE" nullable="true" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>

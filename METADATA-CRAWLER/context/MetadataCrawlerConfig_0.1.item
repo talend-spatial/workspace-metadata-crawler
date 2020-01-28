@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" confirmationNeeded="false" name="Default">
-  <contextParameter comment="The CSW server to push metadata records into" name="csw_server_host" prompt="csw_server_host?" promptNeeded="false" type="id_String" value="&quot;http://localhost:8080/geonetwork/srv/eng/csw-publication&quot;"/>
-  <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" type="id_Directory" value="/tmp/talend/data"/>
-  <contextParameter comment="The folder to create overview into" name="overview_folder" prompt="overview_folder?" promptNeeded="false" type="id_Directory" value="/tmp/talend/www/overviews"/>
-  <contextParameter comment="RASTER file extensions" name="raster_file_extension" prompt="raster_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.tif|.*\\.tiff|.*\\.ecw|.*\\.asc&quot;"/>
-  <contextParameter comment="The output folder" name="tmp_dir" prompt="tmp_dir?" promptNeeded="false" type="id_Directory" value="/tmp/talend/tmp/"/>
-  <contextParameter comment="Vector file extensions" name="vector_file_extension" prompt="vector_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.kml|.*\\.shp|.*\\.mif|.*\\.tab|.*\\.gml|.*\\.dxf&quot;"/>
-  <contextParameter comment="The CSW user name" name="csw_username" prompt="csw_username?" promptNeeded="false" type="id_String" value="&quot;admin&quot;"/>
-  <contextParameter comment="The CSW user password" name="csw_password" prompt="csw_password?" promptNeeded="false" type="id_String" value="&quot;admin&quot;"/>
-  <contextParameter comment="The width of the overview to generate" name="overview_width" prompt="overview_width?" promptNeeded="false" type="id_String" value="&quot;400&quot;"/>
-  <contextParameter comment="The height of the overview to generate" name="overview_height" prompt="overview_height?" promptNeeded="false" type="id_String" value="&quot;400&quot;"/>
-  <contextParameter comment="Create or not overview files" name="create_overview" prompt="create_overview?" promptNeeded="false" type="id_Boolean" value="true"/>
-  <contextParameter comment="Vector file extensions supported for publication in mapservers" name="vector_file_extension_for_geopublication" prompt="vector_file_extension_for_geopublication?" promptNeeded="false" type="id_String" value="&quot;.*\\.shp&quot;"/>
-  <contextParameter comment="RASTER file extensions supported for publication in mapservers" name="raster_file_extension_for_geopublication" prompt="raster_file_extension_for_geopublication?" promptNeeded="false" type="id_String" value="&quot;.*\\.tif|.*\\.tiff&quot;"/>
-  <contextParameter comment="" name="geoserver_server_host" prompt="geoserver_server_host?" promptNeeded="false" type="id_String" value="&quot;http://localhost:8081/geoserver/rest&quot;"/>
-  <contextParameter comment="" name="geoserver_username" prompt="geoserver_username?" promptNeeded="false" type="id_String" value="&quot;admin&quot;"/>
-  <contextParameter comment="" name="geoserver_password" prompt="geoserver_password?" promptNeeded="false" type="id_String" value="&quot;geoserver&quot;"/>
-  <contextParameter comment="" name="geosever_namespace_prefix" prompt="geosever_namespace_prefix?" promptNeeded="false" type="id_String" value="&quot;gn&quot;"/>
-  <contextParameter comment="List of database to scan" name="db_list" prompt="db_list?" promptNeeded="false" type="id_List Of Value" value="&quot;PG:dbname=talend host=localhost port=5432 user=www-data password=www-data&quot;"/>
-  <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" type="id_Directory" value="/tmp/talend/resources/"/>
-  <contextParameter comment="Publish metadata or not in the CSW catalogue defined" name="publish_metadata" prompt="publish_metadata?" promptNeeded="false" type="id_Boolean" value="true"/>
-  <contextParameter comment="Store the generated metadata file next to the analyzed file" name="metadata_file_with_source" prompt="metadata_file_with_source?" promptNeeded="false" type="id_Boolean" value="false"/>
-  <contextParameter comment="The folder to create metadata records into" name="metadata_dir" prompt="metadata_dir?" promptNeeded="false" type="id_Directory" value="/tmp/talend/metadata/"/>
-  <contextParameter comment="An EPSG code of a projection to use in case the projection could not be defined from the file" name="default_projection" prompt="default_projection?" promptNeeded="false" type="id_String" value="&quot;EPSG:4326&quot;"/>
-  <contextParameter comment="" name="default_xmin" prompt="default_xmin?" promptNeeded="false" type="id_String" value="&quot;-180&quot;"/>
-  <contextParameter comment="" name="default_ymin" prompt="default_ymin?" promptNeeded="false" type="id_String" value="&quot;-90&quot;"/>
-  <contextParameter comment="" name="default_xmax" prompt="default_xmax?" promptNeeded="false" type="id_String" value="&quot;180&quot;"/>
-  <contextParameter comment="" name="default_ymax" prompt="default_ymax?" promptNeeded="false" type="id_String" value="&quot;90&quot;"/>
-  <contextParameter comment="Define the way to copy overview (ssh, ftp, copy)" name="overview_copy_mode" prompt="overview_copy_mode?" promptNeeded="false" type="id_String" value="&quot;copy&quot;"/>
-  <contextParameter comment="The FTP host" name="ftp_host" prompt="ftp_host?" promptNeeded="false" type="id_String" value="null"/>
-  <contextParameter comment="The FTP port" name="ftp_port" prompt="ftp_port?" promptNeeded="false" type="id_Integer" value="21"/>
-  <contextParameter comment="The user name to log in the FTP server" name="ftp_username" prompt="ftp_username?" promptNeeded="false" type="id_String" value="null"/>
-  <contextParameter comment="The user password" name="ftp_password" prompt="ftp_password?" promptNeeded="false" type="id_String" value="null"/>
-  <contextParameter comment="The remove directory in the FTP server" name="ftp_dir" prompt="ftp_dir?" promptNeeded="false" type="id_String" value="null"/>
-  <contextParameter comment="" name="ssh_host" prompt="ssh_host?" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
-  <contextParameter comment="" name="ssh_port" prompt="ssh_port?" promptNeeded="false" type="id_Integer" value="22"/>
-  <contextParameter comment="" name="ssh_username" prompt="ssh_username?" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
-  <contextParameter comment="" name="ssh_password" prompt="ssh_password?" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
-  <contextParameter comment="" name="ssh_dir" prompt="ssh_dir?" promptNeeded="false" type="id_String" value="&quot;/tmp/overview&quot;"/>
-  <contextParameter comment="Path to GDAL/OGR bin or empty if in system path" name="gdal_path" prompt="gdal_path?" promptNeeded="false" type="id_Directory" value=""/>
-  <contextParameter comment="Metadata title prefix for vector" name="title_prefix_vector" prompt="title_prefix_vector?" promptNeeded="false" type="id_String" value="&quot;Vector file &quot;"/>
-  <contextParameter comment="Metadata title prefix for RASTER" name="title_prefix_raster" prompt="title_prefix_raster?" promptNeeded="false" type="id_String" value="&quot;Raster file &quot;"/>
-  <contextParameter comment="Metadata title prefix for feature catalog" name="title_prefix_fcat" prompt="title_prefix_fcat?" promptNeeded="false" type="id_String" value="&quot;Feature catalog &quot;"/>
-  <contextParameter comment="Metadata title prefix for db tables" name="title_prefix_db" prompt="title_prefix_db?" promptNeeded="false" type="id_String" value="&quot;Table &quot;"/>
-  <contextParameter comment="The log folder" name="log_dir" prompt="log_dir?" promptNeeded="false" type="id_Directory" value="/tmp/talend/logs/"/>
-  <contextParameter comment="Scan for vector files" name="scan_vector" prompt="scan_vector?" promptNeeded="false" type="id_Boolean" value="true"/>
-  <contextParameter comment="Scan for RASTER files" name="scan_raster" prompt="scan_raster?" promptNeeded="false" type="id_Boolean" value="true"/>
-  <contextParameter comment="List of WFS to scan" name="service_list" prompt="service_list?" promptNeeded="false" type="id_List Of Value" value=""/>
-  <contextParameter comment="True to ping the job and return status response (use when deploy as webservice)" name="ping" prompt="ping?" promptNeeded="false" type="id_Boolean" value="false"/>
-  <contextParameter comment="Metadata title prefix for maps" name="title_prefix_map" prompt="title_prefix_map?" promptNeeded="false" type="id_String" value="&quot;Map &quot;"/>
-  <contextParameter comment="Scan for maps" name="scan_map" prompt="scan_map?" promptNeeded="false" type="id_Boolean" value="false"/>
-  <contextParameter comment="Map file extensions" name="map_file_extension" prompt="map_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.qgs&quot;"/>
-  <contextParameter comment="The folder to scan for maps" name="map_data_dir" prompt="map_data_dir?" promptNeeded="false" type="id_Directory" value="/tmp/talend/maps"/>
-  <contextParameter comment="For each datasources find in a map, create metadata" name="scan_map_and_datasources" prompt="scan_map_and_datasources?" promptNeeded="false" type="id_Boolean" value="true"/>
-  <contextParameter comment="Always run update by sending the complete metadata record (not only some properties like bounding box)" name="publish_metadata_full_update" prompt="publish_metadata_full_update?" promptNeeded="false" type="id_Boolean" value="false"/>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_RBdfAEHlEeqxNJCRKR--7g" confirmationNeeded="false" name="Default">
+  <contextParameter xmi:id="_RBdfAUHlEeqxNJCRKR--7g" comment="The CSW server to push metadata records into" name="csw_server_host" prompt="csw_server_host?" promptNeeded="false" type="id_String" value="&quot;http://localhost:8080/geonetwork/srv/eng/csw-publication&quot;"/>
+  <contextParameter xmi:id="_RBdfAkHlEeqxNJCRKR--7g" comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" type="id_Directory" value="/tmp/talend/data"/>
+  <contextParameter xmi:id="_RBdfA0HlEeqxNJCRKR--7g" comment="The folder to create overview into" name="overview_folder" prompt="overview_folder?" promptNeeded="false" type="id_Directory" value="/tmp/talend/www/overviews"/>
+  <contextParameter xmi:id="_RBdfBEHlEeqxNJCRKR--7g" comment="RASTER file extensions" name="raster_file_extension" prompt="raster_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.tif|.*\\.tiff|.*\\.ecw|.*\\.asc&quot;"/>
+  <contextParameter xmi:id="_RBdfBUHlEeqxNJCRKR--7g" comment="The output folder" name="tmp_dir" prompt="tmp_dir?" promptNeeded="false" type="id_Directory" value="/tmp/talend/tmp/"/>
+  <contextParameter xmi:id="_RBdfBkHlEeqxNJCRKR--7g" comment="Vector file extensions" name="vector_file_extension" prompt="vector_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.kml|.*\\.shp|.*\\.mif|.*\\.tab|.*\\.gml|.*\\.dxf&quot;"/>
+  <contextParameter xmi:id="_RBdfB0HlEeqxNJCRKR--7g" comment="The CSW user name" name="csw_username" prompt="csw_username?" promptNeeded="false" type="id_String" value="&quot;admin&quot;"/>
+  <contextParameter xmi:id="_RBdfCEHlEeqxNJCRKR--7g" comment="The CSW user password" name="csw_password" prompt="csw_password?" promptNeeded="false" type="id_String" value="&quot;admin&quot;"/>
+  <contextParameter xmi:id="_RBdfCUHlEeqxNJCRKR--7g" comment="The width of the overview to generate" name="overview_width" prompt="overview_width?" promptNeeded="false" type="id_String" value="&quot;400&quot;"/>
+  <contextParameter xmi:id="_RBdfCkHlEeqxNJCRKR--7g" comment="The height of the overview to generate" name="overview_height" prompt="overview_height?" promptNeeded="false" type="id_String" value="&quot;400&quot;"/>
+  <contextParameter xmi:id="_RBdfC0HlEeqxNJCRKR--7g" comment="Create or not overview files" name="create_overview" prompt="create_overview?" promptNeeded="false" type="id_Boolean" value="true"/>
+  <contextParameter xmi:id="_RBdfDEHlEeqxNJCRKR--7g" comment="Vector file extensions supported for publication in mapservers" name="vector_file_extension_for_geopublication" prompt="vector_file_extension_for_geopublication?" promptNeeded="false" type="id_String" value="&quot;.*\\.shp&quot;"/>
+  <contextParameter xmi:id="_RBdfDUHlEeqxNJCRKR--7g" comment="RASTER file extensions supported for publication in mapservers" name="raster_file_extension_for_geopublication" prompt="raster_file_extension_for_geopublication?" promptNeeded="false" type="id_String" value="&quot;.*\\.tif|.*\\.tiff&quot;"/>
+  <contextParameter xmi:id="_RBdfDkHlEeqxNJCRKR--7g" comment="" name="geoserver_server_host" prompt="geoserver_server_host?" promptNeeded="false" type="id_String" value="&quot;http://localhost:8081/geoserver/rest&quot;"/>
+  <contextParameter xmi:id="_RBdfD0HlEeqxNJCRKR--7g" comment="" name="geoserver_username" prompt="geoserver_username?" promptNeeded="false" type="id_String" value="&quot;admin&quot;"/>
+  <contextParameter xmi:id="_RBdfEEHlEeqxNJCRKR--7g" comment="" name="geoserver_password" prompt="geoserver_password?" promptNeeded="false" type="id_String" value="&quot;geoserver&quot;"/>
+  <contextParameter xmi:id="_RBdfEUHlEeqxNJCRKR--7g" comment="" name="geosever_namespace_prefix" prompt="geosever_namespace_prefix?" promptNeeded="false" type="id_String" value="&quot;gn&quot;"/>
+  <contextParameter xmi:id="_RBdfEkHlEeqxNJCRKR--7g" comment="List of database to scan" name="db_list" prompt="db_list?" promptNeeded="false" type="id_List Of Value" value="&quot;PG:dbname=talend host=localhost port=5432 user=www-data password=www-data&quot;"/>
+  <contextParameter xmi:id="_RBdfE0HlEeqxNJCRKR--7g" comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" type="id_Directory" value="/tmp/talend/resources/"/>
+  <contextParameter xmi:id="_RBdfFEHlEeqxNJCRKR--7g" comment="Publish metadata or not in the CSW catalogue defined" name="publish_metadata" prompt="publish_metadata?" promptNeeded="false" type="id_Boolean" value="true"/>
+  <contextParameter xmi:id="_RBdfFUHlEeqxNJCRKR--7g" comment="Store the generated metadata file next to the analyzed file" name="metadata_file_with_source" prompt="metadata_file_with_source?" promptNeeded="false" type="id_Boolean" value="false"/>
+  <contextParameter xmi:id="_RBdfFkHlEeqxNJCRKR--7g" comment="The folder to create metadata records into" name="metadata_dir" prompt="metadata_dir?" promptNeeded="false" type="id_Directory" value="/tmp/talend/metadata/"/>
+  <contextParameter xmi:id="_RBdfF0HlEeqxNJCRKR--7g" comment="An EPSG code of a projection to use in case the projection could not be defined from the file" name="default_projection" prompt="default_projection?" promptNeeded="false" type="id_String" value="&quot;EPSG:4326&quot;"/>
+  <contextParameter xmi:id="_RBdfGEHlEeqxNJCRKR--7g" comment="" name="default_xmin" prompt="default_xmin?" promptNeeded="false" type="id_String" value="&quot;-180&quot;"/>
+  <contextParameter xmi:id="_RBdfGUHlEeqxNJCRKR--7g" comment="" name="default_ymin" prompt="default_ymin?" promptNeeded="false" type="id_String" value="&quot;-90&quot;"/>
+  <contextParameter xmi:id="_RBdfGkHlEeqxNJCRKR--7g" comment="" name="default_xmax" prompt="default_xmax?" promptNeeded="false" type="id_String" value="&quot;180&quot;"/>
+  <contextParameter xmi:id="_RBdfG0HlEeqxNJCRKR--7g" comment="" name="default_ymax" prompt="default_ymax?" promptNeeded="false" type="id_String" value="&quot;90&quot;"/>
+  <contextParameter xmi:id="_RBdfHEHlEeqxNJCRKR--7g" comment="Define the way to copy overview (ssh, ftp, copy)" name="overview_copy_mode" prompt="overview_copy_mode?" promptNeeded="false" type="id_String" value="&quot;copy&quot;"/>
+  <contextParameter xmi:id="_RBdfHUHlEeqxNJCRKR--7g" comment="The FTP host" name="ftp_host" prompt="ftp_host?" promptNeeded="false" type="id_String" value="null"/>
+  <contextParameter xmi:id="_RBdfHkHlEeqxNJCRKR--7g" comment="The FTP port" name="ftp_port" prompt="ftp_port?" promptNeeded="false" type="id_Integer" value="21"/>
+  <contextParameter xmi:id="_RBdfH0HlEeqxNJCRKR--7g" comment="The user name to log in the FTP server" name="ftp_username" prompt="ftp_username?" promptNeeded="false" type="id_String" value="null"/>
+  <contextParameter xmi:id="_RBdfIEHlEeqxNJCRKR--7g" comment="The user password" name="ftp_password" prompt="ftp_password?" promptNeeded="false" type="id_String" value="null"/>
+  <contextParameter xmi:id="_RBdfIUHlEeqxNJCRKR--7g" comment="The remove directory in the FTP server" name="ftp_dir" prompt="ftp_dir?" promptNeeded="false" type="id_String" value="null"/>
+  <contextParameter xmi:id="_RBdfIkHlEeqxNJCRKR--7g" comment="" name="ssh_host" prompt="ssh_host?" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
+  <contextParameter xmi:id="_RBdfI0HlEeqxNJCRKR--7g" comment="" name="ssh_port" prompt="ssh_port?" promptNeeded="false" type="id_Integer" value="22"/>
+  <contextParameter xmi:id="_RBdfJEHlEeqxNJCRKR--7g" comment="" name="ssh_username" prompt="ssh_username?" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
+  <contextParameter xmi:id="_RBdfJUHlEeqxNJCRKR--7g" comment="" name="ssh_password" prompt="ssh_password?" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
+  <contextParameter xmi:id="_RBdfJkHlEeqxNJCRKR--7g" comment="" name="ssh_dir" prompt="ssh_dir?" promptNeeded="false" type="id_String" value="&quot;/tmp/overview&quot;"/>
+  <contextParameter xmi:id="_RBdfJ0HlEeqxNJCRKR--7g" comment="Path to GDAL/OGR bin or empty if in system path" name="gdal_path" prompt="gdal_path?" promptNeeded="false" type="id_Directory" value=""/>
+  <contextParameter xmi:id="_RBdfKEHlEeqxNJCRKR--7g" comment="Metadata title prefix for vector" name="title_prefix_vector" prompt="title_prefix_vector?" promptNeeded="false" type="id_String" value="&quot;Vector file &quot;"/>
+  <contextParameter xmi:id="_RBdfKUHlEeqxNJCRKR--7g" comment="Metadata title prefix for RASTER" name="title_prefix_raster" prompt="title_prefix_raster?" promptNeeded="false" type="id_String" value="&quot;Raster file &quot;"/>
+  <contextParameter xmi:id="_RBdfKkHlEeqxNJCRKR--7g" comment="Metadata title prefix for feature catalog" name="title_prefix_fcat" prompt="title_prefix_fcat?" promptNeeded="false" type="id_String" value="&quot;Feature catalog &quot;"/>
+  <contextParameter xmi:id="_RBdfK0HlEeqxNJCRKR--7g" comment="Metadata title prefix for db tables" name="title_prefix_db" prompt="title_prefix_db?" promptNeeded="false" type="id_String" value="&quot;Table &quot;"/>
+  <contextParameter xmi:id="_RBdfLEHlEeqxNJCRKR--7g" comment="The log folder" name="log_dir" prompt="log_dir?" promptNeeded="false" type="id_Directory" value="/tmp/talend/logs/"/>
+  <contextParameter xmi:id="_RBdfLUHlEeqxNJCRKR--7g" comment="Scan for vector files" name="scan_vector" prompt="scan_vector?" promptNeeded="false" type="id_Boolean" value="true"/>
+  <contextParameter xmi:id="_RBdfLkHlEeqxNJCRKR--7g" comment="Scan for RASTER files" name="scan_raster" prompt="scan_raster?" promptNeeded="false" type="id_Boolean" value="true"/>
+  <contextParameter xmi:id="_RBdfL0HlEeqxNJCRKR--7g" comment="List of WFS to scan" name="service_list" prompt="service_list?" promptNeeded="false" type="id_List Of Value" value=""/>
+  <contextParameter xmi:id="_RBdfMEHlEeqxNJCRKR--7g" comment="True to ping the job and return status response (use when deploy as webservice)" name="ping" prompt="ping?" promptNeeded="false" type="id_Boolean" value="false"/>
+  <contextParameter xmi:id="_RBdfMUHlEeqxNJCRKR--7g" comment="Metadata title prefix for maps" name="title_prefix_map" prompt="title_prefix_map?" promptNeeded="false" type="id_String" value="&quot;Map &quot;"/>
+  <contextParameter xmi:id="_RBdfMkHlEeqxNJCRKR--7g" comment="Scan for maps" name="scan_map" prompt="scan_map?" promptNeeded="false" type="id_Boolean" value="false"/>
+  <contextParameter xmi:id="_RBdfM0HlEeqxNJCRKR--7g" comment="Map file extensions" name="map_file_extension" prompt="map_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.qgs&quot;"/>
+  <contextParameter xmi:id="_RBdfNEHlEeqxNJCRKR--7g" comment="The folder to scan for maps" name="map_data_dir" prompt="map_data_dir?" promptNeeded="false" type="id_Directory" value="/tmp/talend/maps"/>
+  <contextParameter xmi:id="_RBdfNUHlEeqxNJCRKR--7g" comment="For each datasources find in a map, create metadata" name="scan_map_and_datasources" prompt="scan_map_and_datasources?" promptNeeded="false" type="id_Boolean" value="true"/>
+  <contextParameter xmi:id="_RBdfNkHlEeqxNJCRKR--7g" comment="Always run update by sending the complete metadata record (not only some properties like bounding box)" name="publish_metadata_full_update" prompt="publish_metadata_full_update?" promptNeeded="false" type="id_Boolean" value="false"/>
 </talendfile:ContextType>

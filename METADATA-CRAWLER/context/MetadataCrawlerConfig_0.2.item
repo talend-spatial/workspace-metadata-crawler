@@ -1,221 +1,221 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
-  <talendfile:ContextType confirmationNeeded="false" name="test">
-    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" type="id_Directory" value="a"/>
-    <contextParameter comment="" name="uuidCreatedFromFilePath" prompt="uuidCreatedFromFilePath?" promptNeeded="false" type="id_Boolean" value="true"/>
-    <contextParameter comment="" name="data_dir_uuid_ignored_path" prompt="data_dir_uuid_ignored_path?" promptNeeded="false" type="id_Directory" value="/data/"/>
-    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" type="id_Directory" value="/var/app/talend/config/"/>
-    <contextParameter comment="The output folder" name="tmp_dir" prompt="tmp_dir?" promptNeeded="false" type="id_Directory" value="/tmp/scan/tmp/"/>
-    <contextParameter comment="The folder to create metadata records into" name="metadata_dir" prompt="metadata_dir?" promptNeeded="false" type="id_Directory" value="/tmp/scan/metadata/"/>
-    <contextParameter comment="The log folder" name="log_dir" prompt="log_dir?" promptNeeded="false" type="id_Directory" value="/tmp/scan/logs/"/>
-    <contextParameter comment="Publish metadata or not in the CSW catalogue defined" name="publish_metadata" prompt="publish_metadata?" promptNeeded="false" type="id_Boolean" value="true"/>
-    <contextParameter comment="The CSW server to push metadata records into" name="csw_server_host" prompt="csw_server_host?" promptNeeded="false" type="id_String" value="&quot;http://localhost:8080/geonetwork/srv/eng/csw-publication&quot;"/>
-    <contextParameter comment="The CSW user name" name="csw_username" prompt="csw_username?" promptNeeded="false" type="id_String" value="&quot;admin&quot;"/>
-    <contextParameter comment="The CSW user password" name="csw_password" prompt="csw_password?" promptNeeded="false" type="id_Password" value="RX/CTwlUNiA="/>
-    <contextParameter comment="Scan for vector files" name="scan_vector" prompt="scan_vector?" promptNeeded="false" type="id_Boolean" value="true"/>
-    <contextParameter comment="Vector file extensions" name="vector_file_extension" prompt="vector_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.kml|.*\\.shp|.*\\.mif|.*\\.tab|.*\\.gml|.*\\.dxf|.*\\.dwg|.*\\.itf|.*\\.gdb&quot;"/>
-    <contextParameter comment="Scan for RASTER files" name="scan_raster" prompt="scan_raster?" promptNeeded="false" type="id_Boolean" value="true"/>
-    <contextParameter comment="RASTER file extensions" name="raster_file_extension" prompt="raster_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.tif|.*\\.tiff|.*\\.ecw|.*\\.asc|.*\\.rst|.*\\.grd|.*\\.jpg|.*\\.xyz&quot;"/>
-    <contextParameter comment="List of database to scan" name="db_list" prompt="db_list?" promptNeeded="false" type="id_List Of Value" value=""/>
-    <contextParameter comment="Hide database connection information" name="db_password_hide" prompt="db_password_hide?" promptNeeded="false" type="id_Boolean" value="true"/>
-    <contextParameter comment="List of WFS to scan" name="service_list" prompt="service_list?" promptNeeded="false" type="id_List Of Value" value=""/>
-    <contextParameter comment="Scan for maps" name="scan_map" prompt="scan_map?" promptNeeded="false" type="id_Boolean" value="true"/>
-    <contextParameter comment="Map file extensions" name="map_file_extension" prompt="map_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.qgs&quot;"/>
-    <contextParameter comment="The folder to scan for maps" name="map_data_dir" prompt="map_data_dir?" promptNeeded="false" type="id_Directory" value="/home/francois/data/test/toscan/"/>
-    <contextParameter comment="For each datasources find in a map, create metadata" name="scan_map_and_datasources" prompt="scan_map_and_datasources?" promptNeeded="false" type="id_Boolean" value="true"/>
-    <contextParameter comment="Metadata title prefix for vector" name="title_prefix_vector" prompt="title_prefix_vector?" promptNeeded="false" type="id_String" value="&quot;Vector file &quot;"/>
-    <contextParameter comment="Metadata title prefix for RASTER" name="title_prefix_raster" prompt="title_prefix_raster?" promptNeeded="false" type="id_String" value="&quot;Raster file &quot;"/>
-    <contextParameter comment="Metadata title prefix for feature catalog" name="title_prefix_fcat" prompt="title_prefix_fcat?" promptNeeded="false" type="id_String" value="&quot;Feature catalog &quot;"/>
-    <contextParameter comment="Metadata title prefix for db tables" name="title_prefix_db" prompt="title_prefix_db?" promptNeeded="false" type="id_String" value="&quot;Table &quot;"/>
-    <contextParameter comment="Metadata title prefix for maps" name="title_prefix_map" prompt="title_prefix_map?" promptNeeded="false" type="id_String" value="&quot;Map &quot;"/>
-    <contextParameter comment="An EPSG code of a projection to use in case the projection could not be defined from the file" name="default_projection" prompt="default_projection?" promptNeeded="false" type="id_String" value="&quot;EPSG:4326&quot;"/>
-    <contextParameter comment="" name="default_xmin" prompt="default_xmin?" promptNeeded="false" type="id_String" value="&quot;-180&quot;"/>
-    <contextParameter comment="" name="default_ymin" prompt="default_ymin?" promptNeeded="false" type="id_String" value="&quot;-90&quot;"/>
-    <contextParameter comment="" name="default_xmax" prompt="default_xmax?" promptNeeded="false" type="id_String" value="&quot;180&quot;"/>
-    <contextParameter comment="" name="default_ymax" prompt="default_ymax?" promptNeeded="false" type="id_String" value="&quot;90&quot;"/>
-    <contextParameter comment="Create or not overview files" name="create_overview" prompt="create_overview?" promptNeeded="false" type="id_Boolean" value="true"/>
-    <contextParameter comment="" name="overview_url_prefix" prompt="overview_url_prefix?" promptNeeded="false" type="id_String" value="&quot;http://localhost/overview/&quot;"/>
-    <contextParameter comment="The width of the overview to generate" name="overview_width" prompt="overview_width?" promptNeeded="false" type="id_String" value="&quot;800&quot;"/>
-    <contextParameter comment="The height of the overview to generate" name="overview_height" prompt="overview_height?" promptNeeded="false" type="id_String" value="&quot;800&quot;"/>
-    <contextParameter comment="" name="pack_data" prompt="pack_data?" promptNeeded="false" type="id_Boolean" value="true"/>
-    <contextParameter comment="" name="pack_data_dir" prompt="pack_data_dir?" promptNeeded="false" type="id_Directory" value="/tmp/scan/download/"/>
-    <contextParameter comment="" name="pack_data_create_checksum" prompt="pack_data_create_checksum?" promptNeeded="false" type="id_Boolean" value="true"/>
-    <contextParameter comment="" name="pack_data_publication_dir" prompt="pack_data_publication_dir?" promptNeeded="false" type="id_Directory" value="/var/www/html/data/"/>
-    <contextParameter comment="" name="pack_data_url_prefix" prompt="pack_data_url_prefix?" promptNeeded="false" type="id_String" value="&quot;http://localhost/data/&quot;"/>
-    <contextParameter comment="" name="pack_data_link_template" prompt="pack_data_link_template?" promptNeeded="false" type="id_String" value="&quot;Download data in {{format}} format&quot;"/>
-    <contextParameter comment="" name="pack_data_publish" prompt="pack_data_publish?" promptNeeded="false" type="id_Boolean" value="true"/>
-    <contextParameter comment="Define the way to copy files (ssh, ftp, copy)" name="overview_and_file_copy_mode" prompt="overview_and_file_copy_mode?" promptNeeded="false" type="id_String" value="&quot;copy&quot;"/>
-    <contextParameter comment="The FTP host" name="ftp_host" prompt="ftp_host?" promptNeeded="false" type="id_String" value="null"/>
-    <contextParameter comment="The FTP port" name="ftp_port" prompt="ftp_port?" promptNeeded="false" type="id_Integer" value="21"/>
-    <contextParameter comment="The user name to log in the FTP server" name="ftp_username" prompt="ftp_username?" promptNeeded="false" type="id_String" value="null"/>
-    <contextParameter comment="The user password" name="ftp_password" prompt="ftp_password?" promptNeeded="false" type="id_Password" value=""/>
-    <contextParameter comment="The remove directory in the FTP server" name="overview_publication_dir" prompt="overview_publication_dir?" promptNeeded="false" type="id_String" value="/var/www/html/overview/"/>
-    <contextParameter comment="" name="ssh_host" prompt="ssh_host?" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
-    <contextParameter comment="" name="ssh_port" prompt="ssh_port?" promptNeeded="false" type="id_Integer" value="22"/>
-    <contextParameter comment="" name="ssh_username" prompt="ssh_username?" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
-    <contextParameter comment="" name="ssh_password" prompt="ssh_password?" promptNeeded="false" type="id_Password" value=""/>
-    <contextParameter comment="Store the generated metadata file next to the analyzed file" name="metadata_file_with_source" prompt="metadata_file_with_source?" promptNeeded="false" type="id_Boolean" value="false"/>
-    <contextParameter comment="Path to GDAL/OGR bin or empty if in system path" name="gdal_path" prompt="gdal_path?" promptNeeded="false" type="id_Directory" value=""/>
-    <contextParameter comment="True to ping the job and return status response (use when deploy as webservice)" name="ping" prompt="ping?" promptNeeded="false" type="id_Boolean" value="false"/>
-    <contextParameter comment="Always run update by sending the complete metadata record (not only some properties like bounding box)" name="publish_metadata_full_update" prompt="publish_metadata_full_update?" promptNeeded="false" type="id_Boolean" value="false"/>
-    <contextParameter comment="" name="mdIndividualName" prompt="mdIndividualName?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="mdOrganisationName" prompt="mdOrganisationName?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="mdEmail" prompt="mdEmail?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="mdPositionName" prompt="mdPositionName?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="mdVoice" prompt="mdVoice?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="mdDeliveryPoint" prompt="mdDeliveryPoint?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="mdCity" prompt="mdCity?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="mdAdministrativeArea" prompt="mdAdministrativeArea?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="mdPostalCode" prompt="mdPostalCode?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="mdCountry" prompt="mdCountry?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="individualName" prompt="individualName?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="organisationName" prompt="organisationName?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="positionName" prompt="positionName?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="voice" prompt="voice?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="deliveryPoint" prompt="deliveryPoint?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="city" prompt="city?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="administrativeArea" prompt="administrativeArea?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="postalCode" prompt="postalCode?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="country" prompt="country?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="email" prompt="email?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="geoserver_server_host" prompt="geoserver_server_host?" promptNeeded="false" type="id_String" value="&quot;http://localhost:8081/geoserver/rest&quot;"/>
-    <contextParameter comment="" name="geoserver_username" prompt="geoserver_username?" promptNeeded="false" type="id_String" value="&quot;admin&quot;"/>
-    <contextParameter comment="" name="geoserver_password" prompt="geoserver_password?" promptNeeded="false" type="id_Password" value=""/>
-    <contextParameter comment="Vector file extensions supported for publication in mapservers" name="vector_file_extension_for_geopublication" prompt="vector_file_extension_for_geopublication?" promptNeeded="false" type="id_String" value="&quot;.*\\.shp&quot;"/>
-    <contextParameter comment="RASTER file extensions supported for publication in mapservers" name="raster_file_extension_for_geopublication" prompt="raster_file_extension_for_geopublication?" promptNeeded="false" type="id_String" value="&quot;.*\\.tif|.*\\.tiff&quot;"/>
-    <contextParameter comment="" name="geosever_namespace_prefix" prompt="geosever_namespace_prefix?" promptNeeded="false" type="id_String" value="&quot;gn&quot;"/>
-    <contextParameter comment="" name="bboxcheck_xmin" prompt="bboxcheck_xmin?" promptNeeded="false" type="id_Double" value="-180"/>
-    <contextParameter comment="" name="bboxcheck_xmax" prompt="bboxcheck_xmax?" promptNeeded="false" type="id_Double" value="180"/>
-    <contextParameter comment="" name="bboxcheck_ymin" prompt="bboxcheck_ymin?" promptNeeded="false" type="id_Double" value="-90"/>
-    <contextParameter comment="" name="bboxcheck_ymax" prompt="bboxcheck_ymax?" promptNeeded="false" type="id_Double" value="90"/>
-    <contextParameter comment="" name="statusArchiveFlag" prompt="statusArchiveFlag?" promptNeeded="false" type="id_String" value="&quot;archive&quot;"/>
-    <contextParameter comment="" name="statusObsoleteFlag" prompt="statusObsoleteFlag?" promptNeeded="false" type="id_String" value="&quot;obsolete&quot;"/>
-    <contextParameter comment="" name="statusUnderDevelopmentFlag" prompt="statusUnderDevelopmentFlag?" promptNeeded="false" type="id_String" value="&quot;underdevelopment&quot;"/>
-    <contextParameter comment="" name="mail_server" prompt="mail_server?" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
-    <contextParameter comment="" name="mail_port" prompt="mail_port?" promptNeeded="false" type="id_String" value="&quot;465&quot;"/>
-    <contextParameter comment="" name="mail_username" prompt="mail_username?" promptNeeded="false" type="id_String" value="&quot;username&quot;"/>
-    <contextParameter comment="" name="mail_password" prompt="mail_password?" promptNeeded="false" type="id_Password" value="orisbc/xTqQ="/>
-    <contextParameter comment="" name="mail_send_to_emails" prompt="mail_send_to_emails?" promptNeeded="false" type="id_String" value="&quot;gis-guy@myorganization.org&quot;"/>
-    <contextParameter comment="" name="mail_from_email" prompt="mail_from_email?" promptNeeded="false" type="id_String" value="&quot;metadata-scan-alert@myorganization.org&quot;"/>
-    <contextParameter comment="" name="mail_subject_outofextent" prompt="mail_subject_outofextent?" promptNeeded="false" type="id_String" value="&quot;Metadata scan / Alert / Layers out of extent&quot;"/>
-    <contextParameter comment="" name="mail_msg_outofextent" prompt="mail_msg_outofextent?" promptNeeded="false" type="id_String" value="&quot; layer(s) found having extent outside the restricted extent. Check that extent and projection are valid.  \nThe metadata scanner&quot;"/>
-    <contextParameter comment="" name="mail_subject_log" prompt="mail_subject_log?" promptNeeded="false" type="id_String" value="&quot;Metadata scan / Notification / Log file for last scan: &quot;"/>
-    <contextParameter comment="" name="mail_msg_log" prompt="mail_msg_log?" promptNeeded="false" type="id_String" value="&quot;Hi, \nattached to this email, you will find the log file of last scan. Enjoy!.  \nThe metadata scanner&quot;"/>
-    <contextParameter comment="" name="mail_subject_check_resource" prompt="mail_subject_check_resource?" promptNeeded="false" type="id_String" value="&quot;Metadata scan / Notification / Metadata records link to non existing files &quot;"/>
-    <contextParameter comment="" name="mail_msg_check_resource" prompt="mail_msg_check_resource?" promptNeeded="false" type="id_String" value="&quot; record(s) found having link to file on the network which does not exist anymore. Check those records and see if files were deleted or moved.  \nThe metadata scanner&quot;"/>
-    <contextParameter comment="" name="catalog_search_records_url" prompt="catalog_search_records_url?" promptNeeded="false" type="id_String" value="&quot;http://localhost:8080/geonetwork/srv/fre/q?fast=index&quot;"/>
-    <contextParameter comment="" name="csv_file_list_of_layers_out_of_extent" prompt="csv_file_list_of_layers_out_of_extent?" promptNeeded="false" type="id_String" value="&quot;listOfLayersOutOfExtent.csv&quot;"/>
-    <contextParameter comment="" name="csv_file_list_of_record_with_file_not_found" prompt="csv_file_list_of_record_with_file_not_found?" promptNeeded="false" type="id_String" value="&quot;listOfRecordsWithFileNotFound.csv&quot;"/>
-    <contextParameter comment="" name="map_missing_datasource_msg" prompt="map_missing_datasource_msg?" promptNeeded="false" type="id_String" value="&quot;List of missing map datasources:%n&quot;"/>
-    <contextParameter comment="" name="map_missing_datasource_status" prompt="map_missing_datasource_status?" promptNeeded="false" type="id_String" value="&quot;underDevelopment&quot;"/>
+  <talendfile:ContextType xmi:id="_RCGYMEHlEeqxNJCRKR--7g" confirmationNeeded="false" name="test">
+    <contextParameter xmi:id="_RCGYMUHlEeqxNJCRKR--7g" comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" type="id_Directory" value="/data/geo/"/>
+    <contextParameter xmi:id="_RCGYMkHlEeqxNJCRKR--7g" comment="" name="uuidCreatedFromFilePath" prompt="uuidCreatedFromFilePath?" promptNeeded="false" type="id_Boolean" value="true"/>
+    <contextParameter xmi:id="_RCGYM0HlEeqxNJCRKR--7g" comment="" name="data_dir_uuid_ignored_path" prompt="data_dir_uuid_ignored_path?" promptNeeded="false" type="id_Directory" value="/data/"/>
+    <contextParameter xmi:id="_RCGYNEHlEeqxNJCRKR--7g" comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" type="id_Directory" value="/data/geo/config/"/>
+    <contextParameter xmi:id="_RCGYNUHlEeqxNJCRKR--7g" comment="The output folder" name="tmp_dir" prompt="tmp_dir?" promptNeeded="false" type="id_Directory" value="/tmp/scan/tmp/"/>
+    <contextParameter xmi:id="_RCGYNkHlEeqxNJCRKR--7g" comment="The folder to create metadata records into" name="metadata_dir" prompt="metadata_dir?" promptNeeded="false" type="id_Directory" value="/tmp/scan/metadata/"/>
+    <contextParameter xmi:id="_RCGYN0HlEeqxNJCRKR--7g" comment="The log folder" name="log_dir" prompt="log_dir?" promptNeeded="false" type="id_Directory" value="/tmp/scan/logs/"/>
+    <contextParameter xmi:id="_RCGYOEHlEeqxNJCRKR--7g" comment="Publish metadata or not in the CSW catalogue defined" name="publish_metadata" prompt="publish_metadata?" promptNeeded="false" type="id_Boolean" value="true"/>
+    <contextParameter xmi:id="_RCGYOUHlEeqxNJCRKR--7g" comment="The CSW server to push metadata records into" name="csw_server_host" prompt="csw_server_host?" promptNeeded="false" type="id_String" value="&quot;http://localhost:8080/geonetwork/srv/eng/csw-publication&quot;"/>
+    <contextParameter xmi:id="_RCGYOkHlEeqxNJCRKR--7g" comment="The CSW user name" name="csw_username" prompt="csw_username?" promptNeeded="false" type="id_String" value="&quot;admin&quot;"/>
+    <contextParameter xmi:id="_RCGYO0HlEeqxNJCRKR--7g" comment="The CSW user password" name="csw_password" prompt="csw_password?" promptNeeded="false" type="id_Password" value="RX/CTwlUNiA="/>
+    <contextParameter xmi:id="_RCGYPEHlEeqxNJCRKR--7g" comment="Scan for vector files" name="scan_vector" prompt="scan_vector?" promptNeeded="false" type="id_Boolean" value="true"/>
+    <contextParameter xmi:id="_RCGYPUHlEeqxNJCRKR--7g" comment="Vector file extensions" name="vector_file_extension" prompt="vector_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.kml|.*\\.shp|.*\\.mif|.*\\.tab|.*\\.gml|.*\\.dxf|.*\\.dwg|.*\\.itf|.*\\.gdb&quot;"/>
+    <contextParameter xmi:id="_RCGYPkHlEeqxNJCRKR--7g" comment="Scan for RASTER files" name="scan_raster" prompt="scan_raster?" promptNeeded="false" type="id_Boolean" value="true"/>
+    <contextParameter xmi:id="_RCGYP0HlEeqxNJCRKR--7g" comment="RASTER file extensions" name="raster_file_extension" prompt="raster_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.tif|.*\\.tiff|.*\\.ecw|.*\\.asc|.*\\.rst|.*\\.grd|.*\\.jpg|.*\\.xyz&quot;"/>
+    <contextParameter xmi:id="_RCGYQEHlEeqxNJCRKR--7g" comment="List of database to scan" name="db_list" prompt="db_list?" promptNeeded="false" type="id_List Of Value" value=""/>
+    <contextParameter xmi:id="_RCGYQUHlEeqxNJCRKR--7g" comment="Hide database connection information" name="db_password_hide" prompt="db_password_hide?" promptNeeded="false" type="id_Boolean" value="true"/>
+    <contextParameter xmi:id="_RCGYQkHlEeqxNJCRKR--7g" comment="List of WFS to scan" name="service_list" prompt="service_list?" promptNeeded="false" type="id_List Of Value" value=""/>
+    <contextParameter xmi:id="_RCGYQ0HlEeqxNJCRKR--7g" comment="Scan for maps" name="scan_map" prompt="scan_map?" promptNeeded="false" type="id_Boolean" value="true"/>
+    <contextParameter xmi:id="_RCGYREHlEeqxNJCRKR--7g" comment="Map file extensions" name="map_file_extension" prompt="map_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.qgs&quot;"/>
+    <contextParameter xmi:id="_RCGYRUHlEeqxNJCRKR--7g" comment="The folder to scan for maps" name="map_data_dir" prompt="map_data_dir?" promptNeeded="false" type="id_Directory" value="/"/>
+    <contextParameter xmi:id="_RCGYRkHlEeqxNJCRKR--7g" comment="For each datasources find in a map, create metadata" name="scan_map_and_datasources" prompt="scan_map_and_datasources?" promptNeeded="false" type="id_Boolean" value="true"/>
+    <contextParameter xmi:id="_RCGYR0HlEeqxNJCRKR--7g" comment="Metadata title prefix for vector" name="title_prefix_vector" prompt="title_prefix_vector?" promptNeeded="false" type="id_String" value="&quot;Vector file &quot;"/>
+    <contextParameter xmi:id="_RCGYSEHlEeqxNJCRKR--7g" comment="Metadata title prefix for RASTER" name="title_prefix_raster" prompt="title_prefix_raster?" promptNeeded="false" type="id_String" value="&quot;Raster file &quot;"/>
+    <contextParameter xmi:id="_RCGYSUHlEeqxNJCRKR--7g" comment="Metadata title prefix for feature catalog" name="title_prefix_fcat" prompt="title_prefix_fcat?" promptNeeded="false" type="id_String" value="&quot;Feature catalog &quot;"/>
+    <contextParameter xmi:id="_RCGYSkHlEeqxNJCRKR--7g" comment="Metadata title prefix for db tables" name="title_prefix_db" prompt="title_prefix_db?" promptNeeded="false" type="id_String" value="&quot;Table &quot;"/>
+    <contextParameter xmi:id="_RCGYS0HlEeqxNJCRKR--7g" comment="Metadata title prefix for maps" name="title_prefix_map" prompt="title_prefix_map?" promptNeeded="false" type="id_String" value="&quot;Map &quot;"/>
+    <contextParameter xmi:id="_RCGYTEHlEeqxNJCRKR--7g" comment="An EPSG code of a projection to use in case the projection could not be defined from the file" name="default_projection" prompt="default_projection?" promptNeeded="false" type="id_String" value="&quot;EPSG:4326&quot;"/>
+    <contextParameter xmi:id="_RCGYTUHlEeqxNJCRKR--7g" comment="" name="default_xmin" prompt="default_xmin?" promptNeeded="false" type="id_String" value="&quot;-180&quot;"/>
+    <contextParameter xmi:id="_RCGYTkHlEeqxNJCRKR--7g" comment="" name="default_ymin" prompt="default_ymin?" promptNeeded="false" type="id_String" value="&quot;-90&quot;"/>
+    <contextParameter xmi:id="_RCGYT0HlEeqxNJCRKR--7g" comment="" name="default_xmax" prompt="default_xmax?" promptNeeded="false" type="id_String" value="&quot;180&quot;"/>
+    <contextParameter xmi:id="_RCGYUEHlEeqxNJCRKR--7g" comment="" name="default_ymax" prompt="default_ymax?" promptNeeded="false" type="id_String" value="&quot;90&quot;"/>
+    <contextParameter xmi:id="_RCGYUUHlEeqxNJCRKR--7g" comment="Create or not overview files" name="create_overview" prompt="create_overview?" promptNeeded="false" type="id_Boolean" value="true"/>
+    <contextParameter xmi:id="_RCGYUkHlEeqxNJCRKR--7g" comment="" name="overview_url_prefix" prompt="overview_url_prefix?" promptNeeded="false" type="id_String" value="&quot;http://localhost/overview/&quot;"/>
+    <contextParameter xmi:id="_RCGYU0HlEeqxNJCRKR--7g" comment="The width of the overview to generate" name="overview_width" prompt="overview_width?" promptNeeded="false" type="id_String" value="&quot;800&quot;"/>
+    <contextParameter xmi:id="_RCGYVEHlEeqxNJCRKR--7g" comment="The height of the overview to generate" name="overview_height" prompt="overview_height?" promptNeeded="false" type="id_String" value="&quot;800&quot;"/>
+    <contextParameter xmi:id="_RCGYVUHlEeqxNJCRKR--7g" comment="" name="pack_data" prompt="pack_data?" promptNeeded="false" type="id_Boolean" value="true"/>
+    <contextParameter xmi:id="_RCGYVkHlEeqxNJCRKR--7g" comment="" name="pack_data_dir" prompt="pack_data_dir?" promptNeeded="false" type="id_Directory" value="/tmp/scan/download/"/>
+    <contextParameter xmi:id="_RCGYV0HlEeqxNJCRKR--7g" comment="" name="pack_data_create_checksum" prompt="pack_data_create_checksum?" promptNeeded="false" type="id_Boolean" value="true"/>
+    <contextParameter xmi:id="_RCGYWEHlEeqxNJCRKR--7g" comment="" name="pack_data_publication_dir" prompt="pack_data_publication_dir?" promptNeeded="false" type="id_Directory" value="/tmp/scan/"/>
+    <contextParameter xmi:id="_RCGYWUHlEeqxNJCRKR--7g" comment="" name="pack_data_url_prefix" prompt="pack_data_url_prefix?" promptNeeded="false" type="id_String" value="&quot;http://localhost/data/&quot;"/>
+    <contextParameter xmi:id="_RCGYWkHlEeqxNJCRKR--7g" comment="" name="pack_data_link_template" prompt="pack_data_link_template?" promptNeeded="false" type="id_String" value="&quot;Download data in {{format}} format&quot;"/>
+    <contextParameter xmi:id="_RCGYW0HlEeqxNJCRKR--7g" comment="" name="pack_data_publish" prompt="pack_data_publish?" promptNeeded="false" type="id_Boolean" value="true"/>
+    <contextParameter xmi:id="_RCGYXEHlEeqxNJCRKR--7g" comment="Define the way to copy files (ssh, ftp, copy)" name="overview_and_file_copy_mode" prompt="overview_and_file_copy_mode?" promptNeeded="false" type="id_String" value="&quot;copy&quot;"/>
+    <contextParameter xmi:id="_RCGYXUHlEeqxNJCRKR--7g" comment="The FTP host" name="ftp_host" prompt="ftp_host?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter xmi:id="_RCGYXkHlEeqxNJCRKR--7g" comment="The FTP port" name="ftp_port" prompt="ftp_port?" promptNeeded="false" type="id_Integer" value="21"/>
+    <contextParameter xmi:id="_RCGYX0HlEeqxNJCRKR--7g" comment="The user name to log in the FTP server" name="ftp_username" prompt="ftp_username?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter xmi:id="_RCGYYEHlEeqxNJCRKR--7g" comment="The user password" name="ftp_password" prompt="ftp_password?" promptNeeded="false" type="id_Password" value=""/>
+    <contextParameter xmi:id="_RCGYYUHlEeqxNJCRKR--7g" comment="The remove directory in the FTP server" name="overview_publication_dir" prompt="overview_publication_dir?" promptNeeded="false" type="id_String" value="/var/www/html/overview/"/>
+    <contextParameter xmi:id="_RCGYYkHlEeqxNJCRKR--7g" comment="" name="ssh_host" prompt="ssh_host?" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
+    <contextParameter xmi:id="_RCGYY0HlEeqxNJCRKR--7g" comment="" name="ssh_port" prompt="ssh_port?" promptNeeded="false" type="id_Integer" value="22"/>
+    <contextParameter xmi:id="_RCGYZEHlEeqxNJCRKR--7g" comment="" name="ssh_username" prompt="ssh_username?" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
+    <contextParameter xmi:id="_RCG_QEHlEeqxNJCRKR--7g" comment="" name="ssh_password" prompt="ssh_password?" promptNeeded="false" type="id_Password" value=""/>
+    <contextParameter xmi:id="_RCG_QUHlEeqxNJCRKR--7g" comment="Store the generated metadata file next to the analyzed file" name="metadata_file_with_source" prompt="metadata_file_with_source?" promptNeeded="false" type="id_Boolean" value="false"/>
+    <contextParameter xmi:id="_RCG_QkHlEeqxNJCRKR--7g" comment="Path to GDAL/OGR bin or empty if in system path" name="gdal_path" prompt="gdal_path?" promptNeeded="false" type="id_Directory" value=""/>
+    <contextParameter xmi:id="_RCG_Q0HlEeqxNJCRKR--7g" comment="True to ping the job and return status response (use when deploy as webservice)" name="ping" prompt="ping?" promptNeeded="false" type="id_Boolean" value="false"/>
+    <contextParameter xmi:id="_RCG_REHlEeqxNJCRKR--7g" comment="Always run update by sending the complete metadata record (not only some properties like bounding box)" name="publish_metadata_full_update" prompt="publish_metadata_full_update?" promptNeeded="false" type="id_Boolean" value="false"/>
+    <contextParameter xmi:id="_RCG_RUHlEeqxNJCRKR--7g" comment="" name="mdIndividualName" prompt="mdIndividualName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_RkHlEeqxNJCRKR--7g" comment="" name="mdOrganisationName" prompt="mdOrganisationName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_R0HlEeqxNJCRKR--7g" comment="" name="mdEmail" prompt="mdEmail?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_SEHlEeqxNJCRKR--7g" comment="" name="mdPositionName" prompt="mdPositionName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_SUHlEeqxNJCRKR--7g" comment="" name="mdVoice" prompt="mdVoice?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_SkHlEeqxNJCRKR--7g" comment="" name="mdDeliveryPoint" prompt="mdDeliveryPoint?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_S0HlEeqxNJCRKR--7g" comment="" name="mdCity" prompt="mdCity?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_TEHlEeqxNJCRKR--7g" comment="" name="mdAdministrativeArea" prompt="mdAdministrativeArea?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_TUHlEeqxNJCRKR--7g" comment="" name="mdPostalCode" prompt="mdPostalCode?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_TkHlEeqxNJCRKR--7g" comment="" name="mdCountry" prompt="mdCountry?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_T0HlEeqxNJCRKR--7g" comment="" name="individualName" prompt="individualName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_UEHlEeqxNJCRKR--7g" comment="" name="organisationName" prompt="organisationName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_UUHlEeqxNJCRKR--7g" comment="" name="positionName" prompt="positionName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_UkHlEeqxNJCRKR--7g" comment="" name="voice" prompt="voice?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_U0HlEeqxNJCRKR--7g" comment="" name="deliveryPoint" prompt="deliveryPoint?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_VEHlEeqxNJCRKR--7g" comment="" name="city" prompt="city?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_VUHlEeqxNJCRKR--7g" comment="" name="administrativeArea" prompt="administrativeArea?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_VkHlEeqxNJCRKR--7g" comment="" name="postalCode" prompt="postalCode?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_V0HlEeqxNJCRKR--7g" comment="" name="country" prompt="country?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_WEHlEeqxNJCRKR--7g" comment="" name="email" prompt="email?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_WUHlEeqxNJCRKR--7g" comment="" name="geoserver_server_host" prompt="geoserver_server_host?" promptNeeded="false" type="id_String" value="&quot;http://localhost:8081/geoserver/rest&quot;"/>
+    <contextParameter xmi:id="_RCG_WkHlEeqxNJCRKR--7g" comment="" name="geoserver_username" prompt="geoserver_username?" promptNeeded="false" type="id_String" value="&quot;admin&quot;"/>
+    <contextParameter xmi:id="_RCG_W0HlEeqxNJCRKR--7g" comment="" name="geoserver_password" prompt="geoserver_password?" promptNeeded="false" type="id_Password" value=""/>
+    <contextParameter xmi:id="_RCG_XEHlEeqxNJCRKR--7g" comment="Vector file extensions supported for publication in mapservers" name="vector_file_extension_for_geopublication" prompt="vector_file_extension_for_geopublication?" promptNeeded="false" type="id_String" value="&quot;.*\\.shp&quot;"/>
+    <contextParameter xmi:id="_RCG_XUHlEeqxNJCRKR--7g" comment="RASTER file extensions supported for publication in mapservers" name="raster_file_extension_for_geopublication" prompt="raster_file_extension_for_geopublication?" promptNeeded="false" type="id_String" value="&quot;.*\\.tif|.*\\.tiff&quot;"/>
+    <contextParameter xmi:id="_RCG_XkHlEeqxNJCRKR--7g" comment="" name="geosever_namespace_prefix" prompt="geosever_namespace_prefix?" promptNeeded="false" type="id_String" value="&quot;gn&quot;"/>
+    <contextParameter xmi:id="_RCG_X0HlEeqxNJCRKR--7g" comment="" name="bboxcheck_xmin" prompt="bboxcheck_xmin?" promptNeeded="false" type="id_Double" value="-180"/>
+    <contextParameter xmi:id="_RCG_YEHlEeqxNJCRKR--7g" comment="" name="bboxcheck_xmax" prompt="bboxcheck_xmax?" promptNeeded="false" type="id_Double" value="180"/>
+    <contextParameter xmi:id="_RCG_YUHlEeqxNJCRKR--7g" comment="" name="bboxcheck_ymin" prompt="bboxcheck_ymin?" promptNeeded="false" type="id_Double" value="-90"/>
+    <contextParameter xmi:id="_RCG_YkHlEeqxNJCRKR--7g" comment="" name="bboxcheck_ymax" prompt="bboxcheck_ymax?" promptNeeded="false" type="id_Double" value="90"/>
+    <contextParameter xmi:id="_RCG_Y0HlEeqxNJCRKR--7g" comment="" name="statusArchiveFlag" prompt="statusArchiveFlag?" promptNeeded="false" type="id_String" value="&quot;archive&quot;"/>
+    <contextParameter xmi:id="_RCG_ZEHlEeqxNJCRKR--7g" comment="" name="statusObsoleteFlag" prompt="statusObsoleteFlag?" promptNeeded="false" type="id_String" value="&quot;obsolete&quot;"/>
+    <contextParameter xmi:id="_RCG_ZUHlEeqxNJCRKR--7g" comment="" name="statusUnderDevelopmentFlag" prompt="statusUnderDevelopmentFlag?" promptNeeded="false" type="id_String" value="&quot;underdevelopment&quot;"/>
+    <contextParameter xmi:id="_RCG_ZkHlEeqxNJCRKR--7g" comment="" name="mail_server" prompt="mail_server?" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
+    <contextParameter xmi:id="_RCG_Z0HlEeqxNJCRKR--7g" comment="" name="mail_port" prompt="mail_port?" promptNeeded="false" type="id_String" value="&quot;465&quot;"/>
+    <contextParameter xmi:id="_RCG_aEHlEeqxNJCRKR--7g" comment="" name="mail_username" prompt="mail_username?" promptNeeded="false" type="id_String" value="&quot;username&quot;"/>
+    <contextParameter xmi:id="_RCG_aUHlEeqxNJCRKR--7g" comment="" name="mail_password" prompt="mail_password?" promptNeeded="false" type="id_Password" value="orisbc/xTqQ="/>
+    <contextParameter xmi:id="_RCG_akHlEeqxNJCRKR--7g" comment="" name="mail_send_to_emails" prompt="mail_send_to_emails?" promptNeeded="false" type="id_String" value="&quot;gis-guy@myorganization.org&quot;"/>
+    <contextParameter xmi:id="_RCG_a0HlEeqxNJCRKR--7g" comment="" name="mail_from_email" prompt="mail_from_email?" promptNeeded="false" type="id_String" value="&quot;metadata-scan-alert@myorganization.org&quot;"/>
+    <contextParameter xmi:id="_RCG_bEHlEeqxNJCRKR--7g" comment="" name="mail_subject_outofextent" prompt="mail_subject_outofextent?" promptNeeded="false" type="id_String" value="&quot;Metadata scan / Alert / Layers out of extent&quot;"/>
+    <contextParameter xmi:id="_RCG_bUHlEeqxNJCRKR--7g" comment="" name="mail_msg_outofextent" prompt="mail_msg_outofextent?" promptNeeded="false" type="id_String" value="&quot; layer(s) found having extent outside the restricted extent. Check that extent and projection are valid.  \nThe metadata scanner&quot;"/>
+    <contextParameter xmi:id="_RCG_bkHlEeqxNJCRKR--7g" comment="" name="mail_subject_log" prompt="mail_subject_log?" promptNeeded="false" type="id_String" value="&quot;Metadata scan / Notification / Log file for last scan: &quot;"/>
+    <contextParameter xmi:id="_RCG_b0HlEeqxNJCRKR--7g" comment="" name="mail_msg_log" prompt="mail_msg_log?" promptNeeded="false" type="id_String" value="&quot;Hi, \nattached to this email, you will find the log file of last scan. Enjoy!.  \nThe metadata scanner&quot;"/>
+    <contextParameter xmi:id="_RCG_cEHlEeqxNJCRKR--7g" comment="" name="mail_subject_check_resource" prompt="mail_subject_check_resource?" promptNeeded="false" type="id_String" value="&quot;Metadata scan / Notification / Metadata records link to non existing files &quot;"/>
+    <contextParameter xmi:id="_RCG_cUHlEeqxNJCRKR--7g" comment="" name="mail_msg_check_resource" prompt="mail_msg_check_resource?" promptNeeded="false" type="id_String" value="&quot; record(s) found having link to file on the network which does not exist anymore. Check those records and see if files were deleted or moved.  \nThe metadata scanner&quot;"/>
+    <contextParameter xmi:id="_RCG_ckHlEeqxNJCRKR--7g" comment="" name="catalog_search_records_url" prompt="catalog_search_records_url?" promptNeeded="false" type="id_String" value="&quot;http://localhost:8080/geonetwork/srv/fre/q?fast=index&quot;"/>
+    <contextParameter xmi:id="_RCG_c0HlEeqxNJCRKR--7g" comment="" name="csv_file_list_of_layers_out_of_extent" prompt="csv_file_list_of_layers_out_of_extent?" promptNeeded="false" type="id_String" value="&quot;listOfLayersOutOfExtent.csv&quot;"/>
+    <contextParameter xmi:id="_RCG_dEHlEeqxNJCRKR--7g" comment="" name="csv_file_list_of_record_with_file_not_found" prompt="csv_file_list_of_record_with_file_not_found?" promptNeeded="false" type="id_String" value="&quot;listOfRecordsWithFileNotFound.csv&quot;"/>
+    <contextParameter xmi:id="_RCG_dUHlEeqxNJCRKR--7g" comment="" name="map_missing_datasource_msg" prompt="map_missing_datasource_msg?" promptNeeded="false" type="id_String" value="&quot;List of missing map datasources:%n&quot;"/>
+    <contextParameter xmi:id="_RCG_dkHlEeqxNJCRKR--7g" comment="" name="map_missing_datasource_status" prompt="map_missing_datasource_status?" promptNeeded="false" type="id_String" value="&quot;underDevelopment&quot;"/>
   </talendfile:ContextType>
-  <talendfile:ContextType confirmationNeeded="false" name="prod">
-    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" type="id_Directory" value="/data/"/>
-    <contextParameter comment="" name="uuidCreatedFromFilePath" prompt="uuidCreatedFromFilePath?" promptNeeded="false" type="id_Boolean" value=""/>
-    <contextParameter comment="" name="data_dir_uuid_ignored_path" prompt="data_dir_uuid_ignored_path?" promptNeeded="false" type="id_Directory" value="/data/"/>
-    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" type="id_Directory" value="r"/>
-    <contextParameter comment="The output folder" name="tmp_dir" prompt="tmp_dir?" promptNeeded="false" type="id_Directory" value="/tmp/scan/tmp/"/>
-    <contextParameter comment="The folder to create metadata records into" name="metadata_dir" prompt="metadata_dir?" promptNeeded="false" type="id_Directory" value="/tmp/scan/metadata/"/>
-    <contextParameter comment="The log folder" name="log_dir" prompt="log_dir?" promptNeeded="false" type="id_Directory" value="/tmp/scan/logs/"/>
-    <contextParameter comment="Publish metadata or not in the CSW catalogue defined" name="publish_metadata" prompt="publish_metadata?" promptNeeded="false" type="id_Boolean" value="true"/>
-    <contextParameter comment="The CSW server to push metadata records into" name="csw_server_host" prompt="csw_server_host?" promptNeeded="false" type="id_String" value="&quot;http://localhost:8080/geonetwork/srv/eng/csw-publication&quot;"/>
-    <contextParameter comment="The CSW user name" name="csw_username" prompt="csw_username?" promptNeeded="false" type="id_String" value="&quot;admin&quot;"/>
-    <contextParameter comment="The CSW user password" name="csw_password" prompt="csw_password?" promptNeeded="false" type="id_Password" value=""/>
-    <contextParameter comment="Scan for vector files" name="scan_vector" prompt="scan_vector?" promptNeeded="false" type="id_Boolean" value="true"/>
-    <contextParameter comment="Vector file extensions" name="vector_file_extension" prompt="vector_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.kml|.*\\.shp|.*\\.mif|.*\\.tab|.*\\.gml|.*\\.dxf|.*\\.dwg|.*\\.itf|.*\\.gdb&quot;"/>
-    <contextParameter comment="Scan for RASTER files" name="scan_raster" prompt="scan_raster?" promptNeeded="false" type="id_Boolean" value="true"/>
-    <contextParameter comment="RASTER file extensions" name="raster_file_extension" prompt="raster_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.tif|.*\\.tiff|.*\\.ecw|.*\\.asc|.*\\.ovr|.*\\.grd|.*\\.jpg&quot;"/>
-    <contextParameter comment="List of database to scan" name="db_list" prompt="db_list?" promptNeeded="false" type="id_List Of Value" value="&quot;PG:dbname=talend host=localhost port=5432 user=www-data password=www-data&quot;"/>
-    <contextParameter comment="Hide database connection information" name="db_password_hide" prompt="db_password_hide?" promptNeeded="false" type="id_Boolean" value="true"/>
-    <contextParameter comment="List of WFS to scan" name="service_list" prompt="service_list?" promptNeeded="false" type="id_List Of Value" value=""/>
-    <contextParameter comment="Scan for maps" name="scan_map" prompt="scan_map?" promptNeeded="false" type="id_Boolean" value="false"/>
-    <contextParameter comment="Map file extensions" name="map_file_extension" prompt="map_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.qgs&quot;"/>
-    <contextParameter comment="The folder to scan for maps" name="map_data_dir" prompt="map_data_dir?" promptNeeded="false" type="id_Directory" value="/maps/"/>
-    <contextParameter comment="For each datasources find in a map, create metadata" name="scan_map_and_datasources" prompt="scan_map_and_datasources?" promptNeeded="false" type="id_Boolean" value="true"/>
-    <contextParameter comment="Metadata title prefix for vector" name="title_prefix_vector" prompt="title_prefix_vector?" promptNeeded="false" type="id_String" value="&quot;Vector file &quot;"/>
-    <contextParameter comment="Metadata title prefix for RASTER" name="title_prefix_raster" prompt="title_prefix_raster?" promptNeeded="false" type="id_String" value="&quot;Raster file &quot;"/>
-    <contextParameter comment="Metadata title prefix for feature catalog" name="title_prefix_fcat" prompt="title_prefix_fcat?" promptNeeded="false" type="id_String" value="&quot;Feature catalog &quot;"/>
-    <contextParameter comment="Metadata title prefix for db tables" name="title_prefix_db" prompt="title_prefix_db?" promptNeeded="false" type="id_String" value="&quot;Table &quot;"/>
-    <contextParameter comment="Metadata title prefix for maps" name="title_prefix_map" prompt="title_prefix_map?" promptNeeded="false" type="id_String" value="&quot;Map &quot;"/>
-    <contextParameter comment="An EPSG code of a projection to use in case the projection could not be defined from the file" name="default_projection" prompt="default_projection?" promptNeeded="false" type="id_String" value="&quot;EPSG:4326&quot;"/>
-    <contextParameter comment="" name="default_xmin" prompt="default_xmin?" promptNeeded="false" type="id_String" value="&quot;-180&quot;"/>
-    <contextParameter comment="" name="default_ymin" prompt="default_ymin?" promptNeeded="false" type="id_String" value="&quot;-90&quot;"/>
-    <contextParameter comment="" name="default_xmax" prompt="default_xmax?" promptNeeded="false" type="id_String" value="&quot;180&quot;"/>
-    <contextParameter comment="" name="default_ymax" prompt="default_ymax?" promptNeeded="false" type="id_String" value="&quot;90&quot;"/>
-    <contextParameter comment="Create or not overview files" name="create_overview" prompt="create_overview?" promptNeeded="false" type="id_Boolean" value="true"/>
-    <contextParameter comment="" name="overview_url_prefix" prompt="overview_url_prefix?" promptNeeded="false" type="id_String" value="&quot;http://localhost/overview/&quot;"/>
-    <contextParameter comment="The width of the overview to generate" name="overview_width" prompt="overview_width?" promptNeeded="false" type="id_String" value="&quot;800&quot;"/>
-    <contextParameter comment="The height of the overview to generate" name="overview_height" prompt="overview_height?" promptNeeded="false" type="id_String" value="&quot;800&quot;"/>
-    <contextParameter comment="" name="pack_data" prompt="pack_data?" promptNeeded="false" type="id_Boolean" value="true"/>
-    <contextParameter comment="" name="pack_data_dir" prompt="pack_data_dir?" promptNeeded="false" type="id_Directory" value="/tmp/scan/download/"/>
-    <contextParameter comment="" name="pack_data_create_checksum" prompt="pack_data_create_checksum?" promptNeeded="false" type="id_Boolean" value="true"/>
-    <contextParameter comment="" name="pack_data_publication_dir" prompt="pack_data_publication_dir?" promptNeeded="false" type="id_Directory" value="/var/www/html/data/"/>
-    <contextParameter comment="" name="pack_data_url_prefix" prompt="pack_data_url_prefix?" promptNeeded="false" type="id_String" value="&quot;http://localhost/data/&quot;"/>
-    <contextParameter comment="" name="pack_data_link_template" prompt="pack_data_link_template?" promptNeeded="false" type="id_String" value="&quot;Download data in {{format}} format&quot;"/>
-    <contextParameter comment="" name="pack_data_publish" prompt="pack_data_publish?" promptNeeded="false" type="id_Boolean" value="true"/>
-    <contextParameter comment="Define the way to copy files (ssh, ftp, copy)" name="overview_and_file_copy_mode" prompt="overview_and_file_copy_mode?" promptNeeded="false" type="id_String" value="&quot;copy&quot;"/>
-    <contextParameter comment="The FTP host" name="ftp_host" prompt="ftp_host?" promptNeeded="false" type="id_String" value="null"/>
-    <contextParameter comment="The FTP port" name="ftp_port" prompt="ftp_port?" promptNeeded="false" type="id_Integer" value="21"/>
-    <contextParameter comment="The user name to log in the FTP server" name="ftp_username" prompt="ftp_username?" promptNeeded="false" type="id_String" value="null"/>
-    <contextParameter comment="The user password" name="ftp_password" prompt="ftp_password?" promptNeeded="false" type="id_Password" value=""/>
-    <contextParameter comment="The remove directory in the FTP server" name="overview_publication_dir" prompt="overview_publication_dir?" promptNeeded="false" type="id_String" value="/var/www/html/overview/"/>
-    <contextParameter comment="" name="ssh_host" prompt="ssh_host?" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
-    <contextParameter comment="" name="ssh_port" prompt="ssh_port?" promptNeeded="false" type="id_Integer" value="22"/>
-    <contextParameter comment="" name="ssh_username" prompt="ssh_username?" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
-    <contextParameter comment="" name="ssh_password" prompt="ssh_password?" promptNeeded="false" type="id_Password" value=""/>
-    <contextParameter comment="Store the generated metadata file next to the analyzed file" name="metadata_file_with_source" prompt="metadata_file_with_source?" promptNeeded="false" type="id_Boolean" value="false"/>
-    <contextParameter comment="Path to GDAL/OGR bin or empty if in system path" name="gdal_path" prompt="gdal_path?" promptNeeded="false" type="id_Directory" value=""/>
-    <contextParameter comment="True to ping the job and return status response (use when deploy as webservice)" name="ping" prompt="ping?" promptNeeded="false" type="id_Boolean" value="false"/>
-    <contextParameter comment="Always run update by sending the complete metadata record (not only some properties like bounding box)" name="publish_metadata_full_update" prompt="publish_metadata_full_update?" promptNeeded="false" type="id_Boolean" value="false"/>
-    <contextParameter comment="" name="mdIndividualName" prompt="mdIndividualName?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="mdOrganisationName" prompt="mdOrganisationName?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="mdEmail" prompt="mdEmail?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="mdPositionName" prompt="mdPositionName?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="mdVoice" prompt="mdVoice?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="mdDeliveryPoint" prompt="mdDeliveryPoint?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="mdCity" prompt="mdCity?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="mdAdministrativeArea" prompt="mdAdministrativeArea?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="mdPostalCode" prompt="mdPostalCode?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="mdCountry" prompt="mdCountry?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="individualName" prompt="individualName?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="organisationName" prompt="organisationName?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="positionName" prompt="positionName?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="voice" prompt="voice?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="deliveryPoint" prompt="deliveryPoint?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="city" prompt="city?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="administrativeArea" prompt="administrativeArea?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="postalCode" prompt="postalCode?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="country" prompt="country?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="email" prompt="email?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="geoserver_server_host" prompt="geoserver_server_host?" promptNeeded="false" type="id_String" value="&quot;http://localhost:8081/geoserver/rest&quot;"/>
-    <contextParameter comment="" name="geoserver_username" prompt="geoserver_username?" promptNeeded="false" type="id_String" value="&quot;admin&quot;"/>
-    <contextParameter comment="" name="geoserver_password" prompt="geoserver_password?" promptNeeded="false" type="id_Password" value=""/>
-    <contextParameter comment="Vector file extensions supported for publication in mapservers" name="vector_file_extension_for_geopublication" prompt="vector_file_extension_for_geopublication?" promptNeeded="false" type="id_String" value="&quot;.*\\.shp&quot;"/>
-    <contextParameter comment="RASTER file extensions supported for publication in mapservers" name="raster_file_extension_for_geopublication" prompt="raster_file_extension_for_geopublication?" promptNeeded="false" type="id_String" value="&quot;.*\\.tif|.*\\.tiff&quot;"/>
-    <contextParameter comment="" name="geosever_namespace_prefix" prompt="geosever_namespace_prefix?" promptNeeded="false" type="id_String" value="&quot;gn&quot;"/>
-    <contextParameter comment="" name="bboxcheck_xmin" prompt="bboxcheck_xmin?" promptNeeded="false" type="id_Double" value=""/>
-    <contextParameter comment="" name="bboxcheck_xmax" prompt="bboxcheck_xmax?" promptNeeded="false" type="id_Double" value=""/>
-    <contextParameter comment="" name="bboxcheck_ymin" prompt="bboxcheck_ymin?" promptNeeded="false" type="id_Double" value=""/>
-    <contextParameter comment="" name="bboxcheck_ymax" prompt="bboxcheck_ymax?" promptNeeded="false" type="id_Double" value=""/>
-    <contextParameter comment="" name="statusArchiveFlag" prompt="statusArchiveFlag?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="statusObsoleteFlag" prompt="statusObsoleteFlag?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="statusUnderDevelopmentFlag" prompt="statusUnderDevelopmentFlag?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="mail_server" prompt="mail_server?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="mail_port" prompt="mail_port?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="mail_username" prompt="mail_username?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="mail_password" prompt="mail_password?" promptNeeded="false" type="id_Password" value=""/>
-    <contextParameter comment="" name="mail_send_to_emails" prompt="mail_send_to_emails?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="mail_from_email" prompt="mail_from_email?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="mail_subject_outofextent" prompt="mail_subject_outofextent?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="mail_msg_outofextent" prompt="mail_msg_outofextent?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="mail_subject_log" prompt="mail_subject_log?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="mail_msg_log" prompt="mail_msg_log?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="mail_subject_check_resource" prompt="mail_subject_check_resource?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="mail_msg_check_resource" prompt="mail_msg_check_resource?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="catalog_search_records_url" prompt="catalog_search_records_url?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="csv_file_list_of_layers_out_of_extent" prompt="csv_file_list_of_layers_out_of_extent?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="csv_file_list_of_record_with_file_not_found" prompt="csv_file_list_of_record_with_file_not_found?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="map_missing_datasource_msg" prompt="map_missing_datasource_msg?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="map_missing_datasource_status" prompt="map_missing_datasource_status?" promptNeeded="false" type="id_String" value=""/>
+  <talendfile:ContextType xmi:id="_RCG_d0HlEeqxNJCRKR--7g" confirmationNeeded="false" name="prod">
+    <contextParameter xmi:id="_RCG_eEHlEeqxNJCRKR--7g" comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" type="id_Directory" value="/data/"/>
+    <contextParameter xmi:id="_RCG_eUHlEeqxNJCRKR--7g" comment="" name="uuidCreatedFromFilePath" prompt="uuidCreatedFromFilePath?" promptNeeded="false" type="id_Boolean" value=""/>
+    <contextParameter xmi:id="_RCG_ekHlEeqxNJCRKR--7g" comment="" name="data_dir_uuid_ignored_path" prompt="data_dir_uuid_ignored_path?" promptNeeded="false" type="id_Directory" value="/data/"/>
+    <contextParameter xmi:id="_RCG_e0HlEeqxNJCRKR--7g" comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" type="id_Directory" value="r"/>
+    <contextParameter xmi:id="_RCG_fEHlEeqxNJCRKR--7g" comment="The output folder" name="tmp_dir" prompt="tmp_dir?" promptNeeded="false" type="id_Directory" value="/tmp/scan/tmp/"/>
+    <contextParameter xmi:id="_RCG_fUHlEeqxNJCRKR--7g" comment="The folder to create metadata records into" name="metadata_dir" prompt="metadata_dir?" promptNeeded="false" type="id_Directory" value="/tmp/scan/metadata/"/>
+    <contextParameter xmi:id="_RCG_fkHlEeqxNJCRKR--7g" comment="The log folder" name="log_dir" prompt="log_dir?" promptNeeded="false" type="id_Directory" value="/tmp/scan/logs/"/>
+    <contextParameter xmi:id="_RCG_f0HlEeqxNJCRKR--7g" comment="Publish metadata or not in the CSW catalogue defined" name="publish_metadata" prompt="publish_metadata?" promptNeeded="false" type="id_Boolean" value="true"/>
+    <contextParameter xmi:id="_RCG_gEHlEeqxNJCRKR--7g" comment="The CSW server to push metadata records into" name="csw_server_host" prompt="csw_server_host?" promptNeeded="false" type="id_String" value="&quot;http://localhost:8080/geonetwork/srv/eng/csw-publication&quot;"/>
+    <contextParameter xmi:id="_RCG_gUHlEeqxNJCRKR--7g" comment="The CSW user name" name="csw_username" prompt="csw_username?" promptNeeded="false" type="id_String" value="&quot;admin&quot;"/>
+    <contextParameter xmi:id="_RCG_gkHlEeqxNJCRKR--7g" comment="The CSW user password" name="csw_password" prompt="csw_password?" promptNeeded="false" type="id_Password" value=""/>
+    <contextParameter xmi:id="_RCG_g0HlEeqxNJCRKR--7g" comment="Scan for vector files" name="scan_vector" prompt="scan_vector?" promptNeeded="false" type="id_Boolean" value="true"/>
+    <contextParameter xmi:id="_RCG_hEHlEeqxNJCRKR--7g" comment="Vector file extensions" name="vector_file_extension" prompt="vector_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.kml|.*\\.shp|.*\\.mif|.*\\.tab|.*\\.gml|.*\\.dxf|.*\\.dwg|.*\\.itf|.*\\.gdb&quot;"/>
+    <contextParameter xmi:id="_RCG_hUHlEeqxNJCRKR--7g" comment="Scan for RASTER files" name="scan_raster" prompt="scan_raster?" promptNeeded="false" type="id_Boolean" value="true"/>
+    <contextParameter xmi:id="_RCG_hkHlEeqxNJCRKR--7g" comment="RASTER file extensions" name="raster_file_extension" prompt="raster_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.tif|.*\\.tiff|.*\\.ecw|.*\\.asc|.*\\.ovr|.*\\.grd|.*\\.jpg&quot;"/>
+    <contextParameter xmi:id="_RCG_h0HlEeqxNJCRKR--7g" comment="List of database to scan" name="db_list" prompt="db_list?" promptNeeded="false" type="id_List Of Value" value="&quot;PG:dbname=talend host=localhost port=5432 user=www-data password=www-data&quot;"/>
+    <contextParameter xmi:id="_RCG_iEHlEeqxNJCRKR--7g" comment="Hide database connection information" name="db_password_hide" prompt="db_password_hide?" promptNeeded="false" type="id_Boolean" value="true"/>
+    <contextParameter xmi:id="_RCG_iUHlEeqxNJCRKR--7g" comment="List of WFS to scan" name="service_list" prompt="service_list?" promptNeeded="false" type="id_List Of Value" value=""/>
+    <contextParameter xmi:id="_RCG_ikHlEeqxNJCRKR--7g" comment="Scan for maps" name="scan_map" prompt="scan_map?" promptNeeded="false" type="id_Boolean" value="false"/>
+    <contextParameter xmi:id="_RCG_i0HlEeqxNJCRKR--7g" comment="Map file extensions" name="map_file_extension" prompt="map_file_extension?" promptNeeded="false" type="id_String" value="&quot;.*\\.qgs&quot;"/>
+    <contextParameter xmi:id="_RCG_jEHlEeqxNJCRKR--7g" comment="The folder to scan for maps" name="map_data_dir" prompt="map_data_dir?" promptNeeded="false" type="id_Directory" value="/maps/"/>
+    <contextParameter xmi:id="_RCG_jUHlEeqxNJCRKR--7g" comment="For each datasources find in a map, create metadata" name="scan_map_and_datasources" prompt="scan_map_and_datasources?" promptNeeded="false" type="id_Boolean" value="true"/>
+    <contextParameter xmi:id="_RCG_jkHlEeqxNJCRKR--7g" comment="Metadata title prefix for vector" name="title_prefix_vector" prompt="title_prefix_vector?" promptNeeded="false" type="id_String" value="&quot;Vector file &quot;"/>
+    <contextParameter xmi:id="_RCG_j0HlEeqxNJCRKR--7g" comment="Metadata title prefix for RASTER" name="title_prefix_raster" prompt="title_prefix_raster?" promptNeeded="false" type="id_String" value="&quot;Raster file &quot;"/>
+    <contextParameter xmi:id="_RCG_kEHlEeqxNJCRKR--7g" comment="Metadata title prefix for feature catalog" name="title_prefix_fcat" prompt="title_prefix_fcat?" promptNeeded="false" type="id_String" value="&quot;Feature catalog &quot;"/>
+    <contextParameter xmi:id="_RCG_kUHlEeqxNJCRKR--7g" comment="Metadata title prefix for db tables" name="title_prefix_db" prompt="title_prefix_db?" promptNeeded="false" type="id_String" value="&quot;Table &quot;"/>
+    <contextParameter xmi:id="_RCG_kkHlEeqxNJCRKR--7g" comment="Metadata title prefix for maps" name="title_prefix_map" prompt="title_prefix_map?" promptNeeded="false" type="id_String" value="&quot;Map &quot;"/>
+    <contextParameter xmi:id="_RCG_k0HlEeqxNJCRKR--7g" comment="An EPSG code of a projection to use in case the projection could not be defined from the file" name="default_projection" prompt="default_projection?" promptNeeded="false" type="id_String" value="&quot;EPSG:4326&quot;"/>
+    <contextParameter xmi:id="_RCG_lEHlEeqxNJCRKR--7g" comment="" name="default_xmin" prompt="default_xmin?" promptNeeded="false" type="id_String" value="&quot;-180&quot;"/>
+    <contextParameter xmi:id="_RCG_lUHlEeqxNJCRKR--7g" comment="" name="default_ymin" prompt="default_ymin?" promptNeeded="false" type="id_String" value="&quot;-90&quot;"/>
+    <contextParameter xmi:id="_RCG_lkHlEeqxNJCRKR--7g" comment="" name="default_xmax" prompt="default_xmax?" promptNeeded="false" type="id_String" value="&quot;180&quot;"/>
+    <contextParameter xmi:id="_RCG_l0HlEeqxNJCRKR--7g" comment="" name="default_ymax" prompt="default_ymax?" promptNeeded="false" type="id_String" value="&quot;90&quot;"/>
+    <contextParameter xmi:id="_RCG_mEHlEeqxNJCRKR--7g" comment="Create or not overview files" name="create_overview" prompt="create_overview?" promptNeeded="false" type="id_Boolean" value="true"/>
+    <contextParameter xmi:id="_RCG_mUHlEeqxNJCRKR--7g" comment="" name="overview_url_prefix" prompt="overview_url_prefix?" promptNeeded="false" type="id_String" value="&quot;http://localhost/overview/&quot;"/>
+    <contextParameter xmi:id="_RCG_mkHlEeqxNJCRKR--7g" comment="The width of the overview to generate" name="overview_width" prompt="overview_width?" promptNeeded="false" type="id_String" value="&quot;800&quot;"/>
+    <contextParameter xmi:id="_RCG_m0HlEeqxNJCRKR--7g" comment="The height of the overview to generate" name="overview_height" prompt="overview_height?" promptNeeded="false" type="id_String" value="&quot;800&quot;"/>
+    <contextParameter xmi:id="_RCG_nEHlEeqxNJCRKR--7g" comment="" name="pack_data" prompt="pack_data?" promptNeeded="false" type="id_Boolean" value="true"/>
+    <contextParameter xmi:id="_RCG_nUHlEeqxNJCRKR--7g" comment="" name="pack_data_dir" prompt="pack_data_dir?" promptNeeded="false" type="id_Directory" value="/tmp/scan/download/"/>
+    <contextParameter xmi:id="_RCG_nkHlEeqxNJCRKR--7g" comment="" name="pack_data_create_checksum" prompt="pack_data_create_checksum?" promptNeeded="false" type="id_Boolean" value="true"/>
+    <contextParameter xmi:id="_RCG_n0HlEeqxNJCRKR--7g" comment="" name="pack_data_publication_dir" prompt="pack_data_publication_dir?" promptNeeded="false" type="id_Directory" value="/var/www/html/data/"/>
+    <contextParameter xmi:id="_RCG_oEHlEeqxNJCRKR--7g" comment="" name="pack_data_url_prefix" prompt="pack_data_url_prefix?" promptNeeded="false" type="id_String" value="&quot;http://localhost/data/&quot;"/>
+    <contextParameter xmi:id="_RCG_oUHlEeqxNJCRKR--7g" comment="" name="pack_data_link_template" prompt="pack_data_link_template?" promptNeeded="false" type="id_String" value="&quot;Download data in {{format}} format&quot;"/>
+    <contextParameter xmi:id="_RCG_okHlEeqxNJCRKR--7g" comment="" name="pack_data_publish" prompt="pack_data_publish?" promptNeeded="false" type="id_Boolean" value="true"/>
+    <contextParameter xmi:id="_RCG_o0HlEeqxNJCRKR--7g" comment="Define the way to copy files (ssh, ftp, copy)" name="overview_and_file_copy_mode" prompt="overview_and_file_copy_mode?" promptNeeded="false" type="id_String" value="&quot;copy&quot;"/>
+    <contextParameter xmi:id="_RCG_pEHlEeqxNJCRKR--7g" comment="The FTP host" name="ftp_host" prompt="ftp_host?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter xmi:id="_RCG_pUHlEeqxNJCRKR--7g" comment="The FTP port" name="ftp_port" prompt="ftp_port?" promptNeeded="false" type="id_Integer" value="21"/>
+    <contextParameter xmi:id="_RCG_pkHlEeqxNJCRKR--7g" comment="The user name to log in the FTP server" name="ftp_username" prompt="ftp_username?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter xmi:id="_RCG_p0HlEeqxNJCRKR--7g" comment="The user password" name="ftp_password" prompt="ftp_password?" promptNeeded="false" type="id_Password" value=""/>
+    <contextParameter xmi:id="_RCG_qEHlEeqxNJCRKR--7g" comment="The remove directory in the FTP server" name="overview_publication_dir" prompt="overview_publication_dir?" promptNeeded="false" type="id_String" value="/var/www/html/overview/"/>
+    <contextParameter xmi:id="_RCG_qUHlEeqxNJCRKR--7g" comment="" name="ssh_host" prompt="ssh_host?" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
+    <contextParameter xmi:id="_RCG_qkHlEeqxNJCRKR--7g" comment="" name="ssh_port" prompt="ssh_port?" promptNeeded="false" type="id_Integer" value="22"/>
+    <contextParameter xmi:id="_RCG_q0HlEeqxNJCRKR--7g" comment="" name="ssh_username" prompt="ssh_username?" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
+    <contextParameter xmi:id="_RCG_rEHlEeqxNJCRKR--7g" comment="" name="ssh_password" prompt="ssh_password?" promptNeeded="false" type="id_Password" value=""/>
+    <contextParameter xmi:id="_RCG_rUHlEeqxNJCRKR--7g" comment="Store the generated metadata file next to the analyzed file" name="metadata_file_with_source" prompt="metadata_file_with_source?" promptNeeded="false" type="id_Boolean" value="false"/>
+    <contextParameter xmi:id="_RCG_rkHlEeqxNJCRKR--7g" comment="Path to GDAL/OGR bin or empty if in system path" name="gdal_path" prompt="gdal_path?" promptNeeded="false" type="id_Directory" value=""/>
+    <contextParameter xmi:id="_RCG_r0HlEeqxNJCRKR--7g" comment="True to ping the job and return status response (use when deploy as webservice)" name="ping" prompt="ping?" promptNeeded="false" type="id_Boolean" value="false"/>
+    <contextParameter xmi:id="_RCG_sEHlEeqxNJCRKR--7g" comment="Always run update by sending the complete metadata record (not only some properties like bounding box)" name="publish_metadata_full_update" prompt="publish_metadata_full_update?" promptNeeded="false" type="id_Boolean" value="false"/>
+    <contextParameter xmi:id="_RCG_sUHlEeqxNJCRKR--7g" comment="" name="mdIndividualName" prompt="mdIndividualName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_skHlEeqxNJCRKR--7g" comment="" name="mdOrganisationName" prompt="mdOrganisationName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_s0HlEeqxNJCRKR--7g" comment="" name="mdEmail" prompt="mdEmail?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_tEHlEeqxNJCRKR--7g" comment="" name="mdPositionName" prompt="mdPositionName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_tUHlEeqxNJCRKR--7g" comment="" name="mdVoice" prompt="mdVoice?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_tkHlEeqxNJCRKR--7g" comment="" name="mdDeliveryPoint" prompt="mdDeliveryPoint?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_t0HlEeqxNJCRKR--7g" comment="" name="mdCity" prompt="mdCity?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_uEHlEeqxNJCRKR--7g" comment="" name="mdAdministrativeArea" prompt="mdAdministrativeArea?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_uUHlEeqxNJCRKR--7g" comment="" name="mdPostalCode" prompt="mdPostalCode?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_ukHlEeqxNJCRKR--7g" comment="" name="mdCountry" prompt="mdCountry?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_u0HlEeqxNJCRKR--7g" comment="" name="individualName" prompt="individualName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_vEHlEeqxNJCRKR--7g" comment="" name="organisationName" prompt="organisationName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_vUHlEeqxNJCRKR--7g" comment="" name="positionName" prompt="positionName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_vkHlEeqxNJCRKR--7g" comment="" name="voice" prompt="voice?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_v0HlEeqxNJCRKR--7g" comment="" name="deliveryPoint" prompt="deliveryPoint?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_wEHlEeqxNJCRKR--7g" comment="" name="city" prompt="city?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_wUHlEeqxNJCRKR--7g" comment="" name="administrativeArea" prompt="administrativeArea?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_wkHlEeqxNJCRKR--7g" comment="" name="postalCode" prompt="postalCode?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_w0HlEeqxNJCRKR--7g" comment="" name="country" prompt="country?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_xEHlEeqxNJCRKR--7g" comment="" name="email" prompt="email?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_xUHlEeqxNJCRKR--7g" comment="" name="geoserver_server_host" prompt="geoserver_server_host?" promptNeeded="false" type="id_String" value="&quot;http://localhost:8081/geoserver/rest&quot;"/>
+    <contextParameter xmi:id="_RCG_xkHlEeqxNJCRKR--7g" comment="" name="geoserver_username" prompt="geoserver_username?" promptNeeded="false" type="id_String" value="&quot;admin&quot;"/>
+    <contextParameter xmi:id="_RCG_x0HlEeqxNJCRKR--7g" comment="" name="geoserver_password" prompt="geoserver_password?" promptNeeded="false" type="id_Password" value=""/>
+    <contextParameter xmi:id="_RCG_yEHlEeqxNJCRKR--7g" comment="Vector file extensions supported for publication in mapservers" name="vector_file_extension_for_geopublication" prompt="vector_file_extension_for_geopublication?" promptNeeded="false" type="id_String" value="&quot;.*\\.shp&quot;"/>
+    <contextParameter xmi:id="_RCG_yUHlEeqxNJCRKR--7g" comment="RASTER file extensions supported for publication in mapservers" name="raster_file_extension_for_geopublication" prompt="raster_file_extension_for_geopublication?" promptNeeded="false" type="id_String" value="&quot;.*\\.tif|.*\\.tiff&quot;"/>
+    <contextParameter xmi:id="_RCG_ykHlEeqxNJCRKR--7g" comment="" name="geosever_namespace_prefix" prompt="geosever_namespace_prefix?" promptNeeded="false" type="id_String" value="&quot;gn&quot;"/>
+    <contextParameter xmi:id="_RCG_y0HlEeqxNJCRKR--7g" comment="" name="bboxcheck_xmin" prompt="bboxcheck_xmin?" promptNeeded="false" type="id_Double" value=""/>
+    <contextParameter xmi:id="_RCG_zEHlEeqxNJCRKR--7g" comment="" name="bboxcheck_xmax" prompt="bboxcheck_xmax?" promptNeeded="false" type="id_Double" value=""/>
+    <contextParameter xmi:id="_RCG_zUHlEeqxNJCRKR--7g" comment="" name="bboxcheck_ymin" prompt="bboxcheck_ymin?" promptNeeded="false" type="id_Double" value=""/>
+    <contextParameter xmi:id="_RCG_zkHlEeqxNJCRKR--7g" comment="" name="bboxcheck_ymax" prompt="bboxcheck_ymax?" promptNeeded="false" type="id_Double" value=""/>
+    <contextParameter xmi:id="_RCG_z0HlEeqxNJCRKR--7g" comment="" name="statusArchiveFlag" prompt="statusArchiveFlag?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_0EHlEeqxNJCRKR--7g" comment="" name="statusObsoleteFlag" prompt="statusObsoleteFlag?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_0UHlEeqxNJCRKR--7g" comment="" name="statusUnderDevelopmentFlag" prompt="statusUnderDevelopmentFlag?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_0kHlEeqxNJCRKR--7g" comment="" name="mail_server" prompt="mail_server?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_00HlEeqxNJCRKR--7g" comment="" name="mail_port" prompt="mail_port?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_1EHlEeqxNJCRKR--7g" comment="" name="mail_username" prompt="mail_username?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_1UHlEeqxNJCRKR--7g" comment="" name="mail_password" prompt="mail_password?" promptNeeded="false" type="id_Password" value=""/>
+    <contextParameter xmi:id="_RCG_1kHlEeqxNJCRKR--7g" comment="" name="mail_send_to_emails" prompt="mail_send_to_emails?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_10HlEeqxNJCRKR--7g" comment="" name="mail_from_email" prompt="mail_from_email?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_2EHlEeqxNJCRKR--7g" comment="" name="mail_subject_outofextent" prompt="mail_subject_outofextent?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_2UHlEeqxNJCRKR--7g" comment="" name="mail_msg_outofextent" prompt="mail_msg_outofextent?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_2kHlEeqxNJCRKR--7g" comment="" name="mail_subject_log" prompt="mail_subject_log?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_20HlEeqxNJCRKR--7g" comment="" name="mail_msg_log" prompt="mail_msg_log?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_3EHlEeqxNJCRKR--7g" comment="" name="mail_subject_check_resource" prompt="mail_subject_check_resource?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_3UHlEeqxNJCRKR--7g" comment="" name="mail_msg_check_resource" prompt="mail_msg_check_resource?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_3kHlEeqxNJCRKR--7g" comment="" name="catalog_search_records_url" prompt="catalog_search_records_url?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_30HlEeqxNJCRKR--7g" comment="" name="csv_file_list_of_layers_out_of_extent" prompt="csv_file_list_of_layers_out_of_extent?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_4EHlEeqxNJCRKR--7g" comment="" name="csv_file_list_of_record_with_file_not_found" prompt="csv_file_list_of_record_with_file_not_found?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_4UHlEeqxNJCRKR--7g" comment="" name="map_missing_datasource_msg" prompt="map_missing_datasource_msg?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_RCG_4kHlEeqxNJCRKR--7g" comment="" name="map_missing_datasource_status" prompt="map_missing_datasource_status?" promptNeeded="false" type="id_String" value=""/>
   </talendfile:ContextType>
 </xmi:XMI>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
     <contextParameter comment="Create or not overview files" name="create_overview" prompt="create_overview?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="The CSW user password" name="csw_password" prompt="csw_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Password" value="RX/CTwlUNiA="/>
     <contextParameter comment="The CSW server to push metadata records into" name="csw_server_host" prompt="csw_server_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;http://localhost:8080/geonetwork/srv/eng/csw-publication&quot;"/>
     <contextParameter comment="The CSW user name" name="csw_username" prompt="csw_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;admin&quot;"/>
-    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="a"/>
+    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/data/geo/"/>
     <contextParameter comment="List of database to scan" name="db_list" prompt="db_list?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_List Of Value" value=""/>
     <contextParameter comment="Path to GDAL/OGR bin or empty if in system path" name="gdal_path" prompt="gdal_path?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value=""/>
     <contextParameter comment="The log folder" name="log_dir" prompt="log_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/logs/"/>
@@ -16,17 +16,77 @@
     <contextParameter comment="The width of the overview to generate" name="overview_width" prompt="overview_width?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;800&quot;"/>
     <contextParameter comment="Publish metadata or not in the CSW catalogue defined" name="publish_metadata" prompt="publish_metadata?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="RASTER file extensions" name="raster_file_extension" prompt="raster_file_extension?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.tif|.*\\.tiff|.*\\.ecw|.*\\.asc|.*\\.rst|.*\\.grd|.*\\.jpg|.*\\.xyz&quot;"/>
-    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/var/app/talend/config/"/>
+    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/data/geo/config/"/>
     <contextParameter comment="Scan for RASTER files" name="scan_raster" prompt="scan_raster?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="Scan for vector files" name="scan_vector" prompt="scan_vector?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="List of WFS to scan" name="service_list" prompt="service_list?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_List Of Value" value=""/>
     <contextParameter comment="The output folder" name="tmp_dir" prompt="tmp_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/tmp/"/>
     <contextParameter comment="Vector file extensions" name="vector_file_extension" prompt="vector_file_extension?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.kml|.*\\.shp|.*\\.mif|.*\\.tab|.*\\.gml|.*\\.dxf|.*\\.dwg|.*\\.itf|.*\\.gdb&quot;"/>
   </context>
+  <context confirmationNeeded="false" name="prod">
+    <contextParameter comment="The folder to create overview into" name="overview_folder" prompt="overview_folder?" promptNeeded="false" type="id_Directory" value="/tmp/talend/www/overviews/"/>
+    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/data/"/>
+    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="r"/>
+    <contextParameter comment="The output folder" name="tmp_dir" prompt="tmp_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/tmp/"/>
+    <contextParameter comment="The folder to create metadata records into" name="metadata_dir" prompt="metadata_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/metadata/"/>
+    <contextParameter comment="The log folder" name="log_dir" prompt="log_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/logs/"/>
+    <contextParameter comment="Publish metadata or not in the CSW catalogue defined" name="publish_metadata" prompt="publish_metadata?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
+    <contextParameter comment="The CSW server to push metadata records into" name="csw_server_host" prompt="csw_server_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;http://localhost:8080/geonetwork/srv/eng/csw-publication&quot;"/>
+    <contextParameter comment="The CSW user name" name="csw_username" prompt="csw_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;admin&quot;"/>
+    <contextParameter comment="The CSW user password" name="csw_password" prompt="csw_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Password" value=""/>
+    <contextParameter comment="Scan for vector files" name="scan_vector" prompt="scan_vector?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
+    <contextParameter comment="Vector file extensions" name="vector_file_extension" prompt="vector_file_extension?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.kml|.*\\.shp|.*\\.mif|.*\\.tab|.*\\.gml|.*\\.dxf|.*\\.dwg|.*\\.itf|.*\\.gdb&quot;"/>
+    <contextParameter comment="Scan for RASTER files" name="scan_raster" prompt="scan_raster?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
+    <contextParameter comment="RASTER file extensions" name="raster_file_extension" prompt="raster_file_extension?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.tif|.*\\.tiff|.*\\.ecw|.*\\.asc|.*\\.ovr|.*\\.grd|.*\\.jpg&quot;"/>
+    <contextParameter comment="List of database to scan" name="db_list" prompt="db_list?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_List Of Value" value="&quot;PG:dbname=talend host=localhost port=5432 user=www-data password=www-data&quot;"/>
+    <contextParameter comment="List of WFS to scan" name="service_list" prompt="service_list?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_List Of Value" value=""/>
+    <contextParameter comment="Create or not overview files" name="create_overview" prompt="create_overview?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
+    <contextParameter comment="The width of the overview to generate" name="overview_width" prompt="overview_width?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;800&quot;"/>
+    <contextParameter comment="The height of the overview to generate" name="overview_height" prompt="overview_height?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;800&quot;"/>
+    <contextParameter comment="Store the generated metadata file next to the analyzed file" name="metadata_file_with_source" prompt="metadata_file_with_source?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="false"/>
+    <contextParameter comment="Path to GDAL/OGR bin or empty if in system path" name="gdal_path" prompt="gdal_path?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value=""/>
+  </context>
+  <context confirmationNeeded="false" name="test">
+    <contextParameter comment="The folder to create overview into" name="overview_folder" prompt="overview_folder?" promptNeeded="false" type="id_Directory" value="/tmp/talend/www/overviews/"/>
+    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/data/geo/"/>
+    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/data/geo/config/"/>
+    <contextParameter comment="The output folder" name="tmp_dir" prompt="tmp_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/tmp/"/>
+    <contextParameter comment="The folder to create metadata records into" name="metadata_dir" prompt="metadata_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/metadata/"/>
+    <contextParameter comment="The log folder" name="log_dir" prompt="log_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/logs/"/>
+    <contextParameter comment="Publish metadata or not in the CSW catalogue defined" name="publish_metadata" prompt="publish_metadata?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
+    <contextParameter comment="The CSW server to push metadata records into" name="csw_server_host" prompt="csw_server_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;http://localhost:8080/geonetwork/srv/eng/csw-publication&quot;"/>
+    <contextParameter comment="The CSW user name" name="csw_username" prompt="csw_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;admin&quot;"/>
+    <contextParameter comment="The CSW user password" name="csw_password" prompt="csw_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Password" value="RX/CTwlUNiA="/>
+    <contextParameter comment="Scan for vector files" name="scan_vector" prompt="scan_vector?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
+    <contextParameter comment="Vector file extensions" name="vector_file_extension" prompt="vector_file_extension?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.kml|.*\\.shp|.*\\.mif|.*\\.tab|.*\\.gml|.*\\.dxf|.*\\.dwg|.*\\.itf|.*\\.gdb&quot;"/>
+    <contextParameter comment="Scan for RASTER files" name="scan_raster" prompt="scan_raster?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
+    <contextParameter comment="RASTER file extensions" name="raster_file_extension" prompt="raster_file_extension?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.tif|.*\\.tiff|.*\\.ecw|.*\\.asc|.*\\.rst|.*\\.grd|.*\\.jpg|.*\\.xyz&quot;"/>
+    <contextParameter comment="List of database to scan" name="db_list" prompt="db_list?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_List Of Value" value=""/>
+    <contextParameter comment="List of WFS to scan" name="service_list" prompt="service_list?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_List Of Value" value=""/>
+    <contextParameter comment="Create or not overview files" name="create_overview" prompt="create_overview?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
+    <contextParameter comment="The width of the overview to generate" name="overview_width" prompt="overview_width?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;800&quot;"/>
+    <contextParameter comment="The height of the overview to generate" name="overview_height" prompt="overview_height?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;800&quot;"/>
+    <contextParameter comment="Store the generated metadata file next to the analyzed file" name="metadata_file_with_source" prompt="metadata_file_with_source?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="false"/>
+    <contextParameter comment="Path to GDAL/OGR bin or empty if in system path" name="gdal_path" prompt="gdal_path?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value=""/>
+  </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" value="" show="false"/>
     <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true" show="false"/>
     <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true" show="false"/>
     <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
@@ -35,8 +95,6 @@
     <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
     <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:PROPERTY_TYPE" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="" show="false"/>
     <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -53,8 +111,8 @@
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning" show="false"/>
     <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false" show="false"/>
     <elementParameter field="CHECK" name="DISABLE_ERROR" value="false" show="false"/>
     <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false" show="false"/>
@@ -64,7 +122,7 @@
     <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
     <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false" show="false"/>
     <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false" show="false"/>
-    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;/home/francois/app/talend/TOS_DI-20150702_1326-V6.0.0/workspace/.metadata&quot;" show="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;/data/app/talend/7.1.1-TEST/workspace/.metadata&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
@@ -72,7 +130,7 @@
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
     <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="false" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tJDBCOutput" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_11" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_12" show="false"/>
     <elementParameter field="TEXT" name="URL" value="&quot;&quot;" show="false"/>
     <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
     <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;" show="false"/>
@@ -116,10 +174,10 @@
     <routinesParameter id="_MzaQcB7YEeOX2a0ZVTFIUg" name="TalendDate"/>
     <routinesParameter id="_Mzd60B7YEeOX2a0ZVTFIUg" name="TalendString"/>
     <routinesParameter id="_NukzgAnLEeKr_IP06R0Uyw" name="Utility"/>
+    <routinesParameter id="_H868YEHlEeqxNJCRKR--7g" name="TalendStringUtil"/>
   </parameters>
-  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="67">
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
     <elementParameter field="RADIO" name="USE_SINGLEMODE" value="false"/>
     <elementParameter field="TABLE" name="VALUES" show="false">
@@ -137,15 +195,14 @@
     <elementParameter field="TEXT" name="LABEL" value="cfgResponse"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFixedFlowInput_1">
-      <column comment="" key="false" name="cfg" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="cfg" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tBufferOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tBufferOutput_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tBufferOutput_1">
-      <column comment="" key="false" name="cfg" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="cfg" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tBufferOutput_1">

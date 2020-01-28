@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="test">
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="test" jobType="Standard">
   <context confirmationNeeded="false" name="test">
     <contextParameter comment="" name="mail_passworld" prompt="mail_passworld?" promptNeeded="false" type="id_Password" value="+U/Qj/0GJuh8e6zcaKueXg=="/>
     <contextParameter comment="" name="administrativeArea" prompt="administrativeArea?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
@@ -16,7 +16,7 @@
     <contextParameter comment="The CSW user password" name="csw_password" prompt="csw_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Password" value="RX/CTwlUNiA="/>
     <contextParameter comment="The CSW server to push metadata records into" name="csw_server_host" prompt="csw_server_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;http://localhost:8080/geonetwork/srv/eng/csw-publication&quot;"/>
     <contextParameter comment="The CSW user name" name="csw_username" prompt="csw_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;admin&quot;"/>
-    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="a"/>
+    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/data/geo/"/>
     <contextParameter comment="" name="data_dir_uuid_ignored_path" prompt="data_dir_uuid_ignored_path?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/data/"/>
     <contextParameter comment="List of database to scan" name="db_list" prompt="db_list?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_List Of Value" value=""/>
     <contextParameter comment="Hide database connection information" name="db_password_hide" prompt="db_password_hide?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
@@ -50,7 +50,7 @@
     <contextParameter comment="" name="mail_subject_log" prompt="mail_subject_log?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;Metadata scan / Notification / Log file for last scan: &quot;"/>
     <contextParameter comment="" name="mail_subject_outofextent" prompt="mail_subject_outofextent?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;Metadata scan / Alert / Layers out of extent&quot;"/>
     <contextParameter comment="" name="mail_username" prompt="mail_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;username&quot;"/>
-    <contextParameter comment="The folder to scan for maps" name="map_data_dir" prompt="map_data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/home/francois/data/test/toscan/"/>
+    <contextParameter comment="The folder to scan for maps" name="map_data_dir" prompt="map_data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/"/>
     <contextParameter comment="Map file extensions" name="map_file_extension" prompt="map_file_extension?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.qgs&quot;"/>
     <contextParameter comment="" name="mdAdministrativeArea" prompt="mdAdministrativeArea?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
     <contextParameter comment="" name="mdCity" prompt="mdCity?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
@@ -74,7 +74,7 @@
     <contextParameter comment="" name="pack_data_create_checksum" prompt="pack_data_create_checksum?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="" name="pack_data_dir" prompt="pack_data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/download/"/>
     <contextParameter comment="" name="pack_data_link_template" prompt="pack_data_link_template?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;Download data in {{format}} format&quot;"/>
-    <contextParameter comment="" name="pack_data_publication_dir" prompt="pack_data_publication_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/var/www/html/data/"/>
+    <contextParameter comment="" name="pack_data_publication_dir" prompt="pack_data_publication_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/"/>
     <contextParameter comment="" name="pack_data_publish" prompt="pack_data_publish?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="" name="pack_data_url_prefix" prompt="pack_data_url_prefix?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;http://localhost/data/&quot;"/>
     <contextParameter comment="True to ping the job and return status response (use when deploy as webservice)" name="ping" prompt="ping?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="false"/>
@@ -84,7 +84,7 @@
     <contextParameter comment="Always run update by sending the complete metadata record (not only some properties like bounding box)" name="publish_metadata_full_update" prompt="publish_metadata_full_update?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="false"/>
     <contextParameter comment="RASTER file extensions" name="raster_file_extension" prompt="raster_file_extension?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.tif|.*\\.tiff|.*\\.ecw|.*\\.asc|.*\\.rst|.*\\.grd|.*\\.jpg|.*\\.xyz&quot;"/>
     <contextParameter comment="RASTER file extensions supported for publication in mapservers" name="raster_file_extension_for_geopublication" prompt="raster_file_extension_for_geopublication?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.tif|.*\\.tiff&quot;"/>
-    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/var/app/talend/config/"/>
+    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/data/geo/config/"/>
     <contextParameter comment="Scan for maps" name="scan_map" prompt="scan_map?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="For each datasources find in a map, create metadata" name="scan_map_and_datasources" prompt="scan_map_and_datasources?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="Scan for RASTER files" name="scan_raster" prompt="scan_raster?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
@@ -220,6 +220,20 @@
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" value="" show="false"/>
     <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true" show="false"/>
     <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="false" show="false"/>
     <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
@@ -228,8 +242,6 @@
     <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
     <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:PROPERTY_TYPE" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="" show="false"/>
     <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -246,8 +258,8 @@
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning" show="false"/>
     <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false" show="false"/>
     <elementParameter field="CHECK" name="DISABLE_ERROR" value="false" show="false"/>
     <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false" show="false"/>
@@ -309,10 +321,10 @@
     <routinesParameter id="_RBGuQCZAEeWPwsKLkuMZjw" name="TalendDate"/>
     <routinesParameter id="_RBIjcCZAEeWPwsKLkuMZjw" name="TalendString"/>
     <routinesParameter id="_NukzgAnLEeKr_IP06R0Uyw" name="Utility"/>
+    <routinesParameter id="_H868YEHlEeqxNJCRKR--7g" name="TalendStringUtil"/>
   </parameters>
   <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
     <elementParameter field="FILE" name="FILENAME" value="context.log_dir + context.csv_file_list_of_layers_out_of_extent"/>
     <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
@@ -442,7 +454,6 @@
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_1" show="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
@@ -484,6 +495,7 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="north"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="false"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="metadata" name="tLogRow_1">
@@ -505,7 +517,6 @@
   </node>
   <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="224" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="((Integer)globalMap.get(&quot;tFileInputDelimited_1_NB_LINE&quot;)) + &quot; layers out of extent.&quot;"/>
     <elementParameter field="TEXT" name="CODE" value="42"/>
     <elementParameter field="CLOSED_LIST" name="PRIORITY" value="4"/>
@@ -515,7 +526,6 @@
   </node>
   <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSendMail_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="TEXT" name="TO" value="context.mail_send_to_emails"/>
     <elementParameter field="TEXT" name="FROM" value="context.mail_from_email"/>
     <elementParameter field="CHECK" name="NEED_PERSONAL_NAME" value="false"/>
@@ -550,11 +560,14 @@
   </node>
   <node componentName="tFileExist" componentVersion="0.101" offsetLabelX="12" offsetLabelY="0" posX="64" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileExist_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="FILE" name="FILE_NAME" value="context.log_dir + context.csv_file_list_of_layers_out_of_extent"/>
     <elementParameter field="TEXT" name="LABEL" value="checkFileExists"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tWarn_1">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="((Integer)globalMap.get(&quot;tFileInputDelimited_1_NB_LINE&quot;))>0"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If1" show="false"/>
+  </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tLogRow_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="files"/>
@@ -603,10 +616,6 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
-  </connection>
-  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tWarn_1">
-    <elementParameter field="MEMO_JAVA" name="CONDITION" value="((Integer)globalMap.get(&quot;tFileInputDelimited_1_NB_LINE&quot;))>0"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If1" show="false"/>
   </connection>
   <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tWarn_1" offsetLabelX="0" offsetLabelY="0" source="tWarn_1" target="tSendMail_1">
     <elementParameter field="MEMO_JAVA" name="CONDITION" value="context.mail_server != null &amp;&amp; !&quot;&quot;.equals(context.mail_server)"/>

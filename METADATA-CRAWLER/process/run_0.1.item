@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="test">
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="test" jobType="Standard">
   <context confirmationNeeded="false" name="test">
     <contextParameter comment="" name="administrativeArea" prompt="administrativeArea?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
     <contextParameter comment="" name="bboxcheck_xmax" prompt="bboxcheck_xmax?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Double" value="180"/>
@@ -15,8 +15,8 @@
     <contextParameter comment="The CSW user password" name="csw_password" prompt="csw_password?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Password" value="RX/CTwlUNiA="/>
     <contextParameter comment="The CSW server to push metadata records into" name="csw_server_host" prompt="csw_server_host?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;http://localhost:8080/geonetwork/srv/eng/csw-publication&quot;"/>
     <contextParameter comment="The CSW user name" name="csw_username" prompt="csw_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;admin&quot;"/>
-    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/home/francois/data/test/toscan/"/>
-    <contextParameter comment="" name="data_dir_uuid_ignored_path" prompt="data_dir_uuid_ignored_path?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/home/francois/data/test/toscan/"/>
+    <contextParameter comment="The folder to scan for datasets" name="data_dir" prompt="data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/data/geo/"/>
+    <contextParameter comment="" name="data_dir_uuid_ignored_path" prompt="data_dir_uuid_ignored_path?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/data/"/>
     <contextParameter comment="List of database to scan" name="db_list" prompt="db_list?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_List Of Value" value=""/>
     <contextParameter comment="Hide database connection information" name="db_password_hide" prompt="db_password_hide?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="An EPSG code of a projection to use in case the projection could not be defined from the file" name="default_projection" prompt="default_projection?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;EPSG:4326&quot;"/>
@@ -49,7 +49,7 @@
     <contextParameter comment="" name="mail_subject_log" prompt="mail_subject_log?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;Metadata scan / Notification / Log file for last scan: &quot;"/>
     <contextParameter comment="" name="mail_subject_outofextent" prompt="mail_subject_outofextent?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;Metadata scan / Alert / Layers out of extent&quot;"/>
     <contextParameter comment="" name="mail_username" prompt="mail_username?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;username&quot;"/>
-    <contextParameter comment="The folder to scan for maps" name="map_data_dir" prompt="map_data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/home/francois/data/test/toscan/"/>
+    <contextParameter comment="The folder to scan for maps" name="map_data_dir" prompt="map_data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/"/>
     <contextParameter comment="Map file extensions" name="map_file_extension" prompt="map_file_extension?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.qgs&quot;"/>
     <contextParameter comment="" name="map_missing_datasource_msg" prompt="map_missing_datasource_msg?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;List of missing map datasources:%n&quot;"/>
     <contextParameter comment="" name="map_missing_datasource_status" prompt="map_missing_datasource_status?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;underDevelopment&quot;"/>
@@ -75,7 +75,7 @@
     <contextParameter comment="" name="pack_data_create_checksum" prompt="pack_data_create_checksum?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="" name="pack_data_dir" prompt="pack_data_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/download/"/>
     <contextParameter comment="" name="pack_data_link_template" prompt="pack_data_link_template?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;Download data in {{format}} format&quot;"/>
-    <contextParameter comment="" name="pack_data_publication_dir" prompt="pack_data_publication_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/var/www/html/data/"/>
+    <contextParameter comment="" name="pack_data_publication_dir" prompt="pack_data_publication_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/tmp/scan/"/>
     <contextParameter comment="" name="pack_data_publish" prompt="pack_data_publish?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="" name="pack_data_url_prefix" prompt="pack_data_url_prefix?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;http://localhost/data/&quot;"/>
     <contextParameter comment="True to ping the job and return status response (use when deploy as webservice)" name="ping" prompt="ping?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="false"/>
@@ -85,7 +85,7 @@
     <contextParameter comment="Always run update by sending the complete metadata record (not only some properties like bounding box)" name="publish_metadata_full_update" prompt="publish_metadata_full_update?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="false"/>
     <contextParameter comment="RASTER file extensions" name="raster_file_extension" prompt="raster_file_extension?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.tif|.*\\.tiff|.*\\.ecw|.*\\.asc|.*\\.rst|.*\\.grd|.*\\.jpg|.*\\.xyz&quot;"/>
     <contextParameter comment="RASTER file extensions supported for publication in mapservers" name="raster_file_extension_for_geopublication" prompt="raster_file_extension_for_geopublication?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value="&quot;.*\\.tif|.*\\.tiff&quot;"/>
-    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/home/francois/data/test/config/"/>
+    <contextParameter comment="The folder with property files" name="resource_dir" prompt="resource_dir?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Directory" value="/data/geo/config/"/>
     <contextParameter comment="Scan for maps" name="scan_map" prompt="scan_map?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="For each datasources find in a map, create metadata" name="scan_map_and_datasources" prompt="scan_map_and_datasources?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
     <contextParameter comment="Scan for RASTER files" name="scan_raster" prompt="scan_raster?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_Boolean" value="true"/>
@@ -219,11 +219,25 @@
     <contextParameter comment="" name="voice" prompt="voice?" promptNeeded="false" repositoryContextId="_EP-BsEILEeKB_-pU5aU-ow" type="id_String" value=""/>
   </context>
   <parameters>
-    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value=" -Dhttp.proxyHost=webcache.example.com-Dhttp.proxyPort=8080 -Xmx1024M " show="false"/>
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Dhttp.proxyHost=webcache.example.com-Dhttp.proxyPort=8080&quot;,&quot;-Xmx1024M&quot;]}" show="false"/>
     <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="true" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" value="" show="false"/>
     <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true" show="false"/>
     <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="false" show="false"/>
     <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
@@ -232,8 +246,6 @@
     <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
     <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:PROPERTY_TYPE" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="" show="false"/>
     <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -250,8 +262,8 @@
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning" show="false"/>
     <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false" show="false"/>
     <elementParameter field="CHECK" name="DISABLE_ERROR" value="false" show="false"/>
     <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false" show="false"/>
@@ -313,10 +325,10 @@
     <routinesParameter id="_nrhX4AfBEeKRSpL2q-qWEQ" name="TalendDate"/>
     <routinesParameter id="_nroFkAfBEeKRSpL2q-qWEQ" name="TalendString"/>
     <routinesParameter id="_NukzgAnLEeKr_IP06R0Uyw" name="Utility"/>
+    <routinesParameter id="_H868YEHlEeqxNJCRKR--7g" name="TalendStringUtil"/>
   </parameters>
   <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="context.data_dir"/>
     <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
     <elementParameter field="CHECK" name="INCLUDSUBDIR" value="true"/>
@@ -340,13 +352,12 @@
   </node>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_2" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="scan_raster"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="test"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="__iSqEOfsEeK1v9Wc0iGVpA"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
-    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="test"/>
     <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
     <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="false"/>
@@ -364,7 +375,6 @@
   </node>
   <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_2" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="context.data_dir"/>
     <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="BOTH"/>
     <elementParameter field="CHECK" name="INCLUDSUBDIR" value="true"/>
@@ -388,13 +398,12 @@
   </node>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="scan_vector"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_YtdS8OPEEeKXY41c3BjRgQ"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
-    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
     <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
     <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="false"/>
@@ -414,7 +423,6 @@
   </node>
   <node componentName="tForeach" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tForeach_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="TABLE" name="VALUES">
       <elementValue elementRef="VALUE" value="context.db_list"/>
     </elementParameter>
@@ -423,13 +431,12 @@
   </node>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_6" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="scan_vector"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_YtdS8OPEEeKXY41c3BjRgQ"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
-    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
     <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
     <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="false"/>
@@ -449,19 +456,17 @@
   </node>
   <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="begin"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="576">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_7" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="publish_files"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_6cVugP9GEeKxLaoPpG66qQ"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
-    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
     <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
     <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="false"/>
@@ -487,13 +492,12 @@
   </node>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="64" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_8" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="cleanup"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_iJXQkBrWEeO07-HdfYgtpA"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
-    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
     <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
     <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
@@ -508,7 +512,6 @@
   </node>
   <node componentName="tLoop" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLoop_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="RADIO" name="FORLOOP" value="true"/>
     <elementParameter field="RADIO" name="WHILELOOP" value="false"/>
     <elementParameter field="TEXT" name="FROM" value="1"/>
@@ -523,13 +526,12 @@
   </node>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="64" posY="576">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_9" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="ping"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_iA0UkCc3EeOPdID-8_k4Gg"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
-    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
     <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
     <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="false"/>
@@ -541,21 +543,19 @@
     <elementParameter field="TEXT" name="LABEL" value="__PROCESS__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_9">
-      <column comment="" key="false" name="cfg" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="cfg" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tBufferOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="256" posY="576">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tBufferOutput_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="pingResponse"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tBufferOutput_1">
-      <column comment="" key="false" name="cfg" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="cfg" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tForeach" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tForeach_2" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="TABLE" name="VALUES">
       <elementValue elementRef="VALUE" value="context.service_list"/>
     </elementParameter>
@@ -564,13 +564,12 @@
   </node>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_10" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="scan_vector"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_YtdS8OPEEeKXY41c3BjRgQ"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
-    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
     <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
     <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="false"/>
@@ -590,7 +589,6 @@
   </node>
   <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_3" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="context.map_data_dir"/>
     <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
     <elementParameter field="CHECK" name="INCLUDSUBDIR" value="true"/>
@@ -614,13 +612,12 @@
   </node>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="704" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_4" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="scan_map_qgis"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="test"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_CP2TwGHDEeOA3vYxAn2LXg"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
-    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="test"/>
     <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
     <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="false"/>
@@ -638,13 +635,12 @@
   </node>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_3" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="publish_metadata"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_6zT9IOP0EeKq6LfAQc0w9A"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
-    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
     <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
     <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="false"/>
@@ -659,13 +655,12 @@
   </node>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_5" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="publish_files"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_6cVugP9GEeKxLaoPpG66qQ"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
-    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
     <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
     <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="false"/>
@@ -691,13 +686,12 @@
   </node>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_11" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="alert_layers_out_of_extent"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="test"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_OiHc4Cb8EeWA2pgTDRxwYA"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
-    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="test"/>
     <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
     <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="false"/>
@@ -712,13 +706,12 @@
   </node>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="576">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_12" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/francois/app/talend/TOS_DI-20150702_1326-V6.0TEST/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="send_log_by_email"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_g44-4CcHEeWBdtNXVhJv1Q"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
-    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
     <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
     <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="false"/>

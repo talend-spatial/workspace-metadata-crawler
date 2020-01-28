@@ -2,7 +2,7 @@
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
-    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value=" -Xms256M -Xmx1024M"/>
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xms256M&quot;,&quot;-Xmx1024M&quot;]}"/>
     <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0"/>
@@ -131,6 +131,7 @@
     <elementParameter field="CHECK" name="INFORMATION" value="false"/>
     <elementParameter field="MEMO" name="COMMENT" value=""/>
     <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="false"/>
     <metadata connector="FLOW" name="tLogRow_1">
       <column defaultValue="" key="false" length="0" name="the_geom" nullable="true" precision="0" sourceType="" type="id_Geometry" usefulColumn="true"/>
     </metadata>
