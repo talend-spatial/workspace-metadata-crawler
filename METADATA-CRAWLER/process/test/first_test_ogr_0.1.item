@@ -63,7 +63,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:efzFWshEgby8M5tOsB1KQpctVJuc0LrOyFrhrG0O"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;"/>
@@ -77,23 +77,24 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="0RMsyjmybrE="/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:jyRyyYvOxYxIjLZnTWO+IwaXaZVAP/fYpkkHzDfL"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;"/>
-    <routinesParameter id="_nrrv8AfBEeKRSpL2q-qWEQ" name="DataOperation"/>
-    <routinesParameter id="_nruzQAfBEeKRSpL2q-qWEQ" name="GeoOperation"/>
-    <routinesParameter id="_nrzEsAfBEeKRSpL2q-qWEQ" name="GeometryOperation"/>
-    <routinesParameter id="_nr054AfBEeKRSpL2q-qWEQ" name="GeometryUtility"/>
-    <routinesParameter id="_nrqh0AfBEeKRSpL2q-qWEQ" name="Mathematical"/>
-    <routinesParameter id="_nrtlIAfBEeKRSpL2q-qWEQ" name="Numeric"/>
-    <routinesParameter id="_nrwocAfBEeKRSpL2q-qWEQ" name="OpenStreetMap"/>
-    <routinesParameter id="_nq3QkAfBEeKRSpL2q-qWEQ" name="Relational"/>
-    <routinesParameter id="_nrj0IAfBEeKRSpL2q-qWEQ" name="StringHandling"/>
-    <routinesParameter id="_nrmQYAfBEeKRSpL2q-qWEQ" name="TalendDataGenerator"/>
-    <routinesParameter id="_nrhX4AfBEeKRSpL2q-qWEQ" name="TalendDate"/>
-    <routinesParameter id="_nroFkAfBEeKRSpL2q-qWEQ" name="TalendString"/>
     <routinesParameter id="_NukzgAnLEeKr_IP06R0Uyw" name="Utility"/>
+    <routinesParameter id="_cXvVIK42EeuV-e9MB8lN9A" name="DataOperation"/>
+    <routinesParameter id="_cX67UK42EeuV-e9MB8lN9A" name="GeoOperation"/>
+    <routinesParameter id="_cX5GIK42EeuV-e9MB8lN9A" name="GeometryOperation"/>
+    <routinesParameter id="_cX9XkK42EeuV-e9MB8lN9A" name="GeometryUtility"/>
+    <routinesParameter id="_cX00sK42EeuV-e9MB8lN9A" name="Mathematical"/>
+    <routinesParameter id="_cXp1kK42EeuV-e9MB8lN9A" name="Numeric"/>
+    <routinesParameter id="_cX8JcK42EeuV-e9MB8lN9A" name="OpenStreetMap"/>
+    <routinesParameter id="_cXy_gK42EeuV-e9MB8lN9A" name="Relational"/>
+    <routinesParameter id="_cXtf8K42EeuV-e9MB8lN9A" name="StringHandling"/>
+    <routinesParameter id="_cXxKUK42EeuV-e9MB8lN9A" name="TalendDataGenerator"/>
+    <routinesParameter id="_cXkWAK42EeuV-e9MB8lN9A" name="TalendDate"/>
+    <routinesParameter id="_cXoAYK42EeuV-e9MB8lN9A" name="TalendStringUtil"/>
+    <routinesParameter id="_cXrqwK42EeuV-e9MB8lN9A" name="TalendString"/>
   </parameters>
   <node componentName="sOGRInfoInput" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="128" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="sOGRInfoInput_1"/>
