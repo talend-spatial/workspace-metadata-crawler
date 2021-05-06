@@ -191,9 +191,7 @@ public class Utility {
 	 * {example} base64encode("admin:admin")
 	 */
 	public static String base64encode(String stringToEncode) {
-		byte[] encodedBytes = com.sun.jersey.core.util.Base64.encode(stringToEncode.getBytes());
-
-		return new String(encodedBytes);
+		return java.util.Base64.getEncoder().encodeToString(stringToEncode.getBytes());
 	}
 	
 	
